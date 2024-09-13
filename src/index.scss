@@ -1,0 +1,60 @@
+
+@import '../public/styles/common/_all.scss';
+@import '../public/styles/component_style/all';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../public/fonts/Agrandir-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Open Sans',sans-serif;
+}
+
+
+.btn{
+    border-radius: 4px;
+    padding:5px 6px;
+    transition: 0.7s;
+  
+
+    &-md {
+        font-size: $LabelMediumFontSize;
+        font-family: $LabelMediumFontFamily;
+        font-weight: $LabelMediumFontWeight;
+        line-height: $LabelMediumLineHeight;
+
+    }
+
+    &-white{
+        color: $black3;
+        border: 1px solid $black3;
+        background-color: transparent;
+
+        &:hover {
+            background-color: $gray4;
+            transform: scale(1.1);
+          }
+    }
+    
+    &-pink{
+        background-color: $pink9;
+        border: none;
+        color : white;
+        
+      &:hover {
+        background-color: $pink3;
+        transform: scale(1.1);
+      }
+    }
+}
+
+
+
+
+
+
