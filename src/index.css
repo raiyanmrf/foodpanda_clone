@@ -169,35 +169,6 @@ li {
   font-feature-settings: "ss09", "ss11";
 }
 
-.cities {
-  width: 100vw;
-  margin-top: 120px;
-}
-.cities-grid {
-  display: grid;
-  gap: 20px;
-  padding: 5% 5%;
-}
-.cities-grid-item img {
-  width: 100%;
-  border-radius: 9px;
-}
-
-@media (max-width: 650px) {
-  .cities-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 651px) and (max-width: 1110px) {
-  .cities-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-width: 1111px) {
-  .cities-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 .nav {
   width: 100vw;
   height: 56px;
@@ -241,6 +212,35 @@ li {
   flex-basis: 152px;
 }
 
+.cities {
+  width: 100vw;
+  margin-top: 120px;
+}
+.cities-grid {
+  display: grid;
+  gap: 20px;
+  padding: 5% 5%;
+}
+.cities-grid-item img {
+  width: 100%;
+  border-radius: 9px;
+}
+
+@media (max-width: 650px) {
+  .cities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 651px) and (max-width: 1110px) {
+  .cities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1111px) {
+  .cities-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 @font-face {
   font-family: "Agrandir";
   src: url("../public/fonts/Agrandir-Regular.otf") format("opentype");
