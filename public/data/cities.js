@@ -1,6 +1,5 @@
 import dhaka_img from "../images/cities/city-tile-Dhaka.webp";
 import chittagong_img from "../images/cities/city-tile-Chittagong.webp";
-// import bagerhat_img from "../images/cities/city-tile-Bagerhat.webp";
 import bandarban_img from "../images/cities/city-tile-Bandarban.webp";
 import barguna_img from "../images/cities/city-tile-Barguna.webp";
 import barisal_img from "../images/cities/city-tile-Barisal.webp";
@@ -13,10 +12,7 @@ import comilla_img from "../images/cities/city-tile-Comilla.webp";
 import coxsbazar_img from "../images/cities/city-tile-CoxsBazar.webp";
 import dinajpur_img from "../images/cities/city-tile-Dinajpur.webp";
 import faridpur_img from "../images/cities/city-tile-Faridpur.webp";
-
 import gaibandha_img from "../images/cities/city-tile-Gaibandha.webp";
-// import gazipur_img from "../images/cities/city-tile-Gazipur.webp";
-import gopalganj_img from "../images/cities/city-tile-Gopalganj.webp";
 import jamalpur_img from "../images/cities/city-tile-Jamalpur.webp";
 import jessore_img from "../images/cities/city-tile-Jessore.webp";
 import jhenaidah_img from "../images/cities/city-tile-Jhenaidha.webp";
@@ -36,7 +32,7 @@ import naogaon_img from "../images/cities/city-tile-Naogaon.webp";
 import narsingdi_img from "../images/cities/city-tile-Narsingdi.webp";
 import natore_img from "../images/cities/city-tile-Natore.webp";
 import nilphamari_img from "../images/cities/city-tile-Nilphamari.webp";
-import noakhali_img from "../images/cities/city-tile-Noakhali.webp";
+
 import pabna_img from "../images/cities/city-tile-Pabna.webp";
 import pirojpur_img from "../images/cities/city-tile-Pirojpur.webp";
 import rajshahi_img from "../images/cities/city-tile-Rajshahi.webp";
@@ -60,11 +56,7 @@ export const citiesArray = [
     name: "Chittagong",
     image: chittagong_img,
   },
-  // {
-  //   id: "ba",
-  //   name: "Bagerhat",
-  //   image: bagerhat_img,
-  // },
+
   {
     id: "bn",
     name: "Bandarban",
@@ -131,16 +123,7 @@ export const citiesArray = [
     name: "Gaibandha",
     image: gaibandha_img,
   },
-  // {
-  //   id: "gz",
-  //   name: "Gazipur",
-  //   image: gazipur_img,
-  // },
-  // {
-  //   id: "go",
-  //   name: "Gopalganj",
-  //   image: gopalganj_img,
-  // },
+
   {
     id: "ja",
     name: "Jamalpur",
@@ -236,11 +219,7 @@ export const citiesArray = [
     name: "Nilphamari",
     image: nilphamari_img,
   },
-  {
-    id: "no",
-    name: "Noakhali",
-    image: noakhali_img,
-  },
+
   {
     id: "pa",
     name: "Pabna",
