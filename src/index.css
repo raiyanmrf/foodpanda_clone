@@ -154,18 +154,12 @@ li {
   margin-top: 16px;
 }
 .vendor-detail h3 {
-  font-family: "Agrandir";
-  font-size: 1.125rem;
-  line-height: 1.5;
-  font-weight: 700;
-  font-feature-settings: "ss09", "ss11";
+  font-size: 1.5rem;
 }
 .vendor-detail p {
   font-family: "Open Sans";
   font-size: 0.95rem;
-  line-height: 1.571428571;
   font-weight: 400;
-  font-feature-settings: "ss09", "ss11";
 }
 
 .extra-detail {
@@ -287,20 +281,16 @@ li {
 .app-ad-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 1em;
 }
 .app-ad-content h3 {
   margin-top: 20px;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 .app-ad-content-fingrtips p {
   font-size: 0.95rem;
   line-height: 1.6;
   font-weight: 500;
-}
-.app-ad-content-fingrtips img {
-  display: none;
 }
 .app-ad-content-icons {
   display: flex;
@@ -309,11 +299,164 @@ li {
   gap: 1em;
   flex-wrap: wrap;
 }
+.app-ad-content-qrcode {
+  display: none;
+}
 .app-ad-main-image img {
   width: min(600px, 100%);
-  vertical-align: bottom;
 }
 
+@media (min-width: 904px) {
+  .app-ad {
+    color: white;
+    max-height: 280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 1em;
+  }
+  .app-ad-content {
+    gap: 3rem;
+  }
+  .app-ad-content-title {
+    width: 100%;
+  }
+  .app-ad-content-title h3 {
+    margin-top: auto;
+    text-align: start;
+  }
+  .app-ad-content-fingrtips {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+  .app-ad-content-fingrtips p {
+    margin-left: auto;
+    text-align: start;
+  }
+  .app-ad-content-qrcode {
+    width: 250px;
+    height: 90px;
+    border: 1px solid white;
+    display: grid;
+    place-items: center;
+  }
+  .app-ad-main-image {
+    display: grid;
+    place-items: center;
+  }
+}
+footer {
+  font-size: 1rem;
+  font-weight: 500;
+}
+footer .upper-footer-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .upper-footer-list-item {
+  border-right: 1px solid gray;
+  padding: 0px 1em;
+}
+footer .upper-footer-list-item:last-child {
+  border: none;
+}
+footer .upper-footer-list-item a {
+  border-bottom: 1px solid gray;
+  transition: 0.6s;
+}
+footer .upper-footer-list-item a:hover {
+  border-bottom: 4px solid black;
+}
+footer .middle-footer-list {
+  -moz-columns: 300px;
+       columns: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+footer .middle-footer-list-item {
+  margin-top: 1em;
+}
+footer .middle-footer-list-item a {
+  border-bottom: 1px solid gray;
+  transition: 0.6s;
+}
+footer .middle-footer-list-item a:hover {
+  border-bottom: 4px solid black;
+}
+footer .middle-footer-list button {
+  padding-inline: 2em;
+}
+footer .lower-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+footer .lower-footer-social {
+  display: flex;
+  gap: 0.85em;
+}
+footer .lower-footer-social-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+footer .lower-footer-social-icon::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s;
+  border: 1px solid gray;
+}
+footer .lower-footer-social-icon:hover::after {
+  transform: scale(1.2);
+}
+footer .line {
+  border-top: 1px solid rgb(243, 243, 243);
+  margin: 3em max(1em, 4%);
+  padding-top: 2em;
+}
+
+.panda {
+  display: flex;
+  gap: 5px;
+}
+
+.panda-copyright {
+  margin-top: 1em;
+  font-size: 0.95rem;
+  color: rgb(180, 175, 175);
+}
+
+@media (width >= 528px) {
+  .lower-footer {
+    flex-direction: row !important;
+    gap: 0 !important;
+  }
+  .lower-footer-social {
+    position: absolute;
+    right: 5%;
+  }
+  .deliveryhero {
+    margin-right: auto;
+    border-left: 1px solid black;
+    padding-left: 5px;
+  }
+  .panda {
+    padding-right: 5px;
+  }
+}
 @font-face {
   font-family: "Agrandir";
   src: url("../public/fonts/Agrandir-Regular.otf") format("opentype");
@@ -330,15 +473,21 @@ main {
 }
 
 .btn {
-  border-radius: 4px;
-  padding: 5px 6px;
+  border-radius: 10px;
+  font-family: "Open Sans";
   transition: 0.7s;
 }
 .btn-md {
   font-size: 0.875rem;
-  font-family: "Open Sans";
   font-weight: 600;
   line-height: 1.571428571;
+  padding: 0.4 0.75em;
+}
+.btn-lg {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 0.5em 0.85em;
 }
 .btn-white {
   color: #39434D;

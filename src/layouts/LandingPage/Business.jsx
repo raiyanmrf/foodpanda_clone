@@ -17,13 +17,13 @@ const Business = () => {
 
  <div className="vendor-detail">
   <h3>
-  List your restaurant or shop on foodpanda
+  foodpanda for business
   </h3>
   <p>Order lunch or fuel for work-from-home, late nights in the office,
      corporate events, client meetings, and much more.</p>
   
 
-   <Button title="Get Started" btnClass="btn btn-md btn-pink vendor-detail-btn"/>
+   <Button title="Get Started" btnClass="btn btn-lg btn-pink vendor-detail-btn"/>
 
 
  </div>

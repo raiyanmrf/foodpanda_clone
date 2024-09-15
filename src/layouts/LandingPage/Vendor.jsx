@@ -23,7 +23,7 @@ const Vendor = () => {
   <p>It's simple: we list your menu and product lists online, help you process orders, pick them up, and deliver them to hungry pandas - in a heartbeat</p>
   <p> Interested? Let's start our partnership today!</p>
 
-   <Button title="Get Started" btnClass="btn btn-md btn-pink vendor-detail-btn"/>
+   <Button title="Get Started" btnClass="btn btn-lg btn-pink vendor-detail-btn"/>
 
 
  </div>

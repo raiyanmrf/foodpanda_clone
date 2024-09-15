@@ -24,32 +24,27 @@
   
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        // margin-top: 10px;
+        // justify-content: center;
         gap: 1em;
 
 
 
         h3{
             margin-top: 20px;
-            font-size: 1.125rem;
+            font-size: clamp(1.125rem,1.25rem,1.75rem);
         }
 
         &-fingrtips {
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
+    
 
             p {
                font-size: clamp(0.85rem,0.95rem,1rem);
                line-height: 1.6;
                font-weight: 500;
-            //    text-wrap: balance;
+          
             }
 
-            img{
-                display: none;
-            }
+            
         }
 
         &-icons {
@@ -60,13 +55,11 @@
             flex-wrap: wrap;
         }
 
+        &-qrcode{
+            display: none;
+        }
+
     }
-
-
-
-
-
-
 
 
     &-main-image {
@@ -75,8 +68,75 @@
         img {
         
             width: min(600px,100%);
-            vertical-align: bottom;
          
         }
     }
+}
+
+
+
+@media(min-width:904px){
+    .app-ad {
+       
+        color: white;
+        max-height: 280px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding:0 1em;
+    
+    
+     
+    
+        &-content {
+      gap: 3rem;
+          
+           
+            
+    &-title{
+        width: 100%;
+        h3 {
+            margin-top: auto;
+            text-align: start ;
+        }
+    
+    }
+    
+            &-fingrtips {
+               display: flex;
+               gap: 1em;
+               align-items: center;
+    
+          
+              
+
+                p{
+                    margin-left: auto;
+                    text-align: start;
+                }
+            }
+    
+            &-qrcode{
+                width: 250px;
+                height: 90px;
+                border: 1px solid white;
+                display: grid;
+                place-items: center;
+                
+               }
+    
+        }
+
+
+        &-main-image {
+            
+           display: grid;
+           place-items: center;
+        }
+}
+
+
+
 }

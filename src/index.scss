@@ -23,16 +23,25 @@ main{
 
 
 .btn{
-    border-radius: 4px;
-    padding:5px 6px;
+    border-radius: 10px;
+    font-family: $LabelMediumFontFamily;
     transition: 0.7s;
   
 
     &-md {
-        font-size: $LabelMediumFontSize;
-        font-family: $LabelMediumFontFamily;
+        font-size: $LabelMediumFontSize;       
         font-weight: $LabelMediumFontWeight;
         line-height: $LabelMediumLineHeight;
+        padding:.4  .75em;
+    
+
+    }
+
+    &-lg {
+        font-size: $LabelLargeFontSize;
+        font-weight: $LabelLargeFontWeight;
+        line-height: $LabelLargeLineHeight;
+        padding:.5em .85em;
 
     }
 
