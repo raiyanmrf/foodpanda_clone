@@ -13,7 +13,7 @@ import comilla_img from "../images/cities/city-tile-Comilla.webp";
 import coxsbazar_img from "../images/cities/city-tile-CoxsBazar.webp";
 import dinajpur_img from "../images/cities/city-tile-Dinajpur.webp";
 import faridpur_img from "../images/cities/city-tile-Faridpur.webp";
-import feni_img from "../images/cities/city-tile-Feni.webp";
+
 import gaibandha_img from "../images/cities/city-tile-Gaibandha.webp";
 // import gazipur_img from "../images/cities/city-tile-Gazipur.webp";
 import gopalganj_img from "../images/cities/city-tile-Gopalganj.webp";
@@ -125,11 +125,7 @@ export const citiesArray = [
     name: "Faridpur",
     image: faridpur_img,
   },
-  {
-    id: "fe",
-    name: "Feni",
-    image: feni_img,
-  },
+
   {
     id: "ga",
     name: "Gaibandha",
