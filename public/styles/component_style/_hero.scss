@@ -141,7 +141,7 @@
 
           h1 {
             font-family: "Agrandir";
-            font-size: 1.5rem;
+            font-size: clamp(1rem,1.5rem,2rem);
             line-height: 1.333333333;
             font-weight: 700;
             font-feature-settings: "ss09", "ss11";
@@ -174,7 +174,7 @@
 &-detail {
   position: absolute;
   background: white;
-  width: 79%;
+  width: min(500px,79%);
   bottom: -22%;
   left: 12%;
   border-radius: 5px;
@@ -187,14 +187,14 @@
 
   h3{
     font-family: 'Agrandir';
-    font-size: $TitleSmallFontSize;
+    font-size: clamp(1rem, 1.125rem, 1.5rem);
     line-height: $TitleSmallLineHeight;
     font-weight: $TitleSmallFontWeight;
     font-feature-settings: $TitleSmallFontFeatureSettings;
   }
   p{
     font-family: $ParagraphSmallFontFamily;
-    font-size: $ParagraphSmallFontSize;
+    font-size: clamp(0.85rem,0.95rem,1rem);
     line-height: $ParagraphSmallLineHeight;
     font-weight: $ParagraphSmallFontWeight;
     font-feature-settings: $TitleSmallFontFeatureSettings;
@@ -203,3 +203,18 @@
     }
 
     
+
+
+
+
+    .extra-detail{
+      margin: 200px auto;
+      padding-inline: max(5%,6px);
+      text-wrap: balance;
+
+      
+      h3{
+        margin-bottom: 10px;
+        font-size: clamp(1rem, 1.125rem, 1.5rem);
+      }
+    }

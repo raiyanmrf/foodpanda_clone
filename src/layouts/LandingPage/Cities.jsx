@@ -15,7 +15,13 @@ const Cities = () => {
         <div className="cities-grid">
             {citiesArray.map(city=>{
               return ( <div key={city.id} className="cities-grid-item">
-                    <img src={city.image} alt={city.name} className="city-grid-item-img" />
+                   <a href="">
+                   <img src={city.image} alt={city.name} className="city-grid-item-img" />
+                   <p className='cities-grid-item-caption'>
+                    {city.name}
+                   </p>
+
+                    </a> 
                 </div>)
             })}
         </div>

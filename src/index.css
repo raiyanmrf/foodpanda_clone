@@ -6,7 +6,6 @@
 }
 
 body {
-  min-width: 100vw;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.6;
@@ -143,7 +142,7 @@ li {
 .vendor-detail {
   position: absolute;
   background: white;
-  width: 79%;
+  width: min(500px, 79%);
   bottom: -22%;
   left: 12%;
   border-radius: 5px;
@@ -156,17 +155,27 @@ li {
 }
 .vendor-detail h3 {
   font-family: "Agrandir";
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.5;
   font-weight: 700;
   font-feature-settings: "ss09", "ss11";
 }
 .vendor-detail p {
   font-family: "Open Sans";
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   line-height: 1.571428571;
   font-weight: 400;
   font-feature-settings: "ss09", "ss11";
+}
+
+.extra-detail {
+  margin: 200px auto;
+  padding-inline: max(5%, 6px);
+  text-wrap: balance;
+}
+.extra-detail h3 {
+  margin-bottom: 10px;
+  font-size: 1.125rem;
 }
 
 .nav {
@@ -214,33 +223,97 @@ li {
 
 .cities {
   width: 100vw;
-  margin-top: 120px;
+  margin-top: 200px;
+}
+.cities-title {
+  text-align: center;
 }
 .cities-grid {
   display: grid;
   gap: 20px;
   padding: 5% 5%;
 }
+.cities-grid-item {
+  position: relative;
+}
 .cities-grid-item img {
   width: 100%;
   border-radius: 9px;
 }
+.cities-grid-item-caption {
+  position: absolute;
+  bottom: 10%;
+  left: 3%;
+  background-color: white;
+  padding: 4px 6px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
 
-@media (max-width: 650px) {
+@media (max-width: 764px) {
   .cities-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 651px) and (max-width: 1110px) {
+@media (min-width: 765px) and (max-width: 1256px) {
   .cities-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 1111px) {
+@media (min-width: 1257px) {
   .cities-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+.app-ad {
+  background: rgb(238, 4, 129);
+  color: white;
+  max-height: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0 1em;
+}
+.app-ad-main-title {
+  padding-left: 1em;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.app-ad-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+.app-ad-content h3 {
+  margin-top: 20px;
+  font-size: 1.125rem;
+}
+.app-ad-content-fingrtips p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.app-ad-content-fingrtips img {
+  display: none;
+}
+.app-ad-content-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+.app-ad-main-image img {
+  width: min(600px, 100%);
+  vertical-align: bottom;
+}
+
 @font-face {
   font-family: "Agrandir";
   src: url("../public/fonts/Agrandir-Regular.otf") format("opentype");
@@ -249,6 +322,11 @@ li {
 }
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+main {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .btn {

@@ -1,35 +1,56 @@
 .cities {
     width: 100vw;
-    margin-top: 120px;
+    margin-top: 200px;
+
+    &-title{
+        text-align: center;
+    }
   
     &-grid {
-      display: grid;
+     display: grid;
      gap:20px;
      padding: 5% 5%;
+     
   
       &-item {
+        position: relative;
         img {
           width: 100%;
           border-radius: 9px;
+       
+        }
+
+
+        &-caption{
+            position: absolute;
+            bottom: 10%;
+            left: 3%;
+            background-color: white;
+            padding: 4px  6px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 500;
         }
       }
     }
   }
   
   // Media queries
-  @media (max-width: 650px) {
+  @media (max-width:764px) {
     .cities-grid {
       grid-template-columns: repeat(2, 1fr);
+      
+   
     }
   }
   
-  @media (min-width: 651px) and (max-width: 1110px) {
+  @media (min-width: 765px) and (max-width: 1256px) {
     .cities-grid {
       grid-template-columns: repeat(3, 1fr);
     }
   }
   
-  @media (min-width: 1111px) {
+  @media (min-width: 1257px) {
     .cities-grid {
       grid-template-columns: repeat(4, 1fr);
     }

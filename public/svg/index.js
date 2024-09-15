@@ -5,6 +5,12 @@ import bagIcon from "./shoppingbag.svg";
 import profileIcon from "./profile.svg";
 import pandaIcon from "./panda.svg";
 import locateIcon from "./locateMe.svg";
+import appstoreIcon from "./appstore.svg";
+import playstoreIcon from "./playstore.svg";
+import appgallerycon from "./appgallery.svg";
+import deliveryHeroIcon from "./deliveryhero.svg";
+import instaIcon from "./insta.svg";
+import facebookIcon from "./facebook.svg";
 
 export {
   foodpandatext,
@@ -14,4 +20,10 @@ export {
   profileIcon,
   pandaIcon,
   locateIcon,
+  appstoreIcon,
+  playstoreIcon,
+  appgallerycon,
+  deliveryHeroIcon,
+  instaIcon,
+  facebookIcon,
 };
