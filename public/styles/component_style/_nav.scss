@@ -1,20 +1,20 @@
 .nav {
-    width: 100vw;
-    height: 56px;
-    box-shadow: 0px 4px 15px black;
-  
-  }
+  box-shadow: 1px -5px 20px 0px #9f8a8a;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
   
   .nav-bar{
   
-  
-  
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      height: 100%;
-      padding: 0px 17px;
+      flex-grow: 1;
+      gap: 1em;
+      padding: 1em;
+
+      &-menu{
+        margin-right: auto;
+      }
   
   
     &-menu,&-cart{
@@ -50,12 +50,41 @@
     }
     &-logo{
    
-    
+  
         display: flex;
-        justify-content: space-around;
-        flex-basis: 152px;
+        gap: 0.5em;
+        margin-right: auto;
+
   
     }
+
+    &-loginBtn,&-signupBtn,&-langBtn{
+      display: none;
+    }
+
+   
   
   }
   
+
+
+  @media(min-width:960px){
+
+    .nav-bar{
+
+      &-menu{
+        display: none;
+      }
+
+      &-loginBtn,&-signupBtn,&-langBtn{
+        display: inline;
+      }
+
+   
+      &-langBtn button{
+        display: flex;
+        padding-inline: .5em;
+        gap: .5em;
+      }
+    }
+  }

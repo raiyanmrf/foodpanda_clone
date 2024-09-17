@@ -1,0 +1,13 @@
+
+.extra-detail{
+    margin: 200px auto;
+    padding-inline: max(5%,6px);
+    text-wrap: balance;
+
+    
+    h3{
+      margin-bottom: 10px;
+      font-size: clamp(1rem, 1.125rem, 1.5rem);
+    }
+  
+  }

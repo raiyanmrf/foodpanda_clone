@@ -6,15 +6,15 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 
 
+
 function App() {
 
 
   return (
     <>
 
-<nav className="nav">
  <Navbar/>
-</nav>
+
 
 
 <main >
