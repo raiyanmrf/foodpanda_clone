@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import heroImage from '../public/images/refresh-hero-home-alt.webp'
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import Menu from "./components/Menu";
 
 
 
@@ -17,8 +18,12 @@ function App() {
 
 
 
-<main >
+
+<main className="content" >
+
+
 <Home/>
+
 
 </main>
 

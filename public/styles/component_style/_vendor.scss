@@ -6,15 +6,17 @@
     .vendor{
 
         position: relative;
+    
           &-title{
   
             h1 {
-              font-family: "Agrandir";
-              font-size: clamp(1rem,1.85rem,2rem);
+              font-family: "Open Sans";
+              font-size: clamp(1rem,1.75rem,1.95rem);
               line-height: 1.333333333;
               font-weight: 700;
               font-feature-settings: "ss09", "ss11";
               margin-block-end: 20px;
+              margin-left: 5px;
           }
       
           }
@@ -48,7 +50,7 @@
     left: 12%;
     border-radius: 5px;
     padding: 18px;
-    font-size: 15px;
+
     box-shadow: 0px 0px 11px -4px gray;
     &>*+*{
       margin-top: 16px;
@@ -56,12 +58,12 @@
   
     h3{
    
-      font-size: clamp(1rem, 1.5rem, 2rem);
+      font-size: 1.3em;
      
     }
     p{
       font-family: $ParagraphSmallFontFamily;
-      font-size: clamp(0.85rem,0.95rem,1rem);
+      font-size: .859em;
       font-weight: 400;
     }
   }

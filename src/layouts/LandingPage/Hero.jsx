@@ -18,8 +18,13 @@ const Hero = () => {
     <div className="hero-location">
       <form action="" className="hero-location-form">
         <div className="hero-location-form-locateMe">
-          
-          <input name='locateInput' placeholder='Street and Potal Code' type="text"  />
+     
+    
+         <input name='locateInput' placeholder='Street and Postal Code' type="text"  />
+            <a className='placeholder'>Your street and street number</a>
+
+        
+     
 
           <button>
             <img src={locateIcon} alt="locate" className='pink-icon' />
@@ -28,7 +33,7 @@ const Hero = () => {
          
          </div> 
       
-      <button className=" hero-location-find-btn"type='submit'>
+      <button className="btn btn-pink btn-lg hero-location-find-btn"type='submit'>
         Find Food
       </button>  
         

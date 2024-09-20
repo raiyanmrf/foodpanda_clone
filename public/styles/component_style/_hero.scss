@@ -1,5 +1,15 @@
 
 
+.placeholder {
+  position: absolute;
+  bottom: .65em;
+  left: .5em;
+  background: white;
+  transition: .1s;
+  font-size: .95em;
+
+}
+
 .hero{
     background: #f7f7f7;
     display: flex;
@@ -19,6 +29,7 @@
         display: flex;
         align-items: center;
         padding: 0 2%;
+        font-weight: 550;
  
   
     }
@@ -53,12 +64,13 @@
         
         
               &-locateMe {
-               
+                position: relative;
                 border-radius: 9px;
                 flex-grow: 1;
                 display: flex;
                 box-shadow: 0px 0px 2px 1px #cbc3c3;
 
+              
 
                 input {
                   flex-grow: 1;
@@ -70,18 +82,19 @@
                   font-size: 1em;
                   font-weight:lighter ;
                   font-family: "Open Sans";
-                  position: relative;
+           
                   
+                  &:focus + .placeholder,:not(:placeholder-shown) + .placeholder,&:hover + .placeholder{
+              
 
-                  &::after{
-                    content: 'Your Street and street number';
-                    height: 100%;
-                    width: 100%;
-                    background-color: #333;
-                    top: 0;
-                    bottom:0;
-                    position: absolute;
+                    font-size: .65em;
+                    bottom:4em;
+                    left: 1em;
+                    line-height: 1.5;
+                    background-color: rgba(255, 255, 255, 0.634);
+                    font-weight: 500;
                   }
+
               }
 
               button {
@@ -96,6 +109,8 @@
                 color: #333;
                 border-radius:0px 9px 9px 0px;
                 font-family: "Open Sans";
+                position: relative;
+                z-index: 2;
 
                 &:hover {
                   color: #c21760;
@@ -107,15 +122,16 @@
     
   
   &-find-btn {
-    background: #e21b70;
-    color: white;
+
+  
     flex-grow: 1;
-    border: none;
-    padding: 1.125em;
-    font-size: .85em;
-    font-weight: 550;
-    border-radius: 9px;
-    font-family: "Open Sans";
+
+    &:hover::after {
+      transform: scale(1.01) !important;
+
+    }
+
+
 }
      }
      
@@ -173,6 +189,7 @@
   align-items: start;
   margin-bottom: 4em;
 
+
   &-title{
     margin-top: 2em;
   }
@@ -180,7 +197,7 @@
   &-location {
     background: white;
     padding: 0em;
-    width: 50%;
+    max-width:  50%;
     border-radius: 9px;
     bottom: 30%;
     left: 1em;
@@ -188,14 +205,13 @@
 
     &-form {
       flex-direction: row;
-      gap: 0.3em;
+      gap: 0.7em;
 
   }
 
   &-find-btn{
 
-    flex-grow: 0;
-   
+   flex-grow: 0;
   }
 }}
 }

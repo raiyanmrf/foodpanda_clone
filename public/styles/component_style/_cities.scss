@@ -14,9 +14,17 @@
   
       &-item {
         position: relative;
+        overflow: hidden;
+        border-radius: 9px;
         img {
           width: 100%;
           border-radius: 9px;
+          transition: transform .4s ease;
+
+         &:hover{
+
+          transform: scale(1.05);
+         } 
        
         }
 

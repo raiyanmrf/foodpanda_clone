@@ -10,7 +10,7 @@ import Vendor from '../layouts/LandingPage/Vendor';
 
 const Home = () => {
   return (
-  <>  
+  < >  
 
   <Hero/>
 

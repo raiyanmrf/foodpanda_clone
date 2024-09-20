@@ -1,8 +1,12 @@
 .nav {
   box-shadow: 1px -5px 20px 0px #9f8a8a;
   display: flex;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 1;
+  background: white;
+  
+  
 }
   
   .nav-bar{
@@ -10,7 +14,7 @@
       display: flex;
       flex-grow: 1;
       gap: 1em;
-      padding: 1em;
+      padding: .75em;
 
       &-menu{
         margin-right: auto;
@@ -25,19 +29,22 @@
         justify-content: center;
         width: 32px;
         height: 32px;
+        cursor: pointer;
+   
   
     
   
       &::after{
-        content: '';
         height: 100%;
         width: 100%;
-        border-radius: 100%;
+        border-radius: 50%;
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
         transition: 0.3s;
+ 
+
   
   
       }
@@ -49,7 +56,8 @@
   
     }
     &-logo{
-   
+      
+      cursor: pointer;
   
         display: flex;
         gap: 0.5em;
@@ -62,6 +70,52 @@
       display: none;
     }
 
+    &-drop{
+
+
+      &-wrapper{
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.162);
+        position: absolute;
+        top:3.6em;
+        left: 0;
+      }
+
+      &-items{
+        position: absolute;
+        top: -5px;
+        right: 4em;
+        background: white;
+        width: 170px;
+        padding: 1em;
+        border-radius: 9px;
+        box-shadow: 0 -1px 12px 0px lightgray;
+      }
+
+
+      &-single-item{
+    
+          padding: .8em;
+          border-radius: 9px;
+
+
+
+        a{
+          display: flex;
+          gap: 2em;
+         }
+      
+         &:hover{
+          background-color:  #fdf2f7;;
+         }
+
+         &:active{
+          background-color: lightgray;
+         }
+     
+      }
+    }
    
   
   }
@@ -71,6 +125,7 @@
   @media(min-width:960px){
 
     .nav-bar{
+      padding-inline: 4em;
 
       &-menu{
         display: none;

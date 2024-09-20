@@ -11,6 +11,15 @@ import appgallerycon from "./appgallery.svg";
 import deliveryHeroIcon from "./deliveryhero.svg";
 import instaIcon from "./insta.svg";
 import facebookIcon from "./facebook.svg";
+import pandapayIcon from "./wallet.svg";
+import pandaproIcon from "./crown.svg";
+import orderlistIcon from "./orderlist.svg";
+import voucherIcon from "./voucher.svg";
+import pandarewardIcon from "./trophy.svg";
+import helpcenterIcon from "./help.svg";
+import logoutIcon from "./logout.svg";
+import oksignIcon from "./okSign.svg";
+import cancelIcon from "./cancel.svg";
 
 export {
   foodpandatext,
@@ -26,4 +35,13 @@ export {
   deliveryHeroIcon,
   instaIcon,
   facebookIcon,
+  pandapayIcon,
+  pandaproIcon,
+  orderlistIcon,
+  voucherIcon,
+  pandarewardIcon,
+  helpcenterIcon,
+  logoutIcon,
+  oksignIcon,
+  cancelIcon,
 };

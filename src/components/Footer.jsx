@@ -25,7 +25,7 @@ const Footer = () => {
        
 
             <ul className='middle-footer-list'>
-            <Button title={`Bangla`} btnClass={`btn btn-md btn-white`}/>
+            <Button title={`Bangla`} btnClass={`btn btn-md btn-white btn-border`}/>
                
             {footerLinks.mainLinks.map((link,index)=> 
                  <li key={index} className="middle-footer-list-item">

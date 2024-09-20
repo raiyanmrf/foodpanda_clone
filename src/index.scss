@@ -18,14 +18,20 @@ body {
 
 main{
   margin: 0 auto;
+ 
 }
 
+button{
+  cursor: pointer;
+}
 
 .btn{
     border-radius: 10px;
     font-family: 'Open Sans';
     position: relative;
     transition: 0.3s;
+    z-index: 1;
+
 
     &::after{
       content: '';
@@ -35,7 +41,7 @@ main{
       position: absolute;
       top: 0;
       left: 0;
-      z-index: -1;
+      z-index: 0;
       transition: 0.3s;
 
 
@@ -43,6 +49,7 @@ main{
 
     &:hover::after {
       transform: scale(1.1);
+      z-index: -1;
 
     }
   
@@ -62,7 +69,7 @@ main{
         font-size: $LabelLargeFontSize;
         font-weight: $LabelLargeFontWeight;
         line-height: $LabelLargeLineHeight;
-        padding:.5em .85em;
+        padding:.65em .85em;
 
     }
 
@@ -86,7 +93,7 @@ main{
         color : white;
 
         &:hover::after {
-          background-color: rgb(232, 41, 73);
+          background-color:#c21760;
         }
         
     }
@@ -110,7 +117,18 @@ main{
 
 
 .pink-icon{
-
   filter: invert(30%) sepia(100%) saturate(1000%) hue-rotate(290deg) brightness(90%) contrast(85%);
+  font-weight: bold;
+  
 }
+
+.charcoal-icon {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(0%) saturate(0%) hue-rotate(197deg) brightness(95%) contrast(92%);
+}
+
+.violet-icon {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(86%) saturate(4671%) hue-rotate(272deg) brightness(87%) contrast(106%);
+}
+
+
 

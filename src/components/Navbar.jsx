@@ -1,17 +1,26 @@
-import { bagIcon, dropIcon, foodpandatext, globeIcon, pandaIcon, profileIcon } from "../../public/svg"
+
+import useHandleDrop from "../../hooks/useHandleDrop"
+import { bagIcon, dropIcon, foodpandatext, globeIcon, oksignIcon, pandaIcon, profileIcon } from "../../public/svg"
 import Button from "./Button"
+import Menu from "./Menu"
 
 
-
+//
 
 
 const Navbar = () => {
+
+const [currentLangClass, handleLangDropMenu] = useHandleDrop('nav-bar-drop-wrapper');
+const [currentDropMenuClass, handleDropMenu] = useHandleDrop('menu');
+
+
+
   return (
 
     <nav className="nav">
       <section className="nav-bar">
     
-    <div className="nav-bar-menu">
+    <div className="nav-bar-menu" onClick={handleDropMenu}>
 
       <img src={profileIcon} height='24px' width='24px' alt="profile" />
 
@@ -31,14 +40,25 @@ const Navbar = () => {
       <Button title={`Sign Up`} btnClass={`btn btn-md btn-pink`}/>
     </div>
     
-    <div className="nav-bar-langBtn">
+    <div className="nav-bar-langBtn nav-bar-drop">
 
-     <button className="btn btn-md btn-white ">
+<div className="nav-bar-drop-content">
+<button className="btn btn-md btn-white " onClick={handleLangDropMenu}>
      <img src={globeIcon} alt="globe" />
      <p>EN</p>
      <img src={dropIcon} className="pink-icon" alt="drop" />   
       </button> 
+</div>
+    
+   <div className={currentLangClass}>
+   <ul className="nav-bar-drop-items">
 
+<li className="nav-bar-drop-single-item"><a href=""><span>English</span> <img src={oksignIcon} alt="ok" /></a></li>
+<li className="nav-bar-drop-single-item"><a href=""><span>Bangla</span> <img src={oksignIcon} alt="ok" /></a></li>
+
+</ul>
+    
+    </div> 
     </div>
 
 
@@ -48,6 +68,10 @@ const Navbar = () => {
 
 
   </section>
+
+
+  <Menu currentDropMenuClass={currentDropMenuClass}  handleDropMenu={handleDropMenu}/>
+
     </nav>
     
   )
