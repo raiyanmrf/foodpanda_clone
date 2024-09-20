@@ -203,6 +203,8 @@ li {
   flex-grow: 1;
   gap: 1em;
   padding: 0.75em;
+  position: relative;
+  z-index: 1;
 }
 .nav-bar-menu {
   margin-right: auto;
