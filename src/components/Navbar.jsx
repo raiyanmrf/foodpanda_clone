@@ -1,6 +1,7 @@
 
 import useHandleDrop from "../../hooks/useHandleDrop"
-import { bagIcon, dropIcon, foodpandatext, globeIcon, oksignIcon, pandaIcon, profileIcon } from "../../public/svg"
+import { locationNavList, lowerNavList } from "../../public/data/navData"
+import { bagIcon, dropIcon, favIcon, foodpandatext, globeIcon, locationmarkIcon, oksignIcon, pandaIcon, profileIcon } from "../../public/svg"
 import Button from "./Button"
 import Menu from "./Menu"
 
@@ -10,7 +11,7 @@ import Menu from "./Menu"
 
 const Navbar = () => {
 
-const [currentLangClass, handleLangDropMenu] = useHandleDrop('nav-bar-drop-wrapper');
+const [currentLangClass, handleLangDropMenu] = useHandleDrop('nav-bar-drop-items');
 const [currentDropMenuClass, handleDropMenu] = useHandleDrop('menu');
 
 
@@ -23,6 +24,8 @@ const [currentDropMenuClass, handleDropMenu] = useHandleDrop('menu');
     <div className="nav-bar-menu" onClick={handleDropMenu}>
 
       <img src={profileIcon} height='24px' width='24px' alt="profile" />
+      <h4 className="nav-bar-menu-username">Raiyan</h4>
+      <img src={dropIcon} className='nav-bar-menu-downarrow pink-icon' alt="drop" />
 
     </div>
 
@@ -31,6 +34,14 @@ const [currentDropMenuClass, handleDropMenu] = useHandleDrop('menu');
       <img src={foodpandatext} width='106.22px'   alt="pandatext" />
     </div>
 
+    <div className="nav-bar-location">
+    {locationNavList.map((item,index)=> <div key={index} className="nav-bar-location-content">
+
+    
+      <img src={item.icon} height='24px' width='24px' alt={item.label} /> <h4>{item.label}</h4>
+    
+    </div>  )}
+    </div>
     
     <div className="nav-bar-loginBtn">
       <Button title={`Log In`} btnClass={`btn btn-md btn-white btn-border`}/>
@@ -50,17 +61,23 @@ const [currentDropMenuClass, handleDropMenu] = useHandleDrop('menu');
       </button> 
 </div>
     
-   <div className={currentLangClass}>
-   <ul className="nav-bar-drop-items">
+ 
+   <ul className={currentLangClass}>
 
 <li className="nav-bar-drop-single-item"><a href=""><span>English</span> <img src={oksignIcon} alt="ok" /></a></li>
 <li className="nav-bar-drop-single-item"><a href=""><span>Bangla</span> <img src={oksignIcon} alt="ok" /></a></li>
 
 </ul>
     
-    </div> 
+   
     </div>
 
+
+   
+
+    <div className="nav-bar-cart">
+      <img src={favIcon} height='24px' width='24px'  alt="cart" />
+    </div>
 
     <div className="nav-bar-cart">
       <img src={bagIcon} height='24px' width='24px'  alt="cart" />
@@ -68,6 +85,17 @@ const [currentDropMenuClass, handleDropMenu] = useHandleDrop('menu');
 
 
   </section>
+
+
+    <section className="lower-nav-bar" style={{width:'100%'}}>
+
+     {lowerNavList.map((item,index)=> <button key={index} className="lower-nav-bar-content">
+   
+        <img src={item.icon} alt={item.label} /> <p>{item.label}</p>
+
+      </button>)
+}
+    </section>
 
 
   <Menu currentDropMenuClass={currentDropMenuClass}  handleDropMenu={handleDropMenu}/>

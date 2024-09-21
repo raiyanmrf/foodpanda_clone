@@ -9,13 +9,11 @@
         width: 100%;
         height: 100vh;
         transition: transform 0.5s ease;
-        //transform: translateX(0%);
+        z-index: 10;
+ 
 
 
-        &:active{
-              
-                // transform: translateX(100);
-        }
+     
 
 &-display{
         display: inline;
@@ -140,7 +138,7 @@
                 top:3.2em;
                 right: 5em;
                 padding: 1em 1em;
-                box-shadow: 0 -1px 12px 0px lightgray;
+                box-shadow: 0 -1px 12px 0px #f8ecec;
                 height: max-content;
             
 

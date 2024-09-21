@@ -20,6 +20,13 @@ import helpcenterIcon from "./help.svg";
 import logoutIcon from "./logout.svg";
 import oksignIcon from "./okSign.svg";
 import cancelIcon from "./cancel.svg";
+import locationmarkIcon from "./locationmark.svg";
+import deliveryIcon from "./bike.svg";
+import pickupIcon from "./pickup.svg";
+import pandamartIcon from "./pandamart.svg";
+import shopIcon from "./shop.svg";
+import asapIcon from "./clock.svg";
+import favIcon from "./fav.svg";
 
 export {
   foodpandatext,
@@ -44,4 +51,11 @@ export {
   logoutIcon,
   oksignIcon,
   cancelIcon,
+  locationmarkIcon,
+  deliveryIcon,
+  pandamartIcon,
+  pickupIcon,
+  shopIcon,
+  asapIcon,
+  favIcon,
 };

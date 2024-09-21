@@ -1,9 +1,10 @@
 .nav {
   box-shadow: 1px -5px 20px 0px #9f8a8a;
   display: flex;
+  flex-wrap: wrap;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   background: white;
   
   
@@ -12,14 +13,20 @@
   .nav-bar{
   
       display: flex;
+      flex-wrap: wrap;
       flex-grow: 1;
       gap: 1em;
       padding: .75em;
       position: relative;
-      z-index: 1;
+   
+
 
       &-menu{
         margin-right: auto;
+
+        &-downarrow,&-username{
+          display: none;
+        }
       }
   
   
@@ -28,23 +35,26 @@
         position: relative;
         display: flex;
         align-items: center;
+        gap: .2em;
         justify-content: center;
         width: 32px;
         height: 32px;
         cursor: pointer;
+        z-index: 2;
    
   
     
   
       &::after{
+        content: '';
         height: 100%;
         width: 100%;
         border-radius: 50%;
         position: absolute;
         top: 0;
         left: 0;
-        z-index: -1;
-        transition: 0.3s;
+ 
+        transition: 0.2s ease;
  
 
   
@@ -54,6 +64,8 @@
       &:hover::after {
         background-color: $gray4;
         transform: scale(1.5);
+        z-index: -1;
+      
       }
   
     }
@@ -68,6 +80,27 @@
   
     }
 
+
+    &-location{
+      order: 4;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+     &-content{
+       display: flex;
+       gap: .3em;
+      
+       padding:.5em;
+       font-size: .9em;
+       font-weight: 500;
+       border-radius: 9px;
+
+       &:hover{
+        background-color: #ddd;
+       }
+      }
+    }
+
     &-loginBtn,&-signupBtn,&-langBtn{
       display: none;
     }
@@ -75,24 +108,16 @@
     &-drop{
 
 
-      &-wrapper{
-        height: 100vh;
-        width: 100vw;
-        background-color: rgba(0, 0, 0, 0.162);
-        position: absolute;
-        top:3.6em;
-        left: 0;
-      }
-
+ 
       &-items{
         position: absolute;
-        top: -5px;
+        top: 54px;
         right: 4em;
         background: white;
         width: 170px;
         padding: 1em;
         border-radius: 9px;
-        box-shadow: 0 -1px 12px 0px lightgray;
+        box-shadow: 0 -1px 12px 0px #f2ecec;
       }
 
 
@@ -129,12 +154,63 @@
     .nav-bar{
       padding-inline: 4em;
 
-      &-menu{
-        display: none;
+    
+      
+      &-logo{
+        margin-inline: initial;
+        order: 1;
       }
+      
+      &-location{
+         margin-inline:auto;
+         order: 2;
+         width: max-content;
+      }
+      &-menu{
+        //display: none;
+        margin-inline: initial;
+        margin-right: 2em;
+        order: 3;
+        &-downarrow,&-username{
+          display: initial;
+        }
 
-      &-loginBtn,&-signupBtn,&-langBtn{
+        &::after{
+     
+          height: 1.5em;
+          width: 78px;
+          border-radius: 9px;
+        
+          top: 19%;
+          left: -71%;
+   
+   
+  
+    
+    
+        }
+    
+        &:hover::after {
+          background-color: #e2dddd;
+          transform: scale(1.5);
+          z-index: -1;
+        
+        }
+      }
+      
+
+      &-loginBtn,&-signupBtn {
+        display: none;
+    }
+      
+      &-langBtn{
         display: inline;
+        order:4;
+      }
+     
+      &-cart{
+   
+        order:5;
       }
 
    
@@ -142,6 +218,83 @@
         display: flex;
         padding-inline: .5em;
         gap: .5em;
+      }
+    }
+
+
+   
+  }
+
+
+
+
+
+  .lower-nav-bar{
+    display: flex;
+    padding-left: 1em;
+
+   &-content{
+    display: flex;
+    padding: 1em;
+    gap:1em .5em;
+    background: none;
+    border: none;
+    align-items: center;
+    font-size: .8em;
+    color: #656161;
+    font-family: 'Open Sans';
+    font-weight: 500;
+    border-radius: 2px;
+    position: relative;
+  
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 9px;
+      width: 0; /* Start with 0 width */
+      height: 4px;
+      background-color: black;
+      transition: width 0.3s ease; /* Smooth transition */
+    }
+    
+    &:hover::before{
+    
+      width: 50%; /* Change width on hover */
+   
+    }
+
+    &:focus::before{
+    
+      width: 100%; /* Change width on hover */
+   
+    }
+
+
+
+    &:hover{
+      background-color: #ddd;
+    }
+   
+    &:focus{
+     color: black;
+    
+    }
+   }
+  }
+
+
+  @media(min-width:960px){
+
+    .lower-nav-bar{
+      padding-inline: 4em;
+
+      &-content{
+
+        font-size: .9em;
       }
     }
   }
