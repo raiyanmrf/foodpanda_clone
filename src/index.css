@@ -1366,6 +1366,10 @@ footer .line {
   z-index: -1;
 }
 
+.cutout h4 {
+  color: deeppink;
+}
+
 .restaurant-profile {
   margin-top: 2em;
   padding-inline: 1em;
@@ -1496,6 +1500,7 @@ footer .line {
   padding: 1em;
 }
 .available-deals-cards {
+  padding-inline: 0.5em;
   gap: 1em;
   display: flex;
   align-items: center;

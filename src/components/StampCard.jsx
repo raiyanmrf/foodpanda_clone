@@ -12,6 +12,7 @@ const StampCard = ({item}) => {
      
 
     <p> {item.offer}</p>
+    <p> {item.tips}</p>
  
       
       </div>

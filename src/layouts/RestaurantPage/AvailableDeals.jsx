@@ -1,34 +1,43 @@
 import React from 'react'
-
-import CutoutCard from '../../components/CutoutCard'
-import StampCard from '../../components/StampCard'
+import { discountIcon, stampcardIcon, stampIllustrationIcon } from '../../../public/svg'
+import Card from '../../components/Card'
 
 
 const cardData = [
   {
     title: "25% OFF (YumPanda)",
     offer: "Min. order Tk 199. Discount capped at Tk 100",
-    type: "cutout"
+    tips: "Use in cart",
+    type: "cutout",
+    icon: discountIcon
   },
   {
     title: "25% OFF (YumPanda)",
     offer: "Min. order Tk 199. Discount capped at Tk 100",
-    type: "cutout"
+    tips: "Use in cart",
+    type: "cutout",
+    icon: discountIcon
   },
   {
     title: "25% OFF (YumPanda)",
     offer: "Min. order Tk 199. Discount capped at Tk 100",
-    type: "cutout"
+    tips: "Use in cart",
+    type: "cutout",
+    icon: discountIcon
   },
   {
     title: "25% OFF (YumPanda)",
     offer: "Min. order Tk 199. Discount capped at Tk 100",
-    type: "cutout"
+    tips: "Use in cart",
+    type: "cutout",
+    icon: discountIcon
   },
   {
-    title: "Stam Cards",
-    offer: "Earn Rewards",
-    type: "stamp"
+    title: "Stamp Cards",
+    tips: "Earn Rewards",
+    type: "stamp",
+    icon: stampcardIcon,
+    bigicon: stampIllustrationIcon
   },
 ]
 
@@ -45,10 +54,9 @@ const AvailableDeals = () => {
     { 
         cardData && 
         cardData.map((item,index)=>
-       item.type === 'cutout' ? 
-       <CutoutCard key={index} item={item} />:
-       <StampCard key={index} item={item}/>
-       
+
+       <Card key={index} item={item} />
+           
       )       
       }
     </div>

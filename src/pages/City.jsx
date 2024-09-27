@@ -18,7 +18,7 @@ const City = () => {
         <ExtraDetail title={paragraphs.orderFood[0]} paragraph={paragraphs.orderFood[1]}/>
       
 
-        <AppDownload/>
+       <AppDownload/>
         
     
     </>
