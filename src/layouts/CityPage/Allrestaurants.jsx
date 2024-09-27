@@ -1,4 +1,4 @@
-import data from '../../../../backend/model/dhaka.json'
+import data from '../../../public/data/dhaka.json'
 import { starIcon } from '../../../public/svg';
 import one from '../../../public/images/restaurants/1.jpg'
 import two from '../../../public/images/restaurants/2.jpg'
