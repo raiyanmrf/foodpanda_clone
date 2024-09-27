@@ -1,0 +1,12 @@
+.available-deals {
+  padding: 1em;
+
+  &-cards {
+    gap: 1em;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+}

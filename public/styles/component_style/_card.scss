@@ -1,0 +1,101 @@
+.card {
+  padding: 1em;
+  position: relative;
+  border: 0.5px solid #d3d0d0;
+  border-radius: 9px;
+  min-height: 104px;
+  min-width: 280px;
+  transition: transform 0.3s ease; /* Smooth transition for hover */
+
+  &::before,
+  .stamp::before {
+    @include after-element;
+    border-radius: 9px;
+    height: 104px;
+    width: 280px;
+    z-index: 0;
+  }
+
+  &:hover::before {
+    background-color: pink;
+    transform: scale(1.04);
+    z-index: -1;
+  }
+  &:hover {
+    border: none;
+    background-color: transparent;
+
+    .card-icon-left {
+      transform: translateX(-0.4em);
+      border: none;
+    }
+
+    .card-icon-right {
+      transform: translateX(0.4em);
+      border: none;
+    }
+    .card-icon-container {
+      transform: translateX(0.4em);
+      border: none;
+    }
+  }
+
+  &-offer {
+    display: flex;
+
+    h4 {
+      font-size: 0.88em;
+    }
+  }
+
+  &-details {
+    font-size: 0.75em;
+  }
+
+  &-icon-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+  }
+
+  &-icon {
+    &-left,
+    &-right {
+      position: absolute;
+      top: 60%;
+      background-color: white;
+      border-radius: 50%;
+      border-color: #d3d0d0;
+      transition: transform 0.3s ease; /* Smooth transition for hover */
+    }
+
+    &-left {
+      left: -0.57em;
+      border-right: 0.5px solid;
+    }
+    &-right {
+      right: -0.57em;
+      border-left: 0.5px solid;
+    }
+
+    &-stamp {
+      // position: absolute;
+
+      opacity: 0.5;
+    }
+  }
+}
+
+.stamp {
+  border: none;
+  background: #ffedc6;
+
+  &:hover::before {
+    background-color: #fee1a2;
+    transform: scale(1.04);
+    z-index: -1;
+  }
+}

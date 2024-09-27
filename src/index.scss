@@ -1,134 +1,115 @@
+@import "../public/styles/common/_all.scss";
+@import "../public/styles/component_style/all";
+@import "../public/styles/layouts/all";
 
-@import '../public/styles/common/_all.scss';
-@import '../public/styles/component_style/all';
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 @font-face {
-  font-family: 'Agrandir';
-  src: url('../public/fonts/Agrandir-Regular.otf') format('opentype');
+  font-family: "Agrandir";
+  src: url("../public/fonts/Agrandir-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'Open Sans',sans-serif;
-
+  font-family: "Open Sans", sans-serif;
 }
 
-main{
+.content {
   margin: 0 auto;
- 
 }
 
-button{
+main {
+  max-width: 1536px;
+}
+
+button {
   cursor: pointer;
 }
 
-.btn{
-    border-radius: 10px;
-    font-family: 'Open Sans';
-    position: relative;
+.btn {
+  border-radius: 10px;
+  font-family: "Open Sans";
+  position: relative;
+  transition: 0.3s;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
     transition: 0.3s;
-    z-index: 1;
+  }
 
+  &:hover::after {
+    transform: scale(1.1);
+    z-index: -1;
+  }
 
-    &::after{
-      content: '';
-      height: 100%;
-      width: 100%;
-      border-radius: inherit;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      transition: 0.3s;
+  &-md {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.57;
+    padding: 0.3em 1.2em;
+  }
 
+  &-lg {
+    font-size: $LabelLargeFontSize;
+    font-weight: $LabelLargeFontWeight;
+    line-height: $LabelLargeLineHeight;
+    padding: 0.65em 0.85em;
+  }
 
-    }
+  &-white {
+    color: $black3;
+    background-color: transparent;
+    border: none;
 
     &:hover::after {
-      transform: scale(1.1);
-      z-index: -1;
-
+      background-color: rgb(238, 235, 235);
     }
-  
+  }
 
-    &-md {
-    
-        font-size: 0.875rem;
-        font-weight: 600;
-        line-height: 1.57;
-        padding: 0.3em 1.2em;
-  
-    
+  &-pink {
+    background-color: $pink9;
+    border: none;
+    color: white;
 
+    &:hover::after {
+      background-color: #c21760;
     }
+  }
 
-    &-lg {
-        font-size: $LabelLargeFontSize;
-        font-weight: $LabelLargeFontWeight;
-        line-height: $LabelLargeLineHeight;
-        padding:.65em .85em;
-
+  &-border {
+    &::after {
+      border: 1px solid gray;
     }
+  }
 
-    &-white{
-        color: $black3;
-        background-color: transparent;
-        border: none;
-       
-
-        &:hover::after {
-          background-color: rgb(238, 235, 235);
-      
-        }
-
-       
+  &-moderate {
+    &:hover::after {
+      transform: none !important;
     }
-    
-    &-pink{
-        background-color: $pink9;
-        border: none;
-        color : white;
-
-        &:hover::after {
-          background-color:#c21760;
-        }
-        
-    }
-
-
-    &-border{
-      &::after{
-        border:1px solid gray;
-      }
-    }
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-.pink-icon{
-  filter: invert(30%) sepia(100%) saturate(1000%) hue-rotate(290deg) brightness(90%) contrast(85%);
+.pink-icon {
+  filter: invert(30%) sepia(100%) saturate(1000%) hue-rotate(290deg)
+    brightness(90%) contrast(85%);
   font-weight: bold;
-  
 }
 
 .charcoal-icon {
-  filter: brightness(0) saturate(100%) invert(19%) sepia(0%) saturate(0%) hue-rotate(197deg) brightness(95%) contrast(92%);
+  filter: brightness(0) saturate(100%) invert(19%) sepia(0%) saturate(0%)
+    hue-rotate(197deg) brightness(95%) contrast(92%);
 }
 
 .violet-icon {
-  filter: brightness(0) saturate(100%) invert(18%) sepia(86%) saturate(4671%) hue-rotate(272deg) brightness(87%) contrast(106%);
+  filter: brightness(0) saturate(100%) invert(18%) sepia(86%) saturate(4671%)
+    hue-rotate(272deg) brightness(87%) contrast(106%);
 }
-
-
-

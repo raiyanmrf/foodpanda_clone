@@ -1,0 +1,157 @@
+.restaurant-profile {
+  margin-top: 2em;
+  padding-inline: 1em;
+
+  border-bottom: 1px solid lightgray;
+  &-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-block: 2em;
+
+    gap: 1em;
+
+    button {
+      padding: 0.3em 0.5em !important;
+    }
+  }
+
+  &-offer {
+    flex-basis: 100%;
+  }
+  &-ratings {
+    margin-right: auto;
+
+    @media (min-width: 521px) {
+      margin-right: initial;
+    }
+  }
+
+  &-offer,
+  &-ratings,
+  .btn-flex,
+  &-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.4em;
+  }
+
+  &-avatar {
+    gap: 1em;
+    align-items: start;
+    img {
+      width: 90px;
+    }
+  }
+
+  &-ratings,
+  &-offer {
+    font-size: 0.69em;
+    font-weight: 500;
+    font-family: "Open Sans";
+  }
+
+  &-offer {
+    img {
+      width: 20px;
+    }
+
+    p:nth-of-type(1) {
+      color: deeppink;
+
+      span {
+        color: #333333;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  &-infoBtn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+}
+
+.dot-separator {
+  width: 3px;
+  height: 3px;
+  color: #333;
+  border-radius: 50%;
+}
+
+@media (min-width: 521px) and (max-width: 964px) {
+  .restaurant-profile {
+    &-avatar {
+      flex-basis: 100%;
+    }
+
+    &-offer {
+      position: absolute;
+      top: 9em;
+      left: 9.4em;
+    }
+  }
+}
+
+@media (min-width: 965px) and (max-width: 1259px) {
+  .restaurant-profile {
+    &-avatar {
+      flex-basis: 100%;
+      img {
+        width: 151px;
+      }
+      h3 {
+        font-size: 1.5em;
+      }
+    }
+
+    &-offer {
+      position: absolute;
+      top: 9em;
+      left: 11em;
+      font-size: 0.95em;
+    }
+  }
+}
+
+@media (min-width: 1260px) {
+  .restaurant-profile {
+    &-content {
+      align-items: end;
+      gap: 2em;
+      //   padding-block: 2em;
+    }
+
+    &-avatar {
+      img {
+        width: 151px;
+      }
+      h3 {
+        font-size: 2em;
+        position: absolute;
+        top: 0.99em;
+        left: 5.7em;
+
+        span {
+          font-size: 0.5em;
+        }
+      }
+    }
+
+    &-offer {
+      position: absolute;
+      top: 8em;
+      left: 12.2em;
+      font-size: 0.95em;
+    }
+  }
+}
+
+.title-cuisine {
+  font-size: 0.65em;
+  display: block;
+  font-weight: 400;
+  color: #b2b1b1;
+}

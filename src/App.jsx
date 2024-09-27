@@ -5,6 +5,9 @@ import heroImage from '../public/images/refresh-hero-home-alt.webp'
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Menu from "./components/Menu";
+import SignIn from "./components/SignIn";
+import City from "./pages/City";
+import RestaurantPage from "./pages/RestaurantPage";
 
 
 
@@ -12,25 +15,27 @@ function App() {
 
 
   return (
-    <>
+    <main>
 
  <Navbar/>
 
 
 
 
-<main className="content" >
+<section className="content" >
+
+{/* <Home/> */}
+{/* <City/> */}
+
+<RestaurantPage/>
 
 
-<Home/>
-
-
-</main>
+</section>
 
 
 <Footer/>
 
-</>
+</main>
   )
 }
 

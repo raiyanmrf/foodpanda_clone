@@ -1,0 +1,138 @@
+.restaurant {
+    width: 100vw;
+    margin-top: 1em;
+    padding: 0 1em;
+    
+    margin-bottom: 3em;
+
+    &-title{
+      margin:0 auto;
+      font-size: .85em;
+      margin-bottom: 1em;
+    
+
+      @media (min-width: 964px) {
+        padding-inline:min(5%,5em);
+        font-size: 1em;
+      }
+      
+    }
+  
+    &-grid {
+     display: grid;
+     gap:20px;
+     place-items: center;
+     
+     
+  
+      &-items {
+        position: relative;
+        overflow: hidden;
+        border-radius: 9px;
+        border: 1px solid rgb(176, 171, 171);
+        max-width: 596px;
+    
+
+        h4{
+          font-size: .85em;
+        }
+
+        img {
+          width: 100%;
+          border-radius: 9px;
+          transition: transform .4s ease;
+          max-width: 100%;
+
+
+         &:hover{
+
+          transform: scale(1.05);
+         } 
+       
+        }
+
+
+        &-caption{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            background-color: white;
+            padding:.5em 1em;
+          
+
+            p{
+              font-size: .75em;
+              font-weight: 400;
+            }
+
+            &-rating{
+              display: flex;
+              gap: .1em;
+              position: absolute;
+              top: 1.2em;
+              right: .5em;
+
+              img{
+                width: 14px;
+              }
+
+             
+              
+            }
+        }
+      }
+    }
+  }
+  
+  // Media queries
+  @media (max-width:599px) {
+    .restaurant-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  @media (min-width: 600px) and (max-width: 963px) {
+
+
+    .restaurant{
+      margin-top: 2em;
+
+      &-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+
+        &-items-caption-rating{
+               p{
+                 font-size: .55em;
+               }
+             
+           
+         }
+    }}
+
+
+
+  }
+  
+  @media (min-width: 964px) {
+    .restaurant{
+      &-grid {
+      grid-template-columns: repeat(3,1fr);
+
+      padding:1em min(5%,5em);
+    
+      place-content: center;
+
+      &-items-caption--rating{
+            p{
+              font-size: .65em;
+            }
+          
+        
+      }
+   
+    }}
+  }
+  
+ 
+  

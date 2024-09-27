@@ -1,0 +1,40 @@
+.breadcrumbs {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+.breadcrumbs-links {
+  display: flex;
+  gap: 0.5em;
+  font-size: 0.825em;
+
+  p {
+    font-family: "Open Sans";
+    font-weight: 400;
+  }
+}
+
+.breadcrumbs-link {
+  background: none;
+  border-bottom: 1px solid black;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 9px;
+    width: 0; /* Start with 0 width */
+    height: 2px;
+    background-color: black;
+    transition: width 0.2s ease; /* Smooth transition */
+  }
+
+  &:hover::before {
+    width: 100%; /* Change width on hover */
+  }
+}

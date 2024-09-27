@@ -28,7 +28,9 @@ li{
 
 
 
+
 @mixin after-element{
+        content: '';
         height: 100%;
         width: 100%;
         border-radius: 50%;
@@ -41,12 +43,22 @@ li{
 
 
 
-.display-none{
-    display: none;
+
+@mixin cancel-circle{
+
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
 }
 
 
 
 
 
-$heavyBoxShadow: 0px 236px 0px 618px #44444482 !important;

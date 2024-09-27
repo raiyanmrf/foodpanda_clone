@@ -19,27 +19,18 @@
         display: inline;
 }
          &-cancel{
-                position: absolute;
-                right: 1em;
-                top: 1em;
-                height: 32px;
-                width: 32px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 10;
-                cursor: pointer;
+                @include cancel-circle;
 
                 
       &::after{
-        content: '';
+
       @include after-element;
   
   
       }
   
       &:hover::after {
-        background-color: $gray4;
+        background-color: #e2dddd;
         transform: scale(1.2);
         z-index: -2;
       

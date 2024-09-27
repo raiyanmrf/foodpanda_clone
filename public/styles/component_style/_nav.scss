@@ -32,15 +32,15 @@
   
     &-menu,&-cart{
   
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: .2em;
-        justify-content: center;
-        width: 32px;
-        height: 32px;
-        cursor: pointer;
-        z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      position: relative;
+      cursor: pointer;
+      gap: .2em;
+      z-index: 2;
    
   
     
@@ -62,8 +62,8 @@
       }
   
       &:hover::after {
-        background-color: $gray4;
-        transform: scale(1.5);
+        background-color: #e2dddd;
+        transform: scale(1.3);
         z-index: -1;
       
       }
@@ -157,7 +157,7 @@
     
       
       &-logo{
-        margin-inline: initial;
+        margin-inline-end: auto;
         order: 1;
       }
       

@@ -1,9 +1,11 @@
 
-import useHandleDrop from "../../hooks/useHandleDrop"
+
+import useIsActive from "../../hooks/useIsActive"
 import { locationNavList, lowerNavList } from "../../public/data/navData"
 import { bagIcon, dropIcon, favIcon, foodpandatext, globeIcon, locationmarkIcon, oksignIcon, pandaIcon, profileIcon } from "../../public/svg"
 import Button from "./Button"
 import Menu from "./Menu"
+import SignIn from "./SignIn"
 
 
 //
@@ -11,8 +13,10 @@ import Menu from "./Menu"
 
 const Navbar = () => {
 
-const [currentLangClass, handleLangDropMenu] = useHandleDrop('nav-bar-drop-items');
-const [currentDropMenuClass, handleDropMenu] = useHandleDrop('menu');
+const [isLangActive, handleIsLangActive] = useIsActive();
+const [isMenuActive, handleIsMenuActive] = useIsActive();
+const [isSignActive, handleIsSignActive] = useIsActive();
+
 
 
 
@@ -21,7 +25,7 @@ const [currentDropMenuClass, handleDropMenu] = useHandleDrop('menu');
     <nav className="nav">
       <section className="nav-bar">
     
-    <div className="nav-bar-menu" onClick={handleDropMenu}>
+    <div className="nav-bar-menu" onClick={handleIsSignActive}>
 
       <img src={profileIcon} height='24px' width='24px' alt="profile" />
       <h4 className="nav-bar-menu-username">Raiyan</h4>
@@ -54,20 +58,20 @@ const [currentDropMenuClass, handleDropMenu] = useHandleDrop('menu');
     <div className="nav-bar-langBtn nav-bar-drop">
 
 <div className="nav-bar-drop-content">
-<button className="btn btn-md btn-white " onClick={handleLangDropMenu}>
+<button className="btn btn-md btn-white " onClick={handleIsLangActive}>
      <img src={globeIcon} alt="globe" />
      <p>EN</p>
      <img src={dropIcon} className="pink-icon" alt="drop" />   
       </button> 
 </div>
     
- 
-   <ul className={currentLangClass}>
+ { isLangActive &&
+   <ul className='nav-bar-drop-items'>
 
 <li className="nav-bar-drop-single-item"><a href=""><span>English</span> <img src={oksignIcon} alt="ok" /></a></li>
 <li className="nav-bar-drop-single-item"><a href=""><span>Bangla</span> <img src={oksignIcon} alt="ok" /></a></li>
 
-</ul>
+</ul>}
     
    
     </div>
@@ -87,7 +91,7 @@ const [currentDropMenuClass, handleDropMenu] = useHandleDrop('menu');
   </section>
 
 
-    <section className="lower-nav-bar" style={{width:'100%'}}>
+    {/* <section className="lower-nav-bar" style={{width:'100%'}}>
 
      {lowerNavList.map((item,index)=> <button key={index} className="lower-nav-bar-content">
    
@@ -95,10 +99,12 @@ const [currentDropMenuClass, handleDropMenu] = useHandleDrop('menu');
 
       </button>)
 }
-    </section>
+    </section> */}
 
 
-  <Menu currentDropMenuClass={currentDropMenuClass}  handleDropMenu={handleDropMenu}/>
+{  isMenuActive &&  <Menu  handleIsMenuActive={handleIsMenuActive}/> }
+{  isSignActive &&  <SignIn  handleIsSignActive={handleIsSignActive}/> }
+
 
     </nav>
     

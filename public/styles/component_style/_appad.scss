@@ -139,4 +139,44 @@
 
 
 
+
+
+
+
+}
+
+
+
+
+
+
+.app-download{
+
+
+  background-color: #efeded;
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-block: 5em;
+
+
+
+        &-invisible{
+           display: none; 
+
+           &:first-child{
+            position: relative;
+            top: -1.1em;
+           }
+
+           @media(min-width: 768px)
+           {
+            display: inline-block;
+           }
+        }
+   
+    
 }

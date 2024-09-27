@@ -1,5 +1,6 @@
 
 import { paragraphs } from '../../public/data/paragraphs';
+import ExtraDetail from '../components/ExtraDetail';
 import AppAd from '../layouts/LandingPage/AppAd';
 import Business from '../layouts/LandingPage/Business';
 import Cities from '../layouts/LandingPage/Cities';
@@ -23,15 +24,15 @@ const Home = () => {
   <Business/>
 
 
-    <section className='extra-detail'>
-
-
-    <h3>{paragraphs.orderFood[0]}</h3>
-    <p>{paragraphs.orderFood[1]}</p>
+  <ExtraDetail 
+    title={paragraphs.orderFood[0]}
+    paragraph={paragraphs.orderFood[1]}
+  />
+ 
 
       
        
-    </section>
+ 
 </>
   )
 }

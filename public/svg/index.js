@@ -27,6 +27,17 @@ import pandamartIcon from "./pandamart.svg";
 import shopIcon from "./shop.svg";
 import asapIcon from "./clock.svg";
 import favIcon from "./fav.svg";
+import envelopeIcon from "./envelope.svg";
+import backwardIcon from "./backward.svg";
+import starIcon from "./star.svg";
+import forwardIcon from "./forward.svg";
+import freeDeliveryIcon from "./bicycle.svg";
+import min_orderIcon from "./min_order.svg";
+import cutoutLeftIcon from "./cutoutLeft.svg";
+import cutoutRightIcon from "./cutoutRight.svg";
+import discountIcon from "./discount.svg";
+import stampIllustrationIcon from "./stamp.illustration.svg";
+import stampcardIcon from "./stamp.card.svg";
 
 export {
   foodpandatext,
@@ -53,9 +64,20 @@ export {
   cancelIcon,
   locationmarkIcon,
   deliveryIcon,
+  freeDeliveryIcon,
   pandamartIcon,
   pickupIcon,
   shopIcon,
   asapIcon,
   favIcon,
+  envelopeIcon,
+  forwardIcon,
+  backwardIcon,
+  starIcon,
+  min_orderIcon,
+  cutoutLeftIcon,
+  cutoutRightIcon,
+  discountIcon,
+  stampcardIcon,
+  stampIllustrationIcon,
 };
