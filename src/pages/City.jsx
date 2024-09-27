@@ -1,7 +1,7 @@
 import { paragraphs } from "../../public/data/paragraphs"
 import ExtraDetail from "../components/ExtraDetail"
 import Allrestaurants from "../layouts/CityPage/Allrestaurants"
-import AppDownload from "../layouts/CityPage/appDownload"
+import AppDownload from "../layouts/CityPage/AppDownload"
 import Banner from "../layouts/CityPage/Banner"
 
 
