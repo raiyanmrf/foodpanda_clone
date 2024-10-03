@@ -1,0 +1,69 @@
+.foodMenu {
+  &-container {
+    p {
+      font-size: 0.9em;
+      font-weight: 400;
+      color: gray;
+      margin-top: 0.5em;
+    }
+  }
+
+  &-title {
+    margin-block: 1em;
+    h3 {
+      text-transform: capitalize;
+      color: #333333;
+    }
+  }
+
+  &-content {
+    display: grid;
+    grid-gap: 20px; /* Ensure grid gap is applied */
+  }
+
+  &-card {
+    display: grid;
+    grid-template-columns: auto 150px;
+
+    gap: 10px;
+    padding: 0.7em;
+    border-radius: 10px;
+    border: 0.001em solid lightgrey;
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: rgb(250, 219, 224);
+    }
+
+    &-info {
+    }
+
+    &-image {
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      button {
+        position: absolute;
+        bottom: 0.55em;
+        right: 0.21em;
+        border-radius: 50%;
+        font-size: 1.5em;
+        padding: 0.2em;
+        display: flex;
+        align-items: center;
+        color: #908d8d;
+        border-color: #908d8d;
+        font-weight: lighter;
+      }
+    }
+  }
+
+  &-sidebar {
+  }
+}

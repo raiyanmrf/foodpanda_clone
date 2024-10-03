@@ -3,16 +3,17 @@
   position: relative;
   border: 0.5px solid #d3d0d0;
   border-radius: 9px;
-  min-height: 104px;
+  height: 104px;
   min-width: 280px;
+  width: 280px;
   transition: transform 0.3s ease; /* Smooth transition for hover */
 
   &::before,
   .stamp::before {
     @include after-element;
     border-radius: 9px;
-    height: 104px;
-    width: 280px;
+    height: 100%;
+    width: 100%;
     z-index: 0;
   }
 
@@ -34,8 +35,10 @@
       transform: translateX(0.4em);
       border: none;
     }
-    .card-icon-container {
-      transform: translateX(0.4em);
+    .stamp-icon-container,
+    .pro-icon-container,
+    .discount-icon-container {
+      transform: translateX(0.3em);
       border: none;
     }
   }
@@ -45,20 +48,12 @@
 
     h4 {
       font-size: 0.88em;
+      margin-left: 0.5em;
     }
   }
 
   &-details {
     font-size: 0.75em;
-  }
-
-  &-icon-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 50px;
-    height: 50px;
-    overflow: hidden;
   }
 
   &-icon {
@@ -75,15 +70,15 @@
     &-left {
       left: -0.57em;
       border-right: 0.5px solid;
+      border-left: none;
     }
     &-right {
       right: -0.57em;
       border-left: 0.5px solid;
+      border-right: none;
     }
 
-    &-stamp {
-      // position: absolute;
-
+    &-pro {
       opacity: 0.5;
     }
   }
@@ -92,6 +87,19 @@
 .stamp {
   border: none;
   background: #ffedc6;
+
+  &-icon {
+    opacity: 0.5;
+  }
+
+  &-icon-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+  }
 
   &:hover::before {
     background-color: #fee1a2;
@@ -103,5 +111,79 @@
 .cutout {
   h4 {
     color: deeppink;
+  }
+}
+
+.pro {
+  border: none;
+  background: #f9f7f7;
+
+  &-header-icon {
+    position: relative;
+    top: 0.4em;
+    background-color: #5c1d94;
+    color: white;
+    font-size: 0.67em;
+    font-weight: 500;
+    display: flex;
+    gap: 0.2em;
+    border-radius: 5px;
+    height: 17px;
+    padding: 0em 0.4em;
+
+    img {
+      height: 14px;
+    }
+  }
+
+  &:hover::before {
+    background-color: #e7e5e5;
+    transform: scale(1.04);
+    z-index: -1;
+  }
+
+  &-icon {
+    opacity: 0.2;
+  }
+
+  &-icon-container {
+    position: absolute;
+    bottom: -0.5em;
+    right: 0;
+    width: 60px;
+    height: 50px;
+    overflow: hidden;
+  }
+
+  h4 {
+    color: #333;
+  }
+}
+
+.discount {
+  border: none;
+  background: #ffecef;
+
+  h4 {
+    color: deeppink;
+  }
+
+  &-icon {
+    opacity: 0.5;
+  }
+
+  &-icon-container {
+    position: absolute;
+    bottom: -0.2em;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+  }
+
+  &:hover::before {
+    background-color: #fedfe3;
+    transform: scale(1.04);
+    z-index: -1;
   }
 }

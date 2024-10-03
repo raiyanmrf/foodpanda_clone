@@ -1,13 +1,28 @@
 .available-deals {
-  padding: 1em;
+  padding: 1em 1em;
+  padding-bottom: 2.5em;
+  position: relative;
+  margin-bottom: 1.2em;
+
+  h3 {
+    font-size: 0.95em;
+    padding-inline: 0.5em;
+  }
 
   &-cards {
     padding-inline: 0.5em;
-    gap: 1em;
+
     display: flex;
     align-items: center;
     overflow-x: scroll;
     overflow-y: hidden;
     scrollbar-width: none;
+    margin-top: 2em;
+  }
+
+  &-content {
+    gap: 2em;
+    display: flex;
+    align-items: center;
   }
 }

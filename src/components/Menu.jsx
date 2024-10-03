@@ -1,6 +1,7 @@
-import useIsActive from "../../hooks/useIsActive"
+
 import { menuList } from '../../public/data/menuData';
 import { cancelIcon, dropIcon, oksignIcon } from '../../public/svg';
+import useIsActive from '../hooks/useIsActive';
 
 const Menu = ({ handleIsMenuActive }) => {
   const [isLangActive, handleIsLangActive] = useIsActive();

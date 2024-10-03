@@ -1,8 +1,7 @@
 
-
-import useIsActive from "../../hooks/useIsActive"
 import { locationNavList, lowerNavList } from "../../public/data/navData"
 import { bagIcon, dropIcon, favIcon, foodpandatext, globeIcon, locationmarkIcon, oksignIcon, pandaIcon, profileIcon } from "../../public/svg"
+import useIsActive from "../hooks/useIsActive"
 import Button from "./Button"
 import Menu from "./Menu"
 import SignIn from "./SignIn"

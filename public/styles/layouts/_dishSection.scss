@@ -1,0 +1,128 @@
+.dish {
+  margin-top: 4em;
+  padding: 1em;
+  position: relative;
+  margin-bottom: 1.2em;
+
+  &-navigation {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    gap: 1em;
+    position: sticky;
+    top: 30%;
+    background-color: white;
+    box-shadow: 9px 17px 20px rgb(237, 236, 236);
+    z-index: 2;
+
+    & > * {
+      cursor: pointer;
+    }
+  }
+
+  &-searchbar {
+    flex-shrink: 0;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    padding: 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-input {
+      display: none;
+    }
+
+    @media (min-width: 960px) {
+      box-shadow: none;
+      border: none;
+      background-color: white;
+      border-radius: 0%;
+      height: 100%;
+
+      img {
+        position: absolute;
+        left: 0.5em;
+
+        max-width: 24px !important;
+      }
+
+      &-input {
+        display: block;
+        border-radius: 15px;
+        border: none;
+        background-color: #eeecec;
+        padding: 0.5em 2em;
+        font-size: 0.95em;
+        width: 200px;
+      }
+    }
+  }
+
+  &-navlinks-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  &-navlinks {
+    display: flex;
+    padding: 0 0.5em;
+
+    > * + * {
+      margin-left: 1em;
+    }
+
+    li {
+      white-space: nowrap;
+      font-size: 0.74em;
+      font-weight: 500;
+      color: #837b7b;
+      height: 54px;
+      padding: 0 0.5em;
+
+      @extend .breadcrumbs-link;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      s &:hover::before {
+        width: 60%; /* Change width on hover */
+      }
+
+      border-bottom: none;
+      &:hover,
+      &:focus {
+        background-color: #837b7b21;
+      }
+    }
+  }
+
+  &-prev-button {
+    @extend .prev-button;
+    min-width: 32px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    top: 0;
+    flex-shrink: 0;
+
+    &:after {
+      min-width: 32px;
+    }
+  }
+  &-next-button {
+    @extend .next-button;
+    position: relative;
+    background-color: white;
+    border-radius: 50%;
+    top: 0;
+    flex-shrink: 0;
+  }
+
+  &-searchbar,
+  &-prev-button,
+  &-next-button {
+    box-shadow: 0 0 5px lightgrey;
+  }
+}

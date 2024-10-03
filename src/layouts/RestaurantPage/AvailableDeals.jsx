@@ -1,69 +1,49 @@
-import React from 'react'
-import { discountIcon, stampcardIcon, stampIllustrationIcon } from '../../../public/svg'
-import Card from '../../components/Card'
+import { backwardIcon, forwardIcon } from "../../../public/svg";
 
-
-const cardData = [
-  {
-    title: "25% OFF (YumPanda)",
-    offer: "Min. order Tk 199. Discount capped at Tk 100",
-    tips: "Use in cart",
-    type: "cutout",
-    icon: discountIcon
-  },
-  {
-    title: "25% OFF (YumPanda)",
-    offer: "Min. order Tk 199. Discount capped at Tk 100",
-    tips: "Use in cart",
-    type: "cutout",
-    icon: discountIcon
-  },
-  {
-    title: "25% OFF (YumPanda)",
-    offer: "Min. order Tk 199. Discount capped at Tk 100",
-    tips: "Use in cart",
-    type: "cutout",
-    icon: discountIcon
-  },
-  {
-    title: "25% OFF (YumPanda)",
-    offer: "Min. order Tk 199. Discount capped at Tk 100",
-    tips: "Use in cart",
-    type: "cutout",
-    icon: discountIcon
-  },
-  {
-    title: "Stamp Cards",
-    tips: "Earn Rewards",
-    type: "stamp",
-    icon: stampcardIcon,
-    bigicon: stampIllustrationIcon
-  },
-]
-
+import useSlideRef from "../../hooks/useSlideRef";
+import { cardData } from "../../../public/data/cardData";
+import Cards from "../../components/Cards";
+import useDetectMouse from "../../hooks/useDetectMouse";
+import useCheckOverflow from "../../hooks/useCheckOverflow";
 
 const AvailableDeals = () => {
+  const [isMouse] = useDetectMouse();
+  const [isOverFlowed, cardContainerRef, cardContentRef] = useCheckOverflow();
+  const [cardRefs, handleCardToggleNext, handleCardTogglePrev, index] =
+    useSlideRef(cardData.length);
   return (
-    <section className='available-deals'>
-      
-
+    <section className="available-deals">
       <h3>Available Deals</h3>
 
-    
-    <div className="available-deals-cards">
-    { 
-        cardData && 
-        cardData.map((item,index)=>
+      <div ref={cardContainerRef} className="available-deals-cards">
+        <div ref={cardContentRef} className="available-deals-content">
+          {cardData &&
+            cardData.map((item, index) => (
+              <Cards
+                ref={(el) => {
+                  cardRefs.current[index] = el;
+                }}
+                key={index}
+                item={item}
+              />
+            ))}
+        </div>
+      </div>
 
-       <Card key={index} item={item} />
-           
-      )       
-      }
-    </div>
-    
-      
-      </section>
-  )
-}
+      {isMouse && isOverFlowed && (
+        <>
+          {index > 0 && (
+            <div className="prev-button" onClick={handleCardTogglePrev}>
+              <img src={backwardIcon} alt="<" />
+            </div>
+          )}
+          <div className="next-button" onClick={handleCardToggleNext}>
+            <img height={`32px`} width={`32px`} src={forwardIcon} alt=">" />
+          </div>
+        </>
+      )}
+    </section>
+  );
+};
 
-export default AvailableDeals
+export default AvailableDeals;

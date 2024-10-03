@@ -2,7 +2,6 @@ import data from '../../../public/data/dhaka.json'
 import { starIcon } from '../../../public/svg';
 import one from '../../../public/images/restaurants/1.jpg'
 import two from '../../../public/images/restaurants/2.jpg'
-import three from '../../../public/images/restaurants/3.jpg'
 import four from '../../../public/images/restaurants/4.jpg'
 import five from '../../../public/images/restaurants/5.jpg'
 import six from '../../../public/images/restaurants/6.jpg'

@@ -1,9 +1,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { backwardIcon, cancelIcon, dropIcon, envelopeIcon } from "../../public/svg";
-import useIsActive from "../../hooks/useIsActive";
 import WelcomeLogIn from "./WelcomeLogIn";
-import useToogleComponent from "../../hooks/useToggleComponent";
+import useIsActive from "../hooks/useIsActive";
+
 
 
 

@@ -1,14 +1,12 @@
 .signin {
-
   position: fixed;
-    width: 100vw;
-    height: 100svh;
-    top:0;
-    z-index: 20;
-    background-color: #33333343;
+  width: 100vw;
+  height: 100svh;
+  top: 0;
+  z-index: 20;
+  background-color: #33333343;
 
-
-    &-container{    
+  &-container {
     background: white;
     top: initial;
     height: 78svh;
@@ -18,269 +16,211 @@
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
     box-shadow: 0px -30px 600px rgba(0, 0, 0, 0.249);
+  }
+
+  &-cancel {
+    @include circular-border-icon;
+    right: 1em;
+    top: 1em;
+
+    &::after {
+      @include after-element;
+      border: 1px solid gray;
+    }
+
+    &:hover::after {
+      transform: scale(1.2);
+    }
+  }
+
+  &-welcome {
+    color: #333333;
+
+    p {
+      font-size: 0.9em;
+      font-weight: 450;
+    }
+
+    > * + * {
+      margin-top: 0.75em;
+    }
+  }
+
+  &-buttons {
+    margin-block-start: 2em;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * + * {
+      margin-block-start: 1em;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    p {
+      text-align: center;
+      width: 100%;
+      font-size: 0.75em;
+      font-weight: 400;
+    }
+  }
+
+  &-fb,
+  &-google,
+  &-apple {
+    font-size: 0.857em;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    font-family: "Open Sans";
+    padding: 0.75em;
+  }
+
+  &-fb {
+    background: #1877f2;
+    color: white;
+    background-image: url(https://micro-assets.foodora.com/2c23276d7d8b7c71e9906642f00902d6.svg);
+
+    &:hover {
+      background-color: #80ade8;
+    }
+  }
+
+  &-google {
+    background: white;
+    border: 1px solid;
+  }
+
+  &-apple {
+    background: black;
+    color: white;
+    background-image: url(https://micro-assets.foodora.com/7f655b37a7f075939cccb8080358cfae.svg);
+  }
+
+  &-apple,
+  &-fb {
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 0.5em;
+  }
+
+  &-terms {
+    font-weight: 550;
+    color: #676161;
+
+    span {
+      color: #ff2b85;
+    }
+  }
 }
 
+@media (min-width: 525px) {
+  .signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-
-
-
-
-
-
-
-
-&-cancel{
-  @include cancel-circle;
-  
-
-    
-&::after{
-
-@include after-element;
-border: 1px solid gray;
-
-
+    &-container {
+      position: relative;
+      width: 384px;
+      height: max-content;
+      border-radius: 9px;
+    }
+  }
 }
-
-&:hover::after {
-transform: scale(1.2);
-
-}
-
-}
-
-    &-welcome{
-        color: #333333;
-       
-        p{
-            font-size: .9em;         
-            font-weight: 450;
-        }
-
-
-        >*+*{
-            margin-top: .75em;
-        }
-    }
-
-    &-buttons {
-        margin-block-start: 2em;
-       position: relative;
-        display: flex;
-        flex-wrap: wrap;
-
-        &>*+* {
-            margin-block-start: 1em;
-        }
-        
-
-        button {
-            width: 100%;
-      
-        }
-
-        p {
-            text-align: center;
-            width: 100%;
-            font-size: 0.75em;
-            font-weight: 400;
-        }
-    }
-
-
-    &-fb,&-google,&-apple {
-        font-size: .857em;
-        font-weight: 600;
-        border: none;
-        border-radius: 5px;
-        font-family: 'Open Sans';
-        padding:.75em;
-    }
-
-    &-fb {
-        background: #1877f2;
-        color: white;
-        background-image: url(https://micro-assets.foodora.com/2c23276d7d8b7c71e9906642f00902d6.svg);
-   
-        &:hover{
-            background-color: #80ade8;
-        }
-    }
-    
-    &-google {
-        background: white;
-        border: 1px solid;
-    }
-    
-    &-apple {
-        background: black;
-        color: white;
-        background-image: url(https://micro-assets.foodora.com/7f655b37a7f075939cccb8080358cfae.svg);
-        
-    }
-
-    &-apple,&-fb{
-        background-repeat: no-repeat;
-        background-position-y: center;
-        background-position-x: .5em;
-    }
-
-    &-terms{
-        
-        font-weight: 550;
-        color: #676161;
-      
-
-        span{
-            color: #ff2b85;
-        }
-    }
-    
-}
-
-
-
-
-@media(min-width:525px){
-
-    .signin{
-        display: flex;     
-        justify-content: center;
-        align-items: center;
-    
-    &-container{
-        position: relative;
-        width: 384px;
-        height: max-content;
-        border-radius: 9px;
-       
-    }
-}
-}
-
-
-
-
-
-
 
 //whats your email tab and email verification
 
 .email-placeholder {
-    position: absolute;
-    bottom: 4.3em;
-    left: 1em;
-    background: white;
-    transition: .1s;
-    font-size: 1em;
-  
-  }
-  
+  position: absolute;
+  bottom: 4.3em;
+  left: 1em;
+  background: white;
+  transition: 0.1s;
+  font-size: 1em;
+}
 
-  .signin{
-
-
-    &-backward{
-
-        margin-bottom: 2em;
-        position: relative;
-        top: -.75em;
-        width: 32px;
-        height: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-
-        &::after{
-            @include after-element
-        }
-
-        &:hover::after {
-            background-color: #e2dddd;
-            transform: scale(1.3);
-            z-index: -1;
-          
-          }
-    }
-
-    &-buttons{
-
-        input{
-            border: 1px solid gray;
-            border-radius: 5px;
-            padding: .6em;
-            outline: none;
-            padding-inline: 1em;
-            font-size: 1em;
-            font-weight:lighter ;
-            font-family: "Open Sans";
-            width: 100%;
-            cursor: pointer;
-
-
-
-            &:focus + .placeholder,:not(:placeholder-shown) + .email-placeholder,&:hover + .email-placeholder{
-              
-
-                font-size: .65em;
-                bottom:9.1em;
-                left: 1em;
-           
-                background-color: rgb(255, 252, 252);
-                font-weight: 500;
-              }
-        }
-    }
-  }
-
-
-
-
-
-
-  .dot-container{
-
+.signin {
+  &-backward {
+    margin-bottom: 2em;
+    position: relative;
+    top: -0.75em;
+    width: 32px;
+    height: 32px;
     display: flex;
-    gap: 0.3em;
     justify-content: center;
     align-items: center;
-    padding: .5em;
 
- 
-
-  }
-
-  .dot{
-
-    width: 6px;
-    height: 6px;
-    border-radius: full;
-    background-color: #eb8999; /* Pink dot color */
-    border-radius: 50%; /* Circle shape */
-    animation: bounce 0.4s infinite alternate ease;
-   
-
-
-    &:nth-child(2){
-        animation-delay: 0.2s;
+    &::after {
+      @include after-element;
     }
-    &:nth-child(3){
-        animation-delay: 0.4s;
+
+    &:hover::after {
+      background-color: #e2dddd;
+      transform: scale(1.3);
+      z-index: -1;
     }
   }
 
+  &-buttons {
+    input {
+      border: 1px solid gray;
+      border-radius: 5px;
+      padding: 0.6em;
+      outline: none;
+      padding-inline: 1em;
+      font-size: 1em;
+      font-weight: lighter;
+      font-family: "Open Sans";
+      width: 100%;
+      cursor: pointer;
 
+      &:focus + .email-placeholder,
+      &:not(:placeholder-shown) + .email-placeholder {
+        font-size: 0.65em;
+        bottom: 9.1em;
+        left: 1em;
 
-  @keyframes bounce {
-    0%{
-        transform: translateY(0);
+        background-color: rgb(255, 252, 252);
+        font-weight: 500;
+      }
     }
-    // 50%{
-    //     transform: translateY(-5px);
-    // }
-    100%{
-        transform: translateY(-7px);
-    }
-
   }
+}
+
+.dot-container {
+  display: flex;
+  gap: 0.3em;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: full;
+  background-color: #eb8999;
+  border-radius: 50%;
+  animation: bounce 0.4s infinite alternate ease;
+
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-7px);
+  }
+}

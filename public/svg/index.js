@@ -36,8 +36,12 @@ import min_orderIcon from "./min_order.svg";
 import cutoutLeftIcon from "./cutoutLeft.svg";
 import cutoutRightIcon from "./cutoutRight.svg";
 import discountIcon from "./discount.svg";
-import stampIllustrationIcon from "./stamp.illustration.svg";
+import discountIllustrationIcon from "./discount.illustration.svg";
 import stampcardIcon from "./stamp.card.svg";
+import stampIllustrationIcon from "./stamp.illustration.svg";
+import proCardIcon from "./crown.white.svg";
+import proIllustrationIcon from "./pro.illustration.svg";
+import searchIcon from "./search.svg";
 
 export {
   foodpandatext,
@@ -78,6 +82,10 @@ export {
   cutoutLeftIcon,
   cutoutRightIcon,
   discountIcon,
+  discountIllustrationIcon,
   stampcardIcon,
   stampIllustrationIcon,
+  proCardIcon,
+  proIllustrationIcon,
+  searchIcon,
 };

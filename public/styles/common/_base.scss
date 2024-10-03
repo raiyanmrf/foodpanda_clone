@@ -1,64 +1,68 @@
-
-
-
-*,*::after,*::before{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
 
 body {
-
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
 
-
-
-
-
-
-@mixin after-element{
-        content: '';
-        height: 100%;
-        width: 100%;
-        border-radius: 50%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: 0.3s;
-    }
-
-
-
-
-@mixin cancel-circle{
-
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    height: 32px;
-    width: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 10;
+@mixin after-element {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s;
 }
 
+@mixin circular-border-icon {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 0;
+}
 
+.prev-button {
+  bottom: -1.1em;
+  left: 0.5em;
+}
+.next-button {
+  bottom: -1.1em;
+  right: 0.5em;
+}
 
+.next-button,
+.prev-button {
+  @include circular-border-icon;
 
+  &::after {
+    @include after-element;
+    border: 1px solid gray;
+  }
 
+  &:hover::after {
+    transform: scale(1.2);
+  }
+}
