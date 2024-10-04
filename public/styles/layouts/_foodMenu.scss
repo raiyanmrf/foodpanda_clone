@@ -68,3 +68,55 @@
   &-sidebar {
   }
 }
+
+@media (min-width: 767px) and (max-width: 959px) {
+  .foodMenu {
+    &-content {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 150px;
+    }
+
+    &-card {
+      grid-template-columns: auto 150px;
+      align-items: center;
+
+      padding: 0.7em;
+
+      &-image {
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        img {
+          max-width: 100%;
+          border-radius: 10px;
+        }
+
+        button {
+          position: absolute;
+          bottom: 0.55em;
+          right: 0.21em;
+          border-radius: 50%;
+          font-size: 1.5em;
+          padding: 0.2em;
+          display: flex;
+          align-items: center;
+          color: #908d8d;
+          border-color: #908d8d;
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+  .ellipsis {
+    display: -webkit-box; /* Flexbox-based for webkit browsers */
+    -webkit-line-clamp: 2; /* Limits to 2 lines */
+    -webkit-box-orient: vertical; /* Ensures vertical box orientation */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis at the end */
+    line-height: 1.5; /* Adjust line height as needed */
+    max-height: 3em; /* Set max height (2 lines * line-height) */
+    word-wrap: break-word; /* Break long words if needed */
+  }
+}

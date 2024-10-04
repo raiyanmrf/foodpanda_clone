@@ -5,11 +5,16 @@ import useCheckOverflow from "../hooks/useCheckOverflow";
 import useSlideRef from "../hooks/useSlideRef";
 import { foodNavLinks } from "../../public/data/foodData";
 
-const DishNavigation = () => {
+const DishNavigation = ({
+  cardRefs,
+  handleCardToggleNext,
+  handleCardTogglePrev,
+  index,
+}) => {
   const [isMouse] = useDetectMouse();
   const [isOverFlowed, dishContainerRef, dishContentRef] = useCheckOverflow();
-  const [cardRefs, handleCardToggleNext, handleCardTogglePrev, index] =
-    useSlideRef(foodNavLinks.fastfood.length);
+  // const [cardRefs, handleCardToggleNext, handleCardTogglePrev, index] =
+  //   useSlideRef(foodNavLinks.fastfood.length);
 
   return (
     <nav className="dish-navigation">
@@ -31,7 +36,7 @@ const DishNavigation = () => {
       <div ref={dishContainerRef} className="dish-navlinks-container">
         <ul ref={dishContentRef} className="dish-navlinks">
           {foodNavLinks.fastfood.map((dish, i) => (
-            <li key={i} ref={(el) => (cardRefs.current[i] = el)}>
+            <li tabIndex={0} key={i} ref={(el) => (cardRefs.current[i] = el)}>
               {" "}
               {dish.item}({dish.number})
             </li>

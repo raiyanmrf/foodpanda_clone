@@ -1,12 +1,30 @@
+import { foodNavLinks } from "../../../public/data/foodData";
 import DishNavigation from "../../components/DishNavigation";
+import useSlideRef from "../../hooks/useSlideRef";
 import FoodDisplaySection from "./FoodDisplaySection";
 
 const DishSection = () => {
+  const [
+    cardRefs,
+    handleCardToggleNext,
+    handleCardTogglePrev,
+    index,
+    handleHoverImpact,
+  ] = useSlideRef(foodNavLinks.fastfood.length);
+
   return (
     <section className="dish">
-      <DishNavigation />
+      <DishNavigation
+        cardRefs={cardRefs}
+        handleCardToggleNext={handleCardToggleNext}
+        handleCardTogglePrev={handleCardTogglePrev}
+        index={index}
+      />
 
-      <FoodDisplaySection />
+      <FoodDisplaySection
+        handleHoverImpact={handleHoverImpact}
+        cardRefs={cardRefs}
+      />
     </section>
   );
 };

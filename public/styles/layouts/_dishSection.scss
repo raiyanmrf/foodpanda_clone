@@ -64,6 +64,7 @@
       color: #837b7b;
       height: 54px;
       padding: 0 0.5em;
+      outline: none;
 
       @extend .breadcrumbs-link;
       z-index: 0;
@@ -72,9 +73,15 @@
       &:hover::before {
         width: 60%; /* Change width on hover */
       }
+      &:focus::before {
+        width: 100%; /* Change width on hover */
+      }
 
       border-bottom: none;
-      &:hover,
+      &:hover {
+        background-color: #837b7b21;
+      }
+
       &:focus {
         background-color: #837b7b21;
       }
@@ -111,6 +118,9 @@
 
 @media (min-width: 960px) {
   .dish {
+    &-navigation {
+      top: 4em;
+    }
     &-searchbar {
       box-shadow: 0px 0px 0px white !important;
       border: none;

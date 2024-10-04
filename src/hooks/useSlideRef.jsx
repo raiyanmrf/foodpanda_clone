@@ -59,8 +59,26 @@ const useSlideRef = (length) => {
       });
     }
   };
+  const handleHoverImpact = (index) => {
+    // Find the previous card that isn't fully visible
 
-  return [cardRefs, handleToggleNextRef, handleTogglePrevRef, index];
+    if (cardRefs.current[index]) {
+      cardRefs.current[index].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
+      cardRefs.current[index].focus();
+    }
+  };
+
+  return [
+    cardRefs,
+    handleToggleNextRef,
+    handleTogglePrevRef,
+    index,
+    handleHoverImpact,
+  ];
 };
 
 export default useSlideRef;

@@ -2,11 +2,20 @@ import React from "react";
 import { foodMenu } from "../../../public/data/foodData";
 import { FaPlus } from "react-icons/fa6";
 
-const FoodDisplaySection = () => {
+const FoodDisplaySection = ({ handleHoverImpact, cardRefs }) => {
   return (
     <section className="foodMenu">
       {foodMenu.chinese.map((menu, index) => (
-        <div key={index} className="foodMenu-container">
+        <div
+          onPointerOver={() => {
+            cardRefs.current[index] && handleHoverImpact(index);
+          }}
+          onPointerOut={() => {
+            cardRefs.current[index] && cardRefs.current[index].blur();
+          }}
+          key={index}
+          className="foodMenu-container"
+        >
           <div className="foodMenu-title">
             <h3>{menu.category}</h3>
             {menu.category === "popular" && <p>Most ordered right now</p>}
@@ -20,7 +29,7 @@ const FoodDisplaySection = () => {
 
                   <p>{item.price}</p>
 
-                  <p>i{item.description}</p>
+                  <p className="ellipsis">i{item.description}</p>
                 </div>
 
                 <div className="foodMenu-card-image">
