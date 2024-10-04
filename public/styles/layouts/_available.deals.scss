@@ -14,9 +14,10 @@
 
     display: flex;
     align-items: center;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     scrollbar-width: none;
+    scroll-behavior: smooth;
     margin-top: 2em;
   }
 

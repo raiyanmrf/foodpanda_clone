@@ -6,7 +6,7 @@ import useSlideRef from "../hooks/useSlideRef";
 import { foodNavLinks } from "../../public/data/foodData";
 
 const DishNavigation = () => {
-  const [isMouse, isTouch] = useDetectMouse();
+  const [isMouse] = useDetectMouse();
   const [isOverFlowed, dishContainerRef, dishContentRef] = useCheckOverflow();
   const [cardRefs, handleCardToggleNext, handleCardTogglePrev, index] =
     useSlideRef(foodNavLinks.fastfood.length);
@@ -22,7 +22,7 @@ const DishNavigation = () => {
         />
       </form>
 
-      {isOverFlowed && isMouse && !isTouch && index > 0 && (
+      {isOverFlowed && isMouse && index > 0 && (
         <div className="dish-prev-button" onClick={handleCardTogglePrev}>
           <img src={backwardIcon} alt="<" />
         </div>
@@ -30,8 +30,8 @@ const DishNavigation = () => {
 
       <div ref={dishContainerRef} className="dish-navlinks-container">
         <ul ref={dishContentRef} className="dish-navlinks">
-          {foodNavLinks.fastfood.map((dish, index) => (
-            <li>
+          {foodNavLinks.fastfood.map((dish, i) => (
+            <li key={i} ref={(el) => (cardRefs.current[i] = el)}>
               {" "}
               {dish.item}({dish.number})
             </li>
@@ -39,7 +39,7 @@ const DishNavigation = () => {
         </ul>
       </div>
 
-      {isOverFlowed && isMouse && !isTouch && (
+      {isOverFlowed && isMouse && (
         <div className="dish-next-button" onClick={handleCardToggleNext}>
           <img height={`32px`} width={`32px`} src={forwardIcon} alt=">" />
         </div>

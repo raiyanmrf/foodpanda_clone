@@ -1,31 +1,32 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const useDetectMouse = () => {
   const [isMouse, setIsMouse] = useState(false);
   const [isTouch, setIsTouch] = useState(false);
 
   useEffect(() => {
-    const handleIsMouse = () => {
-      setIsMouse(true);
-      setIsTouch(false);
+    const handleMouseMove = () => {
+      // Only treat as a mouse if the user hasn't used touch recently
+      if (!isTouch) {
+        setIsMouse(true);
+      }
     };
 
-    const handleIsTouch = () => {
-      setIsMouse(false);
+    const handleTouchStart = () => {
       setIsTouch(true);
+      setIsMouse(false);
     };
 
-    window.addEventListener("mousemove", handleIsMouse);
-    window.addEventListener("touchmove", handleIsTouch);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
 
     return () => {
-      window.removeEventListener("mousemove", handleIsMouse);
-      window.removeEventListener("touchmove", handleIsTouch);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchstart", handleTouchStart);
     };
-  }, []);
+  }, [isTouch]);
 
-  return [isMouse, isTouch];
+  return [isMouse];
 };
 
 export default useDetectMouse;

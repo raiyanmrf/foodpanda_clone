@@ -14,6 +14,7 @@
     background-color: white;
     box-shadow: 9px 17px 20px rgb(237, 236, 236);
     z-index: 2;
+    padding-inline-start: 1em;
 
     & > * {
       cursor: pointer;
@@ -39,6 +40,7 @@
     overflow-y: hidden;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
 
   &-searchbar,
@@ -67,7 +69,7 @@
       z-index: 0;
       display: flex;
       align-items: center;
-      s &:hover::before {
+      &:hover::before {
         width: 60%; /* Change width on hover */
       }
 
@@ -90,6 +92,7 @@
 
     &:after {
       min-width: 32px;
+      border: 1px solid lightgray;
     }
   }
   &-next-button {
@@ -99,6 +102,10 @@
     border-radius: 50%;
     top: 0;
     flex-shrink: 0;
+
+    &:after {
+      border: 1px solid lightgray;
+    }
   }
 }
 
@@ -113,7 +120,7 @@
 
       img {
         position: absolute;
-        left: 0.5em;
+        left: 1.7em;
 
         max-width: 24px !important;
       }

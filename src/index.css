@@ -1482,7 +1482,7 @@ footer .line {
   overflow: hidden;
 }
 .discount:hover::before {
-  background-color: #fedfe3;
+  background-color: #fedfe3 !important;
   transform: scale(1.04);
   z-index: -1;
 }
@@ -1726,9 +1726,10 @@ footer .line {
   padding-inline: 0.5em;
   display: flex;
   align-items: center;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: none;
+  scroll-behavior: smooth;
   margin-top: 2em;
 }
 .available-deals-content {
@@ -1753,6 +1754,7 @@ footer .line {
   background-color: white;
   box-shadow: 9px 17px 20px rgb(237, 236, 236);
   z-index: 2;
+  padding-inline-start: 1em;
 }
 .dish-navigation > * {
   cursor: pointer;
@@ -1774,6 +1776,7 @@ footer .line {
   overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 .dish-searchbar, .dish-prev-button, .dish-next-button {
   box-shadow: 0 0 5px lightgrey;
@@ -1797,7 +1800,7 @@ footer .line {
   align-items: center;
   border-bottom: none;
 }
-s .dish-navlinks li:hover::before {
+.dish-navlinks li:hover::before {
   width: 60%; /* Change width on hover */
 }
 .dish-navlinks li:hover, .dish-navlinks li:focus {
@@ -1813,6 +1816,7 @@ s .dish-navlinks li:hover::before {
 }
 .dish-prev-button:after {
   min-width: 32px;
+  border: 1px solid lightgray;
 }
 .dish-next-button {
   position: relative;
@@ -1820,6 +1824,9 @@ s .dish-navlinks li:hover::before {
   border-radius: 50%;
   top: 0;
   flex-shrink: 0;
+}
+.dish-next-button:after {
+  border: 1px solid lightgray;
 }
 
 @media (min-width: 960px) {
@@ -1832,7 +1839,7 @@ s .dish-navlinks li:hover::before {
   }
   .dish-searchbar img {
     position: absolute;
-    left: 0.5em;
+    left: 1.7em;
     max-width: 24px !important;
   }
   .dish-searchbar-input {
@@ -1908,22 +1915,13 @@ s .dish-navlinks li:hover::before {
 }
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: white;
 }
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: white;
-    color: black;
-  }
-}
-
 .content {
   margin: 0 auto;
 }
 
 main {
   max-width: 1536px;
-  background-color: white;
 }
 
 button {

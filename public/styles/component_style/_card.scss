@@ -182,7 +182,7 @@
   }
 
   &:hover::before {
-    background-color: #fedfe3;
+    background-color: #fedfe3 !important;
     transform: scale(1.04);
     z-index: -1;
   }

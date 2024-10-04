@@ -13,11 +13,11 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: white;
+  // background-color: white;
 
   @media (prefers-color-scheme: dark) {
-    background-color: white;
-    color: black;
+    // background-color: white;
+    // color: black;
   }
 }
 
@@ -27,7 +27,6 @@ body {
 
 main {
   max-width: 1536px;
-  background-color: white;
 }
 
 button {
