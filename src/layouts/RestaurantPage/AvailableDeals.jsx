@@ -7,7 +7,7 @@ import useDetectMouse from "../../hooks/useDetectMouse";
 import useCheckOverflow from "../../hooks/useCheckOverflow";
 
 const AvailableDeals = () => {
-  const [isMouse] = useDetectMouse();
+  const [isMouse, isTouch] = useDetectMouse();
   const [isOverFlowed, cardContainerRef, cardContentRef] = useCheckOverflow();
   const [cardRefs, handleCardToggleNext, handleCardTogglePrev, index] =
     useSlideRef(cardData.length);
@@ -30,7 +30,7 @@ const AvailableDeals = () => {
         </div>
       </div>
 
-      {isMouse && isOverFlowed && (
+      {isMouse && !isTouch && isOverFlowed && (
         <>
           {index > 0 && (
             <div className="prev-button" onClick={handleCardTogglePrev}>

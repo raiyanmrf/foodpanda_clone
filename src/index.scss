@@ -13,6 +13,12 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: white;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: white;
+    color: black;
+  }
 }
 
 .content {
