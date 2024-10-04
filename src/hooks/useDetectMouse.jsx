@@ -13,7 +13,7 @@ const useDetectMouse = () => {
 
     const handleIsTouch = () => {
       setIsMouse(false);
-      setIsTouch(truw);
+      setIsTouch(true);
     };
 
     window.addEventListener("mousemove", handleIsMouse);

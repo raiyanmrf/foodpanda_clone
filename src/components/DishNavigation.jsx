@@ -31,7 +31,8 @@ const DishNavigation = () => {
       <div ref={dishContainerRef} className="dish-navlinks-container">
         <ul ref={dishContentRef} className="dish-navlinks">
           {foodNavLinks.fastfood.map((dish, index) => (
-            <li key={index} ref={(el) => (cardRefs.current[index] = el)}>
+            <li>
+              {" "}
               {dish.item}({dish.number})
             </li>
           ))}

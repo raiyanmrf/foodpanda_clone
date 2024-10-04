@@ -24,6 +24,7 @@ const AvailableDeals = () => {
                   cardRefs.current[index] = el;
                 }}
                 key={index}
+                w
                 item={item}
               />
             ))}
