@@ -2130,11 +2130,6 @@ button {
   transform: none !important;
 }
 
-.btn-tab {
-  border: 1px solid;
-  border-radius: 5px;
-}
-
 .pink-icon {
   filter: invert(30%) sepia(100%) saturate(1000%) hue-rotate(290deg) brightness(90%) contrast(85%);
   font-weight: bold;
