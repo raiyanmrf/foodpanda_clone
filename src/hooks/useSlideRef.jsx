@@ -1,79 +1,81 @@
 import { useRef, useState } from "react";
 
 const useSlideRef = (length) => {
-  const [index, setIndex] = useState(0); // Start at the first card
-  const cardRefs = useRef([]); // This is an array of card refs
+  const [index, setIndex] = useState(0);
+  const itemRefs = useRef([]);
 
-  // Function to check if an element is in view
   const isInView = (el) => {
     const rect = el.getBoundingClientRect();
-    return (
-      rect.left >= 0 &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+    const containerRect = el.parentNode.parentNode.getBoundingClientRect();
+
+    const isVisible =
+      rect.left >= containerRect.left && rect.right <= containerRect.right;
+    return isVisible;
   };
 
-  // Move to the next partially or completely hidden card
   const handleToggleNextRef = () => {
-    let nextIndex = index;
+    setIndex((prevIndex) => {
+      let nextIndex = prevIndex;
 
-    // Find the next card that isn't fully visible or is out of view
-    for (let i = index + 1; i < length; i++) {
-      if (cardRefs.current[i] && !isInView(cardRefs.current[i])) {
-        nextIndex = i;
-        console.log(nextIndex);
-        break;
+      for (let i = prevIndex + 1; i < length; i++) {
+        if (itemRefs.current[i] && !isInView(itemRefs.current[i])) {
+          nextIndex = i;
+          break;
+        }
       }
-    }
 
-    setIndex(nextIndex);
+      if (nextIndex !== prevIndex && itemRefs.current[nextIndex]) {
+        itemRefs.current[nextIndex].scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
 
-    if (cardRefs.current[nextIndex]) {
-      cardRefs.current[nextIndex].scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "center",
-      });
-    }
+      return nextIndex;
+    });
   };
 
-  // Move to the previous card that is partially or fully out of view
   const handleTogglePrevRef = () => {
-    let prevIndex = index;
+    setIndex((prevIndex) => {
+      let newPrevIndex = prevIndex;
 
-    // Find the previous card that isn't fully visible
-    for (let i = index - 1; i >= 0; i--) {
-      if (cardRefs.current[i] && !isInView(cardRefs.current[i])) {
-        prevIndex = i;
-        break;
+      for (let i = prevIndex - 1; i >= 0; i--) {
+        if (itemRefs.current[i] && !isInView(itemRefs.current[i])) {
+          newPrevIndex = i;
+          break;
+        }
       }
-    }
 
-    setIndex(prevIndex);
+      if (newPrevIndex < 0) {
+        newPrevIndex = 0;
+      }
 
-    if (cardRefs.current[prevIndex]) {
-      cardRefs.current[prevIndex].scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "center",
-      });
-    }
+      if (newPrevIndex !== prevIndex && itemRefs.current[newPrevIndex]) {
+        itemRefs.current[newPrevIndex].scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
+
+      return newPrevIndex;
+    });
   };
-  const handleHoverImpact = (index) => {
-    // Find the previous card that isn't fully visible
 
-    if (cardRefs.current[index]) {
-      cardRefs.current[index].scrollIntoView({
+  const handleHoverImpact = (index) => {
+    if (itemRefs.current[index]) {
+      itemRefs.current[index].scrollIntoView({
         behavior: "smooth",
         block: "nearest",
         inline: "center",
       });
-      cardRefs.current[index].focus();
+      itemRefs.current[index].focus();
     }
   };
 
   return [
-    cardRefs,
+    itemRefs,
     handleToggleNextRef,
     handleTogglePrevRef,
     index,

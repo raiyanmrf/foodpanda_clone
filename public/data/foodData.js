@@ -184,3 +184,66 @@ export const foodMenu = {
     },
   ],
 };
+
+export const orderedItem = [
+  {
+    name: "Chicken Dumpling in Chili Oil",
+    price: "Tk 395",
+    description:
+      "5 pcs - Steamed dumplings filled with minced chicken & served with chili oil",
+    image: biriyaniImage,
+  },
+  {
+    name: "Bang Bang Chicken",
+
+    price: "Tk 390",
+    description:
+      "Bite-sized chicken pieces fried & drizzled with our signature house-special bang bang sauce",
+    image: biriyaniImage,
+  },
+  {
+    name: "Chicken Nan Ban",
+    price: "Tk 395",
+    description:
+      "5 pcs - Steamed dumplings filled with minced chicken & served with chili oil",
+    image: biriyaniImage,
+  },
+];
+export const suggestItems = [
+  {
+    name: "Chicken Dumpling in Chili Oil",
+    price: "Tk 395",
+    description:
+      "5 pcs - Steamed dumplings filled with minced chicken & served with chili oil",
+    image: biriyaniImage,
+  },
+  {
+    name: "Bang Bang Chicken",
+
+    price: "Tk 390",
+    description:
+      "Bite-sized chicken pieces fried & drizzled with our signature house-special bang bang sauce",
+    image: biriyaniImage,
+  },
+  {
+    name: "Chicken Nan Ban",
+    price: "Tk 395",
+    description:
+      "5 pcs - Steamed dumplings filled with minced chicken & served with chili oil",
+    image: biriyaniImage,
+  },
+  {
+    name: "Chicken Nan Ban",
+    price: "Tk 395",
+    description:
+      "5 pcs - Steamed dumplings filled with minced chicken & served with chili oil",
+    image: biriyaniImage,
+  },
+  {
+    name: "Chicken Nan Ban",
+    price: "Tk 395",
+    description:
+      "5 pcs - Steamed dumplings filled with minced chicken & served with chili oil",
+    image: biriyaniImage,
+  },
+];

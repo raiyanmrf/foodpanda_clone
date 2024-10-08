@@ -1,9 +1,9 @@
 import { foodNavLinks } from "../../../public/data/foodData";
-import DishNavigation from "../../components/DishNavigation";
 import useSlideRef from "../../hooks/useSlideRef";
-import FoodDisplaySection from "./FoodDisplaySection";
+import MenuDisplay from "./MenuDisplay";
+import MenuNavbar from "./MenuNavbar";
 
-const DishSection = () => {
+const MenuSection = () => {
   const [
     cardRefs,
     handleCardToggleNext,
@@ -14,19 +14,16 @@ const DishSection = () => {
 
   return (
     <section className="dish">
-      <DishNavigation
+      <MenuNavbar
         cardRefs={cardRefs}
         handleCardToggleNext={handleCardToggleNext}
         handleCardTogglePrev={handleCardTogglePrev}
         index={index}
       />
 
-      <FoodDisplaySection
-        handleHoverImpact={handleHoverImpact}
-        cardRefs={cardRefs}
-      />
+      <MenuDisplay handleHoverImpact={handleHoverImpact} cardRefs={cardRefs} />
     </section>
   );
 };
 
-export default DishSection;
+export default MenuSection;

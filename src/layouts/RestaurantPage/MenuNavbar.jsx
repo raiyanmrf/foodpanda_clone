@@ -1,11 +1,10 @@
 import React from "react";
-import { backwardIcon, forwardIcon, searchIcon } from "../../public/svg";
-import useDetectMouse from "../hooks/useDetectMouse";
-import useCheckOverflow from "../hooks/useCheckOverflow";
-import useSlideRef from "../hooks/useSlideRef";
-import { foodNavLinks } from "../../public/data/foodData";
+import { backwardIcon, forwardIcon, searchIcon } from "../../../public/svg";
+import useDetectMouse from "../../hooks/useDetectMouse";
+import useCheckOverflow from "../../hooks/useCheckOverflow";
+import { foodNavLinks } from "../../../public/data/foodData";
 
-const DishNavigation = ({
+const MenuNavbar = ({
   cardRefs,
   handleCardToggleNext,
   handleCardTogglePrev,
@@ -13,8 +12,6 @@ const DishNavigation = ({
 }) => {
   const [isMouse] = useDetectMouse();
   const [isOverFlowed, dishContainerRef, dishContentRef] = useCheckOverflow();
-  // const [cardRefs, handleCardToggleNext, handleCardTogglePrev, index] =
-  //   useSlideRef(foodNavLinks.fastfood.length);
 
   return (
     <nav className="dish-navigation">
@@ -53,4 +50,4 @@ const DishNavigation = ({
   );
 };
 
-export default DishNavigation;
+export default MenuNavbar;

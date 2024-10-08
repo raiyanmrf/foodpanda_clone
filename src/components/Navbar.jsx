@@ -13,8 +13,8 @@ import {
 } from "../../public/svg";
 import useIsActive from "../hooks/useIsActive";
 import Button from "./Button";
-import Menu from "./Menu";
 import SignIn from "./SignIn";
+import NavbarMenu from "./NavbarMenu";
 
 //
 
@@ -116,7 +116,7 @@ const Navbar = () => {
 }
     </section> */}
 
-      {isMenuActive && <Menu handleIsMenuActive={handleIsMenuActive} />}
+      {isMenuActive && <NavbarMenu handleIsMenuActive={handleIsMenuActive} />}
       {isSignActive && <SignIn handleIsSignActive={handleIsSignActive} />}
     </nav>
   );

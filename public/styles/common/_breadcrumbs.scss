@@ -2,16 +2,16 @@
   display: flex;
   gap: 0.5em;
   margin-bottom: 1em;
-}
 
-.breadcrumbs-links {
-  display: flex;
-  gap: 0.5em;
-  font-size: 0.825em;
+  li {
+    display: flex;
+    gap: 0.5em;
+    font-size: 0.825em;
 
-  p {
-    font-family: "Open Sans";
-    font-weight: 400;
+    p {
+      font-family: "Open Sans";
+      font-weight: 400;
+    }
   }
 }
 

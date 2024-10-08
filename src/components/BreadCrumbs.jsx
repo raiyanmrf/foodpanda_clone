@@ -1,37 +1,26 @@
-import React from 'react'
-import { backwardIcon, forwardIcon } from '../../public/svg';
+import React from "react";
+import { forwardIcon } from "../../public/svg";
 
-const BreadCrumbs = ({linkArray}) => {
-
-
+const BreadCrumbs = ({ linkArray }) => {
   return (
-    <div className='breadcrumbs'>
+    <ul className="breadcrumbs">
+      {linkArray.map((item, index) => {
+        return (
+          <li key={index}>
+            {index !== linkArray.length - 1 ? (
+              <>
+                <p className="breadcrumbs-link">{item}</p>
 
-        {
-            linkArray.map((item,index)=>
-            {
-                return <div key={index} className='breadcrumbs-links'>
-                
-                
-                 {index !== linkArray.length-1 ?
-                      <>
-                      <p className='breadcrumbs-link'>{item}</p>
+                <img width={`20px`} src={forwardIcon} />
+              </>
+            ) : (
+              <p>{item}</p>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
 
-                      <img width={`20px`} src={forwardIcon}/>
-                      </>:
-                   
-                      <p>{item}</p>
-
-                                 
-                                 
-                  }
-                
-                </div>
-            })
-        }
-
-    </div>
-  )
-}
-
-export default BreadCrumbs
+export default BreadCrumbs;

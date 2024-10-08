@@ -1,45 +1,47 @@
+import { menuList } from "../../public/data/menuData";
+import { cancelIcon, dropIcon, oksignIcon } from "../../public/svg";
+import useIsActive from "../hooks/useIsActive";
 
-import { menuList } from '../../public/data/menuData';
-import { cancelIcon, dropIcon, oksignIcon } from '../../public/svg';
-import useIsActive from '../hooks/useIsActive';
-
-const Menu = ({ handleIsMenuActive }) => {
+const NavbarMenu = ({ handleIsNavbarMenuActive }) => {
   const [isLangActive, handleIsLangActive] = useIsActive();
 
   return (
     <>
-      <section className="menu">
-        <div className="menu-cancel" onClick={handleIsMenuActive}>
+      <section className="navmenu">
+        <div className="navmenu-cancel" onClick={handleIsNavbarMenuActive}>
           <img src={cancelIcon} alt="X" />
         </div>
 
-        <ul className="menu-items">
+        <ul className="navmenu-items">
           {menuList.map((item, index) => (
-            <li className="menu-single-item" key={item.id || index}>
+            <li className="navmenu-single-item" key={item.id || index}>
               {index !== 6 ? (
                 <>
                   <img src={item.icon} alt={item.label} />
                   <h4>{item.label}</h4>
                 </>
               ) : (
-                <div className="menu-drop">
-                  <div className="menu-drop-content" onClick={handleIsLangActive}>
+                <div className="navmenu-drop">
+                  <div
+                    className="navmenu-drop-content"
+                    onClick={handleIsLangActive}
+                  >
                     <img src={item.icon} alt={item.label} />
                     <h4>{item.label}</h4>
                     <img
                       src={dropIcon}
-                      className="menu-drop-content-dropIcon"
+                      className="navmenu-drop-content-dropIcon"
                       alt="drop"
                     />
                   </div>
 
                   {isLangActive && (
-                    <ul className="menu-drop-items">
-                      <li className="menu-drop-single-item">
+                    <ul className="navmenu-drop-items">
+                      <li className="navmenu-drop-single-item">
                         <h4>{item.label}</h4>
                         <img src={oksignIcon} alt="ok" />
                       </li>
-                      <li className="menu-drop-single-item">
+                      <li className="navmenu-drop-single-item">
                         <h4>{item.label2}</h4>
                         <img src={oksignIcon} alt="ok" />
                       </li>
@@ -55,4 +57,4 @@ const Menu = ({ handleIsMenuActive }) => {
   );
 };
 
-export default Menu;
+export default NavbarMenu;

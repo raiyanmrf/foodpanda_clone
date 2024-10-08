@@ -1,124 +1,119 @@
+$BgLargeFont_Family: "Open Sans";
+$BgLargeFont_size: 10rem;
+$BgLargeFont_weight: 700;
+$BgLargeFont_height: 1.3;
 
-$BgLargeFont_Family: 'Open Sans';
-    $BgLargeFont_size: 10rem;
-    $BgLargeFont_weight: 700;
-    $BgLargeFont_height: 1.3;
+$BgMediumFont_size: "Open Sans";
+$BgMediumFont_Size: 7.5rem;
+$BgMediumFont_Weight: 700;
+$BgMediumFont_Height: 1.3;
 
-$BgMediumFont_size: 'Open Sans';
-    $BgMediumFont_Size: 7.5rem;
-    $BgMediumFont_Weight: 700;
-    $BgMediumFont_Height: 1.3;
-
-$BgSmallFont_Family: 'Open Sans';
+$BgSmallFont_Family: "Open Sans";
 $BgSmallFont_Size: 5rem;
 $BgSmallFont_Weight: 700;
 $BgSmallFont_LineHeight: 1.3;
 
+$TitleXxlargeFontFamily: "PP Agrandir";
+$TitleXxlargeFontSize: 2.5rem;
+$TitleXxlargeFontWeight: 700;
+$TitleXxlargeLineHeight: 1.3;
+$TitleXxlargeFontFeatureSettings: "ss09", "ss11";
 
-$TitleXxlargeFontFamily: 'PP Agrandir';
-        $TitleXxlargeFontSize: 2.5rem;
-        $TitleXxlargeFontWeight: 700;
-        $TitleXxlargeLineHeight: 1.3;
-        $TitleXxlargeFontFeatureSettings: 'ss09', 'ss11';
+$TitleXlargeFontFamily: "PP Agrandir";
+$TitleXlargeFontSize: 2rem;
+$TitleXlargeFontWeight: 700;
+$TitleXlargeLineHeight: 1.3125;
+$TitleXlargeFontFeatureSettings: "ss09", "ss11";
 
-$TitleXlargeFontFamily: 'PP Agrandir';
-        $TitleXlargeFontSize: 2rem;
-        $TitleXlargeFontWeight: 700;
-        $TitleXlargeLineHeight: 1.3125;
-        $TitleXlargeFontFeatureSettings: 'ss09', 'ss11';
+$TitleXlargeSecondaryFontFamily: "PP Agrandir";
+$TitleXlargeSecondaryFontSize: 2rem;
+$TitleXlargeSecondaryFontWeight: 600;
+$TitleXlargeSecondaryLineHeight: 1.3125;
+$TitleXlargeSecondaryFontFeatureSettings: "ss09", "ss11";
 
-$TitleXlargeSecondaryFontFamily: 'PP Agrandir';
-        $TitleXlargeSecondaryFontSize: 2rem;
-        $TitleXlargeSecondaryFontWeight: 600;
-        $TitleXlargeSecondaryLineHeight: 1.3125;
-        $TitleXlargeSecondaryFontFeatureSettings: 'ss09', 'ss11';
+$TitleLargeFontFamily: "PP Agrandir";
+$TitleLargeFontSize: 1.5rem;
+$TitleLargeFontWeight: 700;
+$TitleLargeLineHeight: 1.333333333;
+$TitleLargeFontFeatureSettings: "ss09", "ss11";
 
-$TitleLargeFontFamily: 'PP Agrandir';
-        $TitleLargeFontSize: 1.5rem;
-        $TitleLargeFontWeight: 700;
-        $TitleLargeLineHeight: 1.333333333;
-        $TitleLargeFontFeatureSettings: 'ss09', 'ss11';
+$TitleLargeSecondaryFontFamily: "PP Agrandir";
+$TitleLargeSecondaryFontSize: 1.5rem;
+$TitleLargeSecondaryFontWeight: 600;
+$TitleLargeSecondaryLineHeight: 1.333333333;
+$TitleLargeSecondaryFontFeatureSettings: "ss09", "ss11";
 
-$TitleLargeSecondaryFontFamily: 'PP Agrandir';
-        $TitleLargeSecondaryFontSize: 1.5rem;
-        $TitleLargeSecondaryFontWeight: 600;
-        $TitleLargeSecondaryLineHeight: 1.333333333;
-        $TitleLargeSecondaryFontFeatureSettings: 'ss09', 'ss11';
+$TitleMediumFontFamily: "PP Agrandir";
+$TitleMediumFontSize: 1.125rem;
+$TitleMediumFontWeight: 700;
+$TitleMediumLineHeight: 1.555555556;
+$TitleMediumFontFeatureSettings: "ss09", "ss11";
 
-$TitleMediumFontFamily: 'PP Agrandir';
-        $TitleMediumFontSize: 1.125rem;
-        $TitleMediumFontWeight: 700;
-        $TitleMediumLineHeight: 1.555555556;
-        $TitleMediumFontFeatureSettings: 'ss09', 'ss11';
+$TitleMediumSecondaryFontFamily: "PP Agrandir";
+$TitleMediumSecondaryFontSize: 1.125rem;
+$TitleMediumSecondaryFontWeight: 600;
+$TitleMediumSecondaryLineHeight: 1.555555556;
+$TitleMediumSecondaryFontFeatureSettings: "ss09", "ss11";
 
-$TitleMediumSecondaryFontFamily: 'PP Agrandir';
-        $TitleMediumSecondaryFontSize: 1.125rem;
-        $TitleMediumSecondaryFontWeight: 600;
-        $TitleMediumSecondaryLineHeight: 1.555555556;
-        $TitleMediumSecondaryFontFeatureSettings: 'ss09', 'ss11';
+$TitleSmallFontFamily: "PP Agrandir";
+$TitleSmallFontSize: 1rem;
+$TitleSmallFontWeight: 700;
+$TitleSmallLineHeight: 1.5;
+$TitleSmallFontFeatureSettings: "ss09", "ss11";
 
-$TitleSmallFontFamily: 'PP Agrandir';
-        $TitleSmallFontSize: 1rem;
-        $TitleSmallFontWeight: 700;
-        $TitleSmallLineHeight: 1.5;
-        $TitleSmallFontFeatureSettings: 'ss09', 'ss11';
+$LabelLargeFontFamily: "Open Sans";
+$LabelLargeFontSize: 1rem;
+$LabelLargeFontWeight: 600;
+$LabelLargeLineHeight: 1.5;
 
-$LabelLargeFontFamily: 'Open Sans';
-    $LabelLargeFontSize: 1rem;
-    $LabelLargeFontWeight: 600;
-    $LabelLargeLineHeight: 1.5;
+$LabelMediumFontFamily: "Open Sans";
+$LabelMediumFontSize: 0.875rem;
+$LabelMediumFontWeight: 600;
+$LabelMediumLineHeight: 1.571428571;
 
-$LabelMediumFontFamily: 'Open Sans';
-    $LabelMediumFontSize: 0.875rem;
-    $LabelMediumFontWeight: 600;
-    $LabelMediumLineHeight: 1.571428571;
+$LabelSmallFontFamily: "Open Sans";
+$LabelSmallFontSize: 0.75rem;
+$LabelSmallFontWeight: 600;
+$LabelSmallLineHeight: 1.5;
 
-$LabelSmallFontFamily: 'Open Sans';
-    $LabelSmallFontSize: 0.75rem;
-    $LabelSmallFontWeight: 600;
-    $LabelSmallLineHeight: 1.5;
+$LabelSmallSecondaryFontFamily: "Open Sans";
+$LabelSmallSecondaryFontSize: 0.75rem;
+$LabelSmallSecondaryFontWeight: 400;
 
-$LabelSmallSecondaryFontFamily: 'Open Sans';
-    $LabelSmallSecondaryFontSize: 0.75rem;
-    $LabelSmallSecondaryFontWeight: 400;
+$LabelXsmallFontFamily: "Open Sans";
+$LabelXsmallFontSize: 0.625rem;
+$LabelXsmallFontWeight: 600;
+$LabelXsmallLineHeight: 1.6;
 
-$LabelXsmallFontFamily: 'Open Sans';
-    $LabelXsmallFontSize: 0.625rem;
-    $LabelXsmallFontWeight: 600;
-    $LabelXsmallLineHeight: 1.6;
+$ParagraphMediumFontFamily: "Open Sans";
+$ParagraphMediumFontSize: 1rem;
+$ParagraphMediumFontWeight: 400;
+$ParagraphMediumLineHeight: 1.5;
+$ParagraphSmallFontFamily: "Open Sans";
 
-$ParagraphMediumFontFamily: 'Open Sans';
-    $ParagraphMediumFontSize: 1rem;
-    $ParagraphMediumFontWeight: 400;
-    $ParagraphMediumLineHeight: 1.5;
-    $ParagraphSmallFontFamily: 'Open Sans';
-   
 $ParagraphSmallFontSize: 0.875rem;
-    $ParagraphSmallFontWeight: 400;
-    $ParagraphSmallLineHeight: 1.571428571;
+$ParagraphSmallFontWeight: 400;
+$ParagraphSmallLineHeight: 1.571428571;
 
-$ParagraphXsmallFontFamily: 'Open Sans';
-    $ParagraphXsmallFontSize: 0.75rem;
-    $ParagraphXsmallFontWeight: 600;
-    $ParagraphXsmallLineHeight: 1.833333333;
+$ParagraphXsmallFontFamily: "Open Sans";
+$ParagraphXsmallFontSize: 0.75rem;
+$ParagraphXsmallFontWeight: 600;
+$ParagraphXsmallLineHeight: 1.833333333;
 
-$ParagraphXsmallSecondaryFontFamily: 'Open Sans';
-    $ParagraphXsmallSecondaryFontSize: 0.75rem;
-    $ParagraphXsmallSecondaryFontWeight: 400;
-    $ParagraphXsmallSecondaryLineHeight: 1.833333333;
+$ParagraphXsmallSecondaryFontFamily: "Open Sans";
+$ParagraphXsmallSecondaryFontSize: 0.75rem;
+$ParagraphXsmallSecondaryFontWeight: 400;
+$ParagraphXsmallSecondaryLineHeight: 1.833333333;
 
-$RibbonBaseFontFamily: 'Open Sans';
-    $RibbonBaseFontSize: 0.875rem;
-    $RibbonBaseFontWeight: 600;
-    $RibbonBaseLineHeight: 1.571428571;
+$RibbonBaseFontFamily: "Open Sans";
+$RibbonBaseFontSize: 0.875rem;
+$RibbonBaseFontWeight: 600;
+$RibbonBaseLineHeight: 1.571428571;
 
-$MiniBaseFontFamily: 'Open Sans';
-    $MiniBaseFontSize: 0.625rem;
-    $MiniBaseFontWeight: 700;
-    $MiniBaseLineHeight: 1.6;
-
-
-
+$MiniBaseFontFamily: "Open Sans";
+$MiniBaseFontSize: 0.625rem;
+$MiniBaseFontWeight: 700;
+$MiniBaseLineHeight: 1.6;
 
 $SpacingXxxs: 2px;
 $SpacingXxs: 4px;
@@ -130,3 +125,42 @@ $SpacingLg: 32px;
 $SpacingXl: 48px;
 $SpacingXxl: 64px;
 $SpacingXxxl: 80px;
+
+@mixin p-9($color: black, $font-weight: 400) {
+  font-size: 0.9em;
+  font-weight: $font-weight;
+  color: $color;
+  line-height: 1.7;
+}
+
+.switch-div {
+  position: relative;
+
+  input:checked + label::before {
+    transform: translateX(16px);
+  }
+
+  label {
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    border-radius: 5px;
+    background-color: rgb(78, 77, 77);
+    position: relative;
+    top: -1.4em;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      position: absolute;
+      background-color: white;
+      border-radius: 4px;
+      top: 2.5px;
+      left: 3px;
+      transition: 0.3s ease;
+    }
+  }
+}
