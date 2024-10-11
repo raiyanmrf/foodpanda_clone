@@ -132,35 +132,3 @@ $SpacingXxxl: 80px;
   color: $color;
   line-height: 1.7;
 }
-
-.switch-div {
-  position: relative;
-
-  input:checked + label::before {
-    transform: translateX(16px);
-  }
-
-  label {
-    display: inline-block;
-    width: 40px;
-    height: 24px;
-    border-radius: 5px;
-    background-color: rgb(78, 77, 77);
-    position: relative;
-    top: -1.4em;
-    cursor: pointer;
-
-    &::before {
-      content: "";
-      position: absolute;
-      height: 18px;
-      width: 18px;
-      position: absolute;
-      background-color: white;
-      border-radius: 4px;
-      top: 2.5px;
-      left: 3px;
-      transition: 0.3s ease;
-    }
-  }
-}

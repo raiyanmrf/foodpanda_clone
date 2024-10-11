@@ -1,233 +1,187 @@
-
-
 .placeholder {
   position: absolute;
-  bottom: .65em;
-  left: .5em;
+  bottom: 0.65em;
+  left: 0.5em;
   background: white;
-  transition: .1s;
-  font-size: .95em;
-
+  transition: 0.1s;
+  font-size: 0.95em;
 }
 
-.hero{
-    background: #f7f7f7;
+.hero {
+  background: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 110px;
+
+  &-title {
+    flex-basis: 46%;
+    color: $font_color2;
+    font-family: "Agrandir";
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-    margin-bottom: 110px;
-
-    
-    &-title{
-    
-     
-        flex-basis: 46%;
-        color: $font_color2;
-        font-family: 'Agrandir';
-        display: flex;
-        align-items: center;
-        padding: 0 2%;
-        font-weight: 550;
- 
-  
-    }
-    
-
-     &-image {
-    
-      flex-basis: 46%;
-      position: relative;
-      overflow:hidden;
-    
-      img{
-       width: 120%;
-      }
-      
-    }
-    
-
-    
-    &-location{
-    
-      width: 100%;
-      position: absolute;
-      bottom: -6em;
-
-      
-     &-form {
-              display: flex;
-              flex-wrap: wrap;
-              flex-direction: column;
-              gap: 1em;
-              padding: 1em;
-        
-        
-              &-locateMe {
-                position: relative;
-                border-radius: 9px;
-                flex-grow: 1;
-                display: flex;
-                box-shadow: 0px 0px 2px 1px #cbc3c3;
-
-              
-
-                input {
-                  flex-grow: 1;
-                  margin-inline-end: auto;
-                  border: none;
-                  border-radius: 9px 0px 0px 9px;
-                  outline: none;
-                  padding-inline: 1em;
-                  font-size: 1em;
-                  font-weight:lighter ;
-                  font-family: "Open Sans";
-           
-                  
-                  &:focus + .placeholder,:not(:placeholder-shown) + .placeholder,&:hover + .placeholder{
-              
-
-                    font-size: .65em;
-                    bottom:4em;
-                    left: 1em;
-                    line-height: 1.5;
-                    background-color: rgba(255, 255, 255, 0.634);
-                    font-weight: 500;
-                  }
-
-              }
-
-              button {
-                background: white;
-                border: none;
-                display: flex;
-                gap: .5em;
-                align-items: center;
-                padding: .8em;
-                font-size: .9em;
-                font-weight: 550;
-                color: #333;
-                border-radius:0px 9px 9px 0px;
-                font-family: "Open Sans";
-                position: relative;
-                z-index: 1;
-
-                &:hover {
-                  color: #c21760;
-              }
-            
-            }
-                   }
+    padding: 0 2%;
+    font-weight: 550;
   }
-    
-  
-  &-find-btn {
 
-  
-    flex-grow: 1;
+  &-image {
+    flex-basis: 46%;
+    position: relative;
+    overflow: hidden;
 
-    &:hover::after {
-      transform: scale(1.01) !important;
+    img {
+      width: 120%;
+    }
+  }
 
+  &-location {
+    width: 100%;
+    position: absolute;
+    bottom: -6em;
+
+    &-form {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 1em;
+      padding: 1em;
+
+      &-locateMe {
+        position: relative;
+        border-radius: 9px;
+        flex-grow: 1;
+        display: flex;
+        box-shadow: 0px 0px 2px 1px #cbc3c3;
+
+        input {
+          flex-grow: 1;
+          margin-inline-end: auto;
+          border: none;
+          border-radius: 9px 0px 0px 9px;
+          outline: none;
+          padding-inline: 1em;
+          font-size: 1em;
+          font-weight: lighter;
+          font-family: "Open Sans";
+
+          &:focus + .placeholder,
+          :not(:placeholder-shown) + .placeholder,
+          &:hover + .placeholder {
+            font-size: 0.65em;
+            bottom: 4em;
+            left: 1em;
+            line-height: 1.5;
+            background-color: rgba(255, 255, 255, 0.634);
+            font-weight: 500;
+          }
+        }
+
+        button {
+          background: white;
+          border: none;
+          display: flex;
+          gap: 0.5em;
+          align-items: center;
+          padding: 0.8em;
+          font-size: 0.9em;
+          font-weight: 550;
+          color: #333;
+          border-radius: 0px 9px 9px 0px;
+          font-family: "Open Sans";
+          position: relative;
+          z-index: 1;
+
+          &:hover {
+            color: #c21760;
+          }
+        }
+      }
     }
 
+    &-find-btn {
+      flex-grow: 1;
 
+      &:hover::after {
+        transform: scale(1.01) !important;
+      }
+    }
+  }
 }
-     }
-     
-    } 
 
-
-@media(max-width: 400px){
-  .hero-title{
+@media (max-width: 400px) {
+  .hero-title {
     font-size: 0.65em;
   }
-
 }
 
-@media(min-width: 401px) and (max-width: 675px){
-  .hero-title{
+@media (min-width: 401px) and (max-width: 675px) {
+  .hero-title {
     font-size: 0.75em;
   }
 }
 
-
-@media(min-width: 676px) and (max-width: 675px){
-  .hero-title{
+@media (min-width: 676px) and (max-width: 675px) {
+  .hero-title {
     font-size: 0.85em;
   }
 }
-@media(min-width: 676px) and (max-width: 1042px){
-  .hero-title{
+@media (min-width: 676px) and (max-width: 1042px) {
+  .hero-title {
     font-size: 1.145em;
-
   }
 }
 
-@media(min-width: 1043px) and (max-width: 1251px){
-  .hero-title{
+@media (min-width: 1043px) and (max-width: 1251px) {
+  .hero-title {
     font-size: 1.45em;
   }
 }
 
-@media(min-width: 1252px) and (max-width: 1427px){
-  .hero-title{
+@media (min-width: 1252px) and (max-width: 1427px) {
+  .hero-title {
     font-size: 1.75em;
   }
 }
 
-
-@media(min-width: 1428px){
-  .hero-title{
+@media (min-width: 1428px) {
+  .hero-title {
     font-size: 2em;
   }
 }
 
+@media (min-width: 964px) {
+  .hero {
+    align-items: flex-start;
+    margin-bottom: 4em;
 
-@media(min-width: 964px){
- .hero{
-  align-items: start;
-  margin-bottom: 4em;
+    &-title {
+      margin-top: 2em;
+    }
 
+    &-location {
+      background: white;
+      padding: 0em;
+      max-width: 50%;
+      border-radius: 9px;
+      bottom: 30%;
+      left: 1em;
 
-  &-title{
-    margin-top: 2em;
+      &-form {
+        flex-direction: row;
+        gap: 0.7em;
+      }
+
+      &-find-btn {
+        flex-grow: 0;
+      }
+    }
   }
- 
-  &-location {
-    background: white;
-    padding: 0em;
-    max-width:  50%;
-    border-radius: 9px;
-    bottom: 30%;
-    left: 1em;
-
-
-    &-form {
-      flex-direction: row;
-      gap: 0.7em;
-
-  }
-
-  &-find-btn{
-
-   flex-grow: 0;
-  }
-}}
 }
 
-
-
-
-
-@media(min-width: 964px){
-
- 
- 
-   .banner-title{
-     margin-top: 0 !important;
-   }
-  
-
- }
+@media (min-width: 964px) {
+  .banner-title {
+    margin-top: 0 !important;
+  }
+}

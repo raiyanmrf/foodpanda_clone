@@ -66,3 +66,46 @@ li {
     transform: scale(1.2);
   }
 }
+
+@mixin psuedo(
+  $position: absolute,
+  $bg: #cfcece,
+  $height: 100%,
+  $width: 100%,
+  $radius: 50%,
+  $top: 0,
+  $bottom: 0,
+  $right: 0,
+  $left: 0,
+  $duration: 0.3s,
+  $border: none,
+  $scale: scale(1.1),
+  $hover_border: $border
+) {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 0;
+  &::after {
+    content: "";
+    height: $height;
+    width: $width;
+    border-radius: $radius;
+    position: $position;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    transition: $duration ease;
+    border: $border;
+    z-index: -1;
+  }
+
+  &:hover::after {
+    transform: $scale;
+    border: $hover_border;
+    background-color: $bg;
+  }
+}

@@ -70,7 +70,7 @@
   // }
 }
 
-@media (min-width: 767px) and (max-width: 959px) {
+@media ((min-width: 767px) and (max-width: 959px)) or (min-width: 1265px) {
   .foodMenu {
     &-content {
       display: grid;
