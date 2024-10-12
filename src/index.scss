@@ -12,13 +12,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  // background-color: white;
-
-  @media (prefers-color-scheme: dark) {
-    // background-color: white;
-    // color: black;
-  }
+  font-family: "Open Sans", sans-serif, monospace;
 }
 
 .content {
@@ -102,6 +96,10 @@ button {
       transform: none !important;
     }
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .pink-icon {

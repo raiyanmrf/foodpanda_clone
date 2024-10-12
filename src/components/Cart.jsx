@@ -3,7 +3,7 @@ import { FaBackward, FaForward } from "react-icons/fa6";
 import { LiaPlusSolid } from "react-icons/lia";
 import { MdOutlineDelete } from "react-icons/md";
 import { CiCircleRemove, CiForkAndKnife } from "react-icons/ci";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useSlideRef from "../hooks/useSlideRef";
 import { AiFillShopping, AiOutlineShop } from "react-icons/ai";
 import { RiCrossFill, RiShoppingBag4Line } from "react-icons/ri";
@@ -15,6 +15,20 @@ const Cart = () => {
   const [itemsRefs, handleToggleNext, handleTogglePrev, index] = useSlideRef(
     suggestItems.length
   );
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 960) document.body.classList.add("no-scroll");
+      else document.body.classList.remove("no-scroll");
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>

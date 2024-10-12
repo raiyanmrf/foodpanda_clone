@@ -1416,6 +1416,9 @@ footer .line {
     border-radius: 0%;
     background-color: white;
   }
+  .cart-summary p span:nth-of-type(3) {
+    flex-basis: 100%;
+  }
   .cart header {
     background-color: white;
     display: flex;
@@ -1516,6 +1519,9 @@ footer .line {
 @media (max-width: 959px) {
   .switch-div {
     margin-left: auto;
+  }
+  .switch-div input {
+    display: none;
   }
   .switch-div label {
     top: 0;
@@ -2431,8 +2437,9 @@ footer .line {
   font-style: normal;
 }
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif, monospace;
 }
+
 .content {
   margin: 0 auto;
 }
@@ -2500,6 +2507,10 @@ button {
 }
 .btn-moderate:hover::after {
   transform: none !important;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .pink-icon {

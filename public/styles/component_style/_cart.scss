@@ -325,6 +325,13 @@
     display: flex;
     flex-direction: column;
 
+    &-summary {
+      p {
+        span:nth-of-type(3) {
+          flex-basis: 100%;
+        }
+      }
+    }
     position: fixed;
     top: 0;
     left: 0;
@@ -422,6 +429,9 @@
   }
 
   @media (max-width: 959px) {
+    input {
+      display: none;
+    }
     margin-left: auto;
     label {
       top: 0;
