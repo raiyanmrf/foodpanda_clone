@@ -16,35 +16,12 @@ const Cart = () => {
     suggestItems.length
   );
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 960) {
-        document.body.classList.add("no-scroll");
-      } else {
-        document.body.classList.remove("no-scroll");
-        document.querySelector(".cart").style.display = "";
-      }
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <>
       <section className="cart">
         <header>
           <h3>Momo Miah</h3>
-          <figure
-            onClick={() => {
-              document.body.classList.remove("no-scroll");
-              document.querySelector(".cart").style.display = "none";
-            }}
-          >
+          <figure>
             <RxCross1 />
           </figure>
         </header>
