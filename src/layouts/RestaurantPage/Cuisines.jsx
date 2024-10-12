@@ -5,6 +5,7 @@ import {
   suggestItems,
 } from "../../../public/data/foodData";
 import { LiaPlusSolid } from "react-icons/lia";
+import ItemPopup from "../../components/ItemPopup";
 
 const Cuisines = ({ handleHoverImpact, cardRefs }) => {
   return (
@@ -45,6 +46,8 @@ const Cuisines = ({ handleHoverImpact, cardRefs }) => {
                 </figcaption>
               </article>
             ))}
+
+            {/* <ItemPopup /> */}
           </div>
         </div>
       ))}

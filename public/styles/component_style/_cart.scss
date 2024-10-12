@@ -111,9 +111,19 @@
       margin-top: 1em;
       align-items: center;
 
+      &-btn {
+        background-color: white;
+        font-size: 1.1em;
+        padding: 0.5px 0px;
+        display: flex;
+        gap: 0.58em;
+        color: #333333;
+        align-items: center;
+        border: 1px solid rgb(188, 187, 187);
+        border-radius: 15px;
+      }
       figure {
         font-size: 1.2em;
-
         border-radius: 50%;
         position: relative;
         display: flex;
@@ -123,17 +133,6 @@
         z-index: 0;
 
         @include psuedo($bg: #ebe6e6);
-      }
-
-      button {
-        background-color: white;
-        font-size: 1.1em;
-        padding: 1px 0px;
-        display: flex;
-        gap: 0.58em;
-        align-items: center;
-        border: 1px solid rgb(188, 187, 187);
-        border-radius: 15px;
       }
     }
   }
@@ -390,8 +389,9 @@
     footer {
       width: 100%;
       margin-inline: auto;
-      left: 0;
+
       padding: 1.45em;
+      height: 220px;
     }
   }
 }
@@ -408,11 +408,14 @@
     width: 38px;
     height: 23.5px;
     border-radius: 5px;
-    background-color: rgb(78, 77, 77);
+    background-color: #4e4d4d;
     position: relative;
     top: -1.4em;
-
     cursor: pointer;
+
+    &:hover {
+      background-color: #373737;
+    }
 
     &::before {
       content: "";

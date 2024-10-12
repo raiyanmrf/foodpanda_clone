@@ -107,3 +107,55 @@
     flex-wrap: wrap;
   }
 }
+
+.popup-item {
+  background-color: white;
+  height: calc(100% - 150px);
+  position: relative;
+
+  &-cross {
+    @extend .signin-cancel;
+    right: 2em;
+    &::after {
+      background-color: white;
+    }
+  }
+
+  &-content {
+    background-color: aquamarine;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(100% - 76px);
+
+    picture {
+      display: flex;
+      width: 100%;
+      aspect-ratio: 16/9;
+      align-items: center;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    height: 75px;
+    padding: 1em;
+    justify-content: space-around;
+
+    div {
+      display: flex;
+      width: 20%;
+
+      button {
+        font-size: 1.5em;
+      }
+    }
+
+    button {
+      width: 60%;
+    }
+  }
+}

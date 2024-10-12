@@ -18,8 +18,12 @@ const Cart = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 960) document.body.classList.add("no-scroll");
-      else document.body.classList.remove("no-scroll");
+      if (window.innerWidth < 960) {
+        document.body.classList.add("no-scroll");
+      } else {
+        document.body.classList.remove("no-scroll");
+        document.querySelector(".cart").style.display = "";
+      }
     };
 
     handleResize();
@@ -35,7 +39,12 @@ const Cart = () => {
       <section className="cart">
         <header>
           <h3>Momo Miah</h3>
-          <figure>
+          <figure
+            onClick={() => {
+              document.body.classList.remove("no-scroll");
+              document.querySelector(".cart").style.display = "none";
+            }}
+          >
             <RxCross1 />
           </figure>
         </header>
@@ -79,7 +88,7 @@ const Cart = () => {
                     <div className="cart-order-update">
                       <p>{item.price}</p>
 
-                      <button>
+                      <div className="cart-order-update-btn">
                         <figure>
                           <MdOutlineDelete />{" "}
                         </figure>
@@ -87,7 +96,7 @@ const Cart = () => {
                         <figure>
                           <LiaPlusSolid />{" "}
                         </figure>
-                      </button>
+                      </div>
                     </div>
                   </summary>
                 </figure>

@@ -229,7 +229,7 @@ li {
   border-top-right-radius: 9px;
   box-shadow: 0px -30px 600px rgba(0, 0, 0, 0.249);
 }
-.signin-cancel {
+.signin-cancel, .popup-item-cross {
   position: absolute;
   height: 32px;
   width: 32px;
@@ -241,7 +241,7 @@ li {
   right: 1em;
   top: 1em;
 }
-.signin-cancel::after {
+.signin-cancel::after, .popup-item-cross::after {
   content: "";
   height: 100%;
   width: 100%;
@@ -253,7 +253,7 @@ li {
   transition: 0.3s;
   border: 1px solid gray;
 }
-.signin-cancel:hover::after {
+.signin-cancel:hover::after, .popup-item-cross:hover::after {
   transform: scale(1.2);
 }
 .signin-welcome {
@@ -696,6 +696,50 @@ li {
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
+}
+
+.popup-item {
+  background-color: white;
+  height: calc(100% - 150px);
+  position: relative;
+}
+.popup-item-cross {
+  right: 2em;
+}
+.popup-item-cross::after {
+  background-color: white;
+}
+.popup-item-content {
+  background-color: aquamarine;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100% - 76px);
+}
+.popup-item-content picture {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 16/9;
+  align-items: center;
+  overflow: hidden;
+}
+.popup-item-content picture img {
+  max-width: 100%;
+}
+.popup-item footer {
+  display: flex;
+  height: 75px;
+  padding: 1em;
+  justify-content: space-around;
+}
+.popup-item footer div {
+  display: flex;
+  width: 20%;
+}
+.popup-item footer div button {
+  font-size: 1.5em;
+}
+.popup-item footer button {
+  width: 60%;
 }
 
 .nav {
@@ -1197,6 +1241,17 @@ footer .line {
   margin-top: 1em;
   align-items: center;
 }
+.cart-order-update-btn {
+  background-color: white;
+  font-size: 1.1em;
+  padding: 0.5px 0px;
+  display: flex;
+  gap: 0.58em;
+  color: #333333;
+  align-items: center;
+  border: 1px solid rgb(188, 187, 187);
+  border-radius: 15px;
+}
 .cart-order-update figure {
   font-size: 1.2em;
   border-radius: 50%;
@@ -1231,16 +1286,6 @@ footer .line {
   transform: scale(1.1);
   border: none;
   background-color: #ebe6e6;
-}
-.cart-order-update button {
-  background-color: white;
-  font-size: 1.1em;
-  padding: 1px 0px;
-  display: flex;
-  gap: 0.58em;
-  align-items: center;
-  border: 1px solid rgb(188, 187, 187);
-  border-radius: 15px;
 }
 .cart-toogleBtns {
   display: flex;
@@ -1484,8 +1529,8 @@ footer .line {
   .cart footer {
     width: 100%;
     margin-inline: auto;
-    left: 0;
     padding: 1.45em;
+    height: 220px;
   }
 }
 .switch-div {
@@ -1499,10 +1544,13 @@ footer .line {
   width: 38px;
   height: 23.5px;
   border-radius: 5px;
-  background-color: rgb(78, 77, 77);
+  background-color: #4e4d4d;
   position: relative;
   top: -1.4em;
   cursor: pointer;
+}
+.switch-div label:hover {
+  background-color: #373737;
 }
 .switch-div label::before {
   content: "";
@@ -2450,6 +2498,11 @@ main {
 
 button {
   cursor: pointer;
+  background-color: transparent;
+}
+
+svg {
+  color: #333;
 }
 
 .btn {
