@@ -195,6 +195,7 @@ const Cart = () => {
           </button>
         </footer>
       </section>
+
       {/* <section className="cart-goto">
         <button className="btn btn-flex btn-pink btn-lg btn-moderate">
           <figure>

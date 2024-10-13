@@ -1195,7 +1195,7 @@ footer .line {
   overflow-x: hidden;
   max-width: 350px;
   scroll-behavior: smooth;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 .cart-content > * {
   padding: 1em;
@@ -1461,6 +1461,11 @@ footer .line {
     border-radius: 0%;
     background-color: white;
   }
+  .cart-content {
+    min-width: 100%;
+    max-height: calc(100% - 225px);
+    box-sizing: content-box;
+  }
   .cart-summary p span:nth-of-type(3) {
     flex-basis: 100%;
   }
@@ -1505,10 +1510,6 @@ footer .line {
     transform: scale(1.1);
     border: 1px solid lightgray;
     background-color: white;
-  }
-  .cart-content {
-    min-width: calc(100% - 1em);
-    max-height: calc(100% - 225px);
   }
   .cart-tabs {
     grid-template-columns: 1fr 1fr;

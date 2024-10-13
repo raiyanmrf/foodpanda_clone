@@ -59,8 +59,7 @@
     overflow-x: hidden;
     max-width: 350px;
     scroll-behavior: smooth;
-
-    box-sizing: content-box;
+    box-sizing: border-box;
 
     & > * {
       padding: 1em;
@@ -324,13 +323,6 @@
     display: flex;
     flex-direction: column;
 
-    &-summary {
-      p {
-        span:nth-of-type(3) {
-          flex-basis: 100%;
-        }
-      }
-    }
     position: fixed;
     top: 0;
     left: 0;
@@ -340,6 +332,18 @@
     border-radius: 0%;
     background-color: white;
 
+    &-content {
+      min-width: 100%;
+      max-height: calc(100% - 225px);
+      box-sizing: content-box;
+    }
+    &-summary {
+      p {
+        span:nth-of-type(3) {
+          flex-basis: 100%;
+        }
+      }
+    }
     header {
       background-color: white;
       display: flex;
@@ -358,10 +362,6 @@
 
         @include psuedo($bg: white, $border: 1px solid lightgray);
       }
-    }
-    &-content {
-      min-width: calc(100% - 1em);
-      max-height: calc(100% - 225px);
     }
 
     &-tabs {
@@ -392,7 +392,7 @@
       position: fixed;
       bottom: 0;
       padding: 1.45em;
-      //height: 220px;
+      // height: 10px;
     }
   }
 }
