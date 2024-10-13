@@ -47,7 +47,7 @@ const Cuisines = ({ handleHoverImpact, cardRefs }) => {
               </article>
             ))}
 
-            {/* <ItemPopup /> */}
+            <ItemPopup />
           </div>
         </div>
       ))}

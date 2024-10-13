@@ -6,7 +6,7 @@ const MenuDisplay = ({ handleHoverImpact, cardRefs }) => {
     <section className="foodMenu">
       <Cuisines handleHoverImpact={handleHoverImpact} cardRefs={cardRefs} />
 
-      <Cart />
+      {/* <Cart /> */}
     </section>
   );
 };

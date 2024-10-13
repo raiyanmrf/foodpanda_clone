@@ -1527,12 +1527,16 @@ footer .line {
   .cart-order-update {
     justify-content: space-between;
   }
+  .cart-cutlery {
+    height: 150px;
+  }
   .cart footer {
     width: 100%;
     margin-inline: auto;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     padding: 1.45em;
+    z-index: 10;
   }
 }
 .switch-div {
