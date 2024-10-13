@@ -710,10 +710,13 @@ li {
   background-color: white;
 }
 .popup-item-content {
-  background-color: aquamarine;
   overflow-x: hidden;
   overflow-y: auto;
   height: calc(100% - 76px);
+}
+.popup-item-content > *:not(picture) {
+  padding: 1em;
+  border-bottom: 1px solid rgb(237, 234, 234);
 }
 .popup-item-content picture {
   display: flex;
@@ -724,6 +727,203 @@ li {
 }
 .popup-item-content picture img {
   max-width: 100%;
+}
+.popup-item-description h3 {
+  display: flex;
+  gap: 1em;
+  color: #333;
+}
+.popup-item-description h3 strong {
+  color: #e21b70;
+}
+.popup-item-description h3 span:first-of-type {
+  color: #707070;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.popup-item-description h3 span:last-of-type {
+  font-family: "Agrandir";
+  font-weight: 400;
+}
+.popup-item-description p {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: black;
+  line-height: 1.7;
+  font-size: 0.9em;
+  font-weight: 550;
+  color: #4f4f4f;
+}
+.popup-item-selection, .popup-item-suggestion {
+  position: relative;
+}
+.popup-item-selection summary span, .popup-item-suggestion summary span {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #707070;
+  padding: 0.3em;
+}
+.popup-item-selection p, .popup-item-suggestion p {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.7;
+}
+.popup-item-selection li, .popup-item-suggestion li {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding-inline: 1em;
+  position: relative;
+}
+.popup-item-selection li:hover, .popup-item-suggestion li:hover {
+  background-color: #f7f7f7;
+}
+.popup-item-selection li:hover label, .popup-item-suggestion li:hover label {
+  box-shadow: inset 2px 2px black, inset -2px -2px #333;
+}
+.popup-item-selection li input[type=checkbox], .popup-item-suggestion li input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  transform: scale(1);
+  position: absolute;
+  opacity: 0;
+}
+.popup-item-selection li input:checked + label, .popup-item-suggestion li input:checked + label {
+  box-shadow: inset 2px 2px #333, inset -2px -2px #333;
+}
+.popup-item-selection li input:checked + label svg, .popup-item-suggestion li input:checked + label svg {
+  display: block;
+}
+.popup-item-selection li p:last-of-type, .popup-item-suggestion li p:last-of-type {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popup-item-selection li p:last-of-type span:last-of-type, .popup-item-suggestion li p:last-of-type span:last-of-type {
+  text-decoration: line-through;
+  color: #707070;
+}
+.popup-item-selection li label, .popup-item-suggestion li label {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  border: 2px solid;
+  border-radius: 3px;
+  border-color: #3d3d3d;
+  transition: 0.1s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-item-selection li label svg, .popup-item-suggestion li label svg {
+  font-size: 33px;
+  display: none;
+}
+.popup-item-selection, .popup-item-suggestion {
+  position: relative;
+}
+.popup-item-selection summary span, .popup-item-suggestion summary span {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #707070;
+  padding: 0.3em;
+}
+.popup-item-selection p, .popup-item-suggestion p {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.7;
+}
+.popup-item-selection li, .popup-item-suggestion li {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding-inline: 1em;
+  position: relative;
+}
+.popup-item-selection li:hover, .popup-item-suggestion li:hover {
+  background-color: #f7f7f7;
+}
+.popup-item-selection li:hover label, .popup-item-suggestion li:hover label {
+  box-shadow: inset 2px 2px black, inset -2px -2px #333;
+}
+.popup-item-selection li input[type=checkbox], .popup-item-suggestion li input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  transform: scale(1);
+  position: absolute;
+  opacity: 0;
+}
+.popup-item-selection li input:checked + label, .popup-item-suggestion li input:checked + label {
+  box-shadow: inset 2px 2px #333, inset -2px -2px #333;
+}
+.popup-item-selection li input:checked + label svg, .popup-item-suggestion li input:checked + label svg {
+  display: block;
+}
+.popup-item-selection li p:last-of-type, .popup-item-suggestion li p:last-of-type {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popup-item-selection li p:last-of-type span:last-of-type, .popup-item-suggestion li p:last-of-type span:last-of-type {
+  text-decoration: line-through;
+  color: #707070;
+}
+.popup-item-selection li label, .popup-item-suggestion li label {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  border: 2px solid;
+  border-radius: 3px;
+  border-color: #3d3d3d;
+  transition: 0.1s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-item-selection li label svg, .popup-item-suggestion li label svg {
+  font-size: 33px;
+  display: none;
+}
+.popup-item-orderActions p {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: black;
+  line-height: 1.7;
+}
+.popup-item-orderActions textarea {
+  width: 100%;
+  height: 84px;
+  padding: 0.5em;
+  resize: none;
+  font-family: "Open Sans";
+  padding: 0.5em;
+  font-weight: 300;
+  font-size: 0.9em;
+  border-color: lightgray;
+  border-radius: 9px;
+}
+.popup-item-orderActions select {
+  width: 100%;
+  padding: 0.5em;
+  resize: none;
+  font-family: "Open Sans";
+  padding: 0.5em;
+  font-weight: 400;
+  font-size: 0.9em;
 }
 .popup-item footer {
   display: flex;
@@ -1866,12 +2066,6 @@ footer .line {
 .foodMenu {
   padding-inline: 1em;
 }
-.foodMenu-single-cuisine p {
-  font-size: 0.8em;
-  font-weight: 400;
-  color: gray;
-  margin-top: 0.5em;
-}
 .foodMenu-title {
   margin-block: 1em;
 }
@@ -2486,9 +2680,21 @@ footer .line {
 }
 @font-face {
   font-family: "Agrandir";
-  src: url("../public/fonts/Agrandir-Regular.otf") format("opentype");
+  src: url("./assets/fonts/Agrandir-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: PP Agrandir;
+  font-style: medium;
+  font-weight: 400;
+  src: url("./assets/fonts/PPAgrandir-400-Medium.otf");
+}
+@font-face {
+  font-family: PP Agrandir;
+  font-style: bold;
+  font-weight: 600;
+  src: url("./assets/fonts/PPAgrandir-600-Bold.otf");
 }
 body {
   font-family: "Open Sans", sans-serif, monospace;
@@ -2509,6 +2715,13 @@ button {
 
 svg {
   color: #333;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "PP Agrandir";
 }
 
 .btn {

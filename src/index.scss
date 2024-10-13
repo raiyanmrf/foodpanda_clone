@@ -1,14 +1,27 @@
-@import "../public/styles/common/_all.scss";
-@import "../public/styles/component_style/all";
-@import "../public/styles/layouts/all";
+@import "./assets/styles/common/all";
+@import "./assets/styles/component_style/all";
+@import "./assets/styles/layouts/all";
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 @font-face {
   font-family: "Agrandir";
-  src: url("../public/fonts/Agrandir-Regular.otf") format("opentype");
+  src: url("./assets/fonts/Agrandir-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: PP Agrandir;
+  font-style: medium;
+  font-weight: 400;
+  src: url("./assets/fonts/PPAgrandir-400-Medium.otf");
+}
+@font-face {
+  font-family: PP Agrandir;
+  font-style: bold;
+  font-weight: 600;
+  src: url("./assets/fonts/PPAgrandir-600-Bold.otf");
 }
 
 body {
@@ -30,6 +43,13 @@ button {
 
 svg {
   color: #333;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "PP Agrandir";
 }
 
 .btn {
