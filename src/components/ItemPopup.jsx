@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 import dummyImg from "../../public/images/items/dummyItem.jpg";
 import { FaCheckSquare } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp, FaMinus, FaPlus } from "react-icons/fa6";
+import useIsActive from "../hooks/useIsActive";
 
 const ItemPopup = () => {
+  const [isDropActive, handleIsDropActive, handleInnerText] = useIsActive();
+  const [text, setText] = useState("Remove from my order");
+
+  useEffect(() => {
+    document.body.classList.add("no-scroll");
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, []);
+
   return (
     <section className="popup-container">
       <section className="popup-item">
         <figure className="popup-item-cross">
           <RxCross1 />
         </figure>
-
         <article className="popup-item-content">
+          <header>
+            <h3>Chicken Chedarollas</h3>
+          </header>
           <picture>
             <img style={{ width: "100%" }} src={dummyImg} alt="" />
           </picture>
@@ -108,19 +123,45 @@ const ItemPopup = () => {
             </article>
             <article>
               <h3>If this item is not available</h3>
-              <select name="" id="">
-                <option value="">Remove From my order</option>
-                <option value="">Call me</option>
-              </select>
+              <div className=" popup-item-selector">
+                <div
+                  className=" popup-item-selector-box"
+                  onClick={handleIsDropActive}
+                >
+                  <p id="replaceText">{text}</p>
+                  {isDropActive ? <FaAngleUp /> : <FaAngleDown />}
+                </div>
+
+                <ul className={`${isDropActive && "visible"}`}>
+                  <li
+                    onClick={() => {
+                      setText("Remove From my order");
+                    }}
+                  >
+                    Remove From my order
+                  </li>
+                  <li
+                    onClick={() => {
+                      setText("Call Me");
+                    }}
+                  >
+                    Call me
+                  </li>
+                </ul>
+              </div>
             </article>
           </div>
         </article>
 
         <footer>
           <div className="popup-item-update">
-            <button>-</button>
+            <button>
+              <FaMinus />
+            </button>
             <p>1</p>
-            <button>+</button>
+            <button>
+              <FaPlus />
+            </button>
           </div>
 
           <button className="btn btn-pink btn-lg">Add to cart</button>

@@ -127,6 +127,10 @@ h4 {
   overflow: hidden;
 }
 
+.visible {
+  visibility: visible !important;
+}
+
 .pink-icon {
   filter: invert(30%) sepia(100%) saturate(1000%) hue-rotate(290deg)
     brightness(90%) contrast(85%);
