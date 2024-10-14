@@ -5,11 +5,11 @@ import MenuSection from "../layouts/RestaurantPage/MenuSection";
 
 const RestaurantPage = () => {
   return (
-    <>
+    <section className=" content">
       <RestaurantProfile />
       <AvailableDeals />
       <MenuSection />
-    </>
+    </section>
   );
 };
 

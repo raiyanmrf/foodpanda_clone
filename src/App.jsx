@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
@@ -9,18 +10,19 @@ import RestaurantPage from "./pages/RestaurantPage";
 
 function App() {
   return (
-    <main>
-      <Navbar />
+    <BrowserRouter>
+      <main>
+        <Navbar />
 
-      <section className="content">
-        {/* <Home/> */}
-        {/* <City/> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/city" element={<City />} />
+          <Route path="/restaurant" element={<RestaurantPage />} />
+        </Routes>
 
-        <RestaurantPage />
-      </section>
-
-      <Footer />
-    </main>
+        <Footer />
+      </main>
+    </BrowserRouter>
   );
 }
 

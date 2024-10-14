@@ -749,6 +749,7 @@ li {
 }
 .popup-item-description h3 {
   display: flex;
+  align-items: center;
   gap: 1em;
   color: #333;
 }
@@ -772,6 +773,7 @@ li {
   font-size: 0.9em;
   font-weight: 550;
   color: #4f4f4f;
+  margin-top: 1em;
 }
 .popup-item-selection, .popup-item-suggestion {
   position: relative;
@@ -845,6 +847,9 @@ li {
   font-size: 33px;
   display: none;
 }
+.popup-item-orderActions article > * {
+  margin-top: 0.5em;
+}
 .popup-item-orderActions p {
   font-size: 0.9em;
   font-weight: 500;
@@ -863,6 +868,9 @@ li {
   border-color: lightgray;
   border-radius: 9px;
 }
+.popup-item-selector > * {
+  margin-top: 0.5em;
+}
 .popup-item-selector-box {
   border: 1px solid;
   border-radius: 9px;
@@ -875,7 +883,6 @@ li {
   background-color: white;
   box-shadow: 0 0 7px lightgray;
   padding: 0.5em;
-  margin-top: 0.5em;
   border-radius: 9px;
   visibility: hidden;
 }
@@ -896,7 +903,8 @@ li {
   height: 75px;
   padding: 1em;
   justify-content: space-around;
-  position: fixed;
+  position: sticky;
+  bottom: 0;
 }
 .popup-item footer div {
   display: flex;

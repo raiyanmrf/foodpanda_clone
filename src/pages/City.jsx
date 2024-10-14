@@ -1,28 +1,35 @@
-import { paragraphs } from "../../public/data/paragraphs"
-import ExtraDetail from "../components/ExtraDetail"
-import Allrestaurants from "../layouts/CityPage/Allrestaurants"
-import AppDownload from "../layouts/CityPage/AppDownload"
-import Banner from "../layouts/CityPage/Banner"
-
+import { paragraphs } from "../../public/data/paragraphs";
+import ExtraDetail from "../components/ExtraDetail";
+import Allrestaurants from "../layouts/CityPage/Allrestaurants";
+import AppDownload from "../layouts/CityPage/AppDownload";
+import Banner from "../layouts/CityPage/Banner";
 
 const City = () => {
   return (
-    <>
+    <section className="content">
+      <Banner
+        value={`banner`}
+        title={`Food Delivery from Dhaka's Best Restaurants`}
+      />
 
-        <Banner value={`banner`} title={`Food Delivery from Dhaka's Best Restaurants`}/>
+      <Allrestaurants />
 
-        <Allrestaurants/>
+      <ExtraDetail
+        title={paragraphs.dineEasy[0]}
+        paragraph={paragraphs.dineEasy[1]}
+      />
+      <ExtraDetail
+        title={paragraphs.fastFood[0]}
+        paragraph={paragraphs.fastFood[1]}
+      />
+      <ExtraDetail
+        title={paragraphs.orderFood[0]}
+        paragraph={paragraphs.orderFood[1]}
+      />
 
-        <ExtraDetail title={paragraphs.dineEasy[0]} paragraph={paragraphs.dineEasy[1]}/>
-        <ExtraDetail title={paragraphs.fastFood[0]} paragraph={paragraphs.fastFood[1]}/>
-        <ExtraDetail title={paragraphs.orderFood[0]} paragraph={paragraphs.orderFood[1]}/>
-      
+      <AppDownload />
+    </section>
+  );
+};
 
-       <AppDownload/>
-        
-    
-    </>
-  )
-}
-
-export default City
+export default City;

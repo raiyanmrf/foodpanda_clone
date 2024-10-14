@@ -165,8 +165,10 @@
   &-description {
     h3 {
       display: flex;
+      align-items: center;
       gap: 1em;
       color: #333;
+
       strong {
         color: $pink1;
       }
@@ -186,6 +188,7 @@
       font-size: 0.9em;
       font-weight: 550;
       color: #4f4f4f;
+      margin-top: 1em;
     }
   }
 
@@ -274,6 +277,9 @@
   }
 
   &-orderActions {
+    article > * {
+      margin-top: 0.5em;
+    }
     p {
       @include p-9($font-weight: 500);
     }
@@ -292,6 +298,9 @@
     }
   }
   &-selector {
+    & > * {
+      margin-top: 0.5em;
+    }
     &-box {
       border: 1px solid;
       border-radius: 9px;
@@ -305,7 +314,6 @@
       background-color: white;
       box-shadow: 0 0 7px lightgray;
       padding: 0.5em;
-      margin-top: 0.5em;
       border-radius: 9px;
       visibility: hidden;
 
@@ -327,7 +335,8 @@
     height: 75px;
     padding: 1em;
     justify-content: space-around;
-    position: fixed;
+    position: sticky;
+    bottom: 0;
 
     div {
       display: flex;
