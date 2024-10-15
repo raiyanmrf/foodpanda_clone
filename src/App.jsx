@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import { BrowserRouter,HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
@@ -10,7 +10,7 @@ import RestaurantPage from "./pages/RestaurantPage";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <main>
         <Navbar />
 
@@ -22,7 +22,7 @@ function App() {
 
         <Footer />
       </main>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
