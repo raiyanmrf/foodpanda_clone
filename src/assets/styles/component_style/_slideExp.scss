@@ -1,0 +1,236 @@
+.slideExp {
+  margin-bottom: 5em;
+  padding-inline: 0.5em;
+  ul {
+    display: flex;
+    max-width: 100vw;
+    gap: 1em;
+    align-items: center;
+    padding: 0.5em 0em;
+    overflow: auto;
+    scrollbar-width: none;
+    margin-top: 2em;
+  }
+
+  .fav-cuisines {
+    height: 150px;
+    min-width: 110px;
+    width: 100px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 9px;
+    text-align: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100px;
+      background-color: $light_gray1;
+
+      transition: 0.3s ease-out;
+
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  }
+
+  .daily-deals {
+    width: 280px;
+    min-width: 280px;
+    height: 120px;
+
+    border-radius: 9px;
+    overflow: hidden;
+
+    image {
+      border-radius: 9px;
+      max-width: 100%;
+      height: 100%;
+      transition: 0.3s ease-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .restaurant-slide {
+    position: relative;
+    min-width: 240px;
+    max-width: 240px;
+    width: 240px;
+    height: 215px;
+    overflow: hidden;
+    border-radius: 9px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 135px calc(100% - 136px);
+    border: 0.5px solid $light_gray3;
+
+    img {
+      max-width: 100%;
+      height: 136px;
+      transition: 0.3s ease-out;
+      grid-column: 1/3;
+
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+
+    &-info {
+      padding: 0.3em 0.4em;
+      position: relative;
+      grid-column: 1/3;
+      display: grid;
+      column-gap: auto;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto;
+      color: #333;
+      row-gap: 0.25em;
+      h3 {
+        font-size: 1em;
+        @extend .title-ellipsis;
+        width: 100%;
+      }
+      p {
+        font-size: 0.75em;
+        font-weight: 450;
+        color: #333;
+      }
+      p:first-of-type {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.3em;
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+      p:last-of-type {
+        grid-column: 1/3;
+        grid-row: 3;
+        font-weight: 600;
+
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+
+        svg {
+          font-size: 1.3em;
+          font-weight: 700;
+        }
+
+        svg:last-of-type {
+          font-size: 2em;
+          color: $teal;
+          filter: drop-shadow(0px -2px #45907062);
+        }
+      }
+    }
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1em;
+    button {
+      border: none;
+      padding: 0.8em;
+      @include psuedo($bg: white, $border: 1px solid);
+    }
+  }
+}
+
+.offer-tags {
+  position: absolute;
+  top: 0.3em;
+  left: 0.3em;
+  background-color: $pink1;
+  color: white;
+  font-weight: 500;
+  font-size: 0.8em;
+  border-radius: 9px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+  width: fit-content;
+  padding: 0.2em;
+
+  svg {
+    fill: white;
+    font-size: 1.3em;
+  }
+}
+
+.fav-btn {
+  position: absolute;
+  top: 0.3em;
+  right: 0.3em;
+  border: none;
+  background-color: transparent;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.05em;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+
+    border: 1px solid black;
+
+    z-index: -1;
+    background-color: white;
+    border-radius: 50%;
+
+    transition: 0.2s ease;
+  }
+
+  &:hover::after {
+    transform: scale(1.1);
+  }
+}
+
+.bg-violet {
+  background-color: $violet1;
+}
+.image-container {
+  position: relative;
+  width: 100%;
+  height: max-content;
+}
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  background-color: #0000008c;
+  justify-content: center;
+  align-items: center;
+  @include p-9();
+  font-weight: 550;
+
+  color: white;
+
+  button {
+    @include p-9();
+    background-color: white;
+    font-weight: 550;
+    font-size: 0.8em;
+    color: $pink1;
+    padding: 0.2em 0.5em;
+    border-radius: 9px;
+
+    border: none;
+  }
+}

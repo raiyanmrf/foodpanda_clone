@@ -1,5 +1,5 @@
 import React from "react";
-import { forwardIcon } from "../../public/svg";
+import { forwardIcon } from "../assets/svg";
 
 const BreadCrumbs = ({ linkArray }) => {
   return (

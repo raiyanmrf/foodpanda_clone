@@ -3,7 +3,7 @@ import {
   foodMenu,
   orderedItem,
   suggestItems,
-} from "../../../public/data/foodData";
+} from "../../assets/data/foodData";
 import { LiaPlusSolid } from "react-icons/lia";
 import ItemPopup from "../../components/ItemPopup";
 

@@ -1,7 +1,7 @@
 import React from "react";
-import { cutoutLeftIcon, cutoutRightIcon } from "../../public/svg";
+import { cutoutLeftIcon, cutoutRightIcon } from "../assets/svg";
 import CardPopup from "./CardPopup";
-import { cardOfferDetails } from "../../public/data/cardData";
+import { cardOfferDetails } from "../assets/data/cardData";
 import useIsActive from "../hooks/useIsActive";
 
 const Cards = React.forwardRef(({ item }, ref) => {

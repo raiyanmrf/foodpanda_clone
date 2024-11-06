@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { RxCross1 } from "react-icons/rx";
-import dummyImg from "../../public/images/items/dummyItem.jpg";
+import dummyImg from "../assets/images/items/dummyItem.jpg";
 import { FaCheckSquare } from "react-icons/fa";
 import { FaAngleDown, FaAngleUp, FaMinus, FaPlus } from "react-icons/fa6";
 import useIsActive from "../hooks/useIsActive";

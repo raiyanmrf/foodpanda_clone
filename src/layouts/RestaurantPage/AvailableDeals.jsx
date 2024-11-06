@@ -1,7 +1,7 @@
-import { backwardIcon, forwardIcon } from "../../../public/svg";
+import { backwardIcon, forwardIcon } from "../../assets/svg";
 
 import useSlideRef from "../../hooks/useSlideRef";
-import { cardData } from "../../../public/data/cardData";
+import { cardData } from "../../assets/data/cardData";
 import Cards from "../../components/Cards";
 import useDetectMouse from "../../hooks/useDetectMouse";
 import useCheckOverflow from "../../hooks/useCheckOverflow";

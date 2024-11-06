@@ -1,12 +1,11 @@
-import { orderedItem, suggestItems } from "../../public/data/foodData";
+import { orderedItem, suggestItems } from "../assets/data/foodData";
 import { FaBackward, FaForward } from "react-icons/fa6";
 import { LiaPlusSolid } from "react-icons/lia";
 import { MdOutlineDelete } from "react-icons/md";
-import { CiCircleRemove, CiForkAndKnife } from "react-icons/ci";
-import { useEffect, useState } from "react";
+import { CiForkAndKnife } from "react-icons/ci";
+import { useState } from "react";
 import useSlideRef from "../hooks/useSlideRef";
-import { AiFillShopping, AiOutlineShop } from "react-icons/ai";
-import { RiCrossFill, RiShoppingBag4Line } from "react-icons/ri";
+
 import { RxCross1 } from "react-icons/rx";
 
 const Cart = () => {

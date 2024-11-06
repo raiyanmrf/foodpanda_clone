@@ -1,4 +1,4 @@
-import { foodNavLinks } from "../../../public/data/foodData";
+import { foodNavLinks } from "../../assets/data/foodData";
 import useSlideRef from "../../hooks/useSlideRef";
 import MenuDisplay from "./MenuDisplay";
 import MenuNavbar from "./MenuNavbar";

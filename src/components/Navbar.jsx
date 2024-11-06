@@ -1,5 +1,5 @@
 import { FaRegUser } from "react-icons/fa6";
-import { locationNavList, lowerNavList } from "../../public/data/navData";
+import { locationNavList, lowerNavList } from "../assets/data/navData";
 import {
   bagIcon,
   dropIcon,
@@ -10,7 +10,7 @@ import {
   oksignIcon,
   pandaIcon,
   profileIcon,
-} from "../../public/svg";
+} from "../assets/svg";
 import useIsActive from "../hooks/useIsActive";
 import Button from "./Button";
 import SignIn from "./SignIn";

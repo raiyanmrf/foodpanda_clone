@@ -1,4 +1,4 @@
-import { paragraphs } from "../../public/data/paragraphs";
+import { paragraphs } from "../assets/data/paragraphs";
 import ExtraDetail from "../components/ExtraDetail";
 import Allrestaurants from "../layouts/CityPage/Allrestaurants";
 import AppDownload from "../layouts/CityPage/AppDownload";

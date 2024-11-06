@@ -1,5 +1,5 @@
 import React from "react";
-import { citiesArray } from "../../../public/data/cities";
+import { citiesArray } from "../../assets/images/cities/index";
 import { useNavigate } from "react-router-dom";
 
 const Cities = () => {

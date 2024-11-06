@@ -1,12 +1,17 @@
+import React, { Suspense, lazy } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
-
-import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import ErrorPage from "./pages/ErrorPage";
+import SlideExperiment from "./pages/SlideExperiment";
+import { LuAtSign } from "react-icons/lu";
+import Lats from "./pages/Lats";
 
-import SignIn from "./components/SignIn";
-import City from "./pages/City";
-import RestaurantPage from "./pages/RestaurantPage";
+// Lazy load the page components
+const HomePage = lazy(() => import("./pages/HomePage"));
+const City = lazy(() => import("./pages/City"));
+const RestaurantPage = lazy(() => import("./pages/RestaurantPage"));
+const RestaurantsNearby = lazy(() => import("./pages/RestaurantsNearby"));
 
 function App() {
   return (
@@ -14,13 +19,19 @@ function App() {
       <main>
         <Navbar />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/city" element={<City />} />
-          <Route path="/restaurant" element={<RestaurantPage />} />
-        </Routes>
-
-        <Footer />
+        {/* Suspense wraps lazy-loaded components */}
+        <Suspense>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/city" element={<City />} />
+            <Route path="/restaurant" element={<RestaurantPage />} />
+            <Route path="/nearby" element={<RestaurantsNearby />} />
+            <Route path="/slide" element={<SlideExperiment />} />
+            <Route path="/lats" element={<Lats />} />
+            <Route path="/*" element={<ErrorPage />} />
+          </Routes>
+          <Footer />
+        </Suspense>
       </main>
     </BrowserRouter>
   );

@@ -1,72 +1,54 @@
+.vendor {
+  position: relative;
+  margin-bottom: 10em;
 
+  &-title {
+    h1 {
+      font-family: "Open Sans";
+      font-size: clamp(1rem, 1.75rem, 1.95rem);
+      line-height: 1.333333333;
+      font-weight: 700;
+      font-feature-settings: "ss09", "ss11";
+      margin-block-end: 20px;
+      margin-left: 5px;
+    }
+  }
 
+  &-img {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    max-height: 540px;
 
+    img {
+      min-width: 794px;
+    }
+  }
 
-    
-    .vendor{
-
-        position: relative;
-    
-          &-title{
-  
-            h1 {
-              font-family: "Open Sans";
-              font-size: clamp(1rem,1.75rem,1.95rem);
-              line-height: 1.333333333;
-              font-weight: 700;
-              font-feature-settings: "ss09", "ss11";
-              margin-block-end: 20px;
-              margin-left: 5px;
-          }
-      
-          }
-  
-  
-  
-          &-img{
-           
-              width: 100%;
-              overflow: hidden;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              object-fit: cover;
-              max-height: 540px;
-        
-  
-              img{
-                min-width:794px ;
-             
-              }
-          }
-  
-          
-  
   &-detail {
     position: absolute;
     background: white;
-    width: min(500px,79%);
+    width: min(500px, 79%);
     bottom: -22%;
     left: 12%;
     border-radius: 5px;
     padding: 18px;
 
     box-shadow: 0px 0px 11px -4px gray;
-    &>*+*{
+    & > * + * {
       margin-top: 16px;
     }
-  
-    h3{
-   
+
+    h3 {
       font-size: 1.3em;
-     
     }
-    p{
+    p {
       font-family: $ParagraphSmallFontFamily;
-      font-size: .859em;
+      font-size: 0.859em;
       font-weight: 400;
     }
   }
-      }
-  
-      
+}

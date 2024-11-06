@@ -1,0 +1,3778 @@
+{
+  "pizza": [
+    {
+      "tag": "Popular",
+      "name": "Classic Bolognese Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 360",
+      "price": 360,
+      "detail": "Topped with beef bolognese & mozzarella cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4056194.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Beef Jalapeno Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 450",
+      "price": 450,
+      "detail": "Topped with beef,  jalapeno & mozzarella cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4056193.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "BBQ Sausage N' Shrooms Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 400",
+      "price": 400,
+      "detail": "Topped with chicken sausage, mushroom, bbq sauce & mozzarella cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4056195.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Butter Chicken Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 470",
+      "price": 470,
+      "detail": "Topped with butter chicken, deshi paneer, onion, cilantro & mozzarella cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5851374.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Margherita Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 330",
+      "price": 330,
+      "detail": "Topped with fresh basil, mozzarella cheese & parmesan cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4056197.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Chicken Alfredo Spaghetti ",
+      "type": "spaghetti",
+      "price_desc": "Tk 390",
+      "price": 390,
+      "detail": null,
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4507436.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Classic Pizza",
+      "name": "Margherita Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 330",
+      "price": 330,
+      "detail": "Topped with fresh basil, mozzarella cheese & parmesan cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4056197.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Classic Pizza",
+      "name": "Beef Jalapeno Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 450",
+      "price": 450,
+      "detail": "Topped with beef,  jalapeno & mozzarella cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4056193.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Classic Pizza",
+      "name": "Classic Bolognese Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 360",
+      "price": 360,
+      "detail": "Topped with beef bolognese & mozzarella cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4056194.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Classic Pizza",
+      "name": "BBQ Sausage N' Shrooms Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 400",
+      "price": 400,
+      "detail": "Topped with chicken sausage, mushroom, bbq sauce & mozzarella cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4056195.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Classic Pizza",
+      "name": "Honey Pepperoni Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 480",
+      "price": 480,
+      "detail": "Topped with beef pepperoni, honey drizzle & mozzarella cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4056196.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Classic Pizza",
+      "name": "Chicken Macedonia Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 440",
+      "price": 440,
+      "detail": "Topped with chicken, olives, tomato, feta cheese & mozzarella cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4056198.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Premium Pizza",
+      "name": "All Star Seafood Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 520",
+      "price": 520,
+      "detail": "Topped with shrimp, squid, crab stick, cilantro & mozzarella cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4056199.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Premium Pizza",
+      "name": "Magic Mushroom Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 430",
+      "price": 430,
+      "detail": "Topped with fungus mushroom, button mushroom, oyster mushroom, mozzarella cheese & cheddar cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4056203.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Premium Pizza",
+      "name": "Mad Cheezy Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 380",
+      "price": 380,
+      "detail": "Topped with mozzarella cheese, gouda, cheese, cheddar cheese, feta cheese & parmesan cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4056204.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Premium Pizza",
+      "name": "Butter Chicken Pizza",
+      "type": "pizza",
+      "price_desc": "from Tk 470",
+      "price": 470,
+      "detail": "Topped with butter chicken, deshi paneer, onion, cilantro & mozzarella cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5851374.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Wings",
+      "name": "Thai Chili Lime Wings",
+      "type": "wings",
+      "price_desc": "from Tk 350",
+      "price": 350,
+      "detail": "6 pcs",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5044764.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Wings",
+      "name": "Gochujang Honey Wings",
+      "type": "wings",
+      "price_desc": "from Tk 340",
+      "price": 340,
+      "detail": "6 pcs",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5044765.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Wings",
+      "name": "Buffalo Wings",
+      "type": "wings",
+      "price_desc": "from Tk 330",
+      "price": 330,
+      "detail": "6 pcs",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5044767.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Wings",
+      "name": "BBQ Dry Rub Wings",
+      "type": "wings",
+      "price_desc": "from Tk 280",
+      "price": 280,
+      "detail": "6 pcs",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5044768.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Wings",
+      "name": "Sweet N' Spicy Wings",
+      "type": "wings",
+      "price_desc": "from Tk 300",
+      "price": 300,
+      "detail": "6 pcs",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5044769.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Wings",
+      "name": "Honey Butter Wings",
+      "type": "wings",
+      "price_desc": "from Tk 350",
+      "price": 350,
+      "detail": "6 pcs",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5044771.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Wings",
+      "name": "Death by Chicken Wings - Naga",
+      "type": "wings",
+      "price_desc": "from Tk 370",
+      "price": 370,
+      "detail": "6 pcs",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5044772.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Combo",
+      "name": "Wings Combo",
+      "type": "wings",
+      "price_desc": "from Tk 1,099",
+      "price": 1099,
+      "detail": "Consists of 20 pcs chicken wings",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5402233.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pasta",
+      "name": "Bolognese Spaghetti ",
+      "type": "spaghetti",
+      "price_desc": "Tk 370",
+      "price": 370,
+      "detail": null,
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4507433.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pasta",
+      "name": "Seafood Marinara Spaghetti ",
+      "type": "spaghetti",
+      "price_desc": "Tk 630",
+      "price": 630,
+      "detail": null,
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4507434.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pasta",
+      "name": "Chicken Alfredo Spaghetti ",
+      "type": "spaghetti",
+      "price_desc": "Tk 390",
+      "price": 390,
+      "detail": null,
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4507436.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Plain Cheesecake ",
+      "type": "cake",
+      "price_desc": "Tk 400",
+      "price": 400,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6941589.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Caramel Cheesecake ",
+      "type": "cake",
+      "price_desc": "Tk 440",
+      "price": 440,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6941590.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Blueberry Cheesecake ",
+      "type": "cake",
+      "price_desc": "Tk 460",
+      "price": 460,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6941591.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Strawberry Cheesecake ",
+      "type": "cake",
+      "price_desc": "Tk 460",
+      "price": 460,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6941592.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Picnic Brownie",
+      "type": null,
+      "price_desc": "from Tk 80",
+      "price": 80,
+      "detail": null,
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5851306.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Death By Chocolate Cake ",
+      "type": "cake",
+      "price_desc": "Tk 230",
+      "price": 230,
+      "detail": null,
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8706960.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Chocolate Lava Cake ",
+      "type": "cake",
+      "price_desc": "Tk 270",
+      "price": 270,
+      "detail": null,
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8706961.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Chocolate Cheesecake ",
+      "type": "cake",
+      "price_desc": "Tk 460",
+      "price": 460,
+      "detail": null,
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8706962.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sides",
+      "name": "Fries",
+      "type": null,
+      "price_desc": "Tk 150",
+      "price": 150,
+      "detail": "1:1 - Finely cut crispy fries fried till perfection",
+      "image": null
+    },
+    {
+      "tag": "Sides",
+      "name": "Garlic Mayo",
+      "type": "mayo",
+      "price_desc": "Tk 50",
+      "price": 50,
+      "detail": null,
+      "image": null
+    },
+    {
+      "tag": "Sides",
+      "name": "Sweet Chili Mayo",
+      "type": "mayo",
+      "price_desc": "Tk 60",
+      "price": 60,
+      "detail": null,
+      "image": null
+    },
+    {
+      "tag": "Sides",
+      "name": "Sriracha Mayo",
+      "type": "mayo",
+      "price_desc": "Tk 80",
+      "price": 80,
+      "detail": null,
+      "image": null
+    }
+  ],
+
+  "bangladeshi": [
+    {
+      "tag": "Popular",
+      "name": "Mutton Bhuna Khichuri",
+      "type": "khichuri",
+      "price_desc": "Tk 300",
+      "price": 300,
+      "detail": "Prepared with chunks of mutton, rice, rose water for flavor, green chili paste & garam masala",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3521650.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Chicken Soup",
+      "type": "chicken",
+      "price_desc": "Tk 130",
+      "price": 130,
+      "detail": "Nothing warms the soul as good as a bowl of thick, rich chicken soup",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4063363.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Mutton Paya",
+      "type": "paya",
+      "price_desc": "Tk 150",
+      "price": 150,
+      "detail": "Heavy stew created from feet of goat bones from the leg with rich gelatin marrow covered with meat",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4063365.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Mutton Kolija Bhuna",
+      "type": "bhuna",
+      "price_desc": "Tk 130",
+      "price": 130,
+      "detail": "A traditional delicacy prepared with mutton liver & kidney, cooked on a griddle",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4063364.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Chicken Jhal Fry",
+      "type": "chicken",
+      "price_desc": "Tk 190",
+      "price": 190,
+      "detail": "1:1 - Mixture of tender chicken with a slight spicy flavored curry",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3586479.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Chicken Khichuri",
+      "type": "khichuri",
+      "price_desc": "Tk 280",
+      "price": 280,
+      "detail": "Prepared with aromatic rice, chicken, lentil & secret spices",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3687346.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice",
+      "name": "Mutton Bhuna Khichuri",
+      "type": "khichuri",
+      "price_desc": "Tk 300",
+      "price": 300,
+      "detail": "Prepared with chunks of mutton, rice, rose water for flavor, green chili paste & garam masala",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3521650.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice",
+      "name": "Chicken Khichuri",
+      "type": "khichuri",
+      "price_desc": "Tk 280",
+      "price": 280,
+      "detail": "Prepared with aromatic rice, chicken, lentil & secret spices",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3687346.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Paratha & Naan",
+      "name": "Tandoori Roti",
+      "type": "roti",
+      "price_desc": "Tk 20",
+      "price": 20,
+      "detail": "1 pc - Milky yeasted bread that's baked in the tandoor till golden & fluffy",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3593325.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Paratha & Naan",
+      "name": "Plain Paratha",
+      "type": "paratha",
+      "price_desc": "Tk 20",
+      "price": 20,
+      "detail": "1 pc - Crispy & soft flatbread that is often served with any item that you can have",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4009026.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Paratha & Naan",
+      "name": "Shahi Paratha",
+      "type": "paratha",
+      "price_desc": "Tk 40",
+      "price": 40,
+      "detail": "1 pc - Soft filling of dough with spices, onions & green chilies inside paratha",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3593328.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Paratha & Naan",
+      "name": "Butter Naan",
+      "type": "naan",
+      "price_desc": "Tk 40",
+      "price": 40,
+      "detail": "1 pc - Soft & extremely yummy, it is often served with any item that you can have",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4004806.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Curry",
+      "name": "Mutton Paya",
+      "type": "paya",
+      "price_desc": "Tk 150",
+      "price": 150,
+      "detail": "Heavy stew created from feet of goat bones from the leg with rich gelatin marrow covered with meat",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4063365.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Curry",
+      "name": "Chicken Soup",
+      "type": "chicken",
+      "price_desc": "Tk 130",
+      "price": 130,
+      "detail": "Nothing warms the soul as good as a bowl of thick, rich chicken soup",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4063363.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Curry",
+      "name": "Chicken Jhal Fry",
+      "type": "chicken",
+      "price_desc": "Tk 190",
+      "price": 190,
+      "detail": "1:1 - Mixture of tender chicken with a slight spicy flavored curry",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3586479.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Curry",
+      "name": "Beef Bhuna",
+      "type": "bhuna",
+      "price_desc": "Tk 260",
+      "price": 260,
+      "detail": "1:1 - Glorious curry identified by delicious crafted beef cube, deshi spices & thick gravy",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3593660.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Curry",
+      "name": "Mutton Bhuna",
+      "type": "bhuna",
+      "price_desc": "Tk 170",
+      "price": 170,
+      "detail": "1:1 - Delocious curry identified by delicious crafted mutton cube, deshi spices & thick gravy",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3593724.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Curry",
+      "name": "Mutton Kolija Bhuna",
+      "type": "bhuna",
+      "price_desc": "Tk 130",
+      "price": 130,
+      "detail": "A traditional delicacy prepared with mutton liver & kidney, cooked on a griddle",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4063364.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Curry",
+      "name": "Chicken Roast",
+      "type": "chicken",
+      "price_desc": "Tk 160",
+      "price": 160,
+      "detail": "Prepared with whole chicken, celery, onion powder & black pepper",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3593738.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Curry",
+      "name": "Mutton Dopaiza",
+      "type": null,
+      "price_desc": "Tk 270",
+      "price": 270,
+      "detail": "Mutton, dahi, garam masala powder, olive oil, lemon juice",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6788267.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Bhorta & Bhaji",
+      "name": "Mixed Dal Bhaji",
+      "type": "bhaji",
+      "price_desc": "Tk 30",
+      "price": 30,
+      "detail": "1:1 - Nutritious blend of assorted lentil & seasonal vegetable, cooked to perfection, creating a flavorful & hearty dish",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3586477.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Bhorta & Bhaji",
+      "name": "Bhaji",
+      "type": "bhaji",
+      "price_desc": "Tk 30",
+      "price": 30,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3586476.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dal",
+      "name": "Booter Dal",
+      "type": "dal",
+      "price_desc": "Tk 25",
+      "price": 25,
+      "detail": "1:1 - Classic dish prepared with lentil & authentic spices",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3593336.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Firni",
+      "type": "firni",
+      "price_desc": "Tk 40",
+      "price": 40,
+      "detail": "1:1 - Prepared with basmati rice, saffron, almonds & milk",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3586494.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Pudding",
+      "type": "pudding",
+      "price_desc": "Tk 50",
+      "price": 50,
+      "detail": "1:1 - Rice pudding made with milk & rice, slowly cooked until blended",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3586495.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Doi (1kg)",
+      "type": "doi",
+      "price_desc": "Tk 370",
+      "price": 370,
+      "detail": " 1kg - Prepared with milk & sugar",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3593750.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Cup Doi",
+      "type": "doi",
+      "price_desc": "Tk 50",
+      "price": 50,
+      "detail": "1:1 - Prepared with sugar, curd & milk",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3586492.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Beverage",
+      "name": "Borhani",
+      "type": "borhani",
+      "price_desc": "from Tk 50",
+      "price": 50,
+      "detail": "A healthy beverage helps to digest",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3593748.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Snacks",
+      "name": "Shingara",
+      "type": "shingara",
+      "price_desc": "Tk 15",
+      "price": 15,
+      "detail": "1 pc - Traditional snacks having a thin & flaky coating prepared with onion, vegetable & spices",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3586491.jpg?width=150&height=150"
+    }
+  ],
+  "cafe": [
+    {
+      "tag": "Popular",
+      "name": "Latte",
+      "type": "latte",
+      "price_desc": "from Tk 255",
+      "price": 255,
+      "detail": "Prepared with espresso & steamed milk",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058238.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Cappuccino - Regular",
+      "type": "cappuccino",
+      "price_desc": "from Tk 255",
+      "price": 255,
+      "detail": "180 ml - Espresso-based steamed milk drink with extra foam.\nSpecial Note: Our regular-size cappuccino is 180 ml drink but the smallest takeaway cup is 240 ml so there will be room in the cup",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058263.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Iced Americano",
+      "type": "americano",
+      "price_desc": "from Tk 220",
+      "price": 220,
+      "detail": "Iced version of americano",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1073508.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Roast Beef Sandwich on a Croissant",
+      "type": null,
+      "price_desc": "from Tk 540",
+      "price": 540,
+      "detail": "Smoked roast beef sandwich hails from boston with a nod to local heat. Served on a warm croissant with signature boston sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1062713.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Mocha",
+      "type": "mocha",
+      "price_desc": "from Tk 365",
+      "price": 365,
+      "detail": "Rich chocolate sauce latte",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058246.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "4C Sandwich",
+      "type": null,
+      "price_desc": "from Tk 480",
+      "price": 480,
+      "detail": "Slices of chicken & cheese toasted in a croissant, served with tomato & chili chutney",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058221.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Hot Chocolate",
+      "type": null,
+      "price_desc": "from Tk 325",
+      "price": 325,
+      "detail": "Prepared with rich chocolate flavor, steamed milk & micro foam",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058248.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Mocha",
+      "type": "mocha",
+      "price_desc": "from Tk 365",
+      "price": 365,
+      "detail": "Rich chocolate sauce latte",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058246.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Iced Mocha",
+      "type": "mocha",
+      "price_desc": "from Tk 395",
+      "price": 395,
+      "detail": "Iced version of mocha ",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058245.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "White Mocha",
+      "type": "mocha",
+      "price_desc": "from Tk 365",
+      "price": 365,
+      "detail": "Rice white chocolate latte",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058236.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Iced White Mocha",
+      "type": "mocha",
+      "price_desc": "from Tk 395",
+      "price": 395,
+      "detail": "Iced version of white mocha",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058262.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Iced Chocolate",
+      "type": null,
+      "price_desc": "from Tk 355",
+      "price": 355,
+      "detail": "Iced version of hot chocolate",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058244.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Salted Caramel Latte",
+      "type": "latte",
+      "price_desc": "from Tk 365",
+      "price": 365,
+      "detail": "Rice salted caramel sauce latte",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3620832.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Iced Salted Caramel Latte",
+      "type": "latte",
+      "price_desc": "from Tk 395",
+      "price": 395,
+      "detail": "Prepared with espresso & steamed milk",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3620831.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Iced Hazelnut Latte",
+      "type": "latte",
+      "price_desc": "from Tk 355",
+      "price": 355,
+      "detail": "Prepared with espresso & steamed milk",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058234.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Double Espresso",
+      "type": "espresso",
+      "price_desc": "from Tk 210",
+      "price": 210,
+      "detail": "50 ml - Intense  coffee",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058235.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Latte",
+      "type": "latte",
+      "price_desc": "from Tk 255",
+      "price": 255,
+      "detail": "Prepared with espresso & steamed milk",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058238.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Hazelnut Latte",
+      "type": "latte",
+      "price_desc": "from Tk 325",
+      "price": 325,
+      "detail": "Prepared with espresso & steamed milk",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058240.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Iced Latte",
+      "type": "latte",
+      "price_desc": "from Tk 285",
+      "price": 285,
+      "detail": "Prepared with espresso & steamed milk",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058241.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Chai Latte",
+      "type": "latte",
+      "price_desc": "from Tk 325",
+      "price": 325,
+      "detail": "Steamed milk with chai syrup & micro foam",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058242.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Caramel Latte",
+      "type": "latte",
+      "price_desc": "from Tk 325",
+      "price": 325,
+      "detail": "Prepared with espresso, steamed milk & micro foam ",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058243.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Iced Caramel Latte",
+      "type": "latte",
+      "price_desc": "from Tk 355",
+      "price": 355,
+      "detail": "Prepared with espresso & steamed milk",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058247.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Cappuccino - Regular",
+      "type": "cappuccino",
+      "price_desc": "from Tk 255",
+      "price": 255,
+      "detail": "180 ml - Espresso-based steamed milk drink with extra foam.\nSpecial Note: Our regular-size cappuccino is 180 ml drink but the smallest takeaway cup is 240 ml so there will be room in the cup",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058263.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Americano",
+      "type": "americano",
+      "price_desc": "from Tk 190",
+      "price": 190,
+      "detail": "Espresso poured over hot water",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058265.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Vanilla Latte",
+      "type": "latte",
+      "price_desc": "from Tk 325",
+      "price": 325,
+      "detail": "Prepared with espresso & steamed milk",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058266.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Iced Vanilla Latte",
+      "type": "latte",
+      "price_desc": "from Tk 355",
+      "price": 355,
+      "detail": "Prepared with espresso & steamed milk",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058272.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Iced Americano",
+      "type": "americano",
+      "price_desc": "from Tk 220",
+      "price": 220,
+      "detail": "Iced version of americano",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1073508.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Lemon Raz",
+      "type": null,
+      "price_desc": "from Tk 265",
+      "price": 265,
+      "detail": "Iced drink with organic lemon, raspberry flavor & sparkling water",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3247120.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Moroccan Mint",
+      "type": null,
+      "price_desc": "from Tk 265",
+      "price": 265,
+      "detail": "Iced green tea with real lemon, mojito syrup & sparkling water",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3247122.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Hot & Cold Drinks",
+      "name": "Cappuccino - Large",
+      "type": "cappuccino",
+      "price_desc": "from Tk 365",
+      "price": 365,
+      "detail": "360 ml - Espresso based steamed milk drink with extra foam",
+      "image": null
+    },
+    {
+      "tag": "Pastry",
+      "name": "Harvest Muffin",
+      "type": null,
+      "price_desc": "Tk 110",
+      "price": 110,
+      "detail": "1 pc - Packed with pumpkin, carrot, green pumpkin seeds & walnuts",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7399990.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Brownie",
+      "type": null,
+      "price_desc": "Tk 100",
+      "price": 100,
+      "detail": "A north end classic - our dark & rich chocolate brownie ",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058267.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Biscotti",
+      "type": null,
+      "price_desc": "Tk 85",
+      "price": 85,
+      "detail": "Traditional italian biscuit, twice-baked for a crunch that's best enjoyed dipped in coffee",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058225.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Brain Food",
+      "type": null,
+      "price_desc": "Tk 190",
+      "price": 190,
+      "detail": "A healthy mix of roasted nuts, raisins & dried cranberries with a hint of salt",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058224.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Date Bar",
+      "type": null,
+      "price_desc": "Tk 170",
+      "price": 170,
+      "detail": "Wholesome baked oat crumble & sweet dates combine for a very special bar",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058228.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Chocolate Chip",
+      "type": null,
+      "price_desc": "Tk 150",
+      "price": 150,
+      "detail": "The soft & chewy, classic american cookie with european-quality dark chocolate",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058273.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Triple Chocolate",
+      "type": null,
+      "price_desc": "Tk 150",
+      "price": 150,
+      "detail": "Chewy chocolate cookie studded with both dark & white chocolates",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058232.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Cinnamon Roll",
+      "type": null,
+      "price_desc": "Tk 210",
+      "price": 210,
+      "detail": "Everyone has a cinnamon roll; ours is rich & gooey, best served warm. Enjoy it with or without american-style buttercream frosting",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058285.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Granola",
+      "type": null,
+      "price_desc": "from Tk 230",
+      "price": 230,
+      "detail": "A lightly-sweet mixed of toasted oats, almonds & honey. Served with milk or yogurt",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058223.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Shortbread",
+      "type": null,
+      "price_desc": "Tk 170",
+      "price": 170,
+      "detail": "England's traditional biscuit - crumbly, crunchy & more-ish",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1062718.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Plain Bagel",
+      "type": null,
+      "price_desc": "from Tk 120",
+      "price": 120,
+      "detail": "New York-style chewy sourdough bread, boiled & baked to perfection",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058231.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Sesame Bagel",
+      "type": null,
+      "price_desc": "from Tk 120",
+      "price": 120,
+      "detail": "Sesame seeds add their special flavor to our new york-style chewy sourdough bread",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1061639.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Croissant",
+      "type": null,
+      "price_desc": "from Tk 220",
+      "price": 220,
+      "detail": "The famously french & technically challenging pastry made the french way with real butter & no chemicals",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058259.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Chili Cheese Croissant",
+      "type": null,
+      "price_desc": "from Tk 200",
+      "price": 200,
+      "detail": "Savory cheese croissant with a hint of heat from roasted chilis",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058264.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Pastry",
+      "name": "Cut Croissant",
+      "type": null,
+      "price_desc": "from Tk 220",
+      "price": 220,
+      "detail": "1 pc - Our same butter croissant, cut in half",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8020767.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sandwich",
+      "name": "4C Sandwich",
+      "type": null,
+      "price_desc": "from Tk 480",
+      "price": 480,
+      "detail": "Slices of chicken & cheese toasted in a croissant, served with tomato & chili chutney",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058221.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sandwich",
+      "name": "4C Sandwich on a Bagel",
+      "type": null,
+      "price_desc": "from Tk 380",
+      "price": 380,
+      "detail": "Slices of chicken & cheese toasted in a bagel, served with tomato & chili chutney",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1062711.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sandwich",
+      "name": "Roast Beef Sandwich",
+      "type": null,
+      "price_desc": "from Tk 460",
+      "price": 460,
+      "detail": "Smoked roast beef sandwich hails from boston with a nod to local heat. Served on a toasted bagel with signature boston sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058222.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sandwich",
+      "name": "Roast Beef Sandwich on a Croissant",
+      "type": null,
+      "price_desc": "from Tk 540",
+      "price": 540,
+      "detail": "Smoked roast beef sandwich hails from boston with a nod to local heat. Served on a warm croissant with signature boston sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1062713.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sandwich",
+      "name": "Chili Milli",
+      "type": null,
+      "price_desc": "Tk 250",
+      "price": 250,
+      "detail": "The goodness of cheese, onion, chicken & chili toasted on a bagel",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1875151.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sandwich",
+      "name": "Double Chili Milli",
+      "type": null,
+      "price_desc": "Tk 390",
+      "price": 390,
+      "detail": "The goodness of cheese, onion, chicken & chili toasted on a bagel",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3994899.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "Mocha Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 415",
+      "price": 415,
+      "detail": "Frozen milk blended with espresso & rich chocolate sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058298.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "Chocolate Cream Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 415",
+      "price": 415,
+      "detail": "Frozen milk blended with rich chocolate sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058302.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "Raspberry Mocha Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 485",
+      "price": 485,
+      "detail": "Frozen milk blended with espresso, rich chocolate sauce & raspberry sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058296.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "Brownie Mocha Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 515",
+      "price": 515,
+      "detail": "Frozen milk blended with espresso, rich chocolate sauce & brownie",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058301.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "White Mocha Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 415",
+      "price": 415,
+      "detail": "Frozen milk blended with espresso & rich white chocolate sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058299.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "White Chocolate Cream Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 415",
+      "price": 415,
+      "detail": "Frozen milk blended with rich white chocolate sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058305.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "Salted Caramel Cream Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 415",
+      "price": 415,
+      "detail": "Frozen milk blended with rich salted caramel sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3620836.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "Salted Caramel Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 415",
+      "price": 415,
+      "detail": "Frozen milk blended with espresso & rich salted caramel sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3620835.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "Strawberry Cream Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 375",
+      "price": 375,
+      "detail": "Frozen milk blended with strawberry flavor",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058293.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "Vanilla Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 375",
+      "price": 375,
+      "detail": "1:1 - Frozen milk blended with espresso shot & vanilla flavor",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058294.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "Hazelnut Cream Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 375",
+      "price": 375,
+      "detail": "Frozen milk blended with hazelnut flavor",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058295.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "Vanilla Cream Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 375",
+      "price": 375,
+      "detail": "Frozen milk blended with vanilla flavor",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058297.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "Café Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 275",
+      "price": 275,
+      "detail": "Frozen milk blended with espresso",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058300.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Freddo",
+      "name": "Hazelnut Freddo",
+      "type": "freddo",
+      "price_desc": "from Tk 375",
+      "price": 375,
+      "detail": "1:1 - Frozen milk blended with espresso shot & hazelnut flavor ",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1058306.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Egg Souffle Sandwiches",
+      "name": "The Newbury",
+      "type": null,
+      "price_desc": "from Tk 590",
+      "price": 590,
+      "detail": "Prepared with chicken, roasted capsicum, egg souffle & cheese on a toasted croissant ",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3957171.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Egg Souffle Sandwiches",
+      "name": "The Copley",
+      "type": null,
+      "price_desc": "from Tk 350",
+      "price": 350,
+      "detail": "Prepared with egg souffle & cheese on a toasted bagel ",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3957173.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Egg Souffle Sandwiches",
+      "name": "The Hancock",
+      "type": null,
+      "price_desc": "from Tk 490",
+      "price": 490,
+      "detail": "Prepared with  roasted capsicum, egg souffle & cheese on a toasted chili cheese croissant ",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3957174.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Egg Souffle Sandwiches",
+      "name": "The Fenway",
+      "type": null,
+      "price_desc": "from Tk 560",
+      "price": 560,
+      "detail": "Roast beef, roasted capsicum, egg soufflé & cheese on a toasted bagel",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8249553.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Quick Bites",
+      "name": "The Picolini",
+      "type": null,
+      "price_desc": "Tk 125",
+      "price": 125,
+      "detail": "Cheesy focaccia decorated with onion, chili & capsicum",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5214348.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Quick Bites",
+      "name": "Picolini Gift Box",
+      "type": null,
+      "price_desc": "Tk 1,000",
+      "price": 1000,
+      "detail": "8 pcs - 1 box. Cheesy focaccia decorated with onion, chili & capsicum",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5433615.jpg?width=150&height=150"
+    },
+    {
+      "tag": "The Giver Coffee Box",
+      "name": "The Giver Box of Americanos",
+      "type": "giver box",
+      "price_desc": "from Tk 2,350",
+      "price": 2350,
+      "detail": "3 litre - A perfect giver box of black coffees, keeps warm up to an hour",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1062734.jpg?width=150&height=150"
+    },
+    {
+      "tag": "The Giver Coffee Box",
+      "name": "The Giver Box of Lattes",
+      "type": "giver box",
+      "price_desc": "from Tk 2,650",
+      "price": 2650,
+      "detail": "3 litre - A perfect giver box of milky coffees, keeps warm up to 45 minutes ",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1062733.jpg?width=150&height=150"
+    },
+    {
+      "tag": "The Giver Coffee Box",
+      "name": "The Giver Box of Hazelnut Lattes",
+      "type": "giver box",
+      "price_desc": "from Tk 3,300",
+      "price": 3300,
+      "detail": "3 litre - A perfect giver box of hazelnut flavored milky coffees, keeps warm for up to 45 minutes",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3248306.jpg?width=150&height=150"
+    }
+  ],
+  "snacks": [
+    {
+      "tag": "Popular",
+      "name": "Asta Gorur Nasta",
+      "type": null,
+      "price_desc": "from Tk 299",
+      "price": 299,
+      "detail": " 1:1",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Popular",
+      "name": "Asta Murgir Nasta",
+      "type": null,
+      "price_desc": "from Tk 239",
+      "price": 239,
+      "detail": " 1:1",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Popular",
+      "name": "Asta Dimer Nasta",
+      "type": null,
+      "price_desc": "from Tk 149",
+      "price": 149,
+      "detail": " 1:1",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Popular",
+      "name": "Dhakaiya Beef Roll ",
+      "type": "roll",
+      "price_desc": "Tk 239",
+      "price": 239,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7950197.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Chandni Chawk Lassi",
+      "type": "lassi",
+      "price_desc": "Tk 149",
+      "price": 149,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7950204.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Snacks",
+      "name": "Cinema Hall Chips",
+      "type": null,
+      "price_desc": "Tk 59",
+      "price": 59,
+      "detail": " 1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5143935.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Snacks",
+      "name": "Asta Dimer Nasta",
+      "type": null,
+      "price_desc": "from Tk 149",
+      "price": 149,
+      "detail": " 1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7950179.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Snacks",
+      "name": "Asta Murgir Nasta",
+      "type": null,
+      "price_desc": "from Tk 239",
+      "price": 239,
+      "detail": " 1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7950180.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Snacks",
+      "name": "Asta Gorur Nasta",
+      "type": null,
+      "price_desc": "from Tk 299",
+      "price": 299,
+      "detail": " 1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7950191.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Snacks",
+      "name": "Naga Shingara",
+      "type": "shingara",
+      "price_desc": "Tk 119",
+      "price": 119,
+      "detail": "6 pcs",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7950182.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Snacks",
+      "name": "Patenga Piyaju",
+      "type": "piyaju",
+      "price_desc": "Tk 109",
+      "price": 109,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5143932.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Snacks",
+      "name": "Makkah Samosa",
+      "type": "samosa",
+      "price_desc": "Tk 199",
+      "price": 199,
+      "detail": "3 pcs - Prepared with beef & cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8736260.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Roll",
+      "name": "Dhakaiya Beef Roll ",
+      "type": "roll",
+      "price_desc": "Tk 239",
+      "price": 239,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7950197.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Roll",
+      "name": "Jhal Chicken Roll",
+      "type": "chicken",
+      "price_desc": "Tk 239",
+      "price": 239,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7950199.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Beverage",
+      "name": "Chandni Chawk Lassi",
+      "type": "lassi",
+      "price_desc": "Tk 149",
+      "price": 149,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7950204.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Beverage",
+      "name": "Vitamin K Sharbat",
+      "type": null,
+      "price_desc": "Tk 119",
+      "price": 119,
+      "detail": "1:1 - Prepared with lemon & ginger",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7950203.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Beverage",
+      "name": "Milk Tea- Large",
+      "type": "tea",
+      "price_desc": "Tk 89",
+      "price": 89,
+      "detail": "1:1 - A splash of milk in a hot cup of tea",
+      "image": null
+    }
+  ],
+  "fastfood": [
+    {
+      "tag": "Popular",
+      "name": "Rice Bowl with Crispy Chicken",
+      "type": "chicken",
+      "price_desc": "Tk 232",
+      "price": 232,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526804.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Rice Bowl with Chicken Sizzling",
+      "type": "chicken",
+      "price_desc": "Tk 268",
+      "price": 268,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526807.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Rice Bowl with BBQ Chicken Steak",
+      "type": "steak",
+      "price_desc": "Tk 283",
+      "price": 283,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526810.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Chicken Sausage Delight Burger",
+      "type": "burger",
+      "price_desc": "from Tk 269",
+      "price": 269,
+      "detail": "Prepared with 1x single chicken patty, 2x sausage, bbq sauce, 1x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/844258.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Smokey BBQ Sub Sandwich",
+      "type": "sandwich",
+      "price_desc": "Tk 228",
+      "price": 228,
+      "detail": "Prepared with chicken scotch fillet, caramelized onion & smokey bbq sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526783.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Rice Bowl with Chicken Black Pepper",
+      "type": "chicken",
+      "price_desc": "Tk 218",
+      "price": 218,
+      "detail": "1:1",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Solo Meal",
+      "name": "Mushroom Beef Burger",
+      "type": "burger",
+      "price_desc": "Tk 299",
+      "price": 299,
+      "detail": "Prepared with 1x single beef patty, caramelized mushroom, bbq sauce, 1x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/844179.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chicken Burger",
+      "name": "Chicken Burger",
+      "type": "burger",
+      "price_desc": "from Tk 189",
+      "price": 189,
+      "detail": "Prepared with 1x single chicken patty, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/844255.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chicken Burger",
+      "name": "Chicken Cheese Burger",
+      "type": "burger",
+      "price_desc": "from Tk 219",
+      "price": 219,
+      "detail": "Prepared with 1x single chicken patty, 1x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/844260.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chicken Burger",
+      "name": "Smokey BBQ Chicken Burger",
+      "type": "burger",
+      "price_desc": "from Tk 219",
+      "price": 219,
+      "detail": "Prepared with 1x single chicken patty, bbq sauce, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/844256.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chicken Burger",
+      "name": "Smokey BBQ Chicken Cheese Burger ",
+      "type": "burger",
+      "price_desc": "from Tk 249",
+      "price": 249,
+      "detail": "Prepared with 1x single chicken patty, bbq sauce, 1x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/844261.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chicken Burger",
+      "name": "Chicken & Bacon Bite Burger",
+      "type": "burger",
+      "price_desc": "from Tk 273",
+      "price": 273,
+      "detail": "Prepared with 1x single chicken patty, 2x beef bacon, bbq sauce, 1x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/844257.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chicken Burger",
+      "name": "Chicken Sausage Delight Burger",
+      "type": "burger",
+      "price_desc": "from Tk 269",
+      "price": 269,
+      "detail": "Prepared with 1x single chicken patty, 2x sausage, bbq sauce, 1x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/844258.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chicken Burger",
+      "name": "Mushroom Chicken Burger",
+      "type": "burger",
+      "price_desc": "from Tk 279",
+      "price": 279,
+      "detail": "Prepared with 1x single chicken patty, caramelized mushroom, bbq sauce, 1x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/844259.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Beef Burger",
+      "name": "Beef Burger",
+      "type": "burger",
+      "price_desc": "from Tk 213",
+      "price": 213,
+      "detail": "Prepared with 1x single beef patty, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526750.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Beef Burger",
+      "name": "Beef Cheese Burger",
+      "type": "burger",
+      "price_desc": "from Tk 243",
+      "price": 243,
+      "detail": "Prepared with 1x single beef patty, 1x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/844176.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Beef Burger",
+      "name": "Beef & Bacon Bite Burger",
+      "type": "burger",
+      "price_desc": "from Tk 299",
+      "price": 299,
+      "detail": "Prepared with 1x single beef patty, 2x beef bacon, bbq sauce 1x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/844175.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Beef Burger",
+      "name": "Smokey BBQ Beef Burger ",
+      "type": "burger",
+      "price_desc": "from Tk 243",
+      "price": 243,
+      "detail": "Prepared with 1x single beef patty, bbq sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526751.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Beef Burger",
+      "name": "Smokey BBQ Beef Cheese Burger ",
+      "type": "burger",
+      "price_desc": "from Tk 269",
+      "price": 269,
+      "detail": "Prepared with 1x single beef patty, bbq sauce, 1x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/844177.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Beef Burger",
+      "name": "Beef & Sausage Delight Burger",
+      "type": "burger",
+      "price_desc": "from Tk 297",
+      "price": 297,
+      "detail": "Prepared with 1x single beef patty, 2x sausage, bbq sauce, 1x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/844178.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chef's Choice Burger",
+      "name": "Double Decker Beef Burger",
+      "type": "burger",
+      "price_desc": "from Tk 349",
+      "price": 349,
+      "detail": "Prepared with 2x single beef patty, 2x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526766.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chef's Choice Burger",
+      "name": "Beef Cheese Blast",
+      "type": null,
+      "price_desc": "from Tk 389",
+      "price": 389,
+      "detail": "Prepared with double beef patty, molten cheddar cheese, sliced 2x sausage, 1x cheddar cheese, secret sauce & sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526762.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chef's Choice Burger",
+      "name": "Beef Caramel Mushroom Thrill Burger",
+      "type": "burger",
+      "price_desc": "from Tk 459",
+      "price": 459,
+      "detail": "Prepared with double beef patty, molten cheddar cheese, caramelized mushroom, 1x sliced cheddar cheese,  secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526763.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chef's Choice Burger",
+      "name": "Beef & Bacon House Burger",
+      "type": "burger",
+      "price_desc": "from Tk 468",
+      "price": 468,
+      "detail": "Prepared with 3x single beef patty, 2x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526764.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chef's Choice Burger",
+      "name": "Signature Beef Boom Blast Burger",
+      "type": "burger",
+      "price_desc": "from Tk 523",
+      "price": 523,
+      "detail": "Includes:* Double beef patty with molten cheddar cheese inside* Poached egg* 2 beef salamis* Another single beef patty* 2 pcs of sausage slices* 1 slice of cheddar cheese* Onions, tomato, lettuce & our secret sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526765.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chef's Choice Burger",
+      "name": "Chicken Cheese Blast",
+      "type": "chicken",
+      "price_desc": "from Tk 359",
+      "price": 359,
+      "detail": "Prepared with double chicken patty, molten cheddar cheese, 2x sausage slice, 1x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3001082.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chef's Choice Burger",
+      "name": "Double Decker Chicken Burger",
+      "type": "burger",
+      "price_desc": "from Tk 329",
+      "price": 329,
+      "detail": "Prepared with 2x single chicken patty, 2x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3001083.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chef's Choice Burger",
+      "name": "Chicken Caramel Mushroom Thrill Burger",
+      "type": "burger",
+      "price_desc": "from Tk 429",
+      "price": 429,
+      "detail": "Prepared with double chicken patty, molten cheddar cheese, caramelized mushroom, 1x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3001084.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chef's Choice Burger",
+      "name": "Chicken & Bacon House Burger",
+      "type": "burger",
+      "price_desc": "from Tk 429",
+      "price": 429,
+      "detail": "Prepared with  3x single chicken patty, 2x sliced cheddar cheese, secret sauce, sliced onion, tomato & lettuce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3001085.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chef's Choice Burger",
+      "name": "Signature Chicken Boom Blast Burger",
+      "type": "burger",
+      "price_desc": "from Tk 488",
+      "price": 488,
+      "detail": "Prepared with double chicken patty, molten cheddar cheese, poached egg, chicken salami, chicken patty, 2 pcs sausage, sliced cheddar cheese, onion, tomato, lettuce & secret sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/3001086.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Appetizers",
+      "name": "Peri Peri French Fries",
+      "type": "french",
+      "price_desc": "Tk 139",
+      "price": 139,
+      "detail": "Prepared with potatoes, sugar & deep fried",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526741.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Appetizers",
+      "name": "Potato Wedges",
+      "type": null,
+      "price_desc": "Tk 119",
+      "price": 119,
+      "detail": "Prepared with parmesan cheese, olive oil, russet potatoes & garlic powder",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526742.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Appetizers",
+      "name": "Garlic Mushroom",
+      "type": null,
+      "price_desc": "Tk 218",
+      "price": 218,
+      "detail": "Prepared with olive oil, garlic, button mushroom & fresh thyme",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526746.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Appetizers",
+      "name": "Crispy Chicken Wings",
+      "type": "wings",
+      "price_desc": "from Tk 158",
+      "price": 158,
+      "detail": "Prepared with chicken wings, blue cheese dressing & crumbled blue cheese",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526744.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Appetizers",
+      "name": "Buffalo Wings",
+      "type": "wings",
+      "price_desc": "from Tk 148",
+      "price": 148,
+      "detail": "Prepared with chicken wings, ranch dressing, hot sauce, honey & butter",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526743.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Appetizers",
+      "name": "Peri Peri Wings",
+      "type": "wings",
+      "price_desc": "Tk 184",
+      "price": 184,
+      "detail": "4 pcs",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1580420.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Appetizers",
+      "name": "Garlic Wings",
+      "type": "wings",
+      "price_desc": "Tk 173",
+      "price": 173,
+      "detail": "4 pcs",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/1580421.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice Bowl",
+      "name": "Rice Bowl with Chicken Black Pepper",
+      "type": "chicken",
+      "price_desc": "Tk 218",
+      "price": 218,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526803.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice Bowl",
+      "name": "Rice Bowl with Crispy Chicken",
+      "type": "chicken",
+      "price_desc": "Tk 232",
+      "price": 232,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526804.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice Bowl",
+      "name": "Rice Bowl with BBQ Chicken Steak",
+      "type": "steak",
+      "price_desc": "Tk 283",
+      "price": 283,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526810.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice Bowl",
+      "name": "Rice Bowl with Chicken Chili Onion",
+      "type": "chicken",
+      "price_desc": "Tk 256",
+      "price": 256,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526805.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice Bowl",
+      "name": "Rice Bowl with Chicken Sizzling",
+      "type": "chicken",
+      "price_desc": "Tk 268",
+      "price": 268,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526807.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice Bowl",
+      "name": "Rice Bowl with Chicken Masala",
+      "type": "chicken",
+      "price_desc": "Tk 338",
+      "price": 338,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4360388.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice Bowl",
+      "name": "Rice Bowl with Chicken & Mushroom",
+      "type": "chicken",
+      "price_desc": "Tk 293",
+      "price": 293,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526808.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice Bowl",
+      "name": "Rice Bowl with Beef Chili Onion",
+      "type": "rice bowl",
+      "price_desc": "Tk 298",
+      "price": 298,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526809.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice Bowl",
+      "name": "Rice Bowl with Beef Sizzling",
+      "type": "rice bowl",
+      "price_desc": "Tk 313",
+      "price": 313,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526811.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice Bowl",
+      "name": "Rice Bowl with Beef Masala",
+      "type": "rice bowl",
+      "price_desc": "Tk 368",
+      "price": 368,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4360387.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice Bowl",
+      "name": "BBQ Rice Bowl",
+      "type": "rice bowl",
+      "price_desc": "Tk 208",
+      "price": 208,
+      "detail": "1:1",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526806.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Nachos",
+      "name": "Cheesy Chicken Nachos",
+      "type": "nachos",
+      "price_desc": "Tk 196",
+      "price": 196,
+      "detail": "1:1 - Prepared with chicken thigh, sour cream, shredded chicken, corn chip & chicken broth",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526786.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Nachos",
+      "name": "Cheesy Beef Nachos",
+      "type": "nachos",
+      "price_desc": "Tk 249",
+      "price": 249,
+      "detail": "Prepared with lean ground beef, tex mex cheese, tortilla chips, salsa & black olive",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526787.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Nachos",
+      "name": "Mexican Hot & Spicy Nachos",
+      "type": "nachos",
+      "price_desc": "Tk 259",
+      "price": 259,
+      "detail": "Prepared with black bean, sour cream, corn & avocado",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526788.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Nachos",
+      "name": "BBQ Chicken & Mushroom Nachos",
+      "type": "nachos",
+      "price_desc": "Tk 279",
+      "price": 279,
+      "detail": "Prepared with sour cream, minced chicken, flat mushrooms, fajita seasoning & olive oil",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526789.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chowmein",
+      "name": "Chicken Chowmein",
+      "type": "chowmein",
+      "price_desc": "Tk 243",
+      "price": 243,
+      "detail": "Prepared with chowmein, chicken breast, oyster sauce, soy sauce & bean sprouts",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526790.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chowmein",
+      "name": "Chicken & Mushroom Chowmein",
+      "type": "chowmein",
+      "price_desc": "Tk 292",
+      "price": 292,
+      "detail": "Prepared with chowmein, oyster sauce, soy sauce, bean sprouts & mushroom",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526792.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chowmein",
+      "name": "Chef's Choice Chowmein",
+      "type": "chowmein",
+      "price_desc": "Tk 343",
+      "price": 343,
+      "detail": "Prepared with chicken sausage, mushroom, vegetable, chowmein noodles, oyster sauce, soy sauce, chicken breast & sesame oil",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526793.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Chowmein",
+      "name": "Beef Chowmein",
+      "type": "chowmein",
+      "price_desc": "Tk 278",
+      "price": 278,
+      "detail": "Prepared with chowmein, flank steak, soy sauce, beef broth & sesame oil",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526791.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Subway Sandwich",
+      "name": "Smokey BBQ Sub Sandwich",
+      "type": "sandwich",
+      "price_desc": "Tk 228",
+      "price": 228,
+      "detail": "Prepared with chicken scotch fillet, caramelized onion & smokey bbq sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526783.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Subway Sandwich",
+      "name": "Chicken Sub Sandwich",
+      "type": "sandwich",
+      "price_desc": "Tk 219",
+      "price": 219,
+      "detail": "Prepared with bbq sauce & chicken breast",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526781.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Subway Sandwich",
+      "name": "Mushroom Chicken Sub Sandwich",
+      "type": "sandwich",
+      "price_desc": "Tk 305",
+      "price": 305,
+      "detail": "Prepared with bbq sauce, chicken breast, & mushroom",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526784.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Subway Sandwich",
+      "name": "Chef's Special Sub Sandwich",
+      "type": "sandwich",
+      "price_desc": "Tk 308",
+      "price": 308,
+      "detail": "Prepared with bbq sauce, chicken breast, sausage & mushroom",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526785.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Subway Sandwich",
+      "name": "Beef Sub Sandwich",
+      "type": "sandwich",
+      "price_desc": "Tk 288",
+      "price": 288,
+      "detail": "Prepared with beef, rye bread, chili sauce, lettuce & red onion",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/526782.jpg?width=150&height=150"
+    }
+  ],
+
+  "biryani": [
+    {
+      "tag": "Popular",
+      "name": "Beef Tehari",
+      "type": null,
+      "price_desc": "Tk 170",
+      "price": 170,
+      "detail": "1:1 - Tender chunks of beef, rice & a blend of aromatic spices",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298717.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Chicken Biryani",
+      "type": "biryani",
+      "price_desc": "Tk 190",
+      "price": 190,
+      "detail": "1:1 - Medley of tender chicken, spices & aromatic rice cooked to perfection",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298719.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Special Mutton Kacchi",
+      "type": "kacchi",
+      "price_desc": "Tk 200",
+      "price": 200,
+      "detail": "1:1 - Prepared with chunks of mutton, rice, potato, blended with spices giving out an amazing flavor",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298714.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Beef Bhuna Khichuri",
+      "type": "khichuri",
+      "price_desc": "Tk 170",
+      "price": 170,
+      "detail": "1:1 - Filling meal of tender beef simmered in a flavorful blend of spices, pulses & rice",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298716.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Egg Khichuri",
+      "type": "khichuri",
+      "price_desc": "Tk 80",
+      "price": 80,
+      "detail": "1:1 - Classic dish prepared with aromatic rice, mixed lentils, spices & boiled egg",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298735.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Morog Polao",
+      "type": "polao",
+      "price_desc": "Tk 180",
+      "price": 180,
+      "detail": "1:1 - Tender chicken mixed with flavorful deshi masalas & aromatic rice",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298715.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Rice",
+      "name": "Chicken Biryani",
+      "type": "biryani",
+      "price_desc": "Tk 190",
+      "price": 190,
+      "detail": "1:1 - Medley of tender chicken, spices & aromatic rice cooked to perfection",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298719.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Rice",
+      "name": "Special Mutton Kacchi",
+      "type": "kacchi",
+      "price_desc": "Tk 200",
+      "price": 200,
+      "detail": "1:1 - Prepared with chunks of mutton, rice, potato, blended with spices giving out an amazing flavor",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298714.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Rice",
+      "name": "Beef Tehari",
+      "type": null,
+      "price_desc": "Tk 170",
+      "price": 170,
+      "detail": "1:1 - Tender chunks of beef, rice & a blend of aromatic spices",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298717.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Rice",
+      "name": "Beef Khichuri",
+      "type": "khichuri",
+      "price_desc": "Tk 160",
+      "price": 160,
+      "detail": "1:1 - Filling meal of tender beef simmered in a flavorful blend of spices, pulses & rice",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8420913.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Rice",
+      "name": "Beef Bhuna Khichuri",
+      "type": "khichuri",
+      "price_desc": "Tk 170",
+      "price": 170,
+      "detail": "1:1 - Filling meal of tender beef simmered in a flavorful blend of spices, pulses & rice",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298716.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Rice",
+      "name": "Chicken Khichuri",
+      "type": "khichuri",
+      "price_desc": "Tk 190",
+      "price": 190,
+      "detail": "1:1 - Prepared with a mixture of lentils & rice with chicken, blended with various spices",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298720.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Rice",
+      "name": "Egg Khichuri",
+      "type": "khichuri",
+      "price_desc": "Tk 80",
+      "price": 80,
+      "detail": "1:1 - Classic dish prepared with aromatic rice, mixed lentils, spices & boiled egg",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298735.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Rice",
+      "name": "Vegetable Khichuri",
+      "type": "khichuri",
+      "price_desc": "Tk 70",
+      "price": 70,
+      "detail": "1:1 - Prepared with rice, vegetable & mixed lentils, cooked together with various spices",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298736.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Rice",
+      "name": "Morog Polao",
+      "type": "polao",
+      "price_desc": "Tk 180",
+      "price": 180,
+      "detail": "1:1 - Tender chicken mixed with flavorful deshi masalas & aromatic rice",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298715.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Rice",
+      "name": "Plain Polao",
+      "type": "polao",
+      "price_desc": "Tk 60",
+      "price": 60,
+      "detail": "1:1 - Prepared with aromatic rice & spices",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298728.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Curry",
+      "name": "Chicken Roast",
+      "type": "chicken",
+      "price_desc": "Tk 160",
+      "price": 160,
+      "detail": "1 pc - Thick & flavorful dish, mildly spicy, slightly sweet & tender with a touch of mughal style gravy",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298730.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Curry",
+      "name": "Beef Bhuna",
+      "type": "bhuna",
+      "price_desc": "Tk 220",
+      "price": 220,
+      "detail": "1:1 - Prepared with beef cubes, onion, chili & spices in rich gravy",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298732.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Beverage",
+      "name": "Borhani",
+      "type": "borhani",
+      "price_desc": "from Tk 50",
+      "price": 50,
+      "detail": "A delicious almond drink prepared with milk, you can almost smell the saffron",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298737.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Beverage",
+      "name": "Badam Sharbat",
+      "type": "borhani",
+      "price_desc": "from Tk 50",
+      "price": 50,
+      "detail": "Thick drink prepared with sour yogurt, green chili, mustard seeds, black salt, coriander & mint leaves",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298737.JPG?width=150&height=150"
+    }
+  ],
+  "chinese": [
+    {
+      "tag": "Popular",
+      "name": "Fire Cracker Prawn Bao",
+      "type": null,
+      "price_desc": "Tk 505",
+      "price": 505,
+      "detail": "1:1 - Deep fried prawn served with house-made special sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8297698.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Teriyaki Chicken Bao",
+      "type": "chicken",
+      "price_desc": "Tk 495",
+      "price": 495,
+      "detail": "1:1 - Consists of chicken thigh & teriyaki sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8297670.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Fire Cracker Chicken Platter",
+      "type": "platter",
+      "price_desc": "from Tk 505",
+      "price": 505,
+      "detail": "1:1 - Indonesian egg-fried rice or mashed rice, fried chicken, house special sauce & sautéed vegetable",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8298103.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Teriyaki Chicken Platter",
+      "type": "platter",
+      "price_desc": "from Tk 520",
+      "price": 520,
+      "detail": "1:1 - Indonesian egg-fried rice or mashed rice, rojo chicken & sautéed vegetable",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8297773.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Fire Cracker Chicken Bao",
+      "type": "chicken",
+      "price_desc": "Tk 495",
+      "price": 495,
+      "detail": "1:1 - Deep fried chicken served with house-made special sauce",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Popular",
+      "name": "Fire Cracker Prawn Platter",
+      "type": "platter",
+      "price_desc": "from Tk 505",
+      "price": 505,
+      "detail": "1:1 - Indonesian egg-fried rice or mashed rice, prawn, house special sauce & sautéed vegetable",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Appetizer ",
+      "name": "Hand Cut French Fries",
+      "type": "french",
+      "price_desc": "from Tk 160",
+      "price": 160,
+      "detail": "Hot fries with a kick of spice",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Appetizer ",
+      "name": "Chili Garlic Mushroom",
+      "type": null,
+      "price_desc": "Tk 315",
+      "price": 315,
+      "detail": "1:1 - Mushroom sauteed in garlic with a dash of flavourful sauce",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Appetizer ",
+      "name": "Hot Wings",
+      "type": "wings",
+      "price_desc": "Tk 450",
+      "price": 450,
+      "detail": "1:1 - Wings, house made special hot sauce, served with smoked mayo",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Bao Platter",
+      "name": "Naga Rojo Chicken Bao",
+      "type": "chicken",
+      "price_desc": "Tk 475",
+      "price": 475,
+      "detail": "1:1 - Consists of chicken thigh, rojo sauce & jalapeno salsa",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Bao Platter",
+      "name": "Teriyaki Chicken Bao",
+      "type": "chicken",
+      "price_desc": "Tk 495",
+      "price": 495,
+      "detail": "1:1 - Consists of chicken thigh & teriyaki sauce",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Bao Platter",
+      "name": "Chili Beef Bao",
+      "type": null,
+      "price_desc": "Tk 520",
+      "price": 520,
+      "detail": "1:1 - Served with house-made sriracha mayo",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Bao Platter",
+      "name": "Fire Cracker Chicken Bao",
+      "type": "chicken",
+      "price_desc": "Tk 495",
+      "price": 495,
+      "detail": "1:1 - Deep fried chicken served with house-made special sauce",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Bao Platter",
+      "name": "Fire Cracker Prawn Bao",
+      "type": null,
+      "price_desc": "Tk 505",
+      "price": 505,
+      "detail": "1:1 - Deep fried prawn served with house-made special sauce",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Bao Platter",
+      "name": "Peri Peri Chicken Bao",
+      "type": "chicken",
+      "price_desc": "Tk 540",
+      "price": 540,
+      "detail": "1:1 - Consists of capsicum, onion, chicken thigh & house made peri peri sauce",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Rice Platter",
+      "name": "Naga Rojo Chicken Platter",
+      "type": "platter",
+      "price_desc": "from Tk 540",
+      "price": 540,
+      "detail": "1:1 - Indonesian egg-fried rice or mash rice, rojo chicken & sautéed vegetable",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Rice Platter",
+      "name": "Teriyaki Chicken Platter",
+      "type": "platter",
+      "price_desc": "from Tk 520",
+      "price": 520,
+      "detail": "1:1 - Indonesian egg-fried rice or mashed rice, rojo chicken & sautéed vegetable",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Rice Platter",
+      "name": "Chili Beef Platter",
+      "type": "platter",
+      "price_desc": "from Tk 565",
+      "price": 565,
+      "detail": "1:1 - Indonesian egg-fried rice or mashed rice, chili beef, sriracha mayo & sautéed vegetable",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Rice Platter",
+      "name": "Fire Cracker Prawn Platter",
+      "type": "platter",
+      "price_desc": "from Tk 505",
+      "price": 505,
+      "detail": "1:1 - Indonesian egg-fried rice or mashed rice, prawn, house special sauce & sautéed vegetable",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Rice Platter",
+      "name": "Fire Cracker Chicken Platter",
+      "type": "platter",
+      "price_desc": "from Tk 505",
+      "price": 505,
+      "detail": "1:1 - Indonesian egg-fried rice or mashed rice, fried chicken, house special sauce & sautéed vegetable",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Rice Platter",
+      "name": "Peri Peri Chicken Platter",
+      "type": "platter",
+      "price_desc": "from Tk 565",
+      "price": 565,
+      "detail": "1:1 - Indonesian egg-fried rice or mashed rice, chicken thigh & house-made peri peri sauce",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Juice",
+      "name": "Watermelon Juice",
+      "type": null,
+      "price_desc": "Tk 260",
+      "price": 260,
+      "detail": "1:1 - Regular glass of delicious juice made with fresh seasonal fruits",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Juice",
+      "name": "Papaya Juice",
+      "type": "paya",
+      "price_desc": "Tk 260",
+      "price": 260,
+      "detail": "1:1 - Regular glass of delicious juice made with fresh seasonal fruits",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Juice",
+      "name": "Pineapple Juice",
+      "type": null,
+      "price_desc": "Tk 260",
+      "price": 260,
+      "detail": "1:1 - Regular glass of delicious juice made with fresh seasonal fruits",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Juice",
+      "name": "Orange Juice",
+      "type": null,
+      "price_desc": "Tk 315",
+      "price": 315,
+      "detail": "1:1 - Regular glass of delicious juice made with fresh seasonal fruits",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Mocktails & Fruities",
+      "name": "Classic Lemonade",
+      "type": "lassi",
+      "price_desc": "Tk 170",
+      "price": 170,
+      "detail": "1:1 - Lime juice, mint & water",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Mocktails & Fruities",
+      "name": "Strawberry Mojito",
+      "type": null,
+      "price_desc": "Tk 280",
+      "price": 280,
+      "detail": "1:1 - Strawberry syrup, mint & lemon juice",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Mocktails & Fruities",
+      "name": "Strawberry Lemonade",
+      "type": "lemonade",
+      "price_desc": "Tk 250",
+      "price": 250,
+      "detail": "1:1 - Prepared with strawberry, ice & sugar",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Mocktails & Fruities",
+      "name": "Mango Lemonade",
+      "type": "lemonade",
+      "price_desc": "Tk 250",
+      "price": 250,
+      "detail": "1:1 - Prepared with mango, sugar & ice",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    }
+  ],
+
+  "sweets": [
+    {
+      "tag": "Sweets",
+      "name": "Kalojam",
+      "type": "kalojam",
+      "price_desc": "from Tk 110",
+      "price": 110,
+      "detail": "Bengali delicacy prepared with creamy chana balls deep-fried, but soft & succulent inside, then soaked in sugar syrup",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8726944.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sweets",
+      "name": "Pata Chomchom",
+      "type": "chomchom",
+      "price_desc": "from Tk 163",
+      "price": 163,
+      "detail": "Prepared with fresh chana \nsoaked in flavored sugar syrup",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8726941.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sweets",
+      "name": "Black Chomchom",
+      "type": "chomchom",
+      "price_desc": "from Tk 175",
+      "price": 175,
+      "detail": "Spongy & juicy sweet prepared with fresh chana shaped into small oval balls soaked in flavored sugar syrup",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8727385.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sweets",
+      "name": "Cream Jam",
+      "type": "cream jam",
+      "price_desc": "from Tk 188",
+      "price": 188,
+      "detail": "Spongy & juicy sweet prepared with fresh chana shaped into oval balls, deep-fried & soaked in flavored sugar syrup",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8726943.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sweets",
+      "name": "Motichur Laddu",
+      "type": "laddu",
+      "price_desc": "from Tk 120",
+      "price": 120,
+      "detail": "Soft & delish laddu prepared with bundia & sugar syrup",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8727388.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sweets",
+      "name": "Mihidana Laddu",
+      "type": "laddu",
+      "price_desc": "from Tk 120",
+      "price": 120,
+      "detail": "Prepared with mawa sugar, ghee & cardamom, creating sweet, crumbly sweet",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8726946.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sweets",
+      "name": "Mawa Laddu",
+      "type": "laddu",
+      "price_desc": "from Tk 163",
+      "price": 163,
+      "detail": "Prepared with shredded coconut & condensed milk, shaped into balls",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8726947.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sweets",
+      "name": "Mawa Balushahi",
+      "type": null,
+      "price_desc": "from Tk 113",
+      "price": 113,
+      "detail": "Soft & deliciously flaky inside, prepared with flour, full-cream milk powder & sugar",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8726948.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sweets",
+      "name": "Shor Roll",
+      "type": "roll",
+      "price_desc": "from Tk 213",
+      "price": 213,
+      "detail": "Prepared with sugar, flour & milk",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8726950.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sweets",
+      "name": "Roshogolla",
+      "type": "roshogolla",
+      "price_desc": "from Tk 108",
+      "price": 108,
+      "detail": "Spongy orbs of delight, soaked in syrup, a cherished bengali dessert",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8726952.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sweets",
+      "name": "White Chomchom",
+      "type": "chomchom",
+      "price_desc": "from Tk 163",
+      "price": 163,
+      "detail": "Prepared with sugar, milk & cardamom, a creamy bengali sweet",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8726953.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sweets",
+      "name": "Tangail Chomchom",
+      "type": "chomchom",
+      "price_desc": "from Tk 138",
+      "price": 138,
+      "detail": "Spongy & juicy sweet prepared with fresh chana shaped into oval ball, deep-fried & soaked in flavored sugar syrup",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8726954.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Sweets",
+      "name": "Toffee",
+      "type": null,
+      "price_desc": "from Tk 225",
+      "price": 225,
+      "detail": "Prepared with sugar, butter & flour",
+      "image": null
+    },
+    {
+      "tag": "Sweets",
+      "name": "Kacha Chana",
+      "type": "chana",
+      "price_desc": "from Tk 200",
+      "price": 200,
+      "detail": "Prepared with sugar & milk",
+      "image": null
+    },
+    {
+      "tag": "Bread & Bun",
+      "name": "Butter Bun",
+      "type": null,
+      "price_desc": "Tk 30",
+      "price": 30,
+      "detail": "1 pc - Prepared with flour, butter, yeast, sugar, creating a soft, rich & buttery bread roll",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8727399.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Bread & Bun",
+      "name": "Plain Bun",
+      "type": null,
+      "price_desc": "Tk 20",
+      "price": 20,
+      "detail": "1 pc - Prepared with flour, yeast, sugar, creating a soft, fluffy bun",
+      "image": null
+    },
+    {
+      "tag": "Savory",
+      "name": "Vegetable Shingara",
+      "type": "shingara",
+      "price_desc": "Tk 15",
+      "price": 15,
+      "detail": "1 pc - Deep-fried shingara filled with spiced veggies & potato",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8727400.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Savory",
+      "name": "Chicken Samosa",
+      "type": "chicken",
+      "price_desc": "Tk 35",
+      "price": 35,
+      "detail": "1 pc - Chicken minced prepared with pepper, onion & chili powder wrapped up in a deep-fried samosa shell",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8726958.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Savory",
+      "name": "Chicken Patties",
+      "type": "chicken",
+      "price_desc": "Tk 80",
+      "price": 80,
+      "detail": "1 pc - Crispy layers prepared with flour & stuffed with tender chicken & onion",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8726959.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Savory",
+      "name": "Nimki",
+      "type": null,
+      "price_desc": "Tk 10",
+      "price": 10,
+      "detail": "1 pc - A crunchy savory snack prepared with flour & kalo jeera",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8727403.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Savory",
+      "name": "Dal Bhaja",
+      "type": "dal",
+      "price_desc": "from Tk 70",
+      "price": 70,
+      "detail": "Prepared with split lentil, spices & oil",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8727407.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Savory",
+      "name": "Nimok Pora",
+      "type": null,
+      "price_desc": "from Tk 70",
+      "price": 70,
+      "detail": "Prepared with all purpose flour, baking soda, salt & deep-fried in oil",
+      "image": null
+    },
+    {
+      "tag": "Savory",
+      "name": "Chira Bhaja",
+      "type": null,
+      "price_desc": "from Tk 60",
+      "price": 60,
+      "detail": "Prepared with flattened rice, peanut & spices, creating crispy, savory snack ",
+      "image": null
+    },
+    {
+      "tag": "Toast & Biscuit",
+      "name": "Butter Salt Cookies",
+      "type": null,
+      "price_desc": "Tk 260",
+      "price": 260,
+      "detail": "350 gm - Prepared with butter, sugar, flour, creating crisp, rich & slightly salty cookies",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8727409.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Toast & Biscuit",
+      "name": "Horlicks Biscuit",
+      "type": null,
+      "price_desc": "Tk 260",
+      "price": 260,
+      "detail": "350 gm - Prepared with flour, sugar, butter, horlicks powder, milk & baking powder, creating malt-flavored biscuit",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8727411.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Toast & Biscuit",
+      "name": "Mishti Biscuit ",
+      "type": null,
+      "price_desc": "from Tk 110",
+      "price": 110,
+      "detail": "Prepared with flour, sugar, butter, cardamom, baking powder & milk",
+      "image": null
+    },
+    {
+      "tag": "Toast & Biscuit",
+      "name": "Badami Biscuit",
+      "type": null,
+      "price_desc": "from Tk 130",
+      "price": 130,
+      "detail": "Prepared with flour, sugar, cardamom & baking powder, creating nutty, aromatic biscuit",
+      "image": null
+    },
+    {
+      "tag": "Toast & Biscuit",
+      "name": "Til biscuit",
+      "type": null,
+      "price_desc": "from Tk 100",
+      "price": 100,
+      "detail": "Prepared with flour, butter, sugar, sesame seeds, baking powder & milk",
+      "image": null
+    },
+    {
+      "tag": "Toast & Biscuit",
+      "name": "Sugar Toast",
+      "type": null,
+      "price_desc": "from Tk 75",
+      "price": 75,
+      "detail": "Rich, sugary & slightly crunchy snack",
+      "image": null
+    },
+    {
+      "tag": "Toast & Biscuit",
+      "name": "Diamond Dry Cake",
+      "type": "cake",
+      "price_desc": "from Tk 125",
+      "price": 125,
+      "detail": "Prepared with flour, baking powder, sugar & eggs",
+      "image": null
+    },
+    {
+      "tag": "Cake & Pastry",
+      "name": "Vanilla Cake - Small ",
+      "type": "cake",
+      "price_desc": "Tk 550",
+      "price": 550,
+      "detail": "300 gm - Fluffy cake prepared with a combination of flour, sugar, egg & vanilla extract",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8727421.jpg?width=150&height=150"
+    }
+  ],
+  "burger": [
+    {
+      "tag": "Popular",
+      "name": "Whopper",
+      "type": "whopper",
+      "price_desc": "from Tk 499",
+      "price": 499,
+      "detail": "¼ lb* of savory flame-grilled beef topped with juicy tomatoes, fresh lettuce, creamy mayonnaise, ketchup, crunchy pickles, & sliced white onions on a soft sesame seed bun",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/370107.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Creamy Double Cheese Burger",
+      "type": "burger",
+      "price_desc": "from Tk 449",
+      "price": 449,
+      "detail": "Make room for our Double Cheeseburger, two signature flame-grilled beef patties topped with a simple layer of melted American cheese, crinkle cut pickles, yellow mustard & ketchup on a toasted sesame seed bun",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/370109.png?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Whopper Jr.",
+      "type": "whopper",
+      "price_desc": "from Tk 369",
+      "price": 369,
+      "detail": "Our WHOPPER® Jr Sandwich features one savory flame-grilled beef patty topped with juicy tomatoes, fresh lettuce, creamy mayonnaise, ketchup, crunchy pickles, & sliced white onions on a soft sesame seed bun",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/370106.png?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Crispy King",
+      "type": null,
+      "price_desc": "from Tk 389",
+      "price": 389,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/4547350.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Double Whopper",
+      "type": "whopper",
+      "price_desc": "from Tk 699",
+      "price": 699,
+      "detail": "Our DOUBLE WHOPPER® Sandwich is a pairing of two ¼ lb* savory flame-grilled beef patties topped with juicy tomatoes, fresh lettuce, creamy mayonnaise, ketchup, crunchy pickles & sliced white onions on a soft sesame seed bun",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/370108.png?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Hot Chicken Burrito",
+      "type": "chicken",
+      "price_desc": "from Tk 331",
+      "price": 331,
+      "detail": null,
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5291453.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Crispy King Meal - Small",
+      "type": null,
+      "price_desc": "from Tk 608",
+      "price": 608,
+      "detail": "Consists of 1 pc crispy king burger, 1:1 french fries & 1 small soft drinks",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6202089.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Creamy Double Cheese Burger Meal - Small",
+      "type": "burger meal",
+      "price_desc": "from Tk 668",
+      "price": 668,
+      "detail": "1:1 - Consists of 1 pc creamy double cheese burger, 1:1 french fries & 1 bottle 350 ml soft drinks",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6202100.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Long Chicken Meal - Small",
+      "type": "chicken",
+      "price_desc": "from Tk 668",
+      "price": 668,
+      "detail": "1:1 - Consists of 1 pc long chicken burger, 1:1 french fries & 1 bottle 350 ml soft drinks",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6202090.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Long Cheese Burger Meal - Small",
+      "type": "burger meal",
+      "price_desc": "from Tk 648",
+      "price": 648,
+      "detail": "1:1 - Consists of 1 pc long cheese burger, 1:1 french fries & 1 bottle 350 ml soft drinks",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6202098.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Big King Chicken Meal - Small",
+      "type": "chicken",
+      "price_desc": "from Tk 668T",
+      "price": 668,
+      "detail": "1:1 - Consists of 1 pc big king chicken burger, 1:1 french fries & 1 bottle 350 ml soft drinks",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6202091.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Big King Beef Meal - Small",
+      "type": null,
+      "price_desc": "from Tk 628Tk 677",
+      "price": 628,
+      "detail": "1:1 - Consists of 1 pc big king beef burger, 1:1 french fries & 1 bottle 350 ml soft drinks",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6202099.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Whopper Jr. Meal - Small",
+      "type": "whopper",
+      "price_desc": "from Tk 588Tk 637",
+      "price": 588,
+      "detail": "Consists of 1 Whopper Jr. Burger, 1 small fries & 1 small coke",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6202102.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Tendercrisp Meal - Small",
+      "type": null,
+      "price_desc": "from Tk 718Tk 767",
+      "price": 718,
+      "detail": "Consists of 1 pc tender-crisp, 1:1 small french fries & 1 small soft drinks",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6202087.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Whopper Meal - Small",
+      "type": "whopper",
+      "price_desc": "from Tk 718Tk 767",
+      "price": 718,
+      "detail": "Consists of 1 Whopper, 1 small fries & 1 small coke",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8246710.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Whopperito Meal - Small",
+      "type": "whopper",
+      "price_desc": "from Tk 718",
+      "price": 718,
+      "detail": "1:1 - Consists of 1 1 pc whopperito burger, 1:1 french fries & 1 bottle 350 ml soft drinks",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/8246734.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Triple Whopper Cheese Meal - Small",
+      "type": "whopper",
+      "price_desc": "from Tk 1,058Tk 1,107",
+      "price": 1,
+      "detail": "1:1 - Consists of 1 pc triple whopper cheese burger, 1:1 french fries & 1 bottle 350 ml soft drinks",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6202107.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Chick N Crisp Burger Meal - Small",
+      "type": "burger meal",
+      "price_desc": "from Tk 508",
+      "price": 508,
+      "detail": "1:1 - Consists of 1 pc chick n crisp burger, 1:1 french fries & 1 bottle 350 ml soft drinks",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6202093.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Cheese Burger Meal - Small",
+      "type": "burger meal",
+      "price_desc": "from Tk 508",
+      "price": 508,
+      "detail": "1:1 - Consists of 1 pc cheese burger, 1:1 french fries & 1 bottle 350 ml soft drinks",
+      "image": null
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Double Whopper Meal - Small",
+      "type": "whopper",
+      "price_desc": "from Tk 918",
+      "price": 918,
+      "detail": "Consists of 1 Double Whopper, 1 small fries and 1 small coke",
+      "image": null
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Incredible Crispy King Burger Meal - Small",
+      "type": "burger meal",
+      "price_desc": "from Tk 1,078",
+      "price": 1,
+      "detail": "1 Incredible Crispy King Burger, 1 small fries & 1 small coke",
+      "image": null
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Spicy BBQ Whopper Meal - Small",
+      "type": "whopper",
+      "price_desc": "from Tk 769",
+      "price": 769,
+      "detail": "Consists of 1 spicy bbq whopper, 1 small fries & 1 small soft drinks",
+      "image": null
+    },
+    {
+      "tag": "Burger Meal - Small",
+      "name": "Creamy Cheese Burger Meal - Small",
+      "type": "burger meal",
+      "price_desc": "from Tk 527",
+      "price": 527,
+      "detail": "Consists of 1 Creamy Cheese Burger, 1 small fries & 1 small coke",
+      "image": null
+    },
+    {
+      "tag": "Garden Salad",
+      "name": "Crispy Chicken Salad",
+      "type": "salad",
+      "price_desc": "Tk 269",
+      "price": 269,
+      "detail": "1:1 - A blend of premium lettuce garnished with juicy tomatoes, pickle, breaded chicken fillet & creamy mayonnaise",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7768939.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Garden Salad",
+      "name": "Crunchy Garden Salad",
+      "type": "salad",
+      "price_desc": "Tk 169",
+      "price": 169,
+      "detail": "1:1 - A blend of premium lettuces garnished with juicy tomatoes, pickle & creamy mayonnaise",
+      "image": null
+    },
+    {
+      "tag": "Exclusive Panda Offer",
+      "name": "Chicken Tender Box",
+      "type": "chicken",
+      "price_desc": "Tk 830",
+      "price": 830,
+      "detail": "10 pcs",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5033728.jpg?width=150&height=150"
+    },
+    {
+      "tag": "All About Wraps",
+      "name": "Whopperito",
+      "type": "whopper",
+      "price_desc": "from Tk 499",
+      "price": 499,
+      "detail": "Whopperito is stuffed to the brim with all kinds of delicious ingredients. Flame grilled beef, topped with tangy pickles, fresh tomatoes, crisp ice burg lettuce & fresh onion, finished with creamy mayo & wrapped beautifully in a tortilla wrap",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/6081261.jpg?width=150&height=150"
+    },
+    {
+      "tag": "All About Wraps",
+      "name": "Hot Chicken Burrito",
+      "type": "chicken",
+      "price_desc": "from Tk 331",
+      "price": 331,
+      "detail": null,
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/5291453.jpg?width=150&height=150"
+    },
+    {
+      "tag": "The King of Fried Chicken",
+      "name": "Fried Chicken - 2 pcs",
+      "type": "fried chicken",
+      "price_desc": "from Tk 349",
+      "price": 349,
+      "detail": "Tender & juicy chicken, fried until crispy outside, served hot.",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "The King of Fried Chicken",
+      "name": "Fried Chicken - 5 pcs",
+      "type": "fried chicken",
+      "price_desc": "from Tk 849",
+      "price": 849,
+      "detail": "Tender & juicy chicken, fried until crispy outside, served hot.",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "The King of Fried Chicken",
+      "name": "Fried Chicken - 8 pcs",
+      "type": "fried chicken",
+      "price_desc": "from Tk 1,299",
+      "price": 1,
+      "detail": "Tender & juicy chicken, fried until crispy outside, served hot.",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Wings",
+      "name": "Crispy Chicken Wings - 4 pcs",
+      "type": "wings",
+      "price_desc": "Tk 199",
+      "price": 199,
+      "detail": null,
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Wings",
+      "name": "Crispy Chicken Wings - 6 pcs",
+      "type": "wings",
+      "price_desc": "Tk 359",
+      "price": 359,
+      "detail": null,
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Wings",
+      "name": "Crispy Chicken Wings - 10 pcs",
+      "type": "wings",
+      "price_desc": "Tk 449",
+      "price": 449,
+      "detail": null,
+      "image": null
+    },
+    {
+      "tag": "Exclusive Burger",
+      "name": "Chicken Stacker",
+      "type": "chicken",
+      "price_desc": "from Tk 579",
+      "price": 579,
+      "detail": null,
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Exclusive Burger",
+      "name": "Triple Whopper Cheese",
+      "type": "whopper",
+      "price_desc": "from Tk 839",
+      "price": 839,
+      "detail": null,
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Flame - Grilled Beef Burger",
+      "name": "Whopper",
+      "type": "whopper",
+      "price_desc": "from Tk 499",
+      "price": 499,
+      "detail": "¼ lb* of savory flame-grilled beef topped with juicy tomatoes, fresh lettuce, creamy mayonnaise, ketchup, crunchy pickles, & sliced white onions on a soft sesame seed bun",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Flame - Grilled Beef Burger",
+      "name": "Whopper Jr.",
+      "type": "whopper",
+      "price_desc": "from Tk 369",
+      "price": 369,
+      "detail": "Our WHOPPER® Jr Sandwich features one savory flame-grilled beef patty topped with juicy tomatoes, fresh lettuce, creamy mayonnaise, ketchup, crunchy pickles, & sliced white onions on a soft sesame seed bun",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Flame - Grilled Beef Burger",
+      "name": "Double Whopper",
+      "type": "whopper",
+      "price_desc": "from Tk 699",
+      "price": 699,
+      "detail": "Our DOUBLE WHOPPER® Sandwich is a pairing of two ¼ lb* savory flame-grilled beef patties topped with juicy tomatoes, fresh lettuce, creamy mayonnaise, ketchup, crunchy pickles & sliced white onions on a soft sesame seed bun",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Flame - Grilled Beef Burger",
+      "name": "Creamy Cheese Burger",
+      "type": "burger",
+      "price_desc": "from Tk 289",
+      "price": 289,
+      "detail": "You can’t go wrong with our cheeseburger, a signature flame-grilled beef patty topped with a simple layer of melted American cheese, crinkle cut pickles, yellow mustard, & ketchup on a toasted sesame seed bun",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Flame - Grilled Beef Burger",
+      "name": "Creamy Double Cheese Burger",
+      "type": "burger",
+      "price_desc": "from Tk 449",
+      "price": 449,
+      "detail": "Make room for our Double Cheeseburger, two signature flame-grilled beef patties topped with a simple layer of melted American cheese, crinkle cut pickles, yellow mustard & ketchup on a toasted sesame seed bun",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Flame - Grilled Beef Burger",
+      "name": "Fiery King - Beef",
+      "type": null,
+      "price_desc": "from Tk 555Tk 589",
+      "price": 555,
+      "detail": "Burger featuring two mouth watering flame grilled beef patties topped with two slices of american cheese, caramelized onion & flavored with creamy mayonnaise & spicy ketchup for that distinct heat",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Flame - Grilled Beef Burger",
+      "name": "Long Cheese Burger",
+      "type": "burger",
+      "price_desc": "from Tk 429",
+      "price": 429,
+      "detail": null,
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Flame - Grilled Beef Burger",
+      "name": "Big King Beef",
+      "type": null,
+      "price_desc": "from Tk 409",
+      "price": 409,
+      "detail": "Our BIG KING™ Burger features two savory flame-grilled beef patties, topped with melted cheese, fresh cut iceberg lettuce, crisp onions, crunchy pickles & secret Big King sauce , all on a warm, toasted, sesame seed bun.",
+      "image": null
+    },
+    {
+      "tag": "Flame - Grilled Beef Burger",
+      "name": "Cheese Burger",
+      "type": "burger",
+      "price_desc": "from Tk 289",
+      "price": 289,
+      "detail": null,
+      "image": null
+    },
+    {
+      "tag": "Flame - Grilled Beef Burger",
+      "name": "Spicy BBQ Whopper",
+      "type": "whopper",
+      "price_desc": "from Tk 549",
+      "price": 549,
+      "detail": null,
+      "image": null
+    },
+    {
+      "tag": "Chicken Burger",
+      "name": "Tendercrisp",
+      "type": null,
+      "price_desc": "from Tk 499",
+      "price": 499,
+      "detail": "Our TENDERCRISP™ Chicken Sandwich is made with white meat chicken, generously breaded with homemade seasoning and carefully layered with fresh lettuce, ripe tomatoes, & creamy mayonnaise between the brioche-style bun",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Chicken Burger",
+      "name": "Long Chicken",
+      "type": "chicken",
+      "price_desc": "from Tk 449",
+      "price": 449,
+      "detail": "Our LONG CHICKEN™ is made with white meat chicken, lightly breaded & topped with a simple combination of shredded lettuce & creamy mayonnaise on a sesame seed bun",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Chicken Burger",
+      "name": "Chick N Crisp Burger",
+      "type": "burger",
+      "price_desc": "from Tk 289",
+      "price": 289,
+      "detail": "Our CHICK and CRISP™ is loaded with chopped lettuce, a light layer of creamy mayonnaise, & served to you freshly prepared on a perfectly toasted sesame seed bun",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Chicken Burger",
+      "name": "Crispy King",
+      "type": null,
+      "price_desc": "from Tk 389",
+      "price": 389,
+      "detail": "1 pc",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Chicken Burger",
+      "name": "Big King Chicken",
+      "type": "chicken",
+      "price_desc": "from Tk 449",
+      "price": 449,
+      "detail": "Our BIG KING™ Chicken Burger features two Chicken patties with American cheese, fresh cut iceberg lettuce, crisp onions & secret Big King sauce all on a warm toasted sesame seed bun.",
+      "image": null
+    },
+    {
+      "tag": "Chicken Burger",
+      "name": "Incredible Crispy King Burger",
+      "type": "burger",
+      "price_desc": "from Tk 859",
+      "price": 859,
+      "detail": null,
+      "image": null
+    },
+    {
+      "tag": "Lunch Deal",
+      "name": "Lunch Deal 1",
+      "type": null,
+      "price_desc": "Tk 319",
+      "price": 319,
+      "detail": "1:1 - Consists of fried rice, 1 pc fried chicken, garlic sauce & soft drinks",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Lunch Deal",
+      "name": "Lunch Deal 2",
+      "type": null,
+      "price_desc": "Tk 449",
+      "price": 449,
+      "detail": "1:1 - Consists of fried rice, 2 pc fried chicken, garlic sauce & soft drinks",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Brownie",
+      "type": null,
+      "price_desc": "Tk 119",
+      "price": 119,
+      "detail": "1 pc - Rich & chewy chocolate dessert offering an intense chocolate taste",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Sides",
+      "name": "French Fries - Medium",
+      "type": "french",
+      "price_desc": "Tk 199",
+      "price": 199,
+      "detail": "Deep-fried thinly cut potato chips",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Sides",
+      "name": "French Fries - Large",
+      "type": "french",
+      "price_desc": "Tk 249",
+      "price": 249,
+      "detail": "Deep-fried thinly cut potato chips",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Sides",
+      "name": "Chicken Nuggets",
+      "type": "nugget",
+      "price_desc": "from Tk 199",
+      "price": 199,
+      "detail": "Made with white meat, our bite-sized Chicken Nuggets are tender & juicy on the inside & crispy on the outside",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Sides",
+      "name": "Chicken Tender",
+      "type": "chicken",
+      "price_desc": "from Tk 259",
+      "price": 259,
+      "detail": "3 pcs",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    }
+  ],
+  "cakes": [
+    {
+      "tag": "Popular",
+      "name": "Shumi's Delight",
+      "type": null,
+      "price_desc": "Tk 100",
+      "price": 100,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925539.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Chocolate Ganache Mud Cake - 500 Gm",
+      "type": "cake",
+      "price_desc": "Tk 990",
+      "price": 990,
+      "detail": "500 gm",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925512.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Black Forest Pastry",
+      "type": null,
+      "price_desc": "Tk 150",
+      "price": 150,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925546.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Black Forest Cake - 500 Gm",
+      "type": "cake",
+      "price_desc": "Tk 950",
+      "price": 950,
+      "detail": "500 gm - Moist chocolate sponge cake with fresh butter cream frosting",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925499.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Special Black Forest Cake - 500 Gm",
+      "type": "cake",
+      "price_desc": "Tk 990",
+      "price": 990,
+      "detail": "500 gm",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925504.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Popular",
+      "name": "Chocolate Ganache Mud Cake - 800 Gm",
+      "type": "cake",
+      "price_desc": "Tk 1,590",
+      "price": 1590,
+      "detail": "800 gm",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925514.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Black Forest Cake - 500 Gm",
+      "type": "cake",
+      "price_desc": "Tk 950",
+      "price": 950,
+      "detail": "500 gm - Moist chocolate sponge cake with fresh butter cream frosting",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925499.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Choco Delight Cake - 500 Gm",
+      "type": "cake",
+      "price_desc": "Tk 1,050",
+      "price": 1050,
+      "detail": "500 gm",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925511.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Chocolate Ganache Mud Cake - 500 Gm",
+      "type": "cake",
+      "price_desc": "Tk 990",
+      "price": 990,
+      "detail": "500 gm",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925512.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Strawberry Cream Cheesecake - 500 Gm",
+      "type": "cake",
+      "price_desc": "Tk 1,150",
+      "price": 1150,
+      "detail": "500 gm",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925516.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Special Black Forest Cake - 500 Gm",
+      "type": "cake",
+      "price_desc": "Tk 990",
+      "price": 990,
+      "detail": "500 gm",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925504.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Vanilla Cake - 600 Gm",
+      "type": "cake",
+      "price_desc": "Tk 1,080",
+      "price": 1080,
+      "detail": "600 gm - Fluffy cake prepared with a combination of flour, sugar, egg & vanilla extract",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925497.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Chocolate Cake - 600 Gm",
+      "type": "cake",
+      "price_desc": "Tk 1,080",
+      "price": 1080,
+      "detail": "600 gm - Moist layers of rich cocoa goodness, draped in velvety ganache, a sweet indulgence that melts in your mouth",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925498.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Black Forest Cake - 800 Gm",
+      "type": "cake",
+      "price_desc": "Tk 1,490",
+      "price": 1490,
+      "detail": "800 gm - Moist chocolate sponge cake with fresh butter cream frosting",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925500.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Special Black Forest Cake - 800 Gm",
+      "type": "cake",
+      "price_desc": "Tk 1,590",
+      "price": 1590,
+      "detail": "800 gm",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925506.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Chocolate Ganache Mud Cake - 800 Gm",
+      "type": "cake",
+      "price_desc": "Tk 1,590",
+      "price": 1590,
+      "detail": "800 gm",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925514.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Black Forest Cake - 1200 Gm",
+      "type": "cake",
+      "price_desc": "Tk 2,280",
+      "price": 2280,
+      "detail": "1200 gm - Moist chocolate sponge cake with fresh butter cream frosting",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925501.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Chocolate Ganache Mud Cake - 1200 Gm",
+      "type": "cake",
+      "price_desc": "Tk 2,390",
+      "price": 2390,
+      "detail": "1200 gm",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925515.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Black Forest Cake - 1500 Gm",
+      "type": "cake",
+      "price_desc": "Tk 2,850",
+      "price": 2850,
+      "detail": "1500 gm - Moist chocolate sponge cake with fresh butter cream frosting",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925502.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Marble Cake ",
+      "type": "cake",
+      "price_desc": "Tk 300",
+      "price": 300,
+      "detail": "400 gm",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925524.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Fruit Cake ",
+      "type": "cake",
+      "price_desc": "Tk 320",
+      "price": 320,
+      "detail": "400 gm - Light cake with dried fruits, nuts, egg, flour & sugar",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925525.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Plain Cake ",
+      "type": "cake",
+      "price_desc": "Tk 280",
+      "price": 280,
+      "detail": "400 gm - Light cake prepared with egg whites, flour & sugar",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925526.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Cake",
+      "name": "Chocolate Moist Pound Cake",
+      "type": "cake",
+      "price_desc": "Tk 320",
+      "price": 320,
+      "detail": null,
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925527.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Danish",
+      "type": null,
+      "price_desc": "Tk 70",
+      "price": 70,
+      "detail": "1 pc - A sweet, multi-layered bread, airy & crispy on the outside, but also rich & buttery inside",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925529.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Mousse",
+      "type": null,
+      "price_desc": "Tk 120",
+      "price": 120,
+      "detail": "1 pc - Rich & creamy dessert prepared with  heavy cream in layers",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925530.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Macaroon",
+      "type": null,
+      "price_desc": "Tk 100",
+      "price": 100,
+      "detail": "1 pc ",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925531.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Chocolate Tart",
+      "type": null,
+      "price_desc": "Tk 100",
+      "price": 100,
+      "detail": "1 pc ",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925533.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Black Forest Delight",
+      "type": null,
+      "price_desc": "Tk 50",
+      "price": 50,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925534.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Cake Brownie",
+      "type": "cake",
+      "price_desc": "Tk 90",
+      "price": 90,
+      "detail": "1 pc - Fudgy & super chocolaty brownies prepared with flour, sugar & eggs",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925535.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Rich Chocolate Brownie",
+      "type": null,
+      "price_desc": "Tk 100",
+      "price": 100,
+      "detail": "1 pc - Prepared with dark chocolate, cashewnut & chocolate chip",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925536.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Cake Pop",
+      "type": "cake",
+      "price_desc": "Tk 60",
+      "price": 60,
+      "detail": "1 pc ",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925538.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Shumi's Delight",
+      "type": null,
+      "price_desc": "Tk 100",
+      "price": 100,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925539.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Vanilla Cupcake",
+      "type": "cake",
+      "price_desc": "Tk 70",
+      "price": 70,
+      "detail": "1 cup",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925540.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Chocolate Cupcake",
+      "type": "cake",
+      "price_desc": "Tk 70",
+      "price": 70,
+      "detail": "1 cup",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925541.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Red Velvet Cupcake",
+      "type": "cake",
+      "price_desc": "Tk 70",
+      "price": 70,
+      "detail": "1 cup",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925542.jpg?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Vanilla Pastry",
+      "type": null,
+      "price_desc": "Tk 140",
+      "price": 140,
+      "detail": "1 pc - Rich & indulgent dessert prepared with layers of soft cake & creamy vanilla filling",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925544.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Chocolate Pastry",
+      "type": null,
+      "price_desc": "Tk 140",
+      "price": 140,
+      "detail": "1 pc - Rich & indulgent dessert prepared with layers of soft cake & creamy chocolate filling",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925545.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Black Forest Pastry",
+      "type": null,
+      "price_desc": "Tk 150",
+      "price": 150,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925546.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Chocolate Muffin",
+      "type": null,
+      "price_desc": "Tk 60",
+      "price": 60,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925547.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Nut Muffin",
+      "type": null,
+      "price_desc": "Tk 60",
+      "price": 60,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925548.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Doughnut",
+      "type": null,
+      "price_desc": "Tk 80",
+      "price": 80,
+      "detail": "1 pc",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925550.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Dessert",
+      "name": "Eclairs",
+      "type": null,
+      "price_desc": "Tk 80",
+      "price": 80,
+      "detail": "1 pc - Filled with whipped cream & topped with chocolate sauce",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925554.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Bread & Biscuit",
+      "name": "Dry Cake ",
+      "type": "cake",
+      "price_desc": "Tk 250",
+      "price": 250,
+      "detail": "300 gm - Yummy & chocolaty cake with flour, sugar & eggs",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925555.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Bread & Biscuit",
+      "name": "Salted Biscuit ",
+      "type": null,
+      "price_desc": "Tk 250",
+      "price": 250,
+      "detail": "300 gm",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925556.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Bread & Biscuit",
+      "name": "Bread",
+      "type": null,
+      "price_desc": "Tk 100",
+      "price": 100,
+      "detail": "400 gm",
+      "image": "https://images.deliveryhero.io/image/fd-bd/Products/7925563.JPG?width=150&height=150"
+    },
+    {
+      "tag": "Fast Food",
+      "name": "Beef Samosa",
+      "type": "samosa",
+      "price_desc": "Tk 30",
+      "price": 30,
+      "detail": "1 pc - Prepared with minced beef, pepper, onion & chili powder wrapped up in a deep-fried samosa shell",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Fast Food",
+      "name": "Chicken Samosa",
+      "type": "chicken",
+      "price_desc": "Tk 30",
+      "price": 30,
+      "detail": "1 pc - Prepared with tender chicken, pepper, onion & chili powder wrapped up in a deep-fried samosa shell",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Fast Food",
+      "name": "Shingara",
+      "type": "shingara",
+      "price_desc": "Tk 30",
+      "price": 30,
+      "detail": "1 pc - Crispy fried snack filled with a variety of spiced vegetable & potato",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Fast Food",
+      "name": "Chicken Roll",
+      "type": "chicken",
+      "price_desc": "Tk 75",
+      "price": 75,
+      "detail": "1 pc -  Savor the taste of succulent chicken wrapped in a warm & fluffy roll",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Fast Food",
+      "name": "Beef Roll",
+      "type": "roll",
+      "price_desc": "Tk 80",
+      "price": 80,
+      "detail": "1 pc ",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Fast Food",
+      "name": "Sausage Roll",
+      "type": "roll",
+      "price_desc": "Tk 50",
+      "price": 50,
+      "detail": "1 pc ",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Fast Food",
+      "name": "Chicken Patties",
+      "type": "chicken",
+      "price_desc": "Tk 70",
+      "price": 70,
+      "detail": "1 pc - Crispy layers prepared with flour & stuffed with tender chicken & onion",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Fast Food",
+      "name": "Beef Patties",
+      "type": null,
+      "price_desc": "Tk 75",
+      "price": 75,
+      "detail": "1 pc ",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Fast Food",
+      "name": "American Hot Dog",
+      "type": null,
+      "price_desc": "Tk 70",
+      "price": 70,
+      "detail": "1 pc",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Fast Food",
+      "name": "Chicken Burger",
+      "type": "burger",
+      "price_desc": "Tk 100",
+      "price": 100,
+      "detail": "1 pc - Prepared with chicken patty & sauce",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Fast Food",
+      "name": "Beef Burger",
+      "type": "burger",
+      "price_desc": "Tk 100",
+      "price": 100,
+      "detail": "1 pc - Burger with beef patty stacked with sauce & cheese",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Fast Food",
+      "name": "Chicken Pizza",
+      "type": "pizza",
+      "price_desc": "Tk 90",
+      "price": 90,
+      "detail": "1:1 - Topped with chicken & sauce",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    },
+    {
+      "tag": "Fast Food",
+      "name": "Beef Pizza",
+      "type": "pizza",
+      "price_desc": "Tk 100",
+      "price": 100,
+      "detail": "1:1 ",
+      "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+    }
+  ]
+}

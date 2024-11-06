@@ -1,5 +1,5 @@
-import { menuList } from "../../public/data/menuData";
-import { cancelIcon, dropIcon, oksignIcon } from "../../public/svg";
+import { menuList } from "../assets/data/menuData";
+import { cancelIcon, dropIcon, oksignIcon } from "../assets/svg";
 import useIsActive from "../hooks/useIsActive";
 
 const NavbarMenu = ({ handleIsNavbarMenuActive }) => {

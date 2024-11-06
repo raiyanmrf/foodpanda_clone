@@ -1,7 +1,5 @@
 import React from "react";
-import { cancelIcon, dropIcon, proCardIcon } from "../../public/svg";
-import useIsActive from "../hooks/useIsActive";
-import { proTermsLists } from "../../public/data/cardData";
+import { cancelIcon, dropIcon } from "../assets/svg/index";
 
 const CardPopup = ({
   item,

@@ -1,0 +1,741 @@
+{
+  "burger": {
+    "selectionModifier": [
+      {
+        "type": "Add on",
+        "limit": 6,
+        "required": false,
+        "items": [
+          {
+            "name": "Add Royale Patty",
+            "popular": false,
+            "price": 120,
+            "original_price": 130
+          },
+          {
+            "name": "Add Tender Crisp Patty",
+            "popular": false,
+            "price": 199,
+            "original_price": 210
+          },
+          {
+            "name": "Add Whopper Patty",
+            "popular": false,
+            "price": 199,
+            "original_price": 210
+          },
+          {
+            "name": "cheese",
+            "popular": true,
+            "price": 40,
+            "original_price": 40
+          },
+          {
+            "name": "Add beef Patty",
+            "popular": false,
+            "price": 100,
+            "original_price": 110
+          }
+        ]
+      },
+
+      {
+        "type": "Make Your Meal",
+        "limit": 1,
+        "required": false,
+        "items": [
+          {
+            "name": "Small Fries with Small Drinks",
+            "popular": false,
+            "price": 219,
+            "original_price": 250
+          }
+        ]
+      },
+      {
+        "type": "Sides",
+        "limit": 3,
+        "required": false,
+        "items": [
+          {
+            "name": "French Fries - Medium",
+            "popular": true,
+            "price": 199,
+            "original_price": 199
+          },
+          {
+            "name": "French Fries - large",
+            "popular": false,
+            "price": 249,
+            "original_price": 280
+          }
+        ]
+      },
+      {
+        "type": "Fountain Drinks",
+        "limit": 9,
+        "required": false,
+        "items": [
+          {
+            "name": "Coca Cola - Small",
+            "popular": false,
+            "price": 99,
+            "original_price": 99
+          },
+          {
+            "name": "Coca Cola - medium",
+            "popular": true,
+            "price": 129,
+            "original_price": 129
+          },
+
+          {
+            "name": "Coca Cola - large",
+            "popular": true,
+            "price": 149,
+            "original_price": 149
+          },
+          {
+            "name": "Sprite - Small",
+            "popular": false,
+            "price": 99,
+            "original_price": 99
+          },
+          {
+            "name": "Fanta - Small",
+            "popular": false,
+            "price": 99,
+            "original_price": 99
+          },
+          {
+            "name": "Fanta - medium",
+            "popular": false,
+            "price": 129,
+            "original_price": 129
+          },
+
+          {
+            "name": "Fanta - large",
+            "popular": false,
+            "price": 149,
+            "original_price": 149
+          }
+        ]
+      }
+    ],
+
+    "frequentlyBought": [
+      {
+        "name": "Crispy Chicken Wings - 4 pcs",
+        "popular": false,
+        "price": 199,
+        "original_price": 199,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "French Fries - Large",
+        "popular": false,
+        "price": 249,
+        "original_price": 249,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+
+      {
+        "name": "French Fries - Medium",
+        "popular": false,
+        "price": 199,
+        "original_price": 199,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Chicken Tender",
+        "popular": false,
+        "price": 259,
+        "original_price": 259,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Fried Chicken - 2 pcs",
+        "popular": false,
+        "price": 349,
+        "original_price": 349,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/3753028.jpg?width=150&height=150"
+      },
+
+      {
+        "name": "Brownie",
+        "popular": false,
+        "price": 119,
+        "original_price": 119,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Crispy King",
+        "popular": false,
+        "price": 389,
+        "original_price": 389,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/4547350.jpg?width=150&height=150"
+      },
+      {
+        "name": "Hot Chicken Burrito",
+        "popular": false,
+        "price": 331,
+        "original_price": 359,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/5291453.jpg?width=150&height=150"
+      }
+    ]
+  },
+
+  "burgermeal": {
+    "selectionModifier": [
+      {
+        "type": "Add on",
+        "limit": null,
+        "required": false,
+        "items": [
+          {
+            "name": "cheese",
+            "popular": true,
+            "price": 40,
+            "original_price": 40
+          }
+        ]
+      },
+      {
+        "type": "Fountain Drinks",
+        "limit": 9,
+        "required": false,
+        "items": [
+          {
+            "name": "Coca Cola - Small",
+            "popular": false,
+            "price": 99,
+            "original_price": 99
+          },
+          {
+            "name": "Coca Cola - medium",
+            "popular": true,
+            "price": 129,
+            "original_price": 129
+          },
+
+          {
+            "name": "Coca Cola - large",
+            "popular": true,
+            "price": 149,
+            "original_price": 149
+          },
+          {
+            "name": "Sprite - Small",
+            "popular": false,
+            "price": 99,
+            "original_price": 99
+          },
+          {
+            "name": "Fanta - Small",
+            "popular": false,
+            "price": 99,
+            "original_price": 99
+          },
+          {
+            "name": "Fanta - medium",
+            "popular": false,
+            "price": 129,
+            "original_price": 129
+          },
+
+          {
+            "name": "Fanta - large",
+            "popular": false,
+            "price": 149,
+            "original_price": 149
+          }
+        ]
+      }
+    ],
+    "frequentlyBought": [
+      {
+        "name": "Crispy Chicken Wings - 4 pcs",
+        "popular": false,
+        "price": 199,
+        "original_price": 199,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "French Fries - Large",
+        "popular": false,
+        "price": 249,
+        "original_price": 249,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+
+      {
+        "name": "French Fries - Medium",
+        "popular": false,
+        "price": 199,
+        "original_price": 199,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Chicken Tender",
+        "popular": false,
+        "price": 259,
+        "original_price": 259,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Fried Chicken - 2 pcs",
+        "popular": false,
+        "price": 349,
+        "original_price": 349,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/3753028.jpg?width=150&height=150"
+      },
+
+      {
+        "name": "Brownie",
+        "popular": false,
+        "price": 119,
+        "original_price": 119,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Crispy King",
+        "popular": false,
+        "price": 389,
+        "original_price": 389,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/4547350.jpg?width=150&height=150"
+      },
+      {
+        "name": "Hot Chicken Burrito",
+        "popular": false,
+        "price": 331,
+        "original_price": 359,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/5291453.jpg?width=150&height=150"
+      }
+    ]
+  },
+
+  "fried chicken": {
+    "selectionModifier": [
+      {
+        "type": "Add on",
+        "limit": 2,
+        "required": false,
+        "items": [
+          {
+            "name": "Garlic Sauce - Large",
+            "popular": false,
+            "price": 65,
+            "original_price": 70
+          },
+          {
+            "name": "Garlic Sauce - Large",
+            "popular": true,
+            "price": 25,
+            "original_price": 35
+          }
+        ]
+      },
+      {
+        "type": "Fountain Drinks",
+        "limit": 9,
+        "required": false,
+        "items": [
+          {
+            "name": "Coca Cola - Small",
+            "popular": false,
+            "price": 99,
+            "original_price": 99
+          },
+          {
+            "name": "Coca Cola - medium",
+            "popular": true,
+            "price": 129,
+            "original_price": 129
+          },
+
+          {
+            "name": "Coca Cola - large",
+            "popular": true,
+            "price": 149,
+            "original_price": 149
+          },
+          {
+            "name": "Sprite - Small",
+            "popular": false,
+            "price": 99,
+            "original_price": 99
+          },
+          {
+            "name": "Fanta - Small",
+            "popular": false,
+            "price": 99,
+            "original_price": 99
+          },
+          {
+            "name": "Fanta - medium",
+            "popular": false,
+            "price": 129,
+            "original_price": 129
+          },
+
+          {
+            "name": "Fanta - large",
+            "popular": false,
+            "price": 149,
+            "original_price": 149
+          }
+        ]
+      }
+    ],
+    "frequentlyBought": [
+      {
+        "name": "Crispy Chicken Wings - 4 pcs",
+        "popular": false,
+        "price": 199,
+        "original_price": 199,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "French Fries - Large",
+        "popular": false,
+        "price": 249,
+        "original_price": 249,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+
+      {
+        "name": "French Fries - Medium",
+        "popular": false,
+        "price": 199,
+        "original_price": 199,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Chicken Tender",
+        "popular": false,
+        "price": 259,
+        "original_price": 259,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Fried Chicken - 2 pcs",
+        "popular": false,
+        "price": 349,
+        "original_price": 349,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/3753028.jpg?width=150&height=150"
+      },
+
+      {
+        "name": "Brownie",
+        "popular": false,
+        "price": 119,
+        "original_price": 119,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Crispy King",
+        "popular": false,
+        "price": 389,
+        "original_price": 389,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/4547350.jpg?width=150&height=150"
+      },
+      {
+        "name": "Hot Chicken Burrito",
+        "popular": false,
+        "price": 331,
+        "original_price": 359,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/5291453.jpg?width=150&height=150"
+      }
+    ]
+  },
+  "other": {
+    "selectionModifier": [
+      {
+        "type": "Fountain Drinks",
+        "limit": 9,
+        "required": false,
+        "items": [
+          {
+            "name": "Coca Cola - Small",
+            "popular": false,
+            "price": 99,
+            "original_price": 99
+          },
+          {
+            "name": "Coca Cola - medium",
+            "popular": true,
+            "price": 129,
+            "original_price": 129
+          },
+
+          {
+            "name": "Coca Cola - large",
+            "popular": true,
+            "price": 149,
+            "original_price": 149
+          },
+          {
+            "name": "Sprite - Small",
+            "popular": false,
+            "price": 99,
+            "original_price": 99
+          },
+          {
+            "name": "Fanta - Small",
+            "popular": false,
+            "price": 99,
+            "original_price": 99
+          },
+          {
+            "name": "Fanta - medium",
+            "popular": false,
+            "price": 129,
+            "original_price": 129
+          },
+
+          {
+            "name": "Fanta - large",
+            "popular": false,
+            "price": 149,
+            "original_price": 149
+          }
+        ]
+      }
+    ],
+    "frequentlyBought": []
+  },
+
+  "platter": {
+    "selectionModifier": [
+      {
+        "type": "Choice of Crisps",
+        "limit": 1,
+        "required": true,
+        "items": [
+          {
+            "name": "French Fries - large",
+            "popular": false,
+            "price": "free",
+            "original_price": "free"
+          },
+          {
+            "name": "Meshed potato",
+            "popular": true,
+            "price": "free",
+            "original_price": "free"
+          }
+        ]
+      }
+    ],
+    "frequentlyBought": [
+      {
+        "name": "Crispy Chicken Wings - 4 pcs",
+        "popular": false,
+        "price": 199,
+        "original_price": 199,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "French Fries - Large",
+        "popular": false,
+        "price": 249,
+        "original_price": 249,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+
+      {
+        "name": "French Fries - Medium",
+        "popular": false,
+        "price": 199,
+        "original_price": 199,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Chicken Tender",
+        "popular": false,
+        "price": 259,
+        "original_price": 259,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Fried Chicken - 2 pcs",
+        "popular": false,
+        "price": 349,
+        "original_price": 349,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/3753028.jpg?width=150&height=150"
+      },
+
+      {
+        "name": "Brownie",
+        "popular": false,
+        "price": 119,
+        "original_price": 119,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Crispy King",
+        "popular": false,
+        "price": 389,
+        "original_price": 389,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/4547350.jpg?width=150&height=150"
+      },
+      {
+        "name": "Hot Chicken Burrito",
+        "popular": false,
+        "price": 331,
+        "original_price": 359,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/5291453.jpg?width=150&height=150"
+      }
+    ]
+  },
+  "pizza": {
+    "selectionModifier": [
+      {
+        "type": "variation",
+        "limit": 1,
+        "required": true,
+        "items": [
+          {
+            "name": "small",
+            "popular": false,
+            "price": 305,
+            "original_price": 305
+          },
+          {
+            "name": "medium",
+            "popular": false,
+            "price": 425,
+            "original_price": 425
+          },
+          {
+            "name": "large",
+            "popular": false,
+            "price": 615,
+            "original_price": 615
+          },
+          {
+            "name": "family",
+            "popular": false,
+            "price": 1095,
+            "original_price": 1095
+          }
+        ]
+      }
+    ],
+    "frequentlyBought": [
+      {
+        "name": "Crispy Chicken Wings - 4 pcs",
+        "popular": false,
+        "price": 199,
+        "original_price": 199,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "French Fries - Large",
+        "popular": false,
+        "price": 249,
+        "original_price": 249,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+
+      {
+        "name": "French Fries - Medium",
+        "popular": false,
+        "price": 199,
+        "original_price": 199,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Chicken Tender",
+        "popular": false,
+        "price": 259,
+        "original_price": 259,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Fried Chicken - 2 pcs",
+        "popular": false,
+        "price": 349,
+        "original_price": 349,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/3753028.jpg?width=150&height=150"
+      },
+
+      {
+        "name": "Brownie",
+        "popular": false,
+        "price": 119,
+        "original_price": 119,
+        "image": "https://micro-assets.foodora.com/img/logo-simple-fp.svg"
+      },
+      {
+        "name": "Crispy King",
+        "popular": false,
+        "price": 389,
+        "original_price": 389,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/4547350.jpg?width=150&height=150"
+      },
+      {
+        "name": "Hot Chicken Burrito",
+        "popular": false,
+        "price": 331,
+        "original_price": 359,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/5291453.jpg?width=150&height=150"
+      }
+    ]
+  },
+  "biryani": {
+    "selectionModifier": [
+      {
+        "type": "Add on",
+        "limit": 2,
+        "required": false,
+        "items": [
+          {
+            "name": "Chutney",
+            "popular": true,
+            "price": 20,
+            "original_price": 20
+          },
+          {
+            "name": "Jali Kebab",
+            "popular": true,
+            "price": 60,
+            "original_price": 60
+          }
+        ]
+      }
+    ],
+    "frequentlyBought": [
+      {
+        "name": "Borhani",
+        "popular": false,
+        "price": 70,
+        "original_price": 70,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/2046177.jpg?width=120&height=120"
+      },
+      {
+        "name": "Jali Kebab",
+        "popular": false,
+        "price": 60,
+        "original_price": 60,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/2046172.jpg?width=120&height=120"
+      },
+
+      {
+        "name": "Badam Sharbat",
+        "popular": false,
+        "price": 70,
+        "original_price": 70,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/2046177.jpg?width=120&height=120"
+      },
+      {
+        "name": "Chutney",
+        "popular": false,
+        "price": 20,
+        "original_price": 20,
+        "image": "https://images.deliveryhero.io/image/fd-bd/Products/1034066.jpg?width=120&height=120"
+      }
+    ]
+  }
+}

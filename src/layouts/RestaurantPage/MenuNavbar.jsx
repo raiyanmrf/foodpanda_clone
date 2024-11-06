@@ -1,8 +1,8 @@
 import React from "react";
-import { backwardIcon, forwardIcon, searchIcon } from "../../../public/svg";
+import { backwardIcon, forwardIcon, searchIcon } from "../../assets/svg";
 import useDetectMouse from "../../hooks/useDetectMouse";
 import useCheckOverflow from "../../hooks/useCheckOverflow";
-import { foodNavLinks } from "../../../public/data/foodData";
+import { foodNavLinks } from "../../assets/data/foodData";
 
 const MenuNavbar = ({
   cardRefs,

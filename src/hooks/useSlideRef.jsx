@@ -9,7 +9,7 @@ const useSlideRef = (length) => {
     const containerRect = el.parentNode.parentNode.getBoundingClientRect();
 
     const isVisible =
-      rect.left >= containerRect.left && rect.right <= containerRect.right;
+      rect.left > containerRect.left && rect.right < containerRect.right;
     return isVisible;
   };
 
@@ -17,14 +17,18 @@ const useSlideRef = (length) => {
     setIndex((prevIndex) => {
       let nextIndex = prevIndex;
 
-      for (let i = prevIndex + 1; i < length; i++) {
-        if (itemRefs.current[i] && !isInView(itemRefs.current[i])) {
-          nextIndex = i;
-          break;
-        }
-      }
+      // for (let i = prevIndex + 1; i < length; i++) {
+      //   if (itemRefs.current[i] && !isInView(itemRefs.current[i])) {
+      //     nextIndex = i;
+      //     break;
+      //   }
+      // }
 
-      if (nextIndex !== prevIndex && itemRefs.current[nextIndex]) {
+      if (
+        nextIndex !== prevIndex &&
+        itemRefs.current[i] &&
+        itemRefs.current[nextIndex + 1]
+      ) {
         itemRefs.current[nextIndex].scrollIntoView({
           behavior: "smooth",
           block: "nearest",

@@ -146,3 +146,36 @@ h4 {
   filter: brightness(0) saturate(100%) invert(18%) sepia(86%) saturate(4671%)
     hue-rotate(272deg) brightness(87%) contrast(106%);
 }
+
+.error-page {
+  &-container {
+    @extend .popup-container;
+    background-color: white;
+  }
+
+  &-content {
+    h1 {
+      font-size: 17em;
+      text-shadow: 0px 0px 5px gray;
+      color: white;
+    }
+
+    div {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    img {
+      width: 100%;
+      max-width: 200px;
+      position: absolute;
+      top: -15em;
+      right: -7em;
+    }
+    h2 {
+      font-size: 4em;
+
+      color: $pink1;
+    }
+  }
+}
