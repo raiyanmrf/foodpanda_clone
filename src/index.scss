@@ -23,6 +23,13 @@
   font-weight: 600;
   src: url("./assets/fonts/PPAgrandir-600-Bold.otf");
 }
+/* Force light mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}
+
 
 body {
   font-family: "Open Sans", sans-serif, monospace;
