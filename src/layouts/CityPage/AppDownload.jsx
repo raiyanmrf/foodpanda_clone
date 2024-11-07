@@ -1,5 +1,5 @@
 import React from "react";
-import appImage from "../../../public/images/city-foodpanda-apps.webp";
+import appImage from "../../assets/images/vendor/city-foodpanda-apps.webp";
 import { appstoreIcon, playstoreIcon } from "../../assets/svg";
 
 const AppDownload = () => {
