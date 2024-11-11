@@ -5,7 +5,7 @@ export const paragraphs = {
   ],
 
   fastFood: [
-    "Fast food delivery in Dhaka",
+    `Fast food delivery in Dhaka`,
     "As the bustling capital of Bangladesh, it's no wonder that Dhaka's culinary scene is something special. This cultural hub offers plenty in the way of delicious dishes, from authentic Bangladesh recipes perfected over generations, to fabulous fusion dishes that bring together the best flavours and ingredients from across southern Asia and beyond. With foodpanda, you've easy access to this diverse dining scene, with straightforward online ordering and express delivery so you can enjoy eating in style without breaking a sweat. Whether it's a brilliant brunch or last-minute lunch, mouth-watering dinner or late-night feast, you've plenty to pick from in Dhaka.",
   ],
 

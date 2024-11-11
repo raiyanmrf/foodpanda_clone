@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -23,7 +23,7 @@ function App() {
         <Suspense>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/city" element={<City />} />
+            <Route path="/city/:city" element={<City />} />
             <Route path="/restaurant" element={<RestaurantPage />} />
             <Route path="/nearby" element={<RestaurantsNearby />} />
             <Route path="/slide" element={<SlideExperiment />} />

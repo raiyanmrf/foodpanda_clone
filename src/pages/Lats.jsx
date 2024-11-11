@@ -18,7 +18,7 @@ const Lats = () => {
   }, []);
 
   useEffect(() => {
-    const apiKey = import.meta.env.VITE_GOOGLE_MAP_API;
+    const apiKey = "4747";
 
     const fetchCoordinates = async () => {
       const coordsList = await Promise.all(

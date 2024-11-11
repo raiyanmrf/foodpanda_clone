@@ -15,7 +15,7 @@ const Cities = () => {
           return (
             <div
               onClick={() => {
-                navigate("/city");
+                navigate(`/city/${city.name.toLowerCase()}`);
               }}
               key={city.id}
               className="cities-grid-item"
