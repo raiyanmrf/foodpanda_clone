@@ -3013,6 +3013,12 @@ footer .line {
   font-weight: 600;
   src: url("./assets/fonts/PPAgrandir-600-Bold.otf");
 }
+/* Force light mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}
 body {
   font-family: "Open Sans", sans-serif, monospace;
 }
@@ -3142,4 +3148,51 @@ h4 {
 .error-page-content h2 {
   font-size: 4em;
   color: #e21b70;
+}
+
+.loading-svg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-svg svg {
+  position: relative;
+  width: 75px; /* Adjusted width */
+  height: 75px; /* Adjusted height */
+  animation: rotate 2s linear infinite;
+}
+
+.loading-svg svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: black;
+  stroke-width: 5; /* Reduced stroke-width for smaller circle */
+  stroke-linecap: round;
+  transform: translate(2.5px, 2.5px); /* Adjusted translation for centering */
+  stroke-dasharray: 188; /* Adjusted for new circumference (2 * PI * r) */
+  stroke-dashoffset: 188;
+  animation: loadingAnimation 4s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loadingAnimation {
+  0%, 100% {
+    stroke-dashoffset: 188;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  50.1% {
+    stroke-dashoffset: 376;
+  }
 }/*# sourceMappingURL=index.css.map */

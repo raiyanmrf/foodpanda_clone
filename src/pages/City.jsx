@@ -7,6 +7,7 @@ import Banner from "../layouts/CityPage/Banner";
 import { useInfiniteQuery } from "@tanstack/react-query";
 
 import InfiniteScroll from "react-infinite-scroll-component";
+import Loading from "../assets/svg/Loading";
 
 const LIMIT = 20;
 
@@ -52,7 +53,7 @@ const City = () => {
         dataLength={restaurantData ? restaurantData.length : 0}
         next={() => fetchNextPage()}
         hasMore={hasNextPage}
-        loader={<div>Loading...</div>}
+        loader={<Loading />}
         style={{ overflow: "hidden" }}
       >
         {restaurantData && <Allrestaurants data={restaurantData} />}
