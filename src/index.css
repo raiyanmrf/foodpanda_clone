@@ -2923,7 +2923,6 @@ footer .line {
 .restaurant-grid {
   display: grid;
   gap: 20px;
-  place-items: center;
 }
 .restaurant-grid-items {
   position: relative;
