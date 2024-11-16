@@ -13,8 +13,8 @@ const BuisinessAd = ({ item, handleClick }) => {
 
       <div className="vendor-detail">
         <h3>{item.title}</h3>
-        {item.detail.map((paragrapgh) => (
-          <p>{paragrapgh}</p>
+        {item.detail.map((paragrapgh, i) => (
+          <p key={i}>{paragrapgh}</p>
         ))}
 
         <button

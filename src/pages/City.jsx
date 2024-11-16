@@ -35,13 +35,10 @@ const City = () => {
     },
   });
 
-  console.log("data", data);
-
-  const restaurantData = data?.pages.reduce((arr, page) => {
+  const restaurantData = data?.pages?.reduce((arr, page) => {
     return [...arr, ...page.restaurants];
   }, []);
 
-  console.log(restaurantData);
   return (
     <section className="content">
       <Banner

@@ -7,7 +7,7 @@ import { isTheRestaurantOpen } from "../../utils/isRestaurantOpen";
 
 const AllRestaurants = ({ data }) => {
   const navigate = useNavigate();
-  console.log(data);
+
   return (
     <section className="restaurant">
       <div className="restaurant-title">

@@ -6,6 +6,7 @@ import ErrorPage from "./pages/ErrorPage";
 import SlideExperiment from "./pages/SlideExperiment";
 import { LuAtSign } from "react-icons/lu";
 import Lats from "./pages/Lats";
+import Loading from "./assets/svg/Loading";
 
 // Lazy load the page components
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -14,13 +15,29 @@ const RestaurantPage = lazy(() => import("./pages/RestaurantPage"));
 const RestaurantsNearby = lazy(() => import("./pages/RestaurantsNearby"));
 
 function App() {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(
+          `https://foodpanda-server-1zey.onrender.com/api/sylhet`
+        );
+
+        const data = res.json();
+
+        console.log(data);
+      } catch (error) {
+        console.error("Error Fetching:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <BrowserRouter>
       <main>
         <Navbar />
 
-        {/* Suspense wraps lazy-loaded components */}
-        <Suspense>
+        <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/city/:city" element={<City />} />
