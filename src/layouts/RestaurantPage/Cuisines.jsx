@@ -7,10 +7,10 @@ import {
 import { LiaPlusSolid } from "react-icons/lia";
 import ItemPopup from "../../components/ItemPopup";
 
-const Cuisines = ({ handleHoverImpact, cardRefs }) => {
+const Cuisines = ({ links, items, handleHoverImpact, cardRefs }) => {
   return (
     <section className="foodMenu-cuisines">
-      {foodMenu.chinese.map((menu, i) => (
+      {links.map((link, i) => (
         <div
           className="foodMenu-single-cuisine"
           onPointerOver={() => {
@@ -22,32 +22,34 @@ const Cuisines = ({ handleHoverImpact, cardRefs }) => {
           key={i}
         >
           <div className="foodMenu-title">
-            <h3>{menu.category}</h3>
-            {menu.category === "popular" && <p>Most ordered right now</p>}
+            <h3>{link}</h3>
+            {link === "Popular" && <p>Most ordered right now</p>}
           </div>
 
           <div className="foodMenu-content">
-            {menu.items.map((item, index) => (
-              <article key={index} className="foodMenu-card">
-                <summary className="foodMenu-card-info">
-                  <h4>{item.name}</h4>
+            {items
+              .filter((item) => item.tag === link)
+              .map((item) => (
+                <article className="foodMenu-card">
+                  <summary className="foodMenu-card-info">
+                    <h4>{item.name}</h4>
 
-                  <p>{item.price}</p>
+                    <p>Tk {item.price}</p>
 
-                  <p className="ellipsis">{item.description}</p>
-                </summary>
+                    <p className="ellipsis">{item.detail}</p>
+                  </summary>
 
-                <figcaption className="foodMenu-card-image">
-                  <img src={item.image} width={`500px`} alt="menu" />
+                  <picture className="foodMenu-card-image">
+                    {item.image && <img src={item.image} alt="menu" />}
 
-                  <button>
-                    <LiaPlusSolid />
-                  </button>
-                </figcaption>
-              </article>
-            ))}
-
-            {/* <ItemPopup /> */}
+                    <button>
+                      <LiaPlusSolid />
+                    </button>
+                  </picture>
+                </article>
+              ))}
+            {/* 
+            <ItemPopup /> */}
           </div>
         </div>
       ))}

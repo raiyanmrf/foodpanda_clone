@@ -10,9 +10,9 @@ const Cards = React.forwardRef(({ item }, ref) => {
 
   return (
     <section
-      ref={ref}
+      // ref={ref}
       className={`card ${item.type}`}
-      onClick={handleIsPopupActive}
+      //onClick={handleIsPopupActive}
     >
       <div className="card-offer">
         {item.type === "pro" ? (

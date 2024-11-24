@@ -5,6 +5,7 @@ import { cardData } from "../../assets/data/cardData";
 import Cards from "../../components/Cards";
 import useDetectMouse from "../../hooks/useDetectMouse";
 import useCheckOverflow from "../../hooks/useCheckOverflow";
+import Slider from "../../components/Slider";
 
 const AvailableDeals = () => {
   const [isMouse] = useDetectMouse();
@@ -15,7 +16,7 @@ const AvailableDeals = () => {
     <section className="available-deals">
       <h3>Available Deals</h3>
 
-      <div ref={cardContainerRef} className="available-deals-cards">
+      {/* <div ref={cardContainerRef} className="available-deals-cards">
         <div ref={cardContentRef} className="available-deals-content">
           {cardData &&
             cardData.map((item, index) => (
@@ -28,8 +29,12 @@ const AvailableDeals = () => {
               />
             ))}
         </div>
-      </div>
+      </div> */}
 
+      <Slider title={"Available Deals"}>
+        {cardData && cardData.map((item, index) => <Cards item={item} />)}
+      </Slider>
+      {/* 
       {isOverFlowed && isMouse && (
         <>
           {index > 0 && (
@@ -41,7 +46,7 @@ const AvailableDeals = () => {
             <img height={`32px`} width={`32px`} src={forwardIcon} alt=">" />
           </div>
         </>
-      )}
+      )} */}
     </section>
   );
 };

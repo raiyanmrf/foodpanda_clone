@@ -44,8 +44,8 @@
   }
 
   &-offer {
-    display: flex;
-
+    display: flex !important;
+    justify-content: flex-start !important;
     h4 {
       font-size: 0.88em;
       margin-left: 0.5em;
@@ -53,7 +53,16 @@
   }
 
   &-details {
-    font-size: 0.75em;
+    margin-top: 0.5em;
+    font-size: 0.7em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    p:first-of-type {
+      font-size: 0.9em;
+      font-weight: 450;
+    }
   }
 
   &-icon {
@@ -148,8 +157,8 @@
 
   &-icon-container {
     position: absolute;
-    bottom: -0.5em;
-    right: 0;
+    bottom: 0em;
+    right: 0em;
     width: 60px;
     height: 50px;
     overflow: hidden;

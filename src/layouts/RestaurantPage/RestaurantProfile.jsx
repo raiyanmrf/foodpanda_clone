@@ -10,21 +10,35 @@ import {
   starIcon,
 } from "../../assets/svg";
 import Cuisines from "../../components/Cuisines";
+import { useLocation } from "react-router-dom";
 
-const RestaurantProfile = () => {
-  const items = ["Italian", "Pizza", "Cakes", "Dessert", "Fast Food"];
+const RestaurantProfile = ({ state }) => {
+  const {
+    address,
+    city,
+    cuisine,
+    image,
+    lat,
+    long,
+    name,
+    offer,
+    ratings,
+    reviews,
+    _id,
+  } = state;
 
+  const items = [`${cuisine}`, "Beverage", "Cakes", "Dessert"];
   return (
     <section className="restaurant-profile">
-      <BreadCrumbs linkArray={["Homepage", "Dhaka", "Momo Mia"]} />
+      <BreadCrumbs linkArray={["Homepage", `${city}`, `${name}`]} />
 
       <div className="restaurant-profile-content">
         <div className="restaurant-profile-avatar">
-          <img width={`156px`} src={pandaIcon} alt="" />
+          <img width={`156px`} height={`100px`} src={image} alt="" />
 
           <h3>
             <Cuisines items={items} />
-            Momo Miah
+            {name}
           </h3>
         </div>
 
@@ -43,7 +57,7 @@ const RestaurantProfile = () => {
         <div className="restaurant-profile-ratings">
           <img src={starIcon} alt="*" />
           <p>
-            4.9/5 <span>(16)</span>
+            {ratings}/5 <span>{reviews}</span>
           </p>
 
           <button className="btn btn-white btn-md btn-moderate">

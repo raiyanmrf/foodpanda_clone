@@ -1,17 +1,24 @@
 import React from "react";
-import { backwardIcon, forwardIcon, searchIcon } from "../../assets/svg";
+import {
+  MdOutlineArrowBackIos,
+  MdOutlineArrowForwardIos,
+} from "react-icons/md";
+import { searchIcon } from "../../assets/svg";
 import useDetectMouse from "../../hooks/useDetectMouse";
-import useCheckOverflow from "../../hooks/useCheckOverflow";
-import { foodNavLinks } from "../../assets/data/foodData";
+import useDetectOverFlow from "../../hooks/useDetectOverFlow";
+import useSlide from "../../hooks/useSlide";
 
-const MenuNavbar = ({
-  cardRefs,
-  handleCardToggleNext,
-  handleCardTogglePrev,
-  index,
-}) => {
+const MenuNavbar = ({ items, links }) => {
+  const [
+    scrollRef,
+    slideLeft,
+    slideRight,
+    disableLeftButton,
+    disableRightButton,
+  ] = useSlide();
   const [isMouse] = useDetectMouse();
-  const [isOverFlowed, dishContainerRef, dishContentRef] = useCheckOverflow();
+
+  const [isOverFlowed, containerRef] = useDetectOverFlow("dish-navlinks");
 
   return (
     <nav className="dish-navigation">
@@ -24,27 +31,34 @@ const MenuNavbar = ({
         />
       </form>
 
-      {isOverFlowed && isMouse && index > 0 && (
-        <div className="dish-prev-button" onClick={handleCardTogglePrev}>
-          <img src={backwardIcon} alt="<" />
-        </div>
+      {isMouse && isOverFlowed && (
+        <button
+          className="dish-prev-button"
+          disabled={disableLeftButton}
+          onClick={slideLeft}
+        >
+          <MdOutlineArrowBackIos />
+        </button>
       )}
-
-      <div ref={dishContainerRef} className="dish-navlinks-container">
-        <ul ref={dishContentRef} className="dish-navlinks">
-          {foodNavLinks.fastfood.map((dish, i) => (
-            <li tabIndex={0} key={i} ref={(el) => (cardRefs.current[i] = el)}>
+      <div className="dish-navlinks-container" ref={containerRef}>
+        <ul className="dish-navlinks " ref={scrollRef}>
+          {links.map((dish, i) => (
+            <li tabIndex={0} key={i}>
               {" "}
-              {dish.item}({dish.number})
+              {dish}({items.filter((item) => item.tag === dish).length})
             </li>
           ))}
         </ul>
       </div>
 
-      {isOverFlowed && isMouse && (
-        <div className="dish-next-button" onClick={handleCardToggleNext}>
-          <img height={`32px`} width={`32px`} src={forwardIcon} alt=">" />
-        </div>
+      {isMouse && isOverFlowed && (
+        <button
+          className="dish-next-button"
+          disabled={disableRightButton}
+          onClick={slideRight}
+        >
+          <MdOutlineArrowForwardIos />
+        </button>
       )}
     </nav>
   );

@@ -6,6 +6,7 @@ function getTypeFromString(itemName) {
   // List of keywords to search for
   const keywords = [
     "burger meal",
+    "rice deal",
     "burger",
     "whopper",
 
@@ -13,8 +14,9 @@ function getTypeFromString(itemName) {
 
     "pizza",
 
-    "platter", // fries/potatoes
-
+    "platter",
+    "poutine",
+    "ramen",
     "fried rice",
     "shawrma",
     "khichuri",
@@ -32,6 +34,7 @@ function getTypeFromString(itemName) {
     "kebab",
     "chaap",
 
+    "smoothie",
     "sprite",
     "coke",
     "fanta",
@@ -49,8 +52,6 @@ function getTypeFromString(itemName) {
     "espresso",
     "cappuccino",
 
-    "sandwitch",
-    "sandwich",
     "nachos",
 
     "coffee",
@@ -71,12 +72,20 @@ function getTypeFromString(itemName) {
     "dal",
     "fish",
     "polao",
-    "chicken",
     "firni",
-
+    "lobster",
+    "crab",
+    "squid",
+    "snapper",
+    "seafood",
     "mayo",
     "soup",
     "shawarama",
+    "milk",
+    "mojito",
+    "sandwitch",
+    "sandwich",
+    "d'light",
     "shakes",
     "cake",
     "roti",
@@ -90,8 +99,9 @@ function getTypeFromString(itemName) {
     "wonton",
     "rice bowl",
     "rice",
+    "chicken",
 
-    "kalojam", //1kg,500g,250g
+    "kalojam",
     "chomchom",
     "cream jam",
     "laddu",
@@ -132,6 +142,7 @@ for (const li of ul) {
         null, // Adjust this selector based on your structure
       name: itemName,
       type: (itemName && getTypeFromString(itemName)) || null,
+      cuisine: null,
       price_desc: priceText, // Keeping the original price description
       price: priceText ? parseFloat(priceText.match(/\d+/)[0]) : null, // Convert the price to a number
 

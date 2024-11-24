@@ -42,6 +42,9 @@
     align-items: flex-start;
     img {
       width: 90px;
+      border-radius: 10px;
+      height: 90px;
+      object-fit: cover;
     }
   }
 
@@ -101,6 +104,7 @@
       flex-basis: 100%;
       img {
         width: 151px;
+        height: 151px;
       }
       h3 {
         font-size: 1.5em;
@@ -126,6 +130,7 @@
 
     &-avatar {
       img {
+        height: 151px;
         width: 151px;
       }
       h3 {

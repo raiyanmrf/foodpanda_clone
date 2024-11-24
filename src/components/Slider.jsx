@@ -1,3 +1,4 @@
+import { useState } from "react";
 import useCheckOverflow from "../hooks/useCheckOverflow";
 import useDetectMouse from "../hooks/useDetectMouse";
 import useDetectOverFlow from "../hooks/useDetectOverFlow";
@@ -8,8 +9,15 @@ import {
 } from "react-icons/md";
 
 const Slider = ({ children, title }) => {
-  const [scrollRef, slideLeft, slideRight] = useSlide();
+  const [
+    scrollRef,
+    slideLeft,
+    slideRight,
+    disableLeftButton,
+    disableRightButton,
+  ] = useSlide();
   const [isMouse] = useDetectMouse();
+
   const [isOverFlowed, containerRef] = useDetectOverFlow();
   return (
     <section className="slideExp" ref={containerRef}>
@@ -20,10 +28,15 @@ const Slider = ({ children, title }) => {
 
       {isMouse && isOverFlowed && (
         <div>
-          <button onClick={slideLeft}>
+          <button disabled={disableLeftButton} onClick={slideLeft}>
             <MdOutlineArrowBackIos />
           </button>
-          <button onClick={slideRight}>
+          <button
+            disabled={disableRightButton}
+            onClick={() => {
+              slideRight();
+            }}
+          >
             <MdOutlineArrowForwardIos />
           </button>
         </div>

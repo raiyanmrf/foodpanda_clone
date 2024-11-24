@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 
-const useDetectOverFlow = () => {
+const useDetectOverFlow = (className) => {
   const [isOverFlowed, setIsOverFlowed] = useState(false);
 
   const containerRef = useRef(null);
 
+  const c = className ? `.${className}` : ".contentRef";
+
   const checkOverFlow = () => {
     const container = containerRef.current;
-    const content = containerRef.current.querySelector(".contentRef");
+    const content = containerRef.current.querySelector(c);
 
     if (container && content) {
       const list = content.children;

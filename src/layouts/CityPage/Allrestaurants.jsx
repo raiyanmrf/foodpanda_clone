@@ -11,8 +11,8 @@ const AllRestaurants = ({ data }) => {
   return (
     <section className="restaurant">
       <div className="restaurant-title">
-        <BreadCrumbs linkArray={["Homepage", "Dhaka"]} />
-        <h1>All Data</h1>
+        <BreadCrumbs linkArray={["Homepage", `${data[0].city}`]} />
+        <h1>All Restaurants</h1>
       </div>
 
       <div className="restaurant-grid">
@@ -23,7 +23,7 @@ const AllRestaurants = ({ data }) => {
           return (
             <div
               key={index}
-              onClick={() => navigate("/restaurant")}
+              onClick={() => navigate("/restaurant", { state: restaurant })}
               className="restaurant-grid-items"
             >
               <img src={image ?? altImage} alt={name} width="596px" />
@@ -38,10 +38,7 @@ const AllRestaurants = ({ data }) => {
               {status === "open" && (
                 <>
                   <div className="restaurant-grid-items-caption">
-                    <h4>
-                      {name ?? "Not Available"}
-                      <span>{index}</span>
-                    </h4>
+                    <h4>{name ?? "Not Available"}</h4>
                     <p className="restaurant-grid-items-caption-rating">
                       <img src={starIcon} alt="rating star" />
                       <strong>{ratings ?? "4.4"}</strong>
