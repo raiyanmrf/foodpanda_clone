@@ -7,6 +7,7 @@ import { searchIcon } from "../../assets/svg";
 import useDetectMouse from "../../hooks/useDetectMouse";
 import useDetectOverFlow from "../../hooks/useDetectOverFlow";
 import useSlide from "../../hooks/useSlide";
+import { Link } from "react-router-dom";
 
 const MenuNavbar = ({ items, links }) => {
   const [
@@ -19,7 +20,7 @@ const MenuNavbar = ({ items, links }) => {
   const [isMouse] = useDetectMouse();
 
   const [isOverFlowed, containerRef] = useDetectOverFlow("dish-navlinks");
-
+  console.log("Menu Nav Bar rendering");
   return (
     <nav className="dish-navigation">
       <form className="dish-searchbar">
@@ -43,8 +44,21 @@ const MenuNavbar = ({ items, links }) => {
       <div className="dish-navlinks-container" ref={containerRef}>
         <ul className="dish-navlinks " ref={scrollRef}>
           {links.map((dish, i) => (
-            <li tabIndex={0} key={i}>
-              {" "}
+            <li
+              tabIndex={0}
+              key={i}
+              id={`${dish.replace(/\s+/g, "")}2`}
+              onClick={() => {
+                const id = dish.replace(/\s+/g, "");
+                const el = document.getElementById(id);
+                el &&
+                  el.scrollIntoView({
+                    behavior: "smooth", // Smooth scrolling animation
+                    block: "center", // Align vertically to the center
+                    inline: "nearest", // Align horizontally to the nearest edge
+                  });
+              }}
+            >
               {dish}({items.filter((item) => item.tag === dish).length})
             </li>
           ))}

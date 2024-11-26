@@ -11,13 +11,6 @@ const useCheckOverflow = () => {
     const content = contentRef.current;
 
     if (container && content) {
-      // const isOverflowingHorizontally =
-      //   content.clientWidth > container.clientWidth;
-      // const isOverflowingVertically =
-      //   content.clientHeight > container.clientHeight;
-
-      // setIsOverFlowed(isOverflowingHorizontally || isOverflowingVertically);
-
       const listItems = content.children;
 
       // Check if any list item overflows the container

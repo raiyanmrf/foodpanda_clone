@@ -1,10 +1,10 @@
-import React, { Suspense, lazy, useEffect, useState } from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ErrorPage from "./pages/ErrorPage";
 import SlideExperiment from "./pages/SlideExperiment";
-import { LuAtSign } from "react-icons/lu";
+
 import Lats from "./pages/Lats";
 import Loading from "./assets/svg/Loading";
 
@@ -15,23 +15,6 @@ const RestaurantPage = lazy(() => import("./pages/RestaurantPage"));
 const RestaurantsNearby = lazy(() => import("./pages/RestaurantsNearby"));
 
 function App() {
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch(
-          `https://foodpanda-server-1zey.onrender.com/api/sylhet`
-        );
-
-        const data = res.json();
-
-        console.log(data);
-      } catch (error) {
-        console.error("Error Fetching:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
   return (
     <BrowserRouter>
       <main>
@@ -41,7 +24,10 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/city/:city" element={<City />} />
-            <Route path="/restaurant" element={<RestaurantPage />} />
+            <Route
+              path="/restaurant/:restaurantID"
+              element={<RestaurantPage />}
+            />
             <Route path="/nearby" element={<RestaurantsNearby />} />
             <Route path="/slide" element={<SlideExperiment />} />
             <Route path="/lats" element={<Lats />} />

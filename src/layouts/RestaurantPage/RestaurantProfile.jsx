@@ -12,7 +12,7 @@ import {
 import Cuisines from "../../components/Cuisines";
 import { useLocation } from "react-router-dom";
 
-const RestaurantProfile = ({ state }) => {
+const RestaurantProfile = ({ restaurant }) => {
   const {
     address,
     city,
@@ -25,8 +25,7 @@ const RestaurantProfile = ({ state }) => {
     ratings,
     reviews,
     _id,
-  } = state;
-
+  } = restaurant;
   const items = [`${cuisine}`, "Beverage", "Cakes", "Dessert"];
   return (
     <section className="restaurant-profile">

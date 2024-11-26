@@ -34,7 +34,7 @@ const useSlideRef2 = (length) => {
         itemRefs.current[nextIndex].scrollIntoView({
           behavior: "smooth",
           block: "nearest",
-          inline: "center",
+          inline: "end",
         });
       }
 

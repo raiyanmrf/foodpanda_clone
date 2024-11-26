@@ -17,29 +17,38 @@ function getTypeFromString(itemName) {
     "platter",
     "poutine",
     "ramen",
-    "fried rice",
     "shawrma",
     "khichuri",
     "french",
+
     "wings",
-    "spaghetti",
     "nugget",
     "fried chicken",
+    "kebab",
+    "chaap",
+    "sandwitch",
+    "sandwich",
+    "chicken",
+
+    "rice bowl",
+
+    "spaghetti",
     "chowmein",
     "noodles",
 
+    "fried rice",
+
+    "nachos",
+    "pasta",
+
     "biryani",
     "kacchi",
-
-    "kebab",
-    "chaap",
 
     "smoothie",
     "sprite",
     "coke",
     "fanta",
     "lassi",
-    "pasta",
 
     "salad",
 
@@ -50,17 +59,17 @@ function getTypeFromString(itemName) {
     "latte",
     "americano",
     "espresso",
-    "cappuccino",
-
-    "nachos",
-
     "coffee",
     "iced tea",
     "tea",
+    "cappuccino",
+
     "halim",
     "faluda",
+
     "doi",
     "borhani",
+
     "shingara",
     "dopiaza",
     "bhaji",
@@ -73,18 +82,20 @@ function getTypeFromString(itemName) {
     "fish",
     "polao",
     "firni",
+
     "lobster",
     "crab",
     "squid",
     "snapper",
     "seafood",
+
     "mayo",
     "soup",
+
     "shawarama",
+
     "milk",
     "mojito",
-    "sandwitch",
-    "sandwich",
     "d'light",
     "shakes",
     "cake",
@@ -96,10 +107,9 @@ function getTypeFromString(itemName) {
     "lemonade",
     "vegetable",
     "luchi",
-    "wonton",
-    "rice bowl",
+
     "rice",
-    "chicken",
+    "wonton",
 
     "kalojam",
     "chomchom",

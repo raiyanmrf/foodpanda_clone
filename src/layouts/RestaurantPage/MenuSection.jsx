@@ -3,38 +3,27 @@ import useSlideRef from "../../hooks/useSlideRef";
 import MenuDisplay from "./MenuDisplay";
 import MenuNavbar from "./MenuNavbar";
 import menuJson from "../../utils/cuisines.json";
+import React, { useMemo } from "react";
 
 const MenuSection = ({ cuisine }) => {
-  const filter = cuisine;
-  const items = menuJson.filter(
-    (item) => item.cuisine.toLocaleLowerCase() === cuisine
+  const items = useMemo(
+    () =>
+      menuJson.filter((item) => item.cuisine.toLocaleLowerCase() === cuisine),
+    [cuisine]
   );
-  const navlinks = [...new Set(items.map((item) => item.tag))];
-  const [
-    cardRefs,
-    handleCardToggleNext,
-    handleCardTogglePrev,
-    index,
-    handleHoverImpact,
-  ] = useSlideRef(navlinks.length);
+  const navlinks = useMemo(
+    () => [...new Set(items.map((item) => item.tag))],
+    [items]
+  );
 
+  const MemoizedMenuNavbar = React.memo(MenuNavbar);
+  const MemoizedMenuDisplay = React.memo(MenuDisplay);
+  console.log("MenuSetion Render");
   return (
     <section className="dish">
-      <MenuNavbar
-        items={items}
-        links={navlinks}
-        cardRefs={cardRefs}
-        handleCardToggleNext={handleCardToggleNext}
-        handleCardTogglePrev={handleCardTogglePrev}
-        index={index}
-      />
+      <MemoizedMenuNavbar items={items} links={navlinks} />
 
-      <MenuDisplay
-        links={navlinks}
-        items={items}
-        handleHoverImpact={handleHoverImpact}
-        cardRefs={cardRefs}
-      />
+      <MemoizedMenuDisplay links={navlinks} items={items} />
     </section>
   );
 };

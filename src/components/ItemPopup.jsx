@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState, useMemo } from "react";
 import { RxCross1 } from "react-icons/rx";
-import dummyImg from "../assets/images/items/dummyItem.jpg";
 import { FaCheckSquare } from "react-icons/fa";
 import { FaAngleDown, FaAngleUp, FaMinus, FaPlus } from "react-icons/fa6";
 import useIsActive from "../hooks/useIsActive";
+import selection from "../utils/selectionModifier.json";
 
-const ItemPopup = () => {
-  const [isDropActive, handleIsDropActive, handleInnerText] = useIsActive();
+const ItemPopup = ({ setIsModalActive, item }) => {
+  const [isDropActive, handleIsDropActive] = useIsActive();
   const [text, setText] = useState("Remove from my order");
 
   useEffect(() => {
@@ -17,100 +17,85 @@ const ItemPopup = () => {
     };
   }, []);
 
+  // Using useMemo to memoize the filtered selection data
+  const filteredSelection = useMemo(() => {
+    return selection
+      .filter((product) => product.type.includes(item.type))
+      .map((product, index) => (
+        <div key={index} className="popup-item-suggestion">
+          {product.choices.map((content, index) => (
+            <Fragment key={index}>
+              <summary>
+                <h3>{content.type}</h3>
+                {content.limit ? (
+                  <p>Select up to {content.limit}</p>
+                ) : (
+                  <p>Others around you liked this</p>
+                )}
+                <span>{content.required ? "required" : "Optional"}</span>
+              </summary>
+              <ul>
+                {content.items.map((option, index) => (
+                  <li key={index}>
+                    <input type="checkbox" id="selectItems" />
+                    <label htmlFor="selectItems">
+                      <FaCheckSquare />
+                    </label>
+                    {option.image && (
+                      <img
+                        src={option.image}
+                        width={"40px"}
+                        height={"40px"}
+                        alt=""
+                      />
+                    )}
+                    <p>{option.name}</p>
+                    <p>
+                      <strong>+Tk 29</strong>
+                      <span>Tk 32</span>
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </Fragment>
+          ))}
+        </div>
+      ));
+  }, [item.type]); // Depend on item.type to re-filter when it changes
+  console.log("ItemPopUp:", item.type);
   return (
     <section className="popup-container">
       <section className="popup-item">
-        <figure className="popup-item-cross">
+        <figure
+          className="popup-item-cross"
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsModalActive(false);
+          }}
+        >
           <RxCross1 />
         </figure>
         <article className="popup-item-content">
           <header>
-            <h3>Chicken Chedarollas</h3>
+            <h3>{item.name}</h3>
           </header>
           <picture>
-            <img style={{ width: "100%" }} src={dummyImg} alt="" />
+            <img style={{ width: "100%" }} src={item.image} alt="" />
           </picture>
 
           <summary className="popup-item-description">
-            <h3>Chicken Chedarolla</h3>
+            <h3>{item.name}</h3>
             <h3>
-              <strong>Tk 256</strong>
-              <span>Tk 284</span>
+              <strong>Tk {item.price}</strong>
+              <span>Tk {item.price + item.price * 0.1}</span>
               <span>10% off</span>
             </h3>
 
-            <p className="">
-              {" "}
-              1 pc - Wrapped with house special sauce, chili sauce, french
-              fries, mozzarella cheese, spicy chicken, sausage & cheese
-            </p>
+            <p className="">{item.detail}</p>
           </summary>
 
-          <div className="popup-item-selection">
-            <summary>
-              <h3>Dips</h3>
-              <p>Select up to 2</p>
-              <span>Optional</span>
-            </summary>
-
-            <ul>
-              <li>
-                <input type="checkbox" id="selectItems" />
-                <label htmlFor="selectItems">
-                  <FaCheckSquare />
-                </label>
-                <p>Tatar Sauce</p>
-                <p>
-                  <strong>+Tk 29</strong>
-                  <span>Tk 32</span>
-                </p>
-              </li>
-              <li>
-                <input type="checkbox" id="gg" />
-                <label htmlFor="gg">
-                  <FaCheckSquare />
-                </label>
-                <p>Tatar Sauce</p>
-                <p>
-                  <strong>+Tk 29</strong>
-                  <span>Tk 32</span>
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div className="popup-item-suggestion">
-            <summary>
-              <h3>Frequently bought together</h3>
-              <p>Others around you liked this</p>
-              <span>Optional</span>
-            </summary>
-
-            <ul>
-              <li>
-                <input type="checkbox" id="selectItems" />
-                <label htmlFor="selectItems">
-                  <FaCheckSquare />
-                </label>
-                <img src={dummyImg} width={"40px"} height={"40px"} alt="" />
-                <p>Tatar Sauce</p>
-                <p>
-                  <strong>+Tk 29</strong>
-                  <span>Tk 32</span>
-                </p>
-              </li>
-              <li>
-                <input type="checkbox" id="gg" />
-                <label htmlFor="gg">
-                  <FaCheckSquare />
-                </label>
-                <p>Tatar Sauce</p>
-                <p>
-                  <strong>+Tk 29</strong>
-                  <span>Tk 32</span>
-                </p>
-              </li>
-            </ul>
-          </div>
+          {/* Render the filtered selection */}
+          {filteredSelection}
 
           <div className="popup-item-orderActions">
             <article>
@@ -123,9 +108,9 @@ const ItemPopup = () => {
             </article>
             <article>
               <h3>If this item is not available</h3>
-              <div className=" popup-item-selector">
+              <div className="popup-item-selector">
                 <div
-                  className=" popup-item-selector-box"
+                  className="popup-item-selector-box"
                   onClick={handleIsDropActive}
                 >
                   <p id="replaceText">{text}</p>

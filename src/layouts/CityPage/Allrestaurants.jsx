@@ -17,13 +17,14 @@ const AllRestaurants = ({ data }) => {
 
       <div className="restaurant-grid">
         {data.map((restaurant, index) => {
-          const { name, cuisine, ratings, reviews, image, offer } = restaurant;
+          const { _id, name, cuisine, ratings, reviews, image, offer } =
+            restaurant;
           const status = isTheRestaurantOpen(cuisine);
 
           return (
             <div
               key={index}
-              onClick={() => navigate("/restaurant", { state: restaurant })}
+              onClick={() => navigate(`/restaurant/${_id}`)}
               className="restaurant-grid-items"
             >
               <img src={image ?? altImage} alt={name} width="596px" />
