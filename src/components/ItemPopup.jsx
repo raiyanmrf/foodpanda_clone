@@ -22,52 +22,78 @@ const ItemPopup = ({ setIsModalActive, item }) => {
     return selection
       .filter((product) => product.type.includes(item.type))
       .map((product, index) => (
-        <div key={index} className="popup-item-suggestion">
-          {product.choices.map((content, index) => (
-            <Fragment key={index}>
-              <summary>
-                <h3>{content.type}</h3>
-                {content.limit ? (
-                  <p>Select up to {content.limit}</p>
-                ) : (
-                  <p>Others around you liked this</p>
-                )}
-                <span>{content.required ? "required" : "Optional"}</span>
-              </summary>
-              <ul>
-                {content.items.map((option, index) => (
-                  <li key={index}>
-                    <input type="checkbox" id="selectItems" />
-                    <label htmlFor="selectItems">
-                      <FaCheckSquare />
-                    </label>
-                    {option.image && (
-                      <img
-                        src={option.image}
-                        width={"40px"}
-                        height={"40px"}
-                        alt=""
+        <Fragment key={index}>
+          {product.choices.map((content, index) => {
+            console.log(content);
+
+            return (
+              <div
+                key={index}
+                className={`itemPopup-options ${
+                  content.required && "itemPopup-required"
+                }`}
+              >
+                <article className="itemPopup-options-title">
+                  <h3>{content.label}</h3>
+                  {content.limit ? (
+                    <p>Select up to {content.limit}</p>
+                  ) : (
+                    <p>Others around you liked this</p>
+                  )}
+                  <mark>{content.required ? "Required" : "Optional"}</mark>
+                </article>
+                <ul>
+                  {content.items.map((option, index) => (
+                    <li key={index}>
+                      <input
+                        type="checkbox"
+                        id={index}
+                        required={content.required}
                       />
-                    )}
-                    <p>{option.name}</p>
-                    <p>
-                      <strong>+Tk 29</strong>
-                      <span>Tk 32</span>
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </Fragment>
-          ))}
-        </div>
+                      <label htmlFor={index}>
+                        <FaCheckSquare />
+                      </label>
+                      {option.image && (
+                        <img
+                          src={option.image}
+                          width={"40px"}
+                          height={"40px"}
+                          alt=""
+                        />
+                      )}
+                      <p>{option.name}</p>
+                      <p>
+                        <strong className="">
+                          {typeof option.price === "number"
+                            ? `+Tk ${option.price}`
+                            : "free"}
+                        </strong>
+                        <span>
+                          {" "}
+                          {typeof option.price === "number"
+                            ? `Tk ${Math.ceil(
+                                option.price + option.price * 0.1
+                              )}`
+                            : ""}
+                        </span>
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </Fragment>
       ));
-  }, [item.type]); // Depend on item.type to re-filter when it changes
+  }, [item.type]);
+
   console.log("ItemPopUp:", item.type);
+
   return (
     <section className="popup-container">
-      <section className="popup-item">
+      <section className="itemPopup">
         <figure
-          className="popup-item-cross"
+          className="itemPopup-cross"
           onClick={(e) => {
             e.stopPropagation();
             setIsModalActive(false);
@@ -75,7 +101,7 @@ const ItemPopup = ({ setIsModalActive, item }) => {
         >
           <RxCross1 />
         </figure>
-        <article className="popup-item-content">
+        <article className="itemPopup-content">
           <header>
             <h3>{item.name}</h3>
           </header>
@@ -83,7 +109,7 @@ const ItemPopup = ({ setIsModalActive, item }) => {
             <img style={{ width: "100%" }} src={item.image} alt="" />
           </picture>
 
-          <summary className="popup-item-description">
+          <summary className="itemPopup-description">
             <h3>{item.name}</h3>
             <h3>
               <strong>Tk {item.price}</strong>
@@ -97,7 +123,7 @@ const ItemPopup = ({ setIsModalActive, item }) => {
           {/* Render the filtered selection */}
           {filteredSelection}
 
-          <div className="popup-item-orderActions">
+          <div className="itemPopup-orderActions">
             <article>
               <h3>Special instructions</h3>
               <p>
@@ -108,9 +134,9 @@ const ItemPopup = ({ setIsModalActive, item }) => {
             </article>
             <article>
               <h3>If this item is not available</h3>
-              <div className="popup-item-selector">
+              <div className="itemPopup-selector">
                 <div
-                  className="popup-item-selector-box"
+                  className="itemPopup-selector-box"
                   onClick={handleIsDropActive}
                 >
                   <p id="replaceText">{text}</p>
@@ -139,7 +165,7 @@ const ItemPopup = ({ setIsModalActive, item }) => {
         </article>
 
         <footer>
-          <div className="popup-item-update">
+          <div className="itemPopup-update">
             <button>
               <FaMinus />
             </button>

@@ -229,7 +229,7 @@ li {
   border-top-right-radius: 9px;
   box-shadow: 0px -30px 600px rgba(0, 0, 0, 0.249);
 }
-.signin-cancel, .popup-item-cross {
+.signin-cancel, .itemPopup-cross {
   position: absolute;
   height: 32px;
   width: 32px;
@@ -241,7 +241,7 @@ li {
   right: 1em;
   top: 1em;
 }
-.signin-cancel::after, .popup-item-cross::after {
+.signin-cancel::after, .itemPopup-cross::after {
   content: "";
   height: 100%;
   width: 100%;
@@ -253,7 +253,7 @@ li {
   transition: 0.3s;
   border: 1px solid gray;
 }
-.signin-cancel:hover::after, .popup-item-cross:hover::after {
+.signin-cancel:hover::after, .itemPopup-cross:hover::after {
   transform: scale(1.2);
 }
 .signin-welcome {
@@ -709,14 +709,14 @@ li {
   flex-wrap: wrap;
 }
 
-.popup-item {
+.itemPopup {
   height: calc(100% - 100px);
   position: relative;
   border-radius: 10px;
   overflow: hidden;
   background-color: white;
 }
-.popup-item header {
+.itemPopup header {
   padding: 1em;
   z-index: 2;
   position: absolute;
@@ -724,14 +724,14 @@ li {
   width: 100%;
   background-color: white;
 }
-.popup-item-cross {
+.itemPopup-cross {
   right: 2em;
   z-index: 20;
 }
-.popup-item-cross::after {
+.itemPopup-cross::after {
   background-color: white;
 }
-.popup-item-content {
+.itemPopup-content {
   display: block;
   background-color: white;
   overflow-x: hidden;
@@ -741,11 +741,11 @@ li {
   max-width: 100vw;
   z-index: 0;
 }
-.popup-item-content > *:not(picture) {
+.itemPopup-content > *:not(picture) {
   padding: 1em;
   border-bottom: 1px solid rgb(237, 234, 234);
 }
-.popup-item-content picture {
+.itemPopup-content picture {
   display: flex;
   position: relative;
   width: 100%;
@@ -754,28 +754,28 @@ li {
   overflow: hidden;
   z-index: 10;
 }
-.popup-item-content picture img {
+.itemPopup-content picture img {
   max-width: 100%;
 }
-.popup-item-description h3 {
+.itemPopup-description h3 {
   display: flex;
   align-items: center;
   gap: 1em;
   color: #333;
 }
-.popup-item-description h3 strong {
+.itemPopup-description h3 strong {
   color: #e21b70;
 }
-.popup-item-description h3 span:first-of-type {
+.itemPopup-description h3 span:first-of-type {
   color: #707070;
   font-weight: 400;
   text-decoration: line-through;
 }
-.popup-item-description h3 span:last-of-type {
+.itemPopup-description h3 span:last-of-type {
   font-family: "Agrandir";
   font-weight: 400;
 }
-.popup-item-description p {
+.itemPopup-description p {
   font-size: 0.9em;
   font-weight: 400;
   color: black;
@@ -785,12 +785,16 @@ li {
   color: #4f4f4f;
   margin-top: 1em;
 }
-.popup-item-selection, .popup-item-suggestion {
+.itemPopup-options {
+  position: relative;
+  margin-bottom: 0.5em;
+}
+.itemPopup-options-title {
   position: relative;
 }
-.popup-item-selection summary span, .popup-item-suggestion summary span {
+.itemPopup-options-title mark {
   position: absolute;
-  top: 1em;
+  top: 0em;
   right: 1em;
   background-color: #f7f7f7;
   border-radius: 10px;
@@ -799,49 +803,53 @@ li {
   color: #707070;
   padding: 0.3em;
 }
-.popup-item-selection p, .popup-item-suggestion p {
+.itemPopup-options p {
   font-size: 0.9em;
   font-weight: 600;
   color: #333;
   line-height: 1.7;
 }
-.popup-item-selection li, .popup-item-suggestion li {
+.itemPopup-options li {
   display: flex;
   align-items: center;
   gap: 1em;
   padding-inline: 1em;
   position: relative;
 }
-.popup-item-selection li:hover, .popup-item-suggestion li:hover {
+.itemPopup-options li strong,
+.itemPopup-options li span {
+  white-space: nowrap;
+}
+.itemPopup-options:hover {
   background-color: #f7f7f7;
 }
-.popup-item-selection li:hover label, .popup-item-suggestion li:hover label {
+.itemPopup-options:hover label {
   box-shadow: inset 2px 2px black, inset -2px -2px #333;
 }
-.popup-item-selection li input[type=checkbox], .popup-item-suggestion li input[type=checkbox] {
+.itemPopup-options input[type=checkbox] {
   width: 20px;
   height: 20px;
   transform: scale(1);
   position: absolute;
   opacity: 0;
 }
-.popup-item-selection li input:checked + label, .popup-item-suggestion li input:checked + label {
+.itemPopup-options input:checked + label {
   box-shadow: inset 2px 2px #333, inset -2px -2px #333;
 }
-.popup-item-selection li input:checked + label svg, .popup-item-suggestion li input:checked + label svg {
+.itemPopup-options input:checked + label svg {
   display: block;
 }
-.popup-item-selection li p:last-of-type, .popup-item-suggestion li p:last-of-type {
+.itemPopup-options p:last-of-type {
   margin-left: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.popup-item-selection li p:last-of-type span:last-of-type, .popup-item-suggestion li p:last-of-type span:last-of-type {
+.itemPopup-options p:last-of-type span:last-of-type {
   text-decoration: line-through;
   color: #707070;
 }
-.popup-item-selection li label, .popup-item-suggestion li label {
+.itemPopup-options label {
   display: flex;
   height: 20px;
   width: 20px;
@@ -853,20 +861,28 @@ li {
   justify-content: center;
   align-items: center;
 }
-.popup-item-selection li label svg, .popup-item-suggestion li label svg {
+.itemPopup-options label svg {
   font-size: 33px;
   display: none;
 }
-.popup-item-orderActions article > * {
+.itemPopup-required {
+  background-color: rgb(249, 212, 218);
+  border-radius: 9px;
+}
+.itemPopup-required mark {
+  background-color: #e21b70;
+  color: white;
+}
+.itemPopup-orderActions article > * {
   margin-top: 0.5em;
 }
-.popup-item-orderActions p {
+.itemPopup-orderActions p {
   font-size: 0.9em;
   font-weight: 500;
   color: black;
   line-height: 1.7;
 }
-.popup-item-orderActions textarea {
+.itemPopup-orderActions textarea {
   width: 100%;
   height: 84px;
   padding: 0.5em;
@@ -878,10 +894,10 @@ li {
   border-color: lightgray;
   border-radius: 9px;
 }
-.popup-item-selector > * {
+.itemPopup-selector > * {
   margin-top: 0.5em;
 }
-.popup-item-selector-box {
+.itemPopup-selector-box {
   border: 1px solid;
   border-radius: 9px;
   display: flex;
@@ -889,14 +905,14 @@ li {
   align-items: center;
   padding: 0.5em;
 }
-.popup-item-selector ul {
+.itemPopup-selector ul {
   background-color: white;
   box-shadow: 0 0 7px lightgray;
   padding: 0.5em;
   border-radius: 9px;
   visibility: hidden;
 }
-.popup-item-selector ul li {
+.itemPopup-selector ul li {
   padding: 0.5em;
   font-size: 0.9em;
   font-weight: 400;
@@ -904,10 +920,10 @@ li {
   line-height: 1.7;
   border-radius: 9px;
 }
-.popup-item-selector ul li:hover {
+.itemPopup-selector ul li:hover {
   background-color: #f7f7f7;
 }
-.popup-item footer {
+.itemPopup footer {
   display: flex;
   width: 100%;
   height: 75px;
@@ -916,33 +932,33 @@ li {
   position: sticky;
   bottom: 0;
 }
-.popup-item footer div {
+.itemPopup footer div {
   display: flex;
   gap: 0.5em;
   width: 20%;
   align-items: center;
   padding: 0.1em 0;
 }
-.popup-item footer div button {
+.itemPopup footer div button {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   padding: 0.5em;
 }
-.popup-item footer div button:hover {
+.itemPopup footer div button:hover {
   background-color: #f7f7f7;
 }
-.popup-item footer button {
+.itemPopup footer button {
   width: 60%;
 }
 
 @media (min-width: 530px) {
-  .popup-item {
+  .itemPopup {
     max-width: 400px;
     height: 80%;
   }
-  .popup-item footer {
+  .itemPopup footer {
     max-width: 400px;
   }
 }
@@ -2507,14 +2523,16 @@ footer .line {
     font-weight: lighter;
   }
   .ellipsis {
-    display: -webkit-box; /* Flexbox-based for webkit browsers */
-    -webkit-line-clamp: 2; /* Limits to 2 lines */
+    display: -webkit-box; /* WebKit-based browsers (e.g., Chrome, Safari) */
+    display: box; /* Fallback for older implementations */
+    -webkit-line-clamp: 2; /* Limits to 2 lines (WebKit-only) */
+    line-clamp: 2;
     -webkit-box-orient: vertical; /* Ensures vertical box orientation */
-    overflow: hidden; /* Hide overflowing text */
-    text-overflow: ellipsis; /* Add ellipsis at the end */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds ellipsis at the end */
     line-height: 1.5; /* Adjust line height as needed */
-    max-height: 3em; /* Set max height (2 lines * line-height) */
-    word-wrap: break-word; /* Break long words if needed */
+    max-height: 3em; /* Matches 2 lines based on line-height */
+    word-wrap: break-word; /* Ensures long words break properly */
   }
 }
 @media (min-width: 960px) {
