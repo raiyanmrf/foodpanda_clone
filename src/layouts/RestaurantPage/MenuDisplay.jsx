@@ -6,6 +6,7 @@ import { LiaPlusSolid } from "react-icons/lia";
 const MenuDisplay = ({ links, items }) => {
   const [isModalActive, setIsModalActive] = useState(false);
   const [currentItem, setCurrentItem] = useState({});
+
   console.log("MenuDisplay Render");
   return (
     <section className="foodMenu">
@@ -66,7 +67,7 @@ const MenuDisplay = ({ links, items }) => {
         ))}
       </section>
 
-      {/* <Cart /> */}
+      <Cart />
     </section>
   );
 };

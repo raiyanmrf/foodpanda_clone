@@ -114,6 +114,13 @@ h4 {
     &:hover::after {
       background-color: #c21760;
     }
+
+    &:disabled {
+      background-color: lightgray;
+      &:hover::after {
+        background-color: lightgray;
+      }
+    }
   }
 
   &-border {

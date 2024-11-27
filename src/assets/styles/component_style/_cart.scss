@@ -319,6 +319,9 @@
 }
 
 @media (max-width: 959px) {
+  .emptyCart {
+    display: none !important ;
+  }
   .cart {
     display: flex;
     flex-direction: column;
@@ -452,5 +455,16 @@
         left: 3px;
       }
     }
+  }
+}
+
+.emptyCart {
+  top: 147px;
+  height: calc(100vh - 179px);
+}
+
+.hide-cart {
+  @media (max-width: 959px) {
+    display: none;
   }
 }

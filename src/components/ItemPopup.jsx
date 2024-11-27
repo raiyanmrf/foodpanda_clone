@@ -1,11 +1,19 @@
-import React, { Fragment, useEffect, useState, useMemo } from "react";
+import React, {
+  Fragment,
+  useEffect,
+  useState,
+  useMemo,
+  useContext,
+} from "react";
 import { RxCross1 } from "react-icons/rx";
 import { FaCheckSquare } from "react-icons/fa";
 import { FaAngleDown, FaAngleUp, FaMinus, FaPlus } from "react-icons/fa6";
 import useIsActive from "../hooks/useIsActive";
 import selection from "../utils/selectionModifier.json";
+import { cartContext } from "../hooks/CartContext";
 
 const ItemPopup = ({ setIsModalActive, item }) => {
+  const { isCartEmpty, setIsCartEmpty } = useContext(cartContext);
   const [isDropActive, handleIsDropActive] = useIsActive();
   const [text, setText] = useState("Remove from my order");
 
@@ -27,7 +35,7 @@ const ItemPopup = ({ setIsModalActive, item }) => {
             console.log(content);
 
             return (
-              <div
+              <form
                 key={index}
                 className={`itemPopup-options ${
                   content.required && "itemPopup-required"
@@ -44,13 +52,13 @@ const ItemPopup = ({ setIsModalActive, item }) => {
                 </article>
                 <ul>
                   {content.items.map((option, index) => (
-                    <li key={index}>
+                    <li key={index} className="itemPopup-options-list">
                       <input
                         type="checkbox"
-                        id={index}
+                        id={`${index} ${option.name}`}
                         required={content.required}
                       />
-                      <label htmlFor={index}>
+                      <label htmlFor={`${index} ${option.name}`}>
                         <FaCheckSquare />
                       </label>
                       {option.image && (
@@ -80,7 +88,7 @@ const ItemPopup = ({ setIsModalActive, item }) => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </form>
             );
           })}
         </Fragment>
@@ -175,7 +183,16 @@ const ItemPopup = ({ setIsModalActive, item }) => {
             </button>
           </div>
 
-          <button className="btn btn-pink btn-lg">Add to cart</button>
+          <button
+            className="btn btn-pink btn-lg"
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsCartEmpty(false);
+              setIsModalActive(false);
+            }}
+          >
+            Add to cart
+          </button>
         </footer>
       </section>
     </section>

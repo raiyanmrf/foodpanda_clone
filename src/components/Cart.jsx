@@ -3,33 +3,40 @@ import { FaBackward, FaForward } from "react-icons/fa6";
 import { LiaPlusSolid } from "react-icons/lia";
 import { MdOutlineDelete } from "react-icons/md";
 import { CiForkAndKnife } from "react-icons/ci";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import useSlideRef from "../hooks/useSlideRef";
+import pandaCart from "../assets/images/logo/pandaCart.png";
 
 import { RxCross1 } from "react-icons/rx";
+import EmptyCart from "../layouts/RestaurantPage/EmptyCart";
+import { cartContext } from "../hooks/CartContext";
 
 const Cart = () => {
+  const { isCartEmpty, showCart, setShowCart } = useContext(cartContext);
   const [isActive, setIsActive] = useState(true);
   const [isCutlery, setIsCutlery] = useState(true);
   const [itemsRefs, handleToggleNext, handleTogglePrev, index] = useSlideRef(
     suggestItems.length
   );
+  if (isCartEmpty) {
+    return <EmptyCart />;
+  }
 
   return (
     <>
-      <section className="cart">
+      <section className={`cart ${!showCart && "hide-cart"}`}>
         <header>
           <h3>Momo Miah</h3>
-          <figure>
+          <figure
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowCart(false);
+            }}
+          >
             <RxCross1 />
           </figure>
         </header>
         <section className="cart-content">
-          {/* <div className="cart-empty">
-      <img src={pandaCart} width={`120px`} alt="cart" />
-      <h3>Hungry?</h3>
-      <p>You haven't added anything to your cart!</p>
-      </div> */}
           <div className="cart-tabs">
             <button
               onClick={() => setIsActive(true)}
@@ -195,17 +202,23 @@ const Cart = () => {
         </footer>
       </section>
 
-      {/* <section className="cart-goto">
-        <button className="btn btn-flex btn-pink btn-lg btn-moderate">
+      <section className={`cart-goto ${showCart && "hide-cart"}`}>
+        <button
+          className="btn btn-flex btn-pink btn-lg btn-moderate"
+          onClick={(e) => {
+            e.stopPropagation();
+            setShowCart(true);
+          }}
+        >
           <figure>
-            <RiShoppingBag4Line /> <p>1</p>
+            <CiForkAndKnife /> <p>1</p>
           </figure>
 
           <p>View Cart</p>
 
           <p>Tk 648</p>
         </button>
-      </section> */}
+      </section>
     </>
   );
 };
