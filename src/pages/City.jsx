@@ -15,7 +15,7 @@ const City = () => {
   const { city } = useParams();
 
   const getRestaurants = async ({ pageParam = 1 }) => {
-    const endpoint = `https://foodpanda-server-1zey.onrender.com/api/${city}?page=${pageParam}&limit=${LIMIT}`;
+    const endpoint = `https://foodpanda-server-1zey.onrender.com/api/city/${city}?page=${pageParam}&limit=${LIMIT}`;
     const res = await fetch(endpoint);
 
     if (!res.ok) {
