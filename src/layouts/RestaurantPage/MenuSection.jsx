@@ -3,27 +3,60 @@ import useSlideRef from "../../hooks/useSlideRef";
 import MenuDisplay from "./MenuDisplay";
 import MenuNavbar from "./MenuNavbar";
 import menuJson from "../../utils/cuisines.json";
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
+import { useQuery } from "@tanstack/react-query";
+import Loading from "../../assets/svg/Loading";
 
 const MenuSection = ({ cuisine }) => {
-  const items = useMemo(
-    () =>
-      menuJson.filter((item) => item.cuisine.toLocaleLowerCase() === cuisine),
-    [cuisine]
-  );
+  const getFoodItem = async () => {
+    try {
+      const res = await fetch(
+        `https://foodpanda-server-1zey.onrender.com/api/food-items/${cuisine}`
+      );
+      const data = await res.json();
+      if (!res.ok) {
+        if (res.status === 404) {
+          throw new Error("Items not found.");
+        }
+        throw new Error("Failed to fetch data");
+      }
+
+      return data;
+    } catch (error) {}
+  };
+
+  const { isError, error, isLoading, data } = useQuery({
+    queryKey: ["fooditems", cuisine],
+    queryFn: getFoodItem,
+  });
+
+  // const items = useMemo(
+  //   () =>
+  //     menuJson.filter((item) => item.cuisine.toLocaleLowerCase() === cuisine),
+  //   [cuisine]
+  // );
+  // Handle loading, error, or empty states
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (isError) {
+    return <p>Error: {error.message}</p>;
+  }
+
+  if (!data || data.length === 0) {
+    return <p>No food items found for this cuisine.</p>;
+  }
   const navlinks = useMemo(
-    () => [...new Set(items.map((item) => item.tag))],
-    [items]
+    () => [...new Set(data.map((item) => item.tag))],
+    [data]
   );
 
-  const MemoizedMenuNavbar = React.memo(MenuNavbar);
-  const MemoizedMenuDisplay = React.memo(MenuDisplay);
-  console.log("MenuSetion Render");
   return (
     <section className="dish">
-      <MemoizedMenuNavbar items={items} links={navlinks} />
+      <MenuNavbar items={data} links={navlinks} />
 
-      <MemoizedMenuDisplay links={navlinks} items={items} />
+      <MenuDisplay links={navlinks} items={data} />
     </section>
   );
 };

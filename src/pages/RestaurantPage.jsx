@@ -68,7 +68,7 @@ const RestaurantPage = () => {
             {cardData &&
               cardData.map((item, index) => <Cards key={index} item={item} />)}
           </Slider>
-          <MenuSection cuisine={restaurant[0].cuisine.toLowerCase()} />
+          <MenuSection cuisine={restaurant[0].cuisine} />
         </>
       ) : (
         <Banner value="banner" title="No Restaurant Data Available." />
