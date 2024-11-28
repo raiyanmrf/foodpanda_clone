@@ -30,27 +30,19 @@ const MenuSection = ({ cuisine }) => {
     queryFn: getFoodItem,
   });
 
-  // const items = useMemo(
-  //   () =>
-  //     menuJson.filter((item) => item.cuisine.toLocaleLowerCase() === cuisine),
-  //   [cuisine]
-  // );
-  // Handle loading, error, or empty states
+  const navlinks = [...new Set(data.map((item) => item.tag))];
+
   if (isLoading) {
     return <Loading />;
   }
 
   if (isError) {
-    return <p>Error: {error.message}</p>;
+    return <h1>Error: {error.message}</h1>;
   }
 
   if (!data || data.length === 0) {
-    return <p>No food items found for this cuisine.</p>;
+    return <h1>No food items found for this cuisine.</h1>;
   }
-  const navlinks = useMemo(
-    () => [...new Set(data.map((item) => item.tag))],
-    [data]
-  );
 
   return (
     <section className="dish">
