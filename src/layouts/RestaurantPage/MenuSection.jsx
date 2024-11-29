@@ -11,7 +11,7 @@ const MenuSection = ({ cuisine }) => {
   const getFoodItem = async () => {
     try {
       const res = await fetch(
-        `https://foodpanda-server-1zey.onrender.com/api/food-items/${cuisine}`
+        `https://restaurant-server-ni4y.onrender.com/api/food-items/${cuisine}`
       );
       const data = await res.json();
       if (!res.ok) {

@@ -2,13 +2,7 @@ import Slider from "../components/Slider";
 import FavCuisines from "../layouts/RestaurantsNearby/FavCuisines";
 import DailyDeals from "../layouts/RestaurantsNearby/DailyDeals";
 import data from "../utils/city.json";
-import { starIcon } from "../assets/svg";
-import { RiDiscountPercentFill } from "react-icons/ri";
-import alternateImage from "../assets/images/imageGenerator/alternative.webp";
-import { LuClock4, LuDot } from "react-icons/lu";
-import { MdDeliveryDining, MdFavoriteBorder } from "react-icons/md";
-import { RxTriangleDown } from "react-icons/rx";
-import { GrFavorite } from "react-icons/gr";
+
 import RestaurantSlide from "../components/RestaurantSlide";
 import { useEffect, useState } from "react";
 const SlideExperiment = () => {

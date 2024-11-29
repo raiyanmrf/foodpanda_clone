@@ -19,7 +19,7 @@ const RestaurantPage = () => {
       try {
         setIsLoading(true);
         const res = await fetch(
-          `https://foodpanda-server-1zey.onrender.com/api/restaurant/${restaurantID}`
+          `https://restaurant-server-ni4y.onrender.com/api/restaurant/${restaurantID}`
         );
         if (!res.ok) {
           setIsError(true);
