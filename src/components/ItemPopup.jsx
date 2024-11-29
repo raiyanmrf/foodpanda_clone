@@ -11,9 +11,13 @@ import { FaAngleDown, FaAngleUp, FaMinus, FaPlus } from "react-icons/fa6";
 import useIsActive from "../hooks/useIsActive";
 import selection from "../utils/selectionModifier.json";
 import { cartContext } from "../hooks/CartContext";
+import { useParams } from "react-router-dom";
+import { handleAddToCart } from "../utils/cartLogic";
 
 const ItemPopup = ({ setIsModalActive, item }) => {
-  const { isCartEmpty, setIsCartEmpty } = useContext(cartContext);
+  const { restaurantID } = useParams();
+  const { isCartEmpty, setIsCartEmpty, cartItems, setCartItems } =
+    useContext(cartContext);
   const [isDropActive, handleIsDropActive] = useIsActive();
   const [text, setText] = useState("Remove from my order");
 
@@ -95,7 +99,8 @@ const ItemPopup = ({ setIsModalActive, item }) => {
       ));
   }, [item.type]);
 
-  console.log("ItemPopUp:", item.type);
+  //console.log("ItemPopUp:", item.type);
+  console.log(cartItems);
 
   return (
     <section className="popup-container">
@@ -189,6 +194,7 @@ const ItemPopup = ({ setIsModalActive, item }) => {
               e.stopPropagation();
               setIsCartEmpty(false);
               setIsModalActive(false);
+              handleAddToCart(cartItems, setCartItems, item, restaurantID);
             }}
           >
             Add to cart

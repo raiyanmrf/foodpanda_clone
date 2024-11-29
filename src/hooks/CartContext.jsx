@@ -8,14 +8,8 @@ export const CartContext = (props) => {
   const [isCartEmpty, setIsCartEmpty] = useState(true);
   const [showCart, setShowCart] = useState(false);
   const [cartItems, setCartItems] = useState({
-    restaurantID: null,
-    items: [
-      {
-        item: null,
-        no: null,
-        total: null,
-      },
-    ],
+    restaurantID: "empty",
+    items: [],
   });
 
   const value = {

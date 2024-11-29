@@ -7,7 +7,7 @@ const MenuDisplay = ({ links, items }) => {
   const [isModalActive, setIsModalActive] = useState(false);
   const [currentItem, setCurrentItem] = useState({});
 
-  console.log("MenuDisplay Render");
+  //console.log("MenuDisplay Render");
   return (
     <section className="foodMenu">
       <section className="foodMenu-cuisines">

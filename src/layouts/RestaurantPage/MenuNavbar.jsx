@@ -20,7 +20,7 @@ const MenuNavbar = ({ items, links }) => {
   const [isMouse] = useDetectMouse();
 
   const [isOverFlowed, containerRef] = useDetectOverFlow("dish-navlinks");
-  console.log("Menu Nav Bar rendering");
+  //console.log("Menu Nav Bar rendering");
   return (
     <nav className="dish-navigation">
       <form className="dish-searchbar">

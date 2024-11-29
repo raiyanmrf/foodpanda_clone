@@ -1,6 +1,6 @@
 import { orderedItem, suggestItems } from "../assets/data/foodData";
 import { FaBackward, FaForward } from "react-icons/fa6";
-import { LiaPlusSolid } from "react-icons/lia";
+import { LiaMinusSolid, LiaPlusSolid } from "react-icons/lia";
 import { MdOutlineDelete } from "react-icons/md";
 import { CiForkAndKnife } from "react-icons/ci";
 import { useContext, useState } from "react";
@@ -10,9 +10,19 @@ import pandaCart from "../assets/images/logo/pandaCart.png";
 import { RxCross1 } from "react-icons/rx";
 import EmptyCart from "../layouts/RestaurantPage/EmptyCart";
 import { cartContext } from "../hooks/CartContext";
+import {
+  handleAddToCart,
+  handleDecreaseItem,
+  handleRemoveItem,
+} from "../utils/cartLogic";
+import { useParams } from "react-router-dom";
+import Slider from "./Slider";
 
 const Cart = () => {
-  const { isCartEmpty, showCart, setShowCart } = useContext(cartContext);
+  const { isCartEmpty, showCart, setShowCart, cartItems, setCartItems } =
+    useContext(cartContext);
+
+  const { restaurantID } = useParams();
   const [isActive, setIsActive] = useState(true);
   const [isCutlery, setIsCutlery] = useState(true);
   const [itemsRefs, handleToggleNext, handleTogglePrev, index] = useSlideRef(
@@ -55,28 +65,59 @@ const Cart = () => {
           </div>
           <article className="cart-items">
             <h4>Your Items</h4>
-            {orderedItem.map((item, index) => (
+            {cartItems.items.map((product, index) => (
               <article key={index} className="cart-singleItem">
                 <figure className="cart-order-info">
                   <img
-                    src={item.image}
+                    src={product.image}
                     alt="item"
                     height={`46px`}
                     width={`56px`}
                   />
 
                   <summary className="cart-order-text">
-                    <p className="title-ellipsis">{item.name}</p>
+                    <p className="title-ellipsis">{product.name}</p>
                     <p className="title-ellipsis">Extra Cheese..</p>
                     <div className="cart-order-update">
-                      <p>{item.price}</p>
+                      <p>{product.price}</p>
 
                       <div className="cart-order-update-btn">
-                        <figure>
-                          <MdOutlineDelete />{" "}
+                        <figure
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            product.count < 2
+                              ? handleRemoveItem(
+                                  cartItems,
+                                  setCartItems,
+                                  product,
+                                  restaurantID
+                                )
+                              : handleDecreaseItem(
+                                  cartItems,
+                                  setCartItems,
+                                  product,
+                                  restaurantID
+                                );
+                          }}
+                        >
+                          {product.count < 2 ? (
+                            <MdOutlineDelete />
+                          ) : (
+                            <LiaMinusSolid />
+                          )}
                         </figure>
-                        <span>1</span>
-                        <figure>
+                        <span>{product.count}</span>
+                        <figure
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleAddToCart(
+                              cartItems,
+                              setCartItems,
+                              product,
+                              restaurantID
+                            );
+                          }}
+                        >
                           <LiaPlusSolid />{" "}
                         </figure>
                       </div>
@@ -88,39 +129,12 @@ const Cart = () => {
           </article>
 
           <div className="cart-suggestItems">
-            <article className=" cart-suggestItems-info">
-              <div className=" cart-order-text">
-                <h3>Popular with your order</h3>
-                <p>Based on what other customers bought together</p>
-              </div>
-              <div className="cart-toogleBtns">
-                <button
-                  // disabled={index === 0}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleTogglePrev();
-                  }}
-                  className=" signin-cancel"
-                >
-                  <FaBackward />
-                </button>
-                <button
-                  // disabled={''}
-                  className=" signin-cancel"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleToggleNext();
-                  }}
-                >
-                  <FaForward />
-                </button>
-              </div>
-            </article>
-
-            <div className=" cart-slide-container">
-              <ul>
-                {suggestItems.map((item, i) => (
-                  <li ref={(el) => (itemsRefs.current[i] = el)} key={i}>
+            <div className="cart-slide-container">
+              <h3>Popular with your order</h3>
+              <p>Based on what other customers bought together</p>
+              <Slider>
+                {suggestItems.map((item, index) => (
+                  <li key={index}>
                     <div>
                       <img
                         src={item.image}
@@ -139,7 +153,7 @@ const Cart = () => {
                     </article>
                   </li>
                 ))}
-              </ul>
+              </Slider>
             </div>
           </div>
 

@@ -30,8 +30,6 @@ const MenuSection = ({ cuisine }) => {
     queryFn: getFoodItem,
   });
 
-  const navlinks = [...new Set(data.map((item) => item.tag))];
-
   if (isLoading) {
     return <Loading />;
   }
@@ -43,6 +41,7 @@ const MenuSection = ({ cuisine }) => {
   if (!data || data.length === 0) {
     return <h1>No food items found for this cuisine.</h1>;
   }
+  const navlinks = [...new Set(data.map((item) => item.tag))];
 
   return (
     <section className="dish">
