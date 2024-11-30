@@ -15,19 +15,21 @@ export const handleAddToCart = (
         name: item.name,
         image: item.image,
         price: item.price,
+        total: item.price,
         count: 1,
       },
     ];
     setCartItems({
       restaurantID,
       items: newItems,
+      subtotal: item.price,
     });
   } else if (findItem.length > 0) {
-    const updatedItems = cartItems.items.map((product, index) =>
+    const updatedItems = cartItems.items.map((product) =>
       product._id === item._id
         ? {
             ...product,
-            price: product.price * (product.count + 1),
+            total: product.total + product.price,
             count: product.count + 1,
           }
         : product
@@ -35,6 +37,7 @@ export const handleAddToCart = (
     setCartItems({
       restaurantID,
       items: updatedItems,
+      subtotal: cartItems.subtotal + item.price,
     });
   } else {
     const newItems = [
@@ -44,12 +47,14 @@ export const handleAddToCart = (
         name: item.name,
         image: item.image,
         price: item.price,
+        total: item.price,
         count: 1,
       },
     ];
     setCartItems({
       restaurantID,
       items: newItems,
+      subtotal: cartItems.subtotal + item.price,
     });
   }
 };
@@ -68,7 +73,7 @@ export const handleDecreaseItem = (
       product._id === item._id
         ? {
             ...product,
-            price: product.price / product.count,
+            total: product.total - product.price,
             count: product.count - 1,
           }
         : product
@@ -76,6 +81,7 @@ export const handleDecreaseItem = (
     setCartItems({
       restaurantID,
       items: updatedItems,
+      subtotal: cartItems.subtotal - item.price,
     });
   }
 };
@@ -97,6 +103,7 @@ export const handleRemoveItem = (
     setCartItems({
       restaurantID,
       items: updatedItems,
+      subtotal: cartItems.subtotal - item.price,
     });
   }
 };

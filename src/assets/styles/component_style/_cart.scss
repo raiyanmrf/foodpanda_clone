@@ -33,6 +33,10 @@
       border: none;
 
       font-weight: 550;
+      p {
+        display: block;
+        width: 100%;
+      }
     }
   }
   &-empty {
@@ -112,8 +116,8 @@
 
       &-btn {
         background-color: white;
-        font-size: 1.1em;
-        padding: 0.5px 0px;
+        font-size: 1em;
+
         display: flex;
         gap: 0.58em;
         color: #333333;
@@ -121,7 +125,8 @@
         border: 1px solid rgb(188, 187, 187);
         border-radius: 15px;
       }
-      figure {
+      button {
+        border: none;
         font-size: 1.2em;
         border-radius: 50%;
         position: relative;
@@ -130,8 +135,11 @@
         align-items: center;
         cursor: pointer;
         z-index: 0;
+        padding: 0.1em;
 
-        @include psuedo($bg: #ebe6e6);
+        &:hover {
+          background-color: whitesmoke;
+        }
       }
     }
   }
@@ -359,9 +367,10 @@
       top: 0;
       left: 0;
 
-      figure {
+      button {
         padding: 0.4em;
         height: fit-content;
+        border: none;
 
         @include psuedo($bg: white, $border: 1px solid lightgray);
       }

@@ -17,7 +17,7 @@ const City = () => {
   const getRestaurants = async ({ pageParam = 1 }) => {
     const endpoint = `https://restaurant-server-ni4y.onrender.com/api/city/${city}?page=${pageParam}&limit=${LIMIT}`;
     const res = await fetch(endpoint);
-
+ 
     if (!res.ok) {
       if (res.status === 404) {
         throw new Error("We are not in this area yet.");

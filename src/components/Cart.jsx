@@ -1,10 +1,8 @@
-import { orderedItem, suggestItems } from "../assets/data/foodData";
-import { FaBackward, FaForward } from "react-icons/fa6";
+import { suggestItems } from "../assets/data/foodData";
 import { LiaMinusSolid, LiaPlusSolid } from "react-icons/lia";
 import { MdOutlineDelete } from "react-icons/md";
 import { CiForkAndKnife } from "react-icons/ci";
 import { useContext, useState } from "react";
-import useSlideRef from "../hooks/useSlideRef";
 import pandaCart from "../assets/images/logo/pandaCart.png";
 
 import { RxCross1 } from "react-icons/rx";
@@ -17,18 +15,18 @@ import {
 } from "../utils/cartLogic";
 import { useParams } from "react-router-dom";
 import Slider from "./Slider";
+import SpecialCartBtns from "../layouts/RestaurantPage/SpecialCartBtns";
+import CartGoto from "../layouts/RestaurantPage/CartGoto";
 
 const Cart = () => {
-  const { isCartEmpty, showCart, setShowCart, cartItems, setCartItems } =
+  const { showCart, setShowCart, cartItems, setCartItems } =
     useContext(cartContext);
 
   const { restaurantID } = useParams();
   const [isActive, setIsActive] = useState(true);
   const [isCutlery, setIsCutlery] = useState(true);
-  const [itemsRefs, handleToggleNext, handleTogglePrev, index] = useSlideRef(
-    suggestItems.length
-  );
-  if (isCartEmpty) {
+
+  if (cartItems.restaurantID !== restaurantID || cartItems.items.length === 0) {
     return <EmptyCart />;
   }
 
@@ -37,14 +35,14 @@ const Cart = () => {
       <section className={`cart ${!showCart && "hide-cart"}`}>
         <header>
           <h3>Momo Miah</h3>
-          <figure
+          <button
             onClick={(e) => {
               e.stopPropagation();
               setShowCart(false);
             }}
           >
             <RxCross1 />
-          </figure>
+          </button>
         </header>
         <section className="cart-content">
           <div className="cart-tabs">
@@ -65,67 +63,56 @@ const Cart = () => {
           </div>
           <article className="cart-items">
             <h4>Your Items</h4>
-            {cartItems.items.map((product, index) => (
-              <article key={index} className="cart-singleItem">
-                <figure className="cart-order-info">
-                  <img
-                    src={product.image}
-                    alt="item"
-                    height={`46px`}
-                    width={`56px`}
-                  />
+            {cartItems.items.map((product, index) => {
+              const args = [cartItems, setCartItems, product, restaurantID];
 
-                  <summary className="cart-order-text">
-                    <p className="title-ellipsis">{product.name}</p>
-                    <p className="title-ellipsis">Extra Cheese..</p>
-                    <div className="cart-order-update">
-                      <p>{product.price}</p>
+              return (
+                <article key={index} className="cart-singleItem">
+                  <figure className="cart-order-info">
+                    <img
+                      src={product.image}
+                      alt="item"
+                      height={`46px`}
+                      width={`56px`}
+                    />
 
-                      <div className="cart-order-update-btn">
-                        <figure
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            product.count < 2
-                              ? handleRemoveItem(
-                                  cartItems,
-                                  setCartItems,
-                                  product,
-                                  restaurantID
-                                )
-                              : handleDecreaseItem(
-                                  cartItems,
-                                  setCartItems,
-                                  product,
-                                  restaurantID
-                                );
-                          }}
-                        >
-                          {product.count < 2 ? (
-                            <MdOutlineDelete />
-                          ) : (
-                            <LiaMinusSolid />
-                          )}
-                        </figure>
-                        <span>{product.count}</span>
-                        <figure
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleAddToCart(
-                              cartItems,
-                              setCartItems,
-                              product,
-                              restaurantID
-                            );
-                          }}
-                        >
-                          <LiaPlusSolid />{" "}
-                        </figure>
+                    <summary className="cart-order-text">
+                      <p className="title-ellipsis">{product.name}</p>
+                      <div className="cart-order-update">
+                        <p>{product.total}</p>
+
+                        <div className="cart-order-update-btn">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+
+                              product.count < 2
+                                ? handleRemoveItem(...args)
+                                : handleDecreaseItem(...args);
+                            }}
+                          >
+                            {product.count < 2 ? (
+                              <MdOutlineDelete />
+                            ) : (
+                              <LiaMinusSolid />
+                            )}
+                          </button>
+                          <p>{product.count}</p>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleAddToCart(...args);
+                            }}
+                          >
+                            <LiaPlusSolid />{" "}
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  </summary>
-                </figure>
-              </article>
-            ))}
+                    </summary>
+                  </figure>
+                </article>
+              );
+            })}
           </article>
 
           <div className="cart-suggestItems">
@@ -160,7 +147,7 @@ const Cart = () => {
           <div className=" cart-summary" id="summary">
             <p>
               <span>Subtotal</span>
-              <span>Tk 1433</span>
+              <span>Tk {cartItems.subtotal}</span>
             </p>
             <p>
               <span>Standard delivery</span>
@@ -173,7 +160,7 @@ const Cart = () => {
             </p>
             <p>
               <span>VAT</span>
-              <span>Tk 73</span>
+              <span>Tk 20</span>
             </p>
           </div>
 
@@ -205,7 +192,7 @@ const Cart = () => {
             <p>
               Total <span>(incl. fees and tax)</span>
             </p>
-            <p>Tk 500</p>
+            <p>Tk {cartItems.subtotal + 9 + 20}</p>
           </summary>
 
           <a href="#summary">See Summary</a>
@@ -216,23 +203,7 @@ const Cart = () => {
         </footer>
       </section>
 
-      <section className={`cart-goto ${showCart && "hide-cart"}`}>
-        <button
-          className="btn btn-flex btn-pink btn-lg btn-moderate"
-          onClick={(e) => {
-            e.stopPropagation();
-            setShowCart(true);
-          }}
-        >
-          <figure>
-            <CiForkAndKnife /> <p>1</p>
-          </figure>
-
-          <p>View Cart</p>
-
-          <p>Tk 648</p>
-        </button>
-      </section>
+      <CartGoto />
     </>
   );
 };

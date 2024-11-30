@@ -1402,6 +1402,10 @@ footer .line {
   border: none;
   font-weight: 550;
 }
+.cart-tabs button p {
+  display: block;
+  width: 100%;
+}
 .cart-empty {
   margin: auto;
   display: flex;
@@ -1472,8 +1476,7 @@ footer .line {
 }
 .cart-order-update-btn {
   background-color: white;
-  font-size: 1.1em;
-  padding: 0.5px 0px;
+  font-size: 1em;
   display: flex;
   gap: 0.58em;
   color: #333333;
@@ -1481,7 +1484,8 @@ footer .line {
   border: 1px solid rgb(188, 187, 187);
   border-radius: 15px;
 }
-.cart-order-update figure {
+.cart-order-update button {
+  border: none;
   font-size: 1.2em;
   border-radius: 50%;
   position: relative;
@@ -1490,31 +1494,10 @@ footer .line {
   align-items: center;
   cursor: pointer;
   z-index: 0;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 0;
+  padding: 0.1em;
 }
-.cart-order-update figure::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: 0.3s ease;
-  border: none;
-  z-index: -1;
-}
-.cart-order-update figure:hover::after {
-  transform: scale(1.1);
-  border: none;
-  background-color: #ebe6e6;
+.cart-order-update button:hover {
+  background-color: whitesmoke;
 }
 .cart-toogleBtns {
   display: flex;
@@ -1713,10 +1696,11 @@ footer .line {
     top: 0;
     left: 0;
   }
-  .cart header figure {
+  .cart header button {
     padding: 0.4em;
     height: -moz-fit-content;
     height: fit-content;
+    border: none;
     position: relative;
     display: flex;
     justify-content: center;
@@ -1724,7 +1708,7 @@ footer .line {
     cursor: pointer;
     z-index: 0;
   }
-  .cart header figure::after {
+  .cart header button::after {
     content: "";
     height: 100%;
     width: 100%;
@@ -1738,7 +1722,7 @@ footer .line {
     border: 1px solid lightgray;
     z-index: -1;
   }
-  .cart header figure:hover::after {
+  .cart header button:hover::after {
     transform: scale(1.1);
     border: 1px solid lightgray;
     background-color: white;
@@ -2494,19 +2478,6 @@ footer .line {
   -o-object-fit: contain;
      object-fit: contain; /* Ensures the image fills the space without overflow */
 }
-.foodMenu-card-image button {
-  position: absolute;
-  bottom: 0.55em;
-  right: 0.21em;
-  border-radius: 50%;
-  font-size: 1.5em;
-  padding: 0.2em;
-  display: flex;
-  align-items: center;
-  color: #908d8d;
-  border-color: #908d8d;
-  font-weight: lighter;
-}
 
 @media ((min-width: 767px) and (max-width: 959px)) or (min-width: 1265px) {
   .foodMenu-content {
@@ -2571,6 +2542,7 @@ footer .line {
   border-radius: 5px;
 }
 .btn-active p {
+  width: 3px;
   font-size: 0.8em;
   line-height: 1.7;
   color: #908d8d;
@@ -2581,6 +2553,35 @@ footer .line {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 95%;
+}
+
+.specialCartBtns {
+  position: absolute;
+  bottom: 0.55em;
+  right: 0.21em;
+  display: flex;
+  gap: 0.3em;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  transition: background-color 0.7s ease, color 0.7s ease, width 0.7s ease;
+}
+.specialCartBtns-count {
+  font-size: 0.85em;
+  padding-inline: 0.3em;
+}
+.specialCartBtns button {
+  border-radius: 50%;
+  font-size: 1em;
+  padding: 0.1em;
+  background-color: white;
+  display: flex;
+  color: #908d8d;
+  border: none;
+  font-weight: lighter;
+}
+.specialCartBtns button:hover {
+  background-color: rgb(234, 234, 234);
 }
 
 .placeholder {

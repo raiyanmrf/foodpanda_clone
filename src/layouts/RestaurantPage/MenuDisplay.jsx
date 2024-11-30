@@ -2,6 +2,8 @@ import { useState } from "react";
 import Cart from "../../components/Cart";
 import ItemPopup from "../../components/ItemPopup";
 import { LiaPlusSolid } from "react-icons/lia";
+import SpecialCartBtns from "./SpecialCartBtns";
+import { useParams } from "react-router-dom";
 
 const MenuDisplay = ({ links, items }) => {
   const [isModalActive, setIsModalActive] = useState(false);
@@ -49,9 +51,7 @@ const MenuDisplay = ({ links, items }) => {
                     <picture className="foodMenu-card-image">
                       {item.image && <img src={item.image} alt="menu" />}
 
-                      <button>
-                        <LiaPlusSolid />
-                      </button>
+                      <SpecialCartBtns item={item} />
                     </picture>
                   </article>
                 ))}

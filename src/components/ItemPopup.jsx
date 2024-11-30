@@ -16,8 +16,7 @@ import { handleAddToCart } from "../utils/cartLogic";
 
 const ItemPopup = ({ setIsModalActive, item }) => {
   const { restaurantID } = useParams();
-  const { isCartEmpty, setIsCartEmpty, cartItems, setCartItems } =
-    useContext(cartContext);
+  const { cartItems, setCartItems } = useContext(cartContext);
   const [isDropActive, handleIsDropActive] = useIsActive();
   const [text, setText] = useState("Remove from my order");
 
@@ -55,42 +54,44 @@ const ItemPopup = ({ setIsModalActive, item }) => {
                   <mark>{content.required ? "Required" : "Optional"}</mark>
                 </article>
                 <ul>
-                  {content.items.map((option, index) => (
-                    <li key={index} className="itemPopup-options-list">
-                      <input
-                        type="checkbox"
-                        id={`${index} ${option.name}`}
-                        required={content.required}
-                      />
-                      <label htmlFor={`${index} ${option.name}`}>
-                        <FaCheckSquare />
-                      </label>
-                      {option.image && (
-                        <img
-                          src={option.image}
-                          width={"40px"}
-                          height={"40px"}
-                          alt=""
+                  {content.items.map((option, index) => {
+                    return (
+                      <li key={index} className="itemPopup-options-list">
+                        <input
+                          type="checkbox"
+                          id={`${index} ${option.name}`}
+                          required={content.required}
                         />
-                      )}
-                      <p>{option.name}</p>
-                      <p>
-                        <strong className="">
-                          {typeof option.price === "number"
-                            ? `+Tk ${option.price}`
-                            : "free"}
-                        </strong>
-                        <span>
-                          {" "}
-                          {typeof option.price === "number"
-                            ? `Tk ${Math.ceil(
-                                option.price + option.price * 0.1
-                              )}`
-                            : ""}
-                        </span>
-                      </p>
-                    </li>
-                  ))}
+                        <label htmlFor={`${index} ${option.name}`}>
+                          <FaCheckSquare />
+                        </label>
+                        {option.image && (
+                          <img
+                            src={option.image}
+                            width={"40px"}
+                            height={"40px"}
+                            alt=""
+                          />
+                        )}
+                        <p>{option.name}</p>
+                        <p>
+                          <strong className="">
+                            {typeof option.price === "number"
+                              ? `+Tk ${option.price}`
+                              : "free"}
+                          </strong>
+                          <span>
+                            {" "}
+                            {typeof option.price === "number"
+                              ? `Tk ${Math.ceil(
+                                  option.price + option.price * 0.1
+                                )}`
+                              : ""}
+                          </span>
+                        </p>
+                      </li>
+                    );
+                  })}
                 </ul>
               </form>
             );
@@ -192,7 +193,7 @@ const ItemPopup = ({ setIsModalActive, item }) => {
             className="btn btn-pink btn-lg"
             onClick={(e) => {
               e.stopPropagation();
-              setIsCartEmpty(false);
+
               setIsModalActive(false);
               handleAddToCart(cartItems, setCartItems, item, restaurantID);
             }}
