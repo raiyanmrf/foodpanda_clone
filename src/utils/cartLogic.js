@@ -1,109 +1,165 @@
-export const handleAddToCart = (
+export const handleAddNewProduct = (
   cartItems,
   setCartItems,
-  item,
-  restaurantID
+  newProduct,
+  restaurantID,
+  sideItems
 ) => {
-  const findItem = cartItems.items?.filter(
-    (product) => product._id === item._id
+  console.log("sideItems", sideItems);
+  const existingProduct = findProduct(
+    cartItems,
+    newProduct,
+    newProduct.sides || sideItems
   );
 
-  if (cartItems.restaurantID !== restaurantID) {
+  const isSameRestaurant = cartItems.restaurantID === restaurantID;
+  if (!isSameRestaurant) {
     const newItems = [
       {
-        _id: item._id,
-        name: item.name,
-        image: item.image,
-        price: item.price,
-        total: item.price,
+        _id: newProduct._id,
+        name: newProduct.name,
+        image: newProduct.image,
+        price: newProduct.price,
+        total: newProduct.price,
+        sides: sideItems,
         count: 1,
       },
     ];
+
     setCartItems({
       restaurantID,
       items: newItems,
-      subtotal: item.price,
+      subtotal: newProduct.price,
     });
-  } else if (findItem.length > 0) {
-    const updatedItems = cartItems.items.map((product) =>
-      product._id === item._id
-        ? {
-            ...product,
-            total: product.total + product.price,
-            count: product.count + 1,
-          }
-        : product
-    );
-    setCartItems({
-      restaurantID,
-      items: updatedItems,
-      subtotal: cartItems.subtotal + item.price,
-    });
-  } else {
+  } else if (existingProduct.length === 0) {
     const newItems = [
       ...cartItems.items,
       {
-        _id: item._id,
-        name: item.name,
-        image: item.image,
-        price: item.price,
-        total: item.price,
+        _id: newProduct._id,
+        name: newProduct.name,
+        image: newProduct.image,
+        price: newProduct.price,
+        total: newProduct.price,
+        sides: sideItems,
         count: 1,
       },
     ];
+
     setCartItems({
       restaurantID,
       items: newItems,
-      subtotal: cartItems.subtotal + item.price,
+      subtotal: cartItems.subtotal + newProduct.price,
+    });
+  } else {
+    const updatedItems = cartItems.items.map((product) =>
+      product._id === newProduct._id &&
+      deepCompare(newProduct.sides || sideItems, product.sides)
+        ? {
+            ...product,
+            count: product.count + 1,
+            total: product.total + product.price,
+          }
+        : product
+    );
+
+    setCartItems({
+      restaurantID,
+      items: updatedItems,
+      subtotal: cartItems.subtotal + newProduct.price,
     });
   }
+};
+export const handleIncreaseProduct = (
+  cartItems,
+  setCartItems,
+  newProduct,
+  restaurantID
+) => {
+  const updatedItems = cartItems.items.map((product) =>
+    product._id === newProduct._id &&
+    deepCompare(newProduct.sides, product.sides)
+      ? {
+          ...product,
+          count: product.count + 1,
+          total: product.total + product.price,
+        }
+      : product
+  );
+
+  setCartItems({
+    restaurantID,
+    items: updatedItems,
+    subtotal: cartItems.subtotal + newProduct.price,
+  });
 };
 export const handleDecreaseItem = (
   cartItems,
   setCartItems,
-  item,
+  existingItem,
   restaurantID
 ) => {
-  const findItem = cartItems.items?.filter(
-    (product) => product._id === item._id
+  const filteredItems = findProduct(
+    cartItems,
+    existingItem,
+    existingItem.sides
   );
+  if (filteredItems.length === 1) {
+    if (filteredItems[0].count === 1) {
+      const updatedItems = cartItems.items.filter(
+        (product) =>
+          !(
+            product._id === existingItem._id &&
+            deepCompare(existingItem.sides, product.sides)
+          )
+      );
 
-  if (findItem.length > 0) {
-    const updatedItems = cartItems.items.map((product) =>
-      product._id === item._id
-        ? {
-            ...product,
-            total: product.total - product.price,
-            count: product.count - 1,
-          }
-        : product
-    );
-    setCartItems({
-      restaurantID,
-      items: updatedItems,
-      subtotal: cartItems.subtotal - item.price,
-    });
+      setCartItems({
+        restaurantID,
+        items: updatedItems,
+        subtotal: cartItems.subtotal - existingItem.price,
+      });
+    } else {
+      const updatedItems = cartItems.items.map((product) =>
+        product._id === existingItem._id &&
+        deepCompare(existingItem.sides, product.sides)
+          ? {
+              ...product,
+              total: product.total - product.price,
+              count: product.count - 1,
+            }
+          : product
+      );
+      console.log("updatedItems", updatedItems);
+      setCartItems({
+        restaurantID,
+        items: updatedItems,
+        subtotal: cartItems.subtotal - existingItem.price,
+      });
+    }
   }
 };
 
-export const handleRemoveItem = (
-  cartItems,
-  setCartItems,
-  item,
-  restaurantID
-) => {
-  const findItem = cartItems.items?.filter(
-    (product) => product._id === item._id
-  );
+export const deepCompare = (arr1, arr2) => {
+  console.log("arr1", arr1);
+  console.log("arr2", arr2);
+  if (arr1.length != arr2.length) return false;
+  if (arr1.length === 0) return true;
+  const sortArray = (arr) => {
+    return arr.map((item) => JSON.stringify(item)).sort();
+  };
 
-  if (findItem.length > 0) {
-    const updatedItems = cartItems.items.filter(
-      (product) => product._id !== item._id
-    );
-    setCartItems({
-      restaurantID,
-      items: updatedItems,
-      subtotal: cartItems.subtotal - item.price,
-    });
-  }
+  const sorted1 = sortArray(arr1);
+  const sorted2 = sortArray(arr2);
+
+  return JSON.stringify(sorted1) === JSON.stringify(sorted2);
+};
+
+export const getSimilarProducts = (cartItems, newProduct) => {
+  return cartItems.items?.filter((product) => product._id === newProduct._id);
+};
+
+export const findProduct = (cartItems, newProduct, sideItems) => {
+  return getSimilarProducts(cartItems, newProduct).filter((product) =>
+    deepCompare(sideItems, product.sides)
+  );
 };

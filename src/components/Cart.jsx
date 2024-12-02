@@ -3,23 +3,16 @@ import { LiaMinusSolid, LiaPlusSolid } from "react-icons/lia";
 import { MdOutlineDelete } from "react-icons/md";
 import { CiForkAndKnife } from "react-icons/ci";
 import { useContext, useState } from "react";
-import pandaCart from "../assets/images/logo/pandaCart.png";
-
 import { RxCross1 } from "react-icons/rx";
 import EmptyCart from "../layouts/RestaurantPage/EmptyCart";
 import { cartContext } from "../hooks/CartContext";
-import {
-  handleAddToCart,
-  handleDecreaseItem,
-  handleRemoveItem,
-} from "../utils/cartLogic";
+import { handleAddNewProduct, handleDecreaseItem } from "../utils/cartLogic";
 import { useParams } from "react-router-dom";
 import Slider from "./Slider";
-import SpecialCartBtns from "../layouts/RestaurantPage/SpecialCartBtns";
 import CartGoto from "../layouts/RestaurantPage/CartGoto";
 
 const Cart = () => {
-  const { showCart, setShowCart, cartItems, setCartItems } =
+  const { showCart, setShowCart, cartItems, setCartItems, sideItems } =
     useContext(cartContext);
 
   const { restaurantID } = useParams();
@@ -64,8 +57,20 @@ const Cart = () => {
           <article className="cart-items">
             <h4>Your Items</h4>
             {cartItems.items.map((product, index) => {
-              const args = [cartItems, setCartItems, product, restaurantID];
+              const args = [
+                cartItems,
+                setCartItems,
+                product,
+                restaurantID,
+                sideItems,
+              ];
 
+              const requiredChoice = product.sides.filter(
+                (item) => item.required === true
+              );
+              const optionalChoice = product.sides.filter(
+                (item) => item.required !== true
+              );
               return (
                 <article key={index} className="cart-singleItem">
                   <figure className="cart-order-info">
@@ -78,6 +83,19 @@ const Cart = () => {
 
                     <summary className="cart-order-text">
                       <p className="title-ellipsis">{product.name}</p>
+                      {requiredChoice.length > 0 &&
+                        requiredChoice.map((choice, index) => (
+                          <p key={index} className="title-ellipsis">
+                            <span>{choice.name}</span>
+                          </p>
+                        ))}
+                      {optionalChoice.length > 0 &&
+                        optionalChoice.map((choice, index) => (
+                          <p key={index} className="title-ellipsis">
+                            <span>{choice.name}</span>
+                          </p>
+                        ))}
+
                       <div className="cart-order-update">
                         <p>{product.total}</p>
 
@@ -85,10 +103,7 @@ const Cart = () => {
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
-
-                              product.count < 2
-                                ? handleRemoveItem(...args)
-                                : handleDecreaseItem(...args);
+                              handleDecreaseItem(...args);
                             }}
                           >
                             {product.count < 2 ? (
@@ -101,7 +116,7 @@ const Cart = () => {
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
-                              handleAddToCart(...args);
+                              handleAddNewProduct(...args);
                             }}
                           >
                             <LiaPlusSolid />{" "}

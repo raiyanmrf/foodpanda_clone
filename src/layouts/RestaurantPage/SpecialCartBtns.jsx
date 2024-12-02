@@ -3,16 +3,18 @@ import { LiaMinusSolid, LiaPlusSolid } from "react-icons/lia";
 import { useParams } from "react-router-dom";
 import { cartContext } from "../../hooks/CartContext";
 import {
-  handleAddToCart,
-  handleRemoveItem,
   handleDecreaseItem,
+  findProduct,
+  getSimilarProducts,
+  handleAddNewProduct,
 } from "../../utils/cartLogic";
 import { MdOutlineDelete } from "react-icons/md";
 
 const SpecialCartBtns = ({ item }) => {
   const { restaurantID } = useParams();
-  const { cartItems, setCartItems } = useContext(cartContext);
+  const { cartItems, setCartItems, sideItems } = useContext(cartContext);
   const [isExpanded, setIsExpanded] = useState(false);
+  const args = [cartItems, setCartItems, item, restaurantID, sideItems];
 
   useEffect(() => {
     let id; // Declare `id` here to avoid undefined issues
@@ -30,46 +32,42 @@ const SpecialCartBtns = ({ item }) => {
     };
   }, [isExpanded]);
 
-  // Dynamic function to fetch the current product from cart
-  const getProduct = () =>
-    cartItems.items.find((product) => product._id === item._id);
-
-  // Event handlers using the dynamic product count
   const handleAdd = (e) => {
     e.stopPropagation();
-    handleAddToCart(cartItems, setCartItems, item, restaurantID);
-    setIsExpanded(true);
+
+    handleAddNewProduct(...args);
   };
 
   const handleRemove = (e) => {
     e.stopPropagation();
-    const product = getProduct();
-    if (product?.count < 2) {
-      handleRemoveItem(cartItems, setCartItems, item, restaurantID);
-      setIsExpanded(false);
-    } else {
-      handleDecreaseItem(cartItems, setCartItems, item, restaurantID);
-      setIsExpanded(true);
-    }
+    const query = findProduct(cartItems, item, sideItems);
+    handleDecreaseItem(...args);
+    query[0]?.count === 1 ? setIsExpanded(false) : setIsExpanded(true);
   };
 
-  // Get the product for the initial render
-  const product = getProduct();
-  const removeIcon =
-    product?.count < 2 ? <MdOutlineDelete /> : <LiaMinusSolid />;
-  if (product) {
+  const product = getSimilarProducts(cartItems, item);
+
+  if (product.length > 0) {
+    const count = product.reduce((sum, item) => sum + item.count, 0);
+    const removeIcon = count === 1 ? <MdOutlineDelete /> : <LiaMinusSolid />;
     return (
       <div className="specialCartBtns">
         {isExpanded ? (
           <>
             <button onClick={handleRemove}>{removeIcon}</button>
-            <p className="specialCartBtns-count">{product.count}</p>
+            <p className="specialCartBtns-count">{count}</p>
             <button onClick={handleAdd}>{<LiaPlusSolid />}</button>
           </>
         ) : (
-          <button onClick={handleAdd} style={{ backgroundColor: "black" }}>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsExpanded(true);
+            }}
+            style={{ backgroundColor: "black" }}
+          >
             <p style={{ color: "white" }} className="specialCartBtns-count">
-              {product.count}
+              {count}
             </p>
           </button>
         )}

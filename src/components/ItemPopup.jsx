@@ -1,22 +1,17 @@
-import React, {
-  Fragment,
-  useEffect,
-  useState,
-  useMemo,
-  useContext,
-} from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { RxCross1 } from "react-icons/rx";
-import { FaCheckSquare } from "react-icons/fa";
-import { FaAngleDown, FaAngleUp, FaMinus, FaPlus } from "react-icons/fa6";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 import useIsActive from "../hooks/useIsActive";
-import selection from "../utils/selectionModifier.json";
 import { cartContext } from "../hooks/CartContext";
 import { useParams } from "react-router-dom";
-import { handleAddToCart } from "../utils/cartLogic";
+import { handleAddNewProduct } from "../utils/cartLogic";
+import { ItemPopupOptions } from "../layouts/RestaurantPage/ItemPopupOptions";
+import ItemPopupUpdateButtons from "../layouts/RestaurantPage/ItemPopupUpdateButtons";
 
-const ItemPopup = ({ setIsModalActive, item }) => {
+const ItemPopup = ({ setIsModalActive, foodItem }) => {
   const { restaurantID } = useParams();
-  const { cartItems, setCartItems } = useContext(cartContext);
+  const { cartItems, setCartItems, sideItems, setSideItems } =
+    useContext(cartContext);
   const [isDropActive, handleIsDropActive] = useIsActive();
   const [text, setText] = useState("Remove from my order");
 
@@ -28,81 +23,6 @@ const ItemPopup = ({ setIsModalActive, item }) => {
     };
   }, []);
 
-  // Using useMemo to memoize the filtered selection data
-  const filteredSelection = useMemo(() => {
-    return selection
-      .filter((product) => product.type.includes(item.type))
-      .map((product, index) => (
-        <Fragment key={index}>
-          {product.choices.map((content, index) => {
-            console.log(content);
-
-            return (
-              <form
-                key={index}
-                className={`itemPopup-options ${
-                  content.required && "itemPopup-required"
-                }`}
-              >
-                <article className="itemPopup-options-title">
-                  <h3>{content.label}</h3>
-                  {content.limit ? (
-                    <p>Select up to {content.limit}</p>
-                  ) : (
-                    <p>Others around you liked this</p>
-                  )}
-                  <mark>{content.required ? "Required" : "Optional"}</mark>
-                </article>
-                <ul>
-                  {content.items.map((option, index) => {
-                    return (
-                      <li key={index} className="itemPopup-options-list">
-                        <input
-                          type="checkbox"
-                          id={`${index} ${option.name}`}
-                          required={content.required}
-                        />
-                        <label htmlFor={`${index} ${option.name}`}>
-                          <FaCheckSquare />
-                        </label>
-                        {option.image && (
-                          <img
-                            src={option.image}
-                            width={"40px"}
-                            height={"40px"}
-                            alt=""
-                          />
-                        )}
-                        <p>{option.name}</p>
-                        <p>
-                          <strong className="">
-                            {typeof option.price === "number"
-                              ? `+Tk ${option.price}`
-                              : "free"}
-                          </strong>
-                          <span>
-                            {" "}
-                            {typeof option.price === "number"
-                              ? `Tk ${Math.ceil(
-                                  option.price + option.price * 0.1
-                                )}`
-                              : ""}
-                          </span>
-                        </p>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </form>
-            );
-          })}
-        </Fragment>
-      ));
-  }, [item.type]);
-
-  //console.log("ItemPopUp:", item.type);
-  console.log(cartItems);
-
   return (
     <section className="popup-container">
       <section className="itemPopup">
@@ -111,31 +31,31 @@ const ItemPopup = ({ setIsModalActive, item }) => {
           onClick={(e) => {
             e.stopPropagation();
             setIsModalActive(false);
+            setSideItems([]);
           }}
         >
           <RxCross1 />
         </figure>
         <article className="itemPopup-content">
           <header>
-            <h3>{item.name}</h3>
+            <h3>{foodItem.name}</h3>
           </header>
           <picture>
-            <img style={{ width: "100%" }} src={item.image} alt="" />
+            <img style={{ width: "100%" }} src={foodItem.image} alt="" />
           </picture>
 
           <summary className="itemPopup-description">
-            <h3>{item.name}</h3>
+            <h3>{foodItem.name}</h3>
             <h3>
-              <strong>Tk {item.price}</strong>
-              <span>Tk {item.price + item.price * 0.1}</span>
+              <strong>Tk {foodItem.price}</strong>
+              <span>Tk {foodItem.price + foodItem.price * 0.1}</span>
               <span>10% off</span>
             </h3>
 
-            <p className="">{item.detail}</p>
+            <p className="">{foodItem.detail}</p>
           </summary>
 
-          {/* Render the filtered selection */}
-          {filteredSelection}
+          <ItemPopupOptions foodItem={foodItem} />
 
           <div className="itemPopup-orderActions">
             <article>
@@ -179,15 +99,7 @@ const ItemPopup = ({ setIsModalActive, item }) => {
         </article>
 
         <footer>
-          <div className="itemPopup-update">
-            <button>
-              <FaMinus />
-            </button>
-            <p>1</p>
-            <button>
-              <FaPlus />
-            </button>
-          </div>
+          <ItemPopupUpdateButtons foodItem={foodItem} />
 
           <button
             className="btn btn-pink btn-lg"
@@ -195,7 +107,15 @@ const ItemPopup = ({ setIsModalActive, item }) => {
               e.stopPropagation();
 
               setIsModalActive(false);
-              handleAddToCart(cartItems, setCartItems, item, restaurantID);
+              handleAddNewProduct(
+                cartItems,
+                setCartItems,
+                foodItem,
+                restaurantID,
+                sideItems
+              );
+
+              setSideItems([]);
             }}
           >
             Add to cart

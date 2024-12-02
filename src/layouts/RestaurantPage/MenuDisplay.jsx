@@ -5,7 +5,7 @@ import { LiaPlusSolid } from "react-icons/lia";
 import SpecialCartBtns from "./SpecialCartBtns";
 import { useParams } from "react-router-dom";
 
-const MenuDisplay = ({ links, items }) => {
+const MenuDisplay = ({ links, foodItems }) => {
   const [isModalActive, setIsModalActive] = useState(false);
   const [currentItem, setCurrentItem] = useState({});
 
@@ -28,7 +28,7 @@ const MenuDisplay = ({ links, items }) => {
                 el && el.focus();
               }}
             >
-              {items
+              {foodItems
                 .filter((item) => item.tag === link)
                 .map((item, index) => (
                   <article
@@ -59,7 +59,7 @@ const MenuDisplay = ({ links, items }) => {
                 <ItemPopup
                   key={currentItem.name}
                   setIsModalActive={setIsModalActive}
-                  item={currentItem}
+                  foodItem={currentItem}
                 />
               )}
             </div>

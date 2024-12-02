@@ -45,9 +45,9 @@ const MenuSection = ({ cuisine }) => {
 
   return (
     <section className="dish">
-      <MenuNavbar items={data} links={navlinks} />
+      <MenuNavbar foodItems={data} links={navlinks} />
 
-      <MenuDisplay links={navlinks} items={data} />
+      <MenuDisplay links={navlinks} foodItems={data} />
     </section>
   );
 };

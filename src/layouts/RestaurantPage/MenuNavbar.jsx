@@ -9,7 +9,7 @@ import useDetectOverFlow from "../../hooks/useDetectOverFlow";
 import useSlide from "../../hooks/useSlide";
 import { Link } from "react-router-dom";
 
-const MenuNavbar = ({ items, links }) => {
+const MenuNavbar = ({ foodItems, links }) => {
   const [
     scrollRef,
     slideLeft,
@@ -59,7 +59,7 @@ const MenuNavbar = ({ items, links }) => {
                   });
               }}
             >
-              {dish}({items.filter((item) => item.tag === dish).length})
+              {dish}({foodItems.filter((item) => item.tag === dish).length})
             </li>
           ))}
         </ul>
