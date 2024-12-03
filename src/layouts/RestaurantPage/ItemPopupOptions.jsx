@@ -69,6 +69,7 @@ export const ItemPopupOptions = ({ foodItem }) => {
                           const query = sideItems.filter(
                             (item) => item.name === option.name
                           );
+
                           if (query.length === 0) {
                             setSideItems([
                               ...sideItems,
@@ -79,7 +80,7 @@ export const ItemPopupOptions = ({ foodItem }) => {
                                 label: content.label,
                               },
                             ]);
-                          } else if (query.length === 1) {
+                          } else {
                             const filter = sideItems.filter(
                               (item) => item.name !== option.name
                             );

@@ -7,11 +7,18 @@ import { useParams } from "react-router-dom";
 import { handleAddNewProduct } from "../utils/cartLogic";
 import { ItemPopupOptions } from "../layouts/RestaurantPage/ItemPopupOptions";
 import ItemPopupUpdateButtons from "../layouts/RestaurantPage/ItemPopupUpdateButtons";
+import { handleMergingToCartItems } from "../utils/foodItemPopupLogic";
 
 const ItemPopup = ({ setIsModalActive, foodItem }) => {
   const { restaurantID } = useParams();
-  const { cartItems, setCartItems, sideItems, setSideItems } =
-    useContext(cartContext);
+  const {
+    cartItems,
+    setCartItems,
+    sideItems,
+    setSideItems,
+    tempItems,
+    setTempItems,
+  } = useContext(cartContext);
   const [isDropActive, handleIsDropActive] = useIsActive();
   const [text, setText] = useState("Remove from my order");
 
@@ -107,13 +114,22 @@ const ItemPopup = ({ setIsModalActive, foodItem }) => {
               e.stopPropagation();
 
               setIsModalActive(false);
-              handleAddNewProduct(
-                cartItems,
-                setCartItems,
-                foodItem,
-                restaurantID,
-                sideItems
-              );
+
+              tempItems.items.length === 0
+                ? handleAddNewProduct(
+                    cartItems,
+                    setCartItems,
+                    foodItem,
+                    restaurantID,
+                    sideItems
+                  )
+                : handleMergingToCartItems(
+                    tempItems,
+                    setTempItems,
+                    cartItems,
+                    setCartItems,
+                    restaurantID
+                  );
 
               setSideItems([]);
             }}

@@ -14,6 +14,11 @@ export const CartContextComponent = (props) => {
   const toUncheckRef = useRef(null);
 
   const [sideItems, setSideItems] = useState([]);
+  const [tempItems, setTempItems] = useState({
+    restaurantID: "empty",
+    items: [],
+    subtotal: 0,
+  });
 
   const uncheckAll = () => {
     console.log("Uncheck all triggered");
@@ -38,6 +43,9 @@ export const CartContextComponent = (props) => {
 
     toUncheckRef,
     uncheckAll,
+
+    tempItems,
+    setTempItems,
   };
   return (
     <cartContext.Provider value={value}>{props.children}</cartContext.Provider>

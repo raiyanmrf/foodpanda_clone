@@ -83,18 +83,25 @@ const Cart = () => {
 
                     <summary className="cart-order-text">
                       <p className="title-ellipsis">{product.name}</p>
-                      {requiredChoice.length > 0 &&
-                        requiredChoice.map((choice, index) => (
-                          <p key={index} className="title-ellipsis">
-                            <span>{choice.name}</span>
+                      {product.sides.map((choice, index) => (
+                        <div key={index}>
+                          <p
+                            className="title-ellipsis"
+                            style={{ color: "red" }}
+                          >
+                            {choice.required ? choice.name : " "}
                           </p>
-                        ))}
-                      {optionalChoice.length > 0 &&
+                          <p className="title-ellipsis">
+                            {!choice.required ? choice.name : " "}
+                          </p>
+                        </div>
+                      ))}
+                      {/* {optionalChoice.length > 0 &&
                         optionalChoice.map((choice, index) => (
                           <p key={index} className="title-ellipsis">
                             <span>{choice.name}</span>
                           </p>
-                        ))}
+                        ))} */}
 
                       <div className="cart-order-update">
                         <p>{product.total}</p>

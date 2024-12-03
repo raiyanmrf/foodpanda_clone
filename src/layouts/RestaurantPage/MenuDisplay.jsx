@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Cart from "../../components/Cart";
 import ItemPopup from "../../components/ItemPopup";
-import { LiaPlusSolid } from "react-icons/lia";
+
 import SpecialCartBtns from "./SpecialCartBtns";
-import { useParams } from "react-router-dom";
+
+import { cartContext } from "../../hooks/CartContext";
 
 const MenuDisplay = ({ links, foodItems }) => {
   const [isModalActive, setIsModalActive] = useState(false);
   const [currentItem, setCurrentItem] = useState({});
+  const { cartItems, tempItems } = useContext(cartContext);
 
-  //console.log("MenuDisplay Render");
   return (
     <section className="foodMenu">
       <section className="foodMenu-cuisines">

@@ -2,34 +2,44 @@ import { FaMinus, FaPlus } from "react-icons/fa6";
 import { cartContext } from "../../hooks/CartContext";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import { getSimilarProducts, handleAddNewProduct } from "../../utils/cartLogic";
+import {
+  findProduct,
+  getSimilarProducts,
+  handleAddNewProduct,
+} from "../../utils/cartLogic";
+import {
+  handleTemporaryAdding,
+  handleTemporaryRemoving,
+} from "../../utils/foodItemPopupLogic";
 
 const ItemPopupUpdateButtons = ({ foodItem }) => {
   const { restaurantID } = useParams();
-  const { cartItems, setCartItems, sideItems, setSideItems, uncheckAll } =
-    useContext(cartContext);
+  const { tempItems, setTempItems, sideItems } = useContext(cartContext);
 
-  const args = [cartItems, setCartItems, foodItem, restaurantID, sideItems];
-  const product = getSimilarProducts(cartItems, foodItem);
+  const product = getSimilarProducts(tempItems, foodItem);
+  const args = [tempItems, setTempItems, foodItem, restaurantID, sideItems];
+  const args2 = [tempItems, setTempItems, product[0], restaurantID];
 
-  const count =
-    product.length > 0
-      ? product.reduce((sum, item) => sum + item.count, 0)
-      : "1";
+  const count = product?.reduce((sum, item) => sum + item.count, 0);
 
   return (
     <div className="itemPopup-update">
-      <button>
+      <button
+        disabled={product.length === 0}
+        onClick={(e) => {
+          e.stopPropagation();
+
+          handleTemporaryRemoving(...args2);
+        }}
+      >
         <FaMinus />
       </button>
-      <p>{count}</p>
+      <p>{count ?? "0"}</p>
       <button
         onClick={(e) => {
           e.stopPropagation();
 
-          handleAddNewProduct(...args);
-          uncheckAll();
-          setSideItems([]);
+          handleTemporaryAdding(...args);
         }}
       >
         <FaPlus />

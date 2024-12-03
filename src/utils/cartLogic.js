@@ -140,8 +140,6 @@ export const handleDecreaseItem = (
 };
 
 export const deepCompare = (arr1, arr2) => {
-  console.log("arr1", arr1);
-  console.log("arr2", arr2);
   if (arr1.length != arr2.length) return false;
   if (arr1.length === 0) return true;
   const sortArray = (arr) => {
@@ -159,6 +157,9 @@ export const getSimilarProducts = (cartItems, newProduct) => {
 };
 
 export const findProduct = (cartItems, newProduct, sideItems) => {
+  // console.log("tempItems", cartItems);
+  // console.log("existingFoodItems", newProduct);
+  // console.log("existingFoodItems.sides", sideItems);
   return getSimilarProducts(cartItems, newProduct).filter((product) =>
     deepCompare(sideItems, product.sides)
   );
