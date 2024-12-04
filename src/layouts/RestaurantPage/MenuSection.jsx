@@ -1,9 +1,5 @@
-import { foodNavLinks } from "../../assets/data/foodData";
-import useSlideRef from "../../hooks/useSlideRef";
 import MenuDisplay from "./MenuDisplay";
 import MenuNavbar from "./MenuNavbar";
-import menuJson from "../../utils/cuisines.json";
-import React, { useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "../../assets/svg/Loading";
 
@@ -22,7 +18,9 @@ const MenuSection = ({ cuisine }) => {
       }
 
       return data;
-    } catch (error) {}
+    } catch (error) {
+      console.error("Error Fetching", error);
+    }
   };
 
   const { isError, error, isLoading, data } = useQuery({

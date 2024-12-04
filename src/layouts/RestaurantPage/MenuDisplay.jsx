@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import Cart from "../../components/Cart";
 import ItemPopup from "../../components/ItemPopup";
 
@@ -7,9 +7,12 @@ import SpecialCartBtns from "./SpecialCartBtns";
 import { cartContext } from "../../hooks/CartContext";
 
 const MenuDisplay = ({ links, foodItems }) => {
-  const [isModalActive, setIsModalActive] = useState(false);
-  const [currentItem, setCurrentItem] = useState({});
-  const { cartItems, tempItems } = useContext(cartContext);
+  const {
+    isItemPopupActive,
+    setIsItemPopupActive,
+    currentItem,
+    setCurrentItem,
+  } = useContext(cartContext);
 
   return (
     <section className="foodMenu">
@@ -38,13 +41,13 @@ const MenuDisplay = ({ links, foodItems }) => {
                     onClick={(e) => {
                       e.stopPropagation();
                       setCurrentItem(item);
-                      setIsModalActive(true);
+                      setIsItemPopupActive(true);
                     }}
                   >
                     <summary className="foodMenu-card-info">
                       <h4>{item.name}</h4>
 
-                      <p>Tk {item.price}</p>
+                      <p>{item.price_desc}</p>
 
                       <p className="ellipsis">{item.detail}</p>
                     </summary>
@@ -56,10 +59,10 @@ const MenuDisplay = ({ links, foodItems }) => {
                     </picture>
                   </article>
                 ))}
-              {isModalActive && (
+              {isItemPopupActive && (
                 <ItemPopup
                   key={currentItem.name}
-                  setIsModalActive={setIsModalActive}
+                  setIsItemPopupActive={setIsItemPopupActive}
                   foodItem={currentItem}
                 />
               )}

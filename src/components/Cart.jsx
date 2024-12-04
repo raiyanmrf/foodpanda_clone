@@ -87,7 +87,7 @@ const Cart = () => {
                         <div key={index}>
                           <p
                             className="title-ellipsis"
-                            style={{ color: "red" }}
+                            style={{ color: "darkred" }}
                           >
                             {choice.required ? choice.name : " "}
                           </p>
@@ -96,12 +96,6 @@ const Cart = () => {
                           </p>
                         </div>
                       ))}
-                      {/* {optionalChoice.length > 0 &&
-                        optionalChoice.map((choice, index) => (
-                          <p key={index} className="title-ellipsis">
-                            <span>{choice.name}</span>
-                          </p>
-                        ))} */}
 
                       <div className="cart-order-update">
                         <p>{product.total}</p>

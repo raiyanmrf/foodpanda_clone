@@ -9,7 +9,7 @@ import { ItemPopupOptions } from "../layouts/RestaurantPage/ItemPopupOptions";
 import ItemPopupUpdateButtons from "../layouts/RestaurantPage/ItemPopupUpdateButtons";
 import { handleMergingToCartItems } from "../utils/foodItemPopupLogic";
 
-const ItemPopup = ({ setIsModalActive, foodItem }) => {
+const ItemPopup = ({ setIsItemPopupActive, foodItem }) => {
   const { restaurantID } = useParams();
   const {
     cartItems,
@@ -37,7 +37,7 @@ const ItemPopup = ({ setIsModalActive, foodItem }) => {
           className="itemPopup-cross"
           onClick={(e) => {
             e.stopPropagation();
-            setIsModalActive(false);
+            setIsItemPopupActive(false);
             setSideItems([]);
           }}
         >
@@ -113,7 +113,7 @@ const ItemPopup = ({ setIsModalActive, foodItem }) => {
             onClick={(e) => {
               e.stopPropagation();
 
-              setIsModalActive(false);
+              setIsItemPopupActive(false);
 
               tempItems.items.length === 0
                 ? handleAddNewProduct(

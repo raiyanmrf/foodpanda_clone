@@ -12,7 +12,13 @@ import { MdOutlineDelete } from "react-icons/md";
 
 const SpecialCartBtns = ({ item }) => {
   const { restaurantID } = useParams();
-  const { cartItems, setCartItems, sideItems } = useContext(cartContext);
+  const {
+    cartItems,
+    setCartItems,
+    sideItems,
+    setIsItemPopupActive,
+    setCurrentItem,
+  } = useContext(cartContext);
   const [isExpanded, setIsExpanded] = useState(false);
   const args = [cartItems, setCartItems, item, restaurantID, sideItems];
 
@@ -35,7 +41,10 @@ const SpecialCartBtns = ({ item }) => {
   const handleAdd = (e) => {
     e.stopPropagation();
 
-    handleAddNewProduct(...args);
+    if (item.required) {
+      setCurrentItem(item);
+      setIsItemPopupActive(true);
+    } else handleAddNewProduct(...args);
   };
 
   const handleRemove = (e) => {
@@ -51,7 +60,7 @@ const SpecialCartBtns = ({ item }) => {
     const count = product.reduce((sum, item) => sum + item.count, 0);
     const removeIcon = count === 1 ? <MdOutlineDelete /> : <LiaMinusSolid />;
     return (
-      <div className="specialCartBtns">
+      <div className={`specialCartBtns ${isExpanded && "bg-color"}`}>
         {isExpanded ? (
           <>
             <button onClick={handleRemove}>{removeIcon}</button>

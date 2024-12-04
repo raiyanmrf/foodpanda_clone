@@ -1,13 +1,5 @@
 .foodMenu {
   padding-inline: 1em;
-  // &-single-cuisine {
-  //   // p {
-  //   //   font-size: 0.8em;
-  //   //   font-weight: 400;
-  //   //   color: gray;
-  //   //   margin-top: 0.5em;
-  //   // }
-  // }
 
   &-title {
     margin-block: 1em;
@@ -54,6 +46,10 @@
         height: 100%; /* Ensures the image fits the parent element */
         object-fit: contain; /* Ensures the image fills the space without overflow */
       }
+    }
+
+    .bg-color {
+      background-color: white;
     }
   }
 
@@ -156,9 +152,9 @@
   display: flex;
   gap: 0.3em;
   align-items: center;
-  background-color: white;
-  border-radius: 12px;
-  transition: background-color 0.7s ease, color 0.7s ease, width 0.7s ease;
+
+  border-radius: 15px;
+  transition: color 0.7s ease, width 0.7s ease;
 
   &-count {
     font-size: 0.85em;
@@ -168,7 +164,7 @@
   button {
     border-radius: 50%;
     font-size: 1em;
-    padding: 0.3em;
+    padding: 0.6em;
     background-color: white;
     display: flex;
     color: #908d8d;

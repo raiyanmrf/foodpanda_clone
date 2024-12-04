@@ -2478,6 +2478,9 @@ footer .line {
   -o-object-fit: contain;
      object-fit: contain; /* Ensures the image fills the space without overflow */
 }
+.foodMenu-card .bg-color {
+  background-color: white;
+}
 
 @media ((min-width: 767px) and (max-width: 959px)) or (min-width: 1265px) {
   .foodMenu-content {
@@ -2562,9 +2565,8 @@ footer .line {
   display: flex;
   gap: 0.3em;
   align-items: center;
-  background-color: white;
-  border-radius: 12px;
-  transition: background-color 0.7s ease, color 0.7s ease, width 0.7s ease;
+  border-radius: 15px;
+  transition: color 0.7s ease, width 0.7s ease;
 }
 .specialCartBtns-count {
   font-size: 0.85em;
@@ -2573,7 +2575,7 @@ footer .line {
 .specialCartBtns button {
   border-radius: 50%;
   font-size: 1em;
-  padding: 0.3em;
+  padding: 0.6em;
   background-color: white;
   display: flex;
   color: #908d8d;

@@ -6,6 +6,7 @@ import React from "react";
 
 export const CartContextComponent = (props) => {
   const [showCart, setShowCart] = useState(false);
+  const [isItemPopupActive, setIsItemPopupActive] = useState(false);
   const [cartItems, setCartItems] = useState({
     restaurantID: "empty",
     items: [],
@@ -13,6 +14,7 @@ export const CartContextComponent = (props) => {
   });
   const toUncheckRef = useRef(null);
 
+  const [currentItem, setCurrentItem] = useState({});
   const [sideItems, setSideItems] = useState([]);
   const [tempItems, setTempItems] = useState({
     restaurantID: "empty",
@@ -32,6 +34,9 @@ export const CartContextComponent = (props) => {
   };
 
   const value = {
+    currentItem,
+    setCurrentItem,
+
     showCart,
     setShowCart,
 
@@ -46,6 +51,9 @@ export const CartContextComponent = (props) => {
 
     tempItems,
     setTempItems,
+
+    isItemPopupActive,
+    setIsItemPopupActive,
   };
   return (
     <cartContext.Provider value={value}>{props.children}</cartContext.Provider>
