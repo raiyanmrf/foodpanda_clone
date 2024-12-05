@@ -7,10 +7,8 @@ export const handleTemporaryAdding = (
   restaurantID,
   sideItems
 ) => {
-  const existingFoodItem = findProduct(
-    tempItems,
-    foodItem,
-    foodItem.sides || sideItems
+  const existingFoodItem = tempItems.items.filter(
+    (product) => product._id === foodItem._id
   );
 
   const isSameRestaurant = tempItems?.restaurantID === restaurantID;
@@ -35,6 +33,7 @@ export const handleTemporaryAdding = (
       subtotal: foodItem.price + sideItemsPrice,
     });
   } else if (existingFoodItem.length == 0) {
+    console.log("else if");
     const newItems = [
       ...tempItems.items,
       {
@@ -55,12 +54,13 @@ export const handleTemporaryAdding = (
     });
   } else {
     const updatedItems = tempItems.items.map((product) => {
-      return product._id === foodItem._id &&
-        deepCompare(foodItem.sides || sideItems, product.sides)
+      return product._id === foodItem._id
         ? {
             ...product,
+            price: foodItem.price + sideItemsPrice,
+            total: (foodItem.price + sideItemsPrice) * (product.count + 1),
+            sides: sideItems,
             count: product.count + 1,
-            total: product.total + product.price,
           }
         : product;
     });
@@ -68,7 +68,8 @@ export const handleTemporaryAdding = (
     setTempItems({
       restaurantID,
       items: updatedItems,
-      subtotal: tempItems.subtotal + foodItem.price,
+      subtotal:
+        (foodItem.price + sideItemsPrice) * (existingFoodItem[0].count + 1),
     });
   }
 };
@@ -118,6 +119,7 @@ export const handleMergingToCartItems = (
   if (tempItems.restaurantID === restaurantID) {
     if (cartItems.items.length === 0) {
       console.log("cartItems.items.length === 0");
+
       setCartItems({
         restaurantID,
         items: tempItems.items,
@@ -169,4 +171,19 @@ export const handleMergingToCartItems = (
 
 export const calculateTotalPrice = (arr) => {
   return arr.length > 0 ? arr.reduce((sum, item) => sum + item.price, 0) : 0;
+};
+
+export const checkSelectionLimit = (content) => {
+  const total = sideItems?.filter((item) => item.label === content.label);
+
+  return content.limit <= total.length;
+};
+export const unCheck = (content, option) => {
+  return content.limit <
+    sideItems?.filter((item) => item.label === content.label).length &&
+    sideItems.find((item, index) => item.name === option.name && index === 0)
+    ? false
+    : sideItems.find((item) => item.name === option.name)
+    ? true
+    : false;
 };

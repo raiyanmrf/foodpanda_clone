@@ -1,3 +1,5 @@
+import { calculateTotalPrice } from "./foodItemPopupLogic";
+
 export const handleAddNewProduct = (
   cartItems,
   setCartItems,
@@ -13,14 +15,16 @@ export const handleAddNewProduct = (
   );
 
   const isSameRestaurant = cartItems.restaurantID === restaurantID;
+  const sideItemsPrice = calculateTotalPrice(sideItems);
+
   if (!isSameRestaurant) {
     const newItems = [
       {
         _id: newProduct._id,
         name: newProduct.name,
         image: newProduct.image,
-        price: newProduct.price,
-        total: newProduct.price,
+        price: newProduct.price + sideItemsPrice,
+        total: newProduct.price + sideItemsPrice,
         sides: sideItems,
         count: 1,
       },
@@ -38,8 +42,8 @@ export const handleAddNewProduct = (
         _id: newProduct._id,
         name: newProduct.name,
         image: newProduct.image,
-        price: newProduct.price,
-        total: newProduct.price,
+        price: newProduct.price + sideItemsPrice,
+        total: newProduct.price + sideItemsPrice,
         sides: sideItems,
         count: 1,
       },
@@ -48,7 +52,7 @@ export const handleAddNewProduct = (
     setCartItems({
       restaurantID,
       items: newItems,
-      subtotal: cartItems.subtotal + newProduct.price,
+      subtotal: cartItems.subtotal + newProduct.price + sideItemsPrice,
     });
   } else {
     const updatedItems = cartItems.items.map((product) =>
@@ -104,7 +108,9 @@ export const handleDecreaseItem = (
     existingItem.sides
   );
   if (filteredItems.length === 1) {
+    console.log("filteredItems.length === 1");
     if (filteredItems[0].count === 1) {
+      console.log("filteredItems[0].count === 1");
       const updatedItems = cartItems.items.filter(
         (product) =>
           !(

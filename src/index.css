@@ -710,7 +710,7 @@ li {
 }
 
 .itemPopup {
-  height: calc(100% - 100px);
+  height: calc(100% - 60px);
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -831,17 +831,17 @@ li {
 .itemPopup-options-list:hover {
   background-color: #f7f7f7;
 }
-.itemPopup-options-list p:last-of-type {
+.itemPopup-options-list label:last-of-type {
   margin-left: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.itemPopup-options-list p:last-of-type span:last-of-type {
+.itemPopup-options-list label:last-of-type span:last-of-type {
   text-decoration: line-through;
   color: #707070;
 }
-.itemPopup-options-list:hover label {
+.itemPopup-options-list:hover label:first-of-type {
   box-shadow: inset 2px 2px black, inset -2px -2px #333;
 }
 .itemPopup-options-list input[type=checkbox] {
@@ -851,13 +851,13 @@ li {
   position: absolute;
   opacity: 0;
 }
-.itemPopup-options-list input:checked + label {
+.itemPopup-options-list input:checked + label:first-of-type {
   box-shadow: inset 2px 2px #333, inset -2px -2px #333;
 }
 .itemPopup-options-list input:checked + label svg {
   display: block;
 }
-.itemPopup-options-list label {
+.itemPopup-options-list label:first-of-type {
   display: flex;
   height: 20px;
   width: 20px;
@@ -869,9 +869,16 @@ li {
   justify-content: center;
   align-items: center;
 }
-.itemPopup-options-list label svg {
+.itemPopup-options-list label:first-of-type svg {
   font-size: 33px;
   display: none;
+}
+.itemPopup-options-list-name {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.7;
+  position: static;
 }
 .itemPopup-required {
   background-color: rgb(249, 212, 218);
@@ -938,7 +945,8 @@ li {
   padding: 1em;
   justify-content: space-around;
   position: sticky;
-  bottom: 0;
+  bottom: 7%;
+  background-color: white;
 }
 .itemPopup footer div {
   display: flex;

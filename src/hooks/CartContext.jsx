@@ -22,17 +22,6 @@ export const CartContextComponent = (props) => {
     subtotal: 0,
   });
 
-  const uncheckAll = () => {
-    console.log("Uncheck all triggered");
-    const checkboxes = toUncheckRef.current.querySelectorAll(
-      'input[type="checkbox"]'
-    );
-    console.log(checkboxes);
-    checkboxes.forEach((checkbox) => {
-      checkbox.checked = false;
-    });
-  };
-
   const value = {
     currentItem,
     setCurrentItem,
@@ -45,9 +34,6 @@ export const CartContextComponent = (props) => {
 
     sideItems,
     setSideItems,
-
-    toUncheckRef,
-    uncheckAll,
 
     tempItems,
     setTempItems,

@@ -110,6 +110,7 @@ const ItemPopup = ({ setIsItemPopupActive, foodItem }) => {
 
           <button
             className="btn btn-pink btn-lg"
+            disabled={foodItem.required && sideItems.length === 0}
             onClick={(e) => {
               e.stopPropagation();
 

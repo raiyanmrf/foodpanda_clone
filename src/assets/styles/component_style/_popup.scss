@@ -109,7 +109,7 @@
 }
 
 .itemPopup {
-  height: calc(100% - 100px);
+  height: calc(100% - 60px);
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -240,7 +240,7 @@
         background-color: $light_gray1;
       }
 
-      p:last-of-type {
+      label:last-of-type {
         margin-left: auto;
         display: flex;
         flex-direction: column;
@@ -251,7 +251,7 @@
           color: $dark_gray1;
         }
       }
-      &:hover label {
+      &:hover label:first-of-type {
         box-shadow: inset 2px 2px black, inset -2px -2px #333;
       }
       input[type="checkbox"] {
@@ -262,13 +262,13 @@
         opacity: 0;
       }
 
-      input:checked + label {
+      input:checked + label:first-of-type {
         box-shadow: inset 2px 2px #333, inset -2px -2px #333; // Shows SVG when checkbox is checked
       }
       input:checked + label svg {
         display: block; // Shows SVG when checkbox is checked
       }
-      label {
+      label:first-of-type {
         display: flex;
         height: 20px;
         width: 20px;
@@ -284,6 +284,11 @@
           font-size: 33px;
           display: none;
         }
+      }
+
+      &-name {
+        @include p-9($font-weight: 600, $color: #333);
+        position: static;
       }
     }
   }
@@ -357,7 +362,8 @@
     padding: 1em;
     justify-content: space-around;
     position: sticky;
-    bottom: 0;
+    bottom: 7%;
+    background-color: white;
 
     div {
       display: flex;

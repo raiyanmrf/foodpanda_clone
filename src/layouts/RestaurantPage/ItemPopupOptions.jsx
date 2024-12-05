@@ -3,15 +3,10 @@ import React, { Fragment, useContext } from "react";
 import { FaCheckSquare } from "react-icons/fa";
 import Loading from "../../assets/svg/Loading";
 import { cartContext } from "../../hooks/CartContext";
+import { checkSelectionLimit, unCheck } from "../../utils/foodItemPopupLogic";
 
 export const ItemPopupOptions = ({ foodItem }) => {
-  const { sideItems, setSideItems, toUncheckRef } = useContext(cartContext);
-
-  const handleOptionLimit = (content, option) => {
-    const total = sideItems?.filter((item) => item.label === content.label);
-    const item = sideItems?.filter((item) => item.name === option.name);
-    return content.limit <= total.length && item.length < 1;
-  };
+  const { sideItems, setSideItems } = useContext(cartContext);
 
   const getSideChoices = async () => {
     try {
@@ -27,10 +22,12 @@ export const ItemPopupOptions = ({ foodItem }) => {
       }
 
       return data;
-    } catch (error) {}
+    } catch (error) {
+      console.error("Error Fetching Side Choices", error);
+    }
   };
 
-  const { isError, error, isLoading, data } = useQuery({
+  const { isLoading, data } = useQuery({
     queryKey: ["sideChoices", foodItem.type],
     queryFn: getSideChoices,
   });
@@ -57,53 +54,67 @@ export const ItemPopupOptions = ({ foodItem }) => {
                 )}
                 <mark>{content.required ? "Required" : "Optional"}</mark>
               </article>
-              <ul ref={toUncheckRef}>
+              <ul>
                 {content.items.map((option, index) => {
                   return (
                     <li key={index} className="itemPopup-options-list">
                       <input
-                        disabled={handleOptionLimit(content, option)}
                         type="checkbox"
+                        id={`${index} ${option.name}`}
+                        checked={unCheck(content, option)}
                         value={option.name}
-                        onChange={(e) => {
-                          const query = sideItems.filter(
+                        required={content.required}
+                        onChange={() => {
+                          const isSelected = sideItems.some(
                             (item) => item.name === option.name
                           );
 
-                          if (query.length === 0) {
-                            setSideItems([
-                              ...sideItems,
-                              {
+                          if (!isSelected) {
+                            if (checkSelectionLimit(content)) {
+                              // Replace the first item if the limit is exceeded
+                              const updatedItems = sideItems.slice(1).concat({
                                 name: option.name,
                                 price: option.price,
                                 required: content.required,
                                 label: content.label,
-                              },
-                            ]);
+                              });
+                              console.log("updatedItems", updatedItems);
+                              setSideItems(updatedItems);
+                            } else {
+                              // Add the new item
+                              setSideItems([
+                                ...sideItems,
+                                {
+                                  name: option.name,
+                                  price: option.price,
+                                  required: content.required,
+                                  label: content.label,
+                                },
+                              ]);
+                            }
                           } else {
-                            const filter = sideItems.filter(
+                            // Remove the item if it's unchecked
+                            const updatedItems = sideItems.filter(
                               (item) => item.name !== option.name
                             );
-
-                            setSideItems(filter);
+                            setSideItems(updatedItems);
                           }
                         }}
-                        id={`${index} ${option.name}`}
-                        required={content.required}
                       />
-                      <label htmlFor={`${index} ${option.name}`}>
+                      <label
+                        className="squareBoxLabel"
+                        htmlFor={`${index} ${option.name}`}
+                      >
                         <FaCheckSquare />
                       </label>
-                      {option.image && (
-                        <img
-                          src={option.image}
-                          width={"40px"}
-                          height={"40px"}
-                          alt=""
-                        />
-                      )}
-                      <p>{option.name}</p>
-                      <p>
+
+                      <label
+                        className="itemPopup-options-list-name"
+                        htmlFor={`${index} ${option.name}`}
+                      >
+                        {option.name}
+                      </label>
+                      <label className="itemPopup-options-list-name">
                         <strong className="">
                           {typeof option.price === "number"
                             ? `+Tk ${option.price}`
@@ -117,7 +128,7 @@ export const ItemPopupOptions = ({ foodItem }) => {
                               )}`
                             : ""}
                         </span>
-                      </p>
+                      </label>
                     </li>
                   );
                 })}
