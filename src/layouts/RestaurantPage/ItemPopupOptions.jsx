@@ -3,7 +3,11 @@ import React, { Fragment, useContext } from "react";
 import { FaCheckSquare } from "react-icons/fa";
 import Loading from "../../assets/svg/Loading";
 import { cartContext } from "../../hooks/CartContext";
-import { checkSelectionLimit, unCheck } from "../../utils/foodItemPopupLogic";
+import {
+  checkSelectionLimit,
+  handleOptionChecking,
+  unCheck,
+} from "../../utils/foodItemPopupLogic";
 
 export const ItemPopupOptions = ({ foodItem }) => {
   const { sideItems, setSideItems } = useContext(cartContext);
@@ -61,45 +65,17 @@ export const ItemPopupOptions = ({ foodItem }) => {
                       <input
                         type="checkbox"
                         id={`${index} ${option.name}`}
-                        checked={unCheck(content, option)}
+                        checked={unCheck(content, option, sideItems)}
                         value={option.name}
                         required={content.required}
-                        onChange={() => {
-                          const isSelected = sideItems.some(
-                            (item) => item.name === option.name
-                          );
-
-                          if (!isSelected) {
-                            if (checkSelectionLimit(content)) {
-                              // Replace the first item if the limit is exceeded
-                              const updatedItems = sideItems.slice(1).concat({
-                                name: option.name,
-                                price: option.price,
-                                required: content.required,
-                                label: content.label,
-                              });
-                              console.log("updatedItems", updatedItems);
-                              setSideItems(updatedItems);
-                            } else {
-                              // Add the new item
-                              setSideItems([
-                                ...sideItems,
-                                {
-                                  name: option.name,
-                                  price: option.price,
-                                  required: content.required,
-                                  label: content.label,
-                                },
-                              ]);
-                            }
-                          } else {
-                            // Remove the item if it's unchecked
-                            const updatedItems = sideItems.filter(
-                              (item) => item.name !== option.name
-                            );
-                            setSideItems(updatedItems);
-                          }
-                        }}
+                        onChange={() =>
+                          handleOptionChecking(
+                            sideItems,
+                            setSideItems,
+                            content,
+                            option
+                          )
+                        }
                       />
                       <label
                         className="squareBoxLabel"

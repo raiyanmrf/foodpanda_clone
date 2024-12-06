@@ -173,12 +173,12 @@ export const calculateTotalPrice = (arr) => {
   return arr.length > 0 ? arr.reduce((sum, item) => sum + item.price, 0) : 0;
 };
 
-export const checkSelectionLimit = (content) => {
+export const checkSelectionLimit = (content, sideItems) => {
   const total = sideItems?.filter((item) => item.label === content.label);
 
   return content.limit <= total.length;
 };
-export const unCheck = (content, option) => {
+export const unCheck = (content, option, sideItems) => {
   return content.limit <
     sideItems?.filter((item) => item.label === content.label).length &&
     sideItems.find((item, index) => item.name === option.name && index === 0)
@@ -186,4 +186,42 @@ export const unCheck = (content, option) => {
     : sideItems.find((item) => item.name === option.name)
     ? true
     : false;
+};
+
+export const handleOptionChecking = (
+  sideItems,
+  setSideItems,
+  content,
+  option
+) => {
+  const isSelected = sideItems.some((item) => item.name === option.name);
+
+  if (!isSelected) {
+    if (checkSelectionLimit(content, sideItems)) {
+      // Replace the first item if the limit is exceeded
+      const updatedItems = sideItems.slice(1).concat({
+        name: option.name,
+        price: option.price,
+        required: content.required,
+        label: content.label,
+      });
+      console.log("updatedItems", updatedItems);
+      setSideItems(updatedItems);
+    } else {
+      // Add the new item
+      setSideItems([
+        ...sideItems,
+        {
+          name: option.name,
+          price: option.price,
+          required: content.required,
+          label: content.label,
+        },
+      ]);
+    }
+  } else {
+    // Remove the item if it's unchecked
+    const updatedItems = sideItems.filter((item) => item.name !== option.name);
+    setSideItems(updatedItems);
+  }
 };
