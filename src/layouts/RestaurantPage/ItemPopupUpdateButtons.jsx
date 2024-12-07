@@ -36,6 +36,7 @@ const ItemPopupUpdateButtons = ({ foodItem }) => {
       </button>
       <p>{count ?? "0"}</p>
       <button
+        disabled={foodItem.required && sideItems.length === 0}
         onClick={(e) => {
           e.stopPropagation();
 

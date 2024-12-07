@@ -7,7 +7,6 @@ export const handleAddNewProduct = (
   restaurantID,
   sideItems
 ) => {
-  console.log("sideItems", sideItems);
   const existingProduct = findProduct(
     cartItems,
     newProduct,
@@ -105,8 +104,10 @@ export const handleDecreaseItem = (
   const filteredItems = findProduct(
     cartItems,
     existingItem,
-    existingItem.sides
+    existingItem.sides || []
   );
+
+  console.log("filteredItems", filteredItems);
   if (filteredItems.length === 1) {
     console.log("filteredItems.length === 1");
     if (filteredItems[0].count === 1) {
@@ -115,7 +116,7 @@ export const handleDecreaseItem = (
         (product) =>
           !(
             product._id === existingItem._id &&
-            deepCompare(existingItem.sides, product.sides)
+            deepCompare(existingItem.sides || [], product.sides)
           )
       );
 
@@ -127,7 +128,7 @@ export const handleDecreaseItem = (
     } else {
       const updatedItems = cartItems.items.map((product) =>
         product._id === existingItem._id &&
-        deepCompare(existingItem.sides, product.sides)
+        deepCompare(existingItem.sides || [], product.sides)
           ? {
               ...product,
               total: product.total - product.price,
@@ -146,6 +147,7 @@ export const handleDecreaseItem = (
 };
 
 export const deepCompare = (arr1, arr2) => {
+  console.log(arr1, arr2);
   if (arr1.length != arr2.length) return false;
   if (arr1.length === 0) return true;
   const sortArray = (arr) => {
@@ -163,10 +165,67 @@ export const getSimilarProducts = (cartItems, newProduct) => {
 };
 
 export const findProduct = (cartItems, newProduct, sideItems) => {
-  // console.log("tempItems", cartItems);
-  // console.log("existingFoodItems", newProduct);
-  // console.log("existingFoodItems.sides", sideItems);
+  console.log("cartItems", cartItems);
+  console.log("existingItems", newProduct);
+  console.log("existingFoodItems.sides", sideItems);
   return getSimilarProducts(cartItems, newProduct).filter((product) =>
     deepCompare(sideItems, product.sides)
   );
+};
+
+export const handleShallowDecreasing = (
+  cartItems,
+  setCartItems,
+  existingItem,
+  restaurantID
+) => {
+  console.log("handleShallowDecreasing");
+  const filteredItems = cartItems.items.filter(
+    (item) => item._id === existingItem._id
+  );
+  console.log("filteredItems", filteredItems);
+
+  if (filteredItems.length > 1) {
+    if (filteredItems[0].count > 1) {
+      const updatedItems = cartItems.items.map((product, index) => {
+        return index === 0
+          ? {
+              ...product,
+              total: product.total - product.price,
+              count: product.count - 1,
+            }
+          : product;
+      });
+
+      setCartItems({
+        restaurantID,
+        items: updatedItems,
+        subtotal: cartItems.subtotal - existingItem.price,
+      });
+    } else if (filteredItems[0].count === 1) {
+      const updatedItems = cartItems.items.filter(
+        (product, index) => index !== 0
+      );
+
+      setCartItems({
+        restaurantID,
+        items: updatedItems,
+        subtotal: cartItems.subtotal - existingItem.price,
+      });
+    }
+  } else {
+    const updatedItems = cartItems.items.filter(
+      (product) => product._id !== existingItem._id
+    );
+
+    setCartItems({
+      restaurantID,
+      items: updatedItems,
+      subtotal: cartItems.subtotal - existingItem.price,
+    });
+  }
+};
+
+export const getTotalCartItemsCount = (cartItems) => {
+  return cartItems.items.reduce((sum, item) => sum + item.count, 0);
 };

@@ -7,6 +7,7 @@ import {
   findProduct,
   getSimilarProducts,
   handleAddNewProduct,
+  handleShallowDecreasing,
 } from "../../utils/cartLogic";
 import { MdOutlineDelete } from "react-icons/md";
 
@@ -49,9 +50,9 @@ const SpecialCartBtns = ({ item }) => {
 
   const handleRemove = (e) => {
     e.stopPropagation();
-    const query = findProduct(cartItems, item, sideItems);
-    handleDecreaseItem(...args);
-    query[0]?.count === 1 ? setIsExpanded(false) : setIsExpanded(true);
+    console.log("handleRemove");
+
+    handleShallowDecreasing(cartItems, setCartItems, item, restaurantID);
   };
 
   const product = getSimilarProducts(cartItems, item);
@@ -73,9 +74,9 @@ const SpecialCartBtns = ({ item }) => {
               e.stopPropagation();
               setIsExpanded(true);
             }}
-            style={{ backgroundColor: "black" }}
+            style={{ backgroundColor: "darkgray" }}
           >
-            <p style={{ color: "white" }} className="specialCartBtns-count">
+            <p style={{ color: "black" }} className="specialCartBtns-count">
               {count}
             </p>
           </button>

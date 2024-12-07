@@ -19,7 +19,10 @@ const MenuDisplay = ({ links, foodItems }) => {
       <section className="foodMenu-cuisines">
         {links.map((link, i) => (
           <div className="foodMenu-single-cuisine" key={i}>
-            <div className="foodMenu-title" id={link.replace(/\s+/g, "")}>
+            <div
+              className="foodMenu-title"
+              id={link.replace(/\s+/g, "").toLowerCase()}
+            >
               <h3>{link}</h3>
               {link === "Popular" && <p>Most ordered right now</p>}
             </div>
@@ -36,6 +39,7 @@ const MenuDisplay = ({ links, foodItems }) => {
                 .filter((item) => item.tag === link)
                 .map((item, index) => (
                   <article
+                    id={`${item.name.replace(/\s+/g, "").toLowerCase()}`}
                     className="foodMenu-card"
                     key={index}
                     onClick={(e) => {

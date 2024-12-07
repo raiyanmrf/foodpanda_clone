@@ -1,4 +1,5 @@
 import { FaRegUser } from "react-icons/fa6";
+import { FaChevronDown } from "react-icons/fa";
 import { locationNavList, lowerNavList } from "../assets/data/navData";
 import {
   bagIcon,
@@ -15,10 +16,15 @@ import useIsActive from "../hooks/useIsActive";
 import Button from "./Button";
 import SignIn from "./SignIn";
 import NavbarMenu from "./NavbarMenu";
-
+import { getTotalCartItemsCount } from "../utils/cartLogic";
+import { useContext } from "react";
+import { cartContext } from "../hooks/CartContext";
+import { IoBagOutline } from "react-icons/io5";
+import { FaRegHeart } from "react-icons/fa6";
 //
 
 const Navbar = () => {
+  const { cartItems } = useContext(cartContext);
   const [isLangActive, handleIsLangActive] = useIsActive();
   const [isMenuActive, handleIsMenuActive] = useIsActive();
   const [isSignActive, handleIsSignActive] = useIsActive();
@@ -27,16 +33,10 @@ const Navbar = () => {
     <nav className="nav">
       <section className="nav-bar">
         <div className="nav-bar-menu" onClick={handleIsSignActive}>
-          <img src={profileIcon} height="24px" width="24px" alt="profile" />
-
-          {/* <FaRegUser size={`24px`} /> */}
+          <FaRegUser />
 
           <h4 className="nav-bar-menu-username">Raiyan</h4>
-          <img
-            src={dropIcon}
-            className="nav-bar-menu-downarrow pink-icon"
-            alt="drop"
-          />
+          <FaChevronDown className="nav-bar-menu-downarrow pink-icon" />
         </div>
 
         <div className="nav-bar-logo">
@@ -98,11 +98,11 @@ const Navbar = () => {
         </div>
 
         <div className="nav-bar-cart">
-          <img src={favIcon} height="24px" width="24px" alt="cart" />
+          <FaRegHeart />
         </div>
 
         <div className="nav-bar-cart">
-          <img src={bagIcon} height="24px" width="24px" alt="cart" />
+          <IoBagOutline />
         </div>
       </section>
 
