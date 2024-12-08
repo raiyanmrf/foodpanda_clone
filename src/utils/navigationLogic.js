@@ -1,4 +1,4 @@
-export const handleSearching = (inputValue, setSearchedItems) => {
+export const handleSearching = (inputValue, foodItems, setSearchedItems) => {
   const value = inputValue.trim();
   if (!value) {
     setSearchedItems([]); // Clear the search results if input is empty

@@ -49,7 +49,7 @@ const MenuNavbar = ({ foodItems, links }) => {
           placeholder="Search in Menu"
           type="text"
           onChange={(e) => {
-            handleSearching(e.target.value, setSearchedItems);
+            handleSearching(e.target.value, foodItems, setSearchedItems);
           }}
         />
         {searchedItems.length > 0 && (
