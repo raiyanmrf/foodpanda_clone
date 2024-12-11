@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { LuLocateFixed } from "react-icons/lu";
+import { RxCross1 } from "react-icons/rx";
 import usePlacesAutocomplete from "use-places-autocomplete";
 
 const LocationSearch = () => {
-  const [searchedItems, setSearchedItems] = useState(null);
+  const [hideAutoComplete, setHideAutoComplete] = useState(true);
 
   const {
     ready,
@@ -13,27 +14,44 @@ const LocationSearch = () => {
     clearSuggestions,
   } = usePlacesAutocomplete();
 
+  console.log("ready", ready);
+  console.log("value", value);
+  console.log("status", status);
+  console.log("data", data);
   return (
     <form action="" className="locationForm">
       <div className="locationForm-input">
         <input
           value={value}
           onChange={(e) => {
+            setHideAutoComplete(false);
             setValue(e.target.value);
           }}
+          required
           name="locateInput"
           placeholder="Street and Postal Code"
           type="text"
           disabled={!ready}
         />
-        <label htmlFor="locateInput" className="placeholder">
+        <a htmlFor="locateInput" className="placeholder">
           Your street and street number
-        </label>
+        </a>
 
-        <button>
-          <LuLocateFixed size={"20px"} className="pink-icon" />
-          <span>Locate me</span>
-        </button>
+        {data.length > 0 ? (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setValue("");
+            }}
+          >
+            <RxCross1 size={"20px"} />
+          </button>
+        ) : (
+          <button>
+            <LuLocateFixed size={"20px"} className="pink-icon" />
+            <span>Locate me</span>
+          </button>
+        )}
       </div>
 
       <button
@@ -43,14 +61,21 @@ const LocationSearch = () => {
         Find Food
       </button>
 
-      <ul className="location-autocomplete">
-        {status === "Ok" &&
-          data.map((place_id, description) => (
-            <li key={place_id} value={description}>
-              {description}
+      {status === "OK" && !hideAutoComplete && (
+        <ul className="locationForm-autocomplete">
+          {data.map((item, index) => (
+            <li
+              onClick={() => {
+                setValue(item.description);
+                setHideAutoComplete(true);
+              }}
+              key={item.place_id}
+            >
+              {item.description}
             </li>
           ))}
-      </ul>
+        </ul>
+      )}
     </form>
   );
 };

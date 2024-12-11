@@ -2224,7 +2224,7 @@ footer .line {
   font-weight: 500;
 }
 .locationForm-input input:focus + .placeholder,
-.locationForm-input input :not(:placeholder-shown) + .placeholder, .locationForm-input input:hover + .placeholder {
+.locationForm-input input :not(:placeholder-shown) + .placeholder, .locationForm-input input:hover + .placeholder, .locationForm-input input:valid + .placeholder {
   font-size: 0.65em;
   bottom: 4em;
   left: 1em;
@@ -2257,10 +2257,20 @@ footer .line {
   transform: scale(1.01) !important;
 }
 .locationForm-autocomplete {
-  position: relative;
-  top: 5em;
+  position: absolute;
+  top: 10em;
   background-color: white;
-  padding: 0.3em;
+  padding: 0.5em;
+  font-size: 0.9em;
+  font-weight: 500;
+  z-index: 1000;
+  box-shadow: 0 0 6px gray;
+}
+.locationForm-autocomplete li {
+  margin-bottom: 0.4em;
+}
+.locationForm-autocomplete li:hover {
+  background-color: pink;
 }
 
 @media (min-width: 964px) {
@@ -2276,6 +2286,9 @@ footer .line {
   .locationForm-findBtn {
     max-width: -moz-fit-content;
     max-width: fit-content;
+  }
+  .locationForm-autocomplete {
+    top: 5em;
   }
 }
 .restaurant-profile {

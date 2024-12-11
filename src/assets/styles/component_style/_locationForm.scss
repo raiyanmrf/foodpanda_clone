@@ -26,7 +26,8 @@
 
       &:focus + .placeholder,
       :not(:placeholder-shown) + .placeholder,
-      &:hover + .placeholder {
+      &:hover + .placeholder,
+      &:valid + .placeholder {
         font-size: 0.65em;
         bottom: 4em;
         left: 1em;
@@ -66,10 +67,22 @@
   }
 
   &-autocomplete {
-    position: relative;
-    top: 5em;
+    position: absolute;
+    top: 10em;
     background-color: white;
-    padding: 0.3em;
+    padding: 0.5em;
+    font-size: 0.9em;
+    font-weight: 500;
+    z-index: 1000;
+    box-shadow: 0 0 6px gray;
+
+    li {
+      margin-bottom: 0.4em;
+
+      &:hover {
+        background-color: pink;
+      }
+    }
   }
 }
 
@@ -86,6 +99,10 @@
 
     &-findBtn {
       max-width: fit-content;
+    }
+
+    &-autocomplete {
+      top: 5em;
     }
   }
 }
