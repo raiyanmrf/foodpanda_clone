@@ -19,12 +19,14 @@ const AllRestaurants = ({ data }) => {
         {data.map((restaurant, index) => {
           const { _id, name, cuisine, ratings, reviews, image, offer } =
             restaurant;
+
+          const restaurantName = name.replace(/\s/g, "-").replace(/--/g, "-");
           const status = isTheRestaurantOpen(cuisine);
 
           return (
             <div
               key={index}
-              onClick={() => navigate(`/restaurant/${_id}`)}
+              onClick={() => navigate(`/${restaurantName}/${_id}`)}
               className="restaurant-grid-items"
             >
               <img src={image ?? altImage} alt={name} width="596px" />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BreadCrumbs from "../../components/BreadCrumbs";
 import {
   deliveryIcon,
@@ -9,8 +9,11 @@ import {
   shopIcon,
   starIcon,
 } from "../../assets/svg";
+import { MdHelpOutline } from "react-icons/md";
 import Cuisines from "../../components/Cuisines";
 import { useLocation } from "react-router-dom";
+import GoogleMap from "../../components/GoogleMap";
+import RestaurantMoreInfo from "./RestaurantMoreInfo";
 
 const RestaurantProfile = ({ restaurant }) => {
   const {
@@ -27,6 +30,8 @@ const RestaurantProfile = ({ restaurant }) => {
     _id,
   } = restaurant;
   const items = [`${cuisine}`, "Beverage", "Cakes", "Dessert"];
+
+  const [isRestaurantInfoPopup, setIsRestaurantInfoPopup] = useState(false);
   return (
     <section className="restaurant-profile">
       <BreadCrumbs linkArray={["Homepage", `${city}`, `${name}`]} />
@@ -65,12 +70,17 @@ const RestaurantProfile = ({ restaurant }) => {
         </div>
 
         <div className="restaurant-profile-infoBtn">
-          <button className="btn btn-white btn-md btn-moderate btn-flex">
-            <img src={helpcenterIcon} alt="i" />
+          <button
+            className="btn btn-white btn-md btn-moderate btn-flex"
+            onClick={() => setIsRestaurantInfoPopup(true)}
+          >
+            <MdHelpOutline />
             More Info
           </button>
         </div>
       </div>
+
+      {isRestaurantInfoPopup && <RestaurantMoreInfo restaurant={restaurant} />}
     </section>
   );
 };

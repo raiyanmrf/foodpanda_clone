@@ -1,9 +1,8 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import {
   MdOutlineArrowBackIos,
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
-import { searchIcon } from "../../assets/svg";
 import useDetectMouse from "../../hooks/useDetectMouse";
 import useDetectOverFlow from "../../hooks/useDetectOverFlow";
 import useSlide from "../../hooks/useSlide";

@@ -2,15 +2,11 @@ import { FaRegUser } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa";
 import { locationNavList, lowerNavList } from "../assets/data/navData";
 import {
-  bagIcon,
   dropIcon,
-  favIcon,
   foodpandatext,
   globeIcon,
-  locationmarkIcon,
   oksignIcon,
   pandaIcon,
-  profileIcon,
 } from "../assets/svg";
 import useIsActive from "../hooks/useIsActive";
 import Button from "./Button";
@@ -21,6 +17,7 @@ import { useContext } from "react";
 import { cartContext } from "../hooks/CartContext";
 import { IoBagOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 //
 
 const Navbar = () => {
@@ -28,6 +25,8 @@ const Navbar = () => {
   const [isLangActive, handleIsLangActive] = useIsActive();
   const [isMenuActive, handleIsMenuActive] = useIsActive();
   const [isSignActive, handleIsSignActive] = useIsActive();
+
+  const navigate = useNavigate();
 
   return (
     <nav className="nav">
@@ -103,6 +102,9 @@ const Navbar = () => {
 
         <div className="nav-bar-cart">
           <IoBagOutline />
+          <span className="nav-bar-cart-count">
+            {getTotalCartItemsCount(cartItems) || ""}
+          </span>
         </div>
       </section>
 

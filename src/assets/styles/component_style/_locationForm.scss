@@ -1,0 +1,91 @@
+.locationForm {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+
+  &-input {
+    position: relative;
+    border-radius: 9px;
+    flex-grow: 1;
+    display: flex;
+    box-shadow: 0px 0px 2px 1px #cbc3c3;
+
+    input {
+      flex-grow: 1;
+      margin-inline-end: auto;
+      border: none;
+      border-radius: 9px 0px 0px 9px;
+      outline: none;
+      padding-inline: 1em;
+      font-size: 1em;
+      font-weight: lighter;
+      font-family: "Open Sans";
+
+      &:focus + .placeholder,
+      :not(:placeholder-shown) + .placeholder,
+      &:hover + .placeholder {
+        font-size: 0.65em;
+        bottom: 4em;
+        left: 1em;
+        line-height: 1.5;
+        background-color: rgba(255, 255, 255, 0.634);
+        font-weight: 500;
+      }
+    }
+
+    button {
+      background: white;
+      border: none;
+      display: flex;
+      gap: 0.5em;
+      align-items: center;
+      padding: 0.8em;
+      font-size: 0.9em;
+      font-weight: 550;
+      color: #333;
+      border-radius: 0px 9px 9px 0px;
+      font-family: "Open Sans";
+      position: relative;
+      z-index: 1;
+
+      &:hover {
+        color: #c21760;
+      }
+    }
+  }
+
+  &-findBtn {
+    flex-grow: 1;
+
+    &:hover::after {
+      transform: scale(1.01) !important;
+    }
+  }
+
+  &-autocomplete {
+    position: relative;
+    top: 5em;
+    background-color: white;
+    padding: 0.3em;
+  }
+}
+
+@media (min-width: 964px) {
+  .locationForm {
+    background: transparent;
+    padding: 0em;
+    border-radius: 9px;
+    bottom: 30%;
+    flex-grow: 1;
+    display: flex;
+
+    flex-direction: row;
+
+    &-findBtn {
+      max-width: fit-content;
+    }
+  }
+}

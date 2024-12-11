@@ -978,6 +978,23 @@ li {
     max-width: 400px;
   }
 }
+.restaurantInfoPopup {
+  background: white;
+  padding: 0.5em;
+  overflow: auto;
+  height: 80%;
+  min-height: 500px;
+}
+.restaurantInfoPopup header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(185, 181, 181);
+}
+.restaurantInfoPopup article p {
+  font-weight: 500;
+}
+
 .nav {
   box-shadow: 1px -5px 20px 0px #9f8a8a;
   display: flex;
@@ -2172,6 +2189,95 @@ footer .line {
   border: none;
 }
 
+.locationForm {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+.locationForm-input {
+  position: relative;
+  border-radius: 9px;
+  flex-grow: 1;
+  display: flex;
+  box-shadow: 0px 0px 2px 1px #cbc3c3;
+}
+.locationForm-input input {
+  flex-grow: 1;
+  margin-inline-end: auto;
+  border: none;
+  border-radius: 9px 0px 0px 9px;
+  outline: none;
+  padding-inline: 1em;
+  font-size: 1em;
+  font-weight: lighter;
+  font-family: "Open Sans";
+}
+.locationForm-input input :not(:-moz-placeholder-shown) + .placeholder {
+  font-size: 0.65em;
+  bottom: 4em;
+  left: 1em;
+  line-height: 1.5;
+  background-color: rgba(255, 255, 255, 0.634);
+  font-weight: 500;
+}
+.locationForm-input input:focus + .placeholder,
+.locationForm-input input :not(:placeholder-shown) + .placeholder, .locationForm-input input:hover + .placeholder {
+  font-size: 0.65em;
+  bottom: 4em;
+  left: 1em;
+  line-height: 1.5;
+  background-color: rgba(255, 255, 255, 0.634);
+  font-weight: 500;
+}
+.locationForm-input button {
+  background: white;
+  border: none;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  padding: 0.8em;
+  font-size: 0.9em;
+  font-weight: 550;
+  color: #333;
+  border-radius: 0px 9px 9px 0px;
+  font-family: "Open Sans";
+  position: relative;
+  z-index: 1;
+}
+.locationForm-input button:hover {
+  color: #c21760;
+}
+.locationForm-findBtn {
+  flex-grow: 1;
+}
+.locationForm-findBtn:hover::after {
+  transform: scale(1.01) !important;
+}
+.locationForm-autocomplete {
+  position: relative;
+  top: 5em;
+  background-color: white;
+  padding: 0.3em;
+}
+
+@media (min-width: 964px) {
+  .locationForm {
+    background: transparent;
+    padding: 0em;
+    border-radius: 9px;
+    bottom: 30%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+  }
+  .locationForm-findBtn {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+}
 .restaurant-profile {
   margin-top: 2em;
   padding-inline: 1em;
@@ -2692,72 +2798,6 @@ footer .line {
   position: absolute;
   bottom: -6em;
 }
-.hero-location-form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 1em;
-  padding: 1em;
-}
-.hero-location-form-locateMe {
-  position: relative;
-  border-radius: 9px;
-  flex-grow: 1;
-  display: flex;
-  box-shadow: 0px 0px 2px 1px #cbc3c3;
-}
-.hero-location-form-locateMe input {
-  flex-grow: 1;
-  margin-inline-end: auto;
-  border: none;
-  border-radius: 9px 0px 0px 9px;
-  outline: none;
-  padding-inline: 1em;
-  font-size: 1em;
-  font-weight: lighter;
-  font-family: "Open Sans";
-}
-.hero-location-form-locateMe input :not(:-moz-placeholder-shown) + .placeholder {
-  font-size: 0.65em;
-  bottom: 4em;
-  left: 1em;
-  line-height: 1.5;
-  background-color: rgba(255, 255, 255, 0.634);
-  font-weight: 500;
-}
-.hero-location-form-locateMe input:focus + .placeholder,
-.hero-location-form-locateMe input :not(:placeholder-shown) + .placeholder, .hero-location-form-locateMe input:hover + .placeholder {
-  font-size: 0.65em;
-  bottom: 4em;
-  left: 1em;
-  line-height: 1.5;
-  background-color: rgba(255, 255, 255, 0.634);
-  font-weight: 500;
-}
-.hero-location-form-locateMe button {
-  background: white;
-  border: none;
-  display: flex;
-  gap: 0.5em;
-  align-items: center;
-  padding: 0.8em;
-  font-size: 0.9em;
-  font-weight: 550;
-  color: #333;
-  border-radius: 0px 9px 9px 0px;
-  font-family: "Open Sans";
-  position: relative;
-  z-index: 1;
-}
-.hero-location-form-locateMe button:hover {
-  color: #c21760;
-}
-.hero-location-find-btn {
-  flex-grow: 1;
-}
-.hero-location-find-btn:hover::after {
-  transform: scale(1.01) !important;
-}
 
 @media (max-width: 400px) {
   .hero-title {
@@ -2803,19 +2843,12 @@ footer .line {
     margin-top: 2em;
   }
   .hero-location {
-    background: white;
-    padding: 0em;
-    max-width: 50%;
+    background-color: transparent;
+    width: 50%;
     border-radius: 9px;
     bottom: 30%;
     left: 1em;
-  }
-  .hero-location-form {
-    flex-direction: row;
-    gap: 0.7em;
-  }
-  .hero-location-find-btn {
-    flex-grow: 0;
+    display: flex;
   }
 }
 @media (min-width: 964px) {

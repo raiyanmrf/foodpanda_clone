@@ -1,13 +1,16 @@
-import HeroSearch from "../../components/HeroSearch";
+import LocationSearch from "../../components/LocationSearch";
+import { useMapContext } from "../../components/MapContextComponent";
+import { handleMapLibrary } from "../../utils/mapLogic";
 import Banner from "../CityPage/Banner";
 
 const Hero = () => {
+  const { isLoaded } = useMapContext();
   return (
     <Banner
       value={`hero`}
       title={`It's the food and groceries you love, delivered`}
     >
-      <HeroSearch />
+      <div className="hero-location">{isLoaded && <LocationSearch />} </div>
     </Banner>
   );
 };

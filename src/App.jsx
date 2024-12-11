@@ -25,7 +25,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/city/:city" element={<City />} />
             <Route
-              path="/restaurant/:restaurantID"
+              path="/:restaurant/:restaurantID"
               element={<RestaurantPage />}
             />
             <Route path="/nearby" element={<RestaurantsNearby />} />

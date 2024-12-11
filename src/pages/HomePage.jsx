@@ -5,6 +5,7 @@ import ExtraDetail from "../components/ExtraDetail";
 import AppAd from "../layouts/LandingPage/AppAd";
 import Cities from "../layouts/LandingPage/Cities";
 import Hero from "../layouts/LandingPage/Hero";
+import GoogleMap from "../components/GoogleMap";
 
 const HomePage = () => {
   return (
