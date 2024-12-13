@@ -66,8 +66,6 @@ const RestaurantPage = () => {
         <>
           <RestaurantProfile restaurant={restaurantData[0]} />
 
-          <LocationSearch />
-
           <Slider title="Available Deals">
             {cardData &&
               cardData.map((item, index) => <Cards key={index} item={item} />)}

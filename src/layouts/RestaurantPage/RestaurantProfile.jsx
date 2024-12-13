@@ -80,7 +80,12 @@ const RestaurantProfile = ({ restaurant }) => {
         </div>
       </div>
 
-      {isRestaurantInfoPopup && <RestaurantMoreInfo restaurant={restaurant} />}
+      {isRestaurantInfoPopup && (
+        <RestaurantMoreInfo
+          setIsRestaurantInfoPopup={setIsRestaurantInfoPopup}
+          restaurant={restaurant}
+        />
+      )}
     </section>
   );
 };
