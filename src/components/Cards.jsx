@@ -4,9 +4,8 @@ import CardPopup from "./CardPopup";
 import { cardOfferDetails } from "../assets/data/cardData";
 import useIsActive from "../hooks/useIsActive";
 
-const Cards = React.forwardRef(({ item }) => {
+const Cards = ({ item }) => {
   const [isPopupActive, handleIsPopupActive] = useIsActive();
-  const [isTermsActive, handleIsTermsActive] = useIsActive();
 
   return (
     <section className={`card ${item.type}`} onClick={handleIsPopupActive}>
@@ -55,12 +54,10 @@ const Cards = React.forwardRef(({ item }) => {
           key={item.type}
           item={cardOfferDetails[item.type]}
           handleIsPopupActive={handleIsPopupActive}
-          isTermsActive={isTermsActive}
-          handleIsTermsActive={handleIsTermsActive}
         />
       )}
     </section>
   );
-});
+};
 
 export default Cards;

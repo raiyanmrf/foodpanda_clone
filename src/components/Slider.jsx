@@ -20,14 +20,14 @@ const Slider = ({ children, title }) => {
 
   const [isOverFlowed, containerRef] = useDetectOverFlow();
   return (
-    <section className="slideExp" ref={containerRef}>
+    <section className="slide" ref={containerRef}>
       <h2>{title}</h2>
-      <ul className="contentRef" ref={scrollRef}>
+      <ul className="contentRef slide-ul" ref={scrollRef}>
         {children}
       </ul>
 
       {isMouse && isOverFlowed && (
-        <div>
+        <div className="slide-btns">
           <button disabled={disableLeftButton} onClick={slideLeft}>
             <MdOutlineArrowBackIos />
           </button>

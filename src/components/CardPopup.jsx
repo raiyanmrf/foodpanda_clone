@@ -2,14 +2,7 @@ import React from "react";
 import { cancelIcon, dropIcon } from "../assets/svg/index";
 import { RxCross1 } from "react-icons/rx";
 
-const CardPopup = ({
-  item,
-  isTermsActive,
-  handleIsTermsActive,
-  handleIsPopupActive,
-}) => {
-  console.log(isTermsActive);
-
+const CardPopup = ({ item, handleIsPopupActive }) => {
   return (
     <section className="popup-container">
       <div className="cardPopup">
@@ -33,27 +26,17 @@ const CardPopup = ({
 
         <div className="cardPopup-description">
           {item.offer.map((item, index) => (
-            <p key={index}>{item}</p>
+            <li key={index}>{item}</li>
           ))}
-          <button
-            onClick={(e) => {
-              e.stopPropagation(); // stop popup close when clicking on this button
-              handleIsTermsActive();
-            }}
-            className="btn btn-white btn-md btn-moderate btn-drop"
-          >
-            Terms & Conditions <img src={dropIcon} alt="^" />
-          </button>
 
-          {isTermsActive && (
+          <details className="c" onClick={(e) => e.stopPropagation()}>
+            <summary>Terms & Conditions</summary>
             <ul className="cardPopup-dropdown">
-              {item.terms.map((item, index) => (
-                <li key={index}>
-                  <a href="">{item}</a>
-                </li>
+              {item.terms.map((term, index) => (
+                <li key={index}>{term}</li>
               ))}
             </ul>
-          )}
+          </details>
         </div>
         {item.type === "pro" && (
           <div className="cardPopup-end">

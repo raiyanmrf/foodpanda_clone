@@ -1,7 +1,7 @@
-.slideExp {
+.slide {
   margin-bottom: 5em;
   padding-inline: 0.5em;
-  ul {
+  &-ul {
     display: flex;
     max-width: 100vw;
     gap: 1em;
@@ -14,7 +14,20 @@
       display: none; /* Chrome/Safari/Edge */
     }
   }
+  &-btns {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1em;
+    button {
+      border: none;
+      padding: 0.8em;
+      @include psuedo($bg: white, $border: 1px solid);
+    }
 
+    button:disabled {
+      visibility: hidden;
+    }
+  }
   .fav-cuisines {
     height: 150px;
     min-width: 110px;
@@ -132,20 +145,6 @@
           filter: drop-shadow(0px -2px #45907062);
         }
       }
-    }
-  }
-  div {
-    display: flex;
-    justify-content: space-between;
-    padding-inline: 1em;
-    button {
-      border: none;
-      padding: 0.8em;
-      @include psuedo($bg: white, $border: 1px solid);
-    }
-
-    button:disabled {
-      visibility: hidden;
     }
   }
 }
