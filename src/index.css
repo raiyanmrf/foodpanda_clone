@@ -630,85 +630,6 @@ li {
   }
 }
 
-.card-popup-content {
-  background-color: white;
-  position: relative;
-  padding: 1em 1em;
-  border-radius: 9px;
-  width: 100%;
-  overflow: scroll;
-  overflow-x: hidden;
-  scrollbar-width: none;
-}
-.card-popup-content > * + * {
-  margin-top: 1.7em;
-}
-.card-popup-content h2 {
-  font-size: 1.2em;
-}
-.card-popup-content h1 {
-  font-size: 2em;
-}
-@media (min-width: 530px) and (max-width: 764px) {
-  .card-popup-content {
-    max-width: 430px;
-    max-height: 80%;
-    padding: 1.3em 1.5em;
-  }
-}
-@media (min-width: 765px) {
-  .card-popup-content {
-    max-width: 550px;
-    max-height: 80%;
-    padding: 1.3em 1.5em;
-  }
-}
-.card-popup-title {
-  display: flex;
-  gap: 0.7em;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.card-popup-title-icon {
-  width: -moz-fit-content;
-  width: fit-content;
-  top: 0;
-}
-.card-popup-description {
-  font-size: 0.9em;
-  font-weight: 500;
-  color: #333;
-}
-.card-popup-description > * + * {
-  margin-top: 1em;
-}
-.card-popup-description p,
-.card-popup-description button {
-  padding-inline: 0.1em;
-}
-.card-popup-description button {
-  display: flex;
-  align-items: center;
-  gap: 0.3em;
-  font-weight: 650;
-}
-.card-popup-dropdown {
-  padding: 0.5em 1.9em;
-  transition: 0.4s ease;
-}
-.card-popup-dropdown li {
-  list-style-type: initial;
-}
-.card-popup-end {
-  display: flex;
-  border-top: 1px solid;
-  padding: 0.5em 1em;
-  gap: 1em;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-}
-
 .itemPopup {
   height: calc(100% - 60px);
   position: relative;
@@ -993,6 +914,23 @@ li {
 }
 .restaurantInfoPopup article p {
   font-weight: 500;
+}
+
+.locationPopup {
+  background-color: white;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  min-height: 500px;
+  min-width: 400px;
+}
+.locationPopup-autocomplete {
+  top: 20em !important;
+}
+.locationPopup li {
+  white-space: wrap;
+  max-width: 98%;
 }
 
 .nav {
@@ -3192,6 +3130,116 @@ footer .line {
     grid-template-columns: repeat(3, 1fr);
     padding: 1em min(5%, 5em);
     place-content: center;
+  }
+}
+.cardPopup {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: relative;
+  padding: 1em 1em;
+  border-radius: 9px;
+  width: 100%;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+.cardPopup > * + * {
+  margin-top: 1.7em;
+}
+.cardPopup h2 {
+  font-size: 1.2em;
+}
+.cardPopup h1 {
+  font-size: 2em;
+}
+.cardPopup-cross {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 0;
+  right: 1em;
+  top: 0em;
+}
+.cardPopup-cross::after {
+  content: "";
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: absolute;
+  left: 8px;
+  z-index: -1;
+  transition: 0.3s;
+  border: 1px solid gray;
+}
+.cardPopup-cross:hover::after {
+  transform: scale(1.2);
+}
+.cardPopup-title {
+  display: flex;
+  gap: 0.7em;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cardPopup-title-icon {
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 0;
+}
+.cardPopup-description {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+.cardPopup-description > * + * {
+  margin-top: 1em;
+}
+.cardPopup-description p,
+.cardPopup-description button {
+  padding-inline: 0.1em;
+}
+.cardPopup-description button {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  font-weight: 650;
+}
+.cardPopup-dropdown {
+  padding: 0.5em 1.9em;
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.cardPopup-dropdown li {
+  list-style-type: initial;
+}
+.cardPopup-end {
+  display: flex;
+  border-top: 1px solid;
+  padding: 0.5em 1em;
+  gap: 1em;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 530px) and (max-width: 764px) {
+  .cardPopup {
+    max-width: 430px;
+    max-height: 80%;
+    padding: 1.3em 1.5em;
+  }
+}
+@media (min-width: 765px) {
+  .cardPopup {
+    max-width: 550px;
+    max-height: 80%;
+    padding: 1.3em 1.5em;
   }
 }
 @font-face {

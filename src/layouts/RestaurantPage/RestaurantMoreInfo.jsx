@@ -16,7 +16,7 @@ const RestaurantMoreInfo = ({ setIsRestaurantInfoPopup, restaurant }) => {
         </header>
 
         <article>
-          <GoogleMap lat={restaurant.lat} lng={restaurant.long} />
+          <GoogleMap />
           <p>{status}</p>
           <p>{restaurant.address}</p>
         </article>

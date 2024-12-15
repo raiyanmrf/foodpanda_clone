@@ -1,5 +1,6 @@
 import React from "react";
 import { cancelIcon, dropIcon } from "../assets/svg/index";
+import { RxCross1 } from "react-icons/rx";
 
 const CardPopup = ({
   item,
@@ -11,15 +12,15 @@ const CardPopup = ({
 
   return (
     <section className="popup-container">
-      <div className="card-popup-content">
+      <div className="cardPopup">
         <h2>Offer Details</h2>
-        <div onClick={handleIsPopupActive} className="signin-cancel">
-          <img src={cancelIcon} alt="X" />
+        <div onClick={handleIsPopupActive} className="cardPopup-cross">
+          <RxCross1 />
         </div>
 
-        <div className="card-popup-title">
+        <div className="cardPopup-title">
           {item.type === "pro" ? (
-            <div className="pro-header-icon card-popup-title-icon">
+            <div className="pro-header-icon cardPopup-title-icon">
               <img src={item.icon} alt="pro" />
               <span>PRO</span>
             </div>
@@ -30,7 +31,7 @@ const CardPopup = ({
           <h1>15% off ৳50</h1>
         </div>
 
-        <div className="card-popup-description">
+        <div className="cardPopup-description">
           {item.offer.map((item, index) => (
             <p key={index}>{item}</p>
           ))}
@@ -45,7 +46,7 @@ const CardPopup = ({
           </button>
 
           {isTermsActive && (
-            <ul className="card-popup-dropdown">
+            <ul className="cardPopup-dropdown">
               {item.terms.map((item, index) => (
                 <li key={index}>
                   <a href="">{item}</a>
@@ -55,7 +56,7 @@ const CardPopup = ({
           )}
         </div>
         {item.type === "pro" && (
-          <div className="card-popup-end">
+          <div className="cardPopup-end">
             <h2>Tk 99/month</h2>
             <button className="btn btn-lg btn-pink">LEARN MORE</button>
           </div>

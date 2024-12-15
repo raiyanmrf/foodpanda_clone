@@ -1,0 +1,130 @@
+.cardPopup {
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+  position: relative;
+  padding: 1em 1em;
+  border-radius: 9px;
+  width: 100%;
+
+  overflow-x: hidden;
+  scrollbar-width: none;
+
+  & > * + * {
+    margin-top: 1.7em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  &-cross {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 0;
+    right: 1em;
+    top: 0em;
+
+    &::after {
+      content: "";
+
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      position: absolute;
+
+      left: 8px;
+      z-index: -1;
+      transition: 0.3s;
+      border: 1px solid gray;
+    }
+
+    &:hover::after {
+      transform: scale(1.2);
+    }
+  }
+
+  &-title {
+    display: flex;
+    gap: 0.7em;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &-icon {
+      width: fit-content;
+      top: 0;
+    }
+  }
+
+  &-description {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+
+    & > * + * {
+      margin-top: 1em;
+    }
+
+    p,
+    button {
+      padding-inline: 0.1em;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+      font-weight: 650;
+    }
+  }
+
+  &-dropdown {
+    padding: 0.5em 1.9em;
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    li {
+      list-style-type: initial;
+    }
+  }
+
+  &-end {
+    display: flex;
+    border-top: 1px solid;
+    padding: 0.5em 1em;
+    gap: 1em;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 530px) and (max-width: 764px) {
+  .cardPopup {
+    max-width: 430px;
+
+    max-height: 80%;
+    padding: 1.3em 1.5em;
+  }
+}
+@media (min-width: 765px) {
+  .cardPopup {
+    max-width: 550px;
+
+    max-height: 80%;
+    padding: 1.3em 1.5em;
+  }
+}

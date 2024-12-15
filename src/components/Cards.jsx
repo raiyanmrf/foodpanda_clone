@@ -4,16 +4,12 @@ import CardPopup from "./CardPopup";
 import { cardOfferDetails } from "../assets/data/cardData";
 import useIsActive from "../hooks/useIsActive";
 
-const Cards = React.forwardRef(({ item }, ref) => {
+const Cards = React.forwardRef(({ item }) => {
   const [isPopupActive, handleIsPopupActive] = useIsActive();
   const [isTermsActive, handleIsTermsActive] = useIsActive();
 
   return (
-    <section
-      // ref={ref}
-      className={`card ${item.type}`}
-      //onClick={handleIsPopupActive}
-    >
+    <section className={`card ${item.type}`} onClick={handleIsPopupActive}>
       <div className="card-offer">
         {item.type === "pro" ? (
           <div className="pro-header-icon">

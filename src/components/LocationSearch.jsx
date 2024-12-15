@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { LuLocateFixed } from "react-icons/lu";
 import { RxCross1 } from "react-icons/rx";
-import usePlacesAutocomplete from "use-places-autocomplete";
+import usePlacesAutocomplete, {
+  getGeocode,
+  getLatLng,
+} from "use-places-autocomplete";
+import { usePopContext } from "../hooks/PopupContextComponent";
+import { useMapContext } from "./MapContextComponent";
 
 const LocationSearch = () => {
   const [hideAutoComplete, setHideAutoComplete] = useState(true);
-
+  const { isLocationSearchPopup, setIsLocationSearchPopup } = usePopContext();
+  const { setPlaceSelected } = useMapContext();
   const {
     ready,
     value,
@@ -14,24 +20,39 @@ const LocationSearch = () => {
     clearSuggestions,
   } = usePlacesAutocomplete();
 
-  console.log("ready", ready);
-  console.log("value", value);
-  console.log("status", status);
-  console.log("data", data);
+  const handleSelect = async (address) => {
+    setValue(address, false);
+    clearSuggestions();
+
+    const result = await getGeocode({ address });
+    const { lat, lng } = await getLatLng(result[0]);
+    console.log(lat, lng);
+    setIsLocationSearchPopup(true);
+    setPlaceSelected({ lat, lng });
+  };
+
   return (
-    <form action="" className="locationForm">
-      <div className="locationForm-input">
+    <form
+      action=""
+      className="locationForm"
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleSelect(value);
+      }}
+    >
+      <div className="locationForm-input" style={{ position: "relative" }}>
         <input
           value={value}
           onChange={(e) => {
-            setHideAutoComplete(false);
             setValue(e.target.value);
+            setHideAutoComplete(false);
           }}
           required
           name="locateInput"
           placeholder="Street and Postal Code"
           type="text"
           disabled={!ready}
+          style={{ position: "relative" }}
         />
         <a htmlFor="locateInput" className="placeholder">
           Your street and street number

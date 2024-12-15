@@ -18,6 +18,9 @@ import { cartContext } from "../hooks/CartContext";
 import { IoBagOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import { usePopContext } from "../hooks/PopupContextComponent";
+import LocationSearchPopup from "./LocationSearchPopup";
+import { useMapContext } from "./MapContextComponent";
 //
 
 const Navbar = () => {
@@ -25,7 +28,8 @@ const Navbar = () => {
   const [isLangActive, handleIsLangActive] = useIsActive();
   const [isMenuActive, handleIsMenuActive] = useIsActive();
   const [isSignActive, handleIsSignActive] = useIsActive();
-
+  const { isLocationSearchPopup } = usePopContext();
+  const { placeSelected, setPlaceSelected } = useMapContext();
   const navigate = useNavigate();
 
   return (
@@ -120,6 +124,7 @@ const Navbar = () => {
 
       {isMenuActive && <NavbarMenu handleIsMenuActive={handleIsMenuActive} />}
       {isSignActive && <SignIn handleIsSignActive={handleIsSignActive} />}
+      {isLocationSearchPopup && <LocationSearchPopup />}
     </nav>
   );
 };

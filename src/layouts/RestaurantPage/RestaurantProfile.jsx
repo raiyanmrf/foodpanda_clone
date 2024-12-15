@@ -14,22 +14,12 @@ import Cuisines from "../../components/Cuisines";
 import { useLocation } from "react-router-dom";
 import GoogleMap from "../../components/GoogleMap";
 import RestaurantMoreInfo from "./RestaurantMoreInfo";
+import { useMapContext } from "../../components/MapContextComponent";
 
 const RestaurantProfile = ({ restaurant }) => {
-  const {
-    address,
-    city,
-    cuisine,
-    image,
-    lat,
-    long,
-    name,
-    offer,
-    ratings,
-    reviews,
-    _id,
-  } = restaurant;
+  const { city, cuisine, image, name, ratings, reviews } = restaurant;
   const items = [`${cuisine}`, "Beverage", "Cakes", "Dessert"];
+  const { setPlaceSelected } = useMapContext();
 
   const [isRestaurantInfoPopup, setIsRestaurantInfoPopup] = useState(false);
   return (
@@ -72,7 +62,10 @@ const RestaurantProfile = ({ restaurant }) => {
         <div className="restaurant-profile-infoBtn">
           <button
             className="btn btn-white btn-md btn-moderate btn-flex"
-            onClick={() => setIsRestaurantInfoPopup(true)}
+            onClick={() => {
+              setIsRestaurantInfoPopup(true);
+              setPlaceSelected({ lat: restaurant.lat, lng: restaurant.long });
+            }}
           >
             <MdHelpOutline />
             More Info
