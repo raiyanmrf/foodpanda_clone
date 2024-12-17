@@ -29,7 +29,7 @@ function App() {
               element={<RestaurantPage />}
             />
             <Route path="/nearby" element={<RestaurantsNearby />} />
-            <Route path="/slide" element={<SlideExperiment />} />
+            <Route path="/area/:area/:lat/:lng" element={<SlideExperiment />} />
             <Route path="/lats" element={<Lats />} />
             <Route path="/*" element={<ErrorPage />} />
           </Routes>

@@ -11,11 +11,14 @@ export const useMapContext = () => useContext(mapContext);
 const MapContextComponent = (props) => {
   const { isLoaded } = handleMapLibrary();
   const [placeSelected, setPlaceSelected] = useState(null);
+  const [areaSelected, setAreaSelected] = useState(null);
 
   const values = {
     isLoaded,
     placeSelected,
     setPlaceSelected,
+    areaSelected,
+    setAreaSelected,
   };
   return (
     <mapContext.Provider value={values}>{props.children}</mapContext.Provider>

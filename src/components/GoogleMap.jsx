@@ -3,6 +3,7 @@ import React from "react";
 import { useMapContext } from "./MapContextComponent";
 import { usePopContext } from "../hooks/PopupContextComponent";
 import { getGeocode } from "use-places-autocomplete";
+import { getLocality } from "../utils/mapLogic";
 
 const GoogleMap = ({ setValue }) => {
   const { placeSelected, setPlaceSelected } = useMapContext();
@@ -15,14 +16,19 @@ const GoogleMap = ({ setValue }) => {
     const newLat = e.latLng.lat();
     const newLng = e.latLng.lng();
 
-    setPlaceSelected({ lat: newLat, lng: newLng });
-
     try {
       const results = await getGeocode({
         location: { lat: newLat, lng: newLng },
       });
       const newValue = results[0].formatted_address;
-      newValue && setValue(newValue);
+      const locality = getLocality(results);
+      setValue(newValue);
+      setPlaceSelected({
+        lat: newLat,
+        lng: newLng,
+        locality,
+        address: newValue,
+      });
     } catch (error) {
       console.error("error in dragging func", error);
     }
@@ -32,7 +38,16 @@ const GoogleMap = ({ setValue }) => {
     <APIProvider apiKey={apiKey}>
       <div style={{ height: "50vh", width: "100%" }}>
         {
-          <Map zoom={17} center={placeSelected} mapId={mapId}>
+          <Map
+            maxZoom={20}
+            minZoom={15}
+            defaultZoom={15}
+            center={placeSelected}
+            mapId={mapId}
+            fullscreenControl={false}
+            streetViewControl={false}
+            keyboardShortcuts={false}
+          >
             <AdvancedMarker
               position={placeSelected}
               draggable={!!isLocationSearchPopup}

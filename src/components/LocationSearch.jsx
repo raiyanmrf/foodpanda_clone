@@ -7,10 +7,15 @@ import usePlacesAutocomplete, {
 } from "use-places-autocomplete";
 import { usePopContext } from "../hooks/PopupContextComponent";
 import { useMapContext } from "./MapContextComponent";
+import {
+  getLocality,
+  handleLocateMe,
+  handlePlaceSelection,
+} from "../utils/mapLogic";
 
 const LocationSearch = () => {
   const [hideAutoComplete, setHideAutoComplete] = useState(true);
-  const { isLocationSearchPopup, setIsLocationSearchPopup } = usePopContext();
+  const { setIsLocationSearchPopup } = usePopContext();
   const { setPlaceSelected } = useMapContext();
   const {
     ready,
@@ -20,16 +25,17 @@ const LocationSearch = () => {
     clearSuggestions,
   } = usePlacesAutocomplete();
 
-  const handleSelect = async (address) => {
-    setValue(address, false);
-    clearSuggestions();
+  // const handleSelect = async (address) => {
+  //   setValue(address, false);
+  //   clearSuggestions();
 
-    const result = await getGeocode({ address });
-    const { lat, lng } = await getLatLng(result[0]);
-    console.log(lat, lng);
-    setIsLocationSearchPopup(true);
-    setPlaceSelected({ lat, lng });
-  };
+  //   const result = await getGeocode({ address });
+  //   const locality = getLocality(result);
+  //   const { lat, lng } = await getLatLng(result[0]);
+  //   console.log("handleSelect", { lat, lng, locality: locality });
+  //   setIsLocationSearchPopup(true);
+  //   setPlaceSelected({ lat, lng, locality: locality, address: address });
+  // };
 
   return (
     <form
@@ -37,7 +43,14 @@ const LocationSearch = () => {
       className="locationForm"
       onSubmit={(e) => {
         e.preventDefault();
-        handleSelect(value);
+        handlePlaceSelection(
+          value,
+          setIsLocationSearchPopup,
+          setPlaceSelected,
+          setValue,
+          clearSuggestions
+        );
+        setValue("");
       }}
     >
       <div className="locationForm-input" style={{ position: "relative" }}>
@@ -68,7 +81,12 @@ const LocationSearch = () => {
             <RxCross1 size={"20px"} />
           </button>
         ) : (
-          <button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleLocateMe(setPlaceSelected, setValue);
+            }}
+          >
             <LuLocateFixed size={"20px"} className="pink-icon" />
             <span>Locate me</span>
           </button>

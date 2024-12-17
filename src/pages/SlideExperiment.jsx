@@ -1,27 +1,41 @@
 import Slider from "../components/Slider";
 import FavCuisines from "../layouts/RestaurantsNearby/FavCuisines";
 import DailyDeals from "../layouts/RestaurantsNearby/DailyDeals";
-import data from "../utils/city.json";
 
 import RestaurantSlide from "../components/RestaurantSlide";
-import { useEffect, useState } from "react";
+
+import { useParams } from "react-router-dom";
+import Banner from "../layouts/CityPage/Banner";
+import Loading from "../assets/svg/Loading";
+import InfiniteScroll from "react-infinite-scroll-component";
+import AllRestaurants from "../layouts/CityPage/Allrestaurants";
+import useInfiniteFetch from "../hooks/useInfiniteFetch";
 const SlideExperiment = () => {
-  const [restaurants, setRestaurants] = useState([]);
-  useEffect(() => {
-    const fetchRestaurants = async () => {
-      const response = await fetch(`http://localhost:5000/api/bogra`);
+  const { area, lat, lng } = useParams();
+  const key = "nearMe";
+  const city = area.toLocaleLowerCase();
+  const url = "https://restaurant-server-ni4y.onrender.com/api/city";
 
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
+  const { isLoading, isError, fetchNextPage, hasNextPage, restaurantData } =
+    useInfiniteFetch(url, key, city);
+  // Show a loading state
+  if (isLoading) {
+    return (
+      <section className="content">
+        <Loading />
+      </section>
+    );
+  }
 
-      const data = await response.json();
-      setRestaurants(data);
-      console.log(data);
-    };
+  // Show error message when an error occurs
+  if (isError) {
+    return (
+      <section className="content">
+        <Banner value={`banner`} title={`Sorry! we are not in this area.`} />
+      </section>
+    );
+  }
 
-    fetchRestaurants();
-  }, []);
   return (
     <section className="content ">
       <Slider title={"Favourite Cuisines"}>
@@ -30,17 +44,27 @@ const SlideExperiment = () => {
       <Slider title={"Daily Deals"}>
         <DailyDeals />
       </Slider>
-      <Slider title={"Home Chefs"}>
-        <RestaurantSlide data={data.dhaka} query={"homechef"} />
-      </Slider>
+      <RestaurantSlide
+        data={restaurantData}
+        query={"homechef"}
+        title={"Home Chefs"}
+      />
 
-      <Slider title={"Pandapro"}>
-        <RestaurantSlide data={data.dhaka} query={"pandapro"} />
-      </Slider>
+      <RestaurantSlide
+        data={restaurantData}
+        query={"pandadeal"}
+        title={"Panda Deal"}
+      />
 
-      {restaurants.map((item, index) => (
-        <p key={index}>{item.name}</p>
-      ))}
+      <InfiniteScroll
+        dataLength={restaurantData ? restaurantData.length : 0}
+        next={() => fetchNextPage()}
+        hasMore={hasNextPage}
+        loader={<Loading />}
+        style={{ overflow: "hidden" }}
+      >
+        {restaurantData && <AllRestaurants data={restaurantData} />}
+      </InfiniteScroll>
     </section>
   );
 };

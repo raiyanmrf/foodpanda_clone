@@ -1,20 +1,23 @@
-import React, { useState } from "react";
-import usePlacesAutocomplete, {
-  getGeocode,
-  getLatLng,
-} from "use-places-autocomplete";
+import React, { useEffect, useState } from "react";
+import usePlacesAutocomplete from "use-places-autocomplete";
 import GoogleMap from "./GoogleMap";
 
 import { RxCross1 } from "react-icons/rx";
 import { LuLocateFixed } from "react-icons/lu";
 import { usePopContext } from "../hooks/PopupContextComponent";
 import { useMapContext } from "./MapContextComponent";
+import {
+  getLocality,
+  handleLocateMe,
+  handlePlaceSelection,
+} from "../utils/mapLogic";
+import { useNavigate } from "react-router-dom";
 
 const LocationSearchPopup = () => {
   const [hideAutoComplete, setHideAutoComplete] = useState(true);
   const { setIsLocationSearchPopup } = usePopContext();
   const { placeSelected, setPlaceSelected } = useMapContext();
-
+  const navigate = useNavigate();
   const {
     ready,
     value,
@@ -23,16 +26,10 @@ const LocationSearchPopup = () => {
     clearSuggestions,
   } = usePlacesAutocomplete();
 
-  const handleSelect = async (address) => {
-    setValue(address, false);
-    clearSuggestions();
+  useEffect(() => {
+    setValue((prev) => (prev = placeSelected.address));
+  }, []);
 
-    const result = await getGeocode({ address });
-    const { lat, lng } = await getLatLng(result[0]);
-    console.log(lat, lng);
-    setIsLocationSearchPopup(true);
-    setPlaceSelected({ lat, lng });
-  };
   return (
     <div className="popup-container ">
       <form
@@ -40,6 +37,10 @@ const LocationSearchPopup = () => {
         className="locationPopup"
         onSubmit={(e) => {
           e.preventDefault();
+
+          const { lat, lng, locality } = placeSelected;
+
+          navigate(`/area/${locality}/${lat}/${lng}`);
         }}
       >
         <RxCross1
@@ -77,7 +78,12 @@ const LocationSearchPopup = () => {
               <RxCross1 size={"20px"} />
             </button>
           ) : (
-            <button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleLocateMe(setPlaceSelected, setValue);
+              }}
+            >
               <LuLocateFixed size={"20px"} className="pink-icon" />
               <span>Locate me</span>
             </button>
@@ -91,7 +97,7 @@ const LocationSearchPopup = () => {
           />
         )}
         <button className="btn btn-pink btn-lg" type="submit">
-          Find Food
+          Find Restaurant
         </button>
 
         {status === "OK" && !hideAutoComplete && (
@@ -99,9 +105,14 @@ const LocationSearchPopup = () => {
             {data.map((item, index) => (
               <li
                 onClick={() => {
-                  setValue(item.description);
                   setHideAutoComplete(true);
-                  handleSelect(item.description);
+                  handlePlaceSelection(
+                    item.description,
+                    setIsLocationSearchPopup,
+                    setPlaceSelected,
+                    setValue,
+                    clearSuggestions
+                  );
                 }}
                 key={item.place_id}
               >
