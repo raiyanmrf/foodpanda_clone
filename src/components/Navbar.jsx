@@ -30,6 +30,7 @@ const Navbar = () => {
   const [isSignActive, handleIsSignActive] = useIsActive();
   const { isLocationSearchPopup } = usePopContext();
   const { placeSelected, setPlaceSelected } = useMapContext();
+  const { setIsLocationSearchPopup } = usePopContext();
   const navigate = useNavigate();
 
   return (
@@ -47,20 +48,32 @@ const Navbar = () => {
           <img src={foodpandatext} width="106.22px" alt="pandatext" />
         </div>
 
-        <div className="nav-bar-location">
-          {locationNavList.map((item, index) => (
-            <div key={index} className="nav-bar-location-content">
-              <img
-                src={item.icon}
-                height="24px"
-                width="24px"
-                alt={item.label}
-              />{" "}
-              <h4>{item.label}</h4>
-            </div>
-          ))}
-        </div>
-
+        {placeSelected && (
+          <div className="nav-bar-location">
+            {locationNavList.map((item, index) => (
+              <div
+                key={index}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  index === 0 && setIsLocationSearchPopup(true);
+                }}
+                className="nav-bar-location-content"
+              >
+                <img
+                  src={item.icon}
+                  height="24px"
+                  width="24px"
+                  alt={item.label}
+                />{" "}
+                {index === 0 ? (
+                  <h4>{placeSelected.locality}</h4>
+                ) : (
+                  <h4>{item.label}</h4>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
         <div className="nav-bar-loginBtn">
           <Button
             title={`Log In`}

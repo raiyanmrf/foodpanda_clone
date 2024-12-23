@@ -3,7 +3,7 @@ import { starIcon } from "../assets/svg";
 import OfferTags from "./OfferTags";
 import { isTheRestaurantOpen } from "../utils/isRestaurantOpen";
 import { useNavigate } from "react-router-dom";
-
+import altImage from "../assets/images/imageGenerator/alternative.webp";
 const RestaurantsGrid = ({ data }) => {
   const navigate = useNavigate();
   return (

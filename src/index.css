@@ -2234,6 +2234,7 @@ footer .line {
     bottom: 30%;
     flex-grow: 1;
     display: flex;
+    position: relative;
     flex-direction: row;
   }
   .locationForm-findBtn {
