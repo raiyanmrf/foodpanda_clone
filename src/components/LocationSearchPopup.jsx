@@ -40,7 +40,7 @@ const LocationSearchPopup = () => {
 
           const { lat, lng, locality } = placeSelected;
 
-          navigate(`/area/${locality}/${lat}/${lng}`);
+          navigate(`/area/${locality.toLowerCase()}/${lat}/${lng}`);
         }}
       >
         <RxCross1

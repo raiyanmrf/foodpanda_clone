@@ -14,7 +14,7 @@ const LIMIT = 20;
 
 const City = () => {
   const { city } = useParams();
-  const url = "https://restaurant-server-ni4y.onrender.com/api/city";
+  const url = "https://restaurant-server-ni4y.onrender.com/api";
   const key = "allRestaurants";
 
   const { isLoading, isError, fetchNextPage, hasNextPage, restaurantData } =

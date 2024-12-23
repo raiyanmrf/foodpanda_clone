@@ -14,10 +14,10 @@ const SlideExperiment = () => {
   const { area, lat, lng } = useParams();
   const key = "nearMe";
   const city = area.toLocaleLowerCase();
-  const url = "https://restaurant-server-ni4y.onrender.com/api/city";
+  const url = "https://restaurant-server-ni4y.onrender.com/api";
 
   const { isLoading, isError, fetchNextPage, hasNextPage, restaurantData } =
-    useInfiniteFetch(url, key, city);
+    useInfiniteFetch(url, key, city, lat, lng);
   // Show a loading state
   if (isLoading) {
     return (
@@ -31,7 +31,7 @@ const SlideExperiment = () => {
   if (isError) {
     return (
       <section className="content">
-        <Banner value={`banner`} title={`Sorry! we are not in this area.`} />
+        <Banner value={`banner`} title={`Sorry! we are not in ${area} yet.`} />
       </section>
     );
   }
@@ -46,14 +46,14 @@ const SlideExperiment = () => {
       </Slider>
       <RestaurantSlide
         data={restaurantData}
-        query={"homechef"}
-        title={"Home Chefs"}
+        query={"panda"}
+        title={"Panda's Kitchen"}
       />
 
       <RestaurantSlide
         data={restaurantData}
-        query={"pandadeal"}
-        title={"Panda Deal"}
+        query={"sweets"}
+        title={"Sweet Tooth"}
       />
 
       <InfiniteScroll

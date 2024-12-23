@@ -2,14 +2,24 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 
 const LIMIT = 20;
 
-const useInfiniteFetch = (url, key, city) => {
+const useInfiniteFetch = (url, key, city, lat, lng) => {
+  const buildEndpoint = (pageParam) => {
+    // Differentiate between "nearMe" and generic city-based queries
+    if (key === "nearMe" && city === "dhaka") {
+      const area = city;
+      return `${url}/area/${area}/${lat}/${lng}?page=${pageParam}&limit=${LIMIT}`;
+    }
+    return `${url}/city/${city}?page=${pageParam}&limit=${LIMIT}`;
+  };
+
   const getRestaurants = async ({ pageParam = 1 }) => {
-    const endpoint = `${url}/${city}?page=${pageParam}&limit=${LIMIT}`;
+    const endpoint = buildEndpoint(pageParam);
+
     const res = await fetch(endpoint);
 
     if (!res.ok) {
       if (res.status === 404) {
-        throw new Error("We are not in this area yet.");
+        throw new Error(`We are not in ${city} yet.`);
       }
       throw new Error("Failed to fetch data");
     }
@@ -30,7 +40,7 @@ const useInfiniteFetch = (url, key, city) => {
     });
 
   const restaurantData = data?.pages?.reduce((arr, page) => {
-    return [...arr, ...page.restaurants];
+    return [...arr, ...page.restaurantsNew];
   }, []);
 
   return { isLoading, isError, fetchNextPage, hasNextPage, restaurantData };

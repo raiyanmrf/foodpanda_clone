@@ -1,6 +1,9 @@
 .slide {
-  margin-bottom: 5em;
-  padding-inline: 0.5em;
+  margin-bottom: 2em;
+
+  @media (min-width: 764px) {
+    padding-inline: 5em;
+  }
   &-ul {
     display: flex;
     max-width: 100vw;

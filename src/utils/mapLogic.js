@@ -87,4 +87,9 @@ export const handlePlaceSelection = async (
   });
 };
 
-export const handleRestaurantsNearbyPageNavigation = () => {};
+export const handleRestaurantsNearbyPageNavigation = () => {
+
+
+
+  
+};

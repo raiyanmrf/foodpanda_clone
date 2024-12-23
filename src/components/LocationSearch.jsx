@@ -1,17 +1,10 @@
 import React, { useState } from "react";
 import { LuLocateFixed } from "react-icons/lu";
 import { RxCross1 } from "react-icons/rx";
-import usePlacesAutocomplete, {
-  getGeocode,
-  getLatLng,
-} from "use-places-autocomplete";
 import { usePopContext } from "../hooks/PopupContextComponent";
 import { useMapContext } from "./MapContextComponent";
-import {
-  getLocality,
-  handleLocateMe,
-  handlePlaceSelection,
-} from "../utils/mapLogic";
+import { handleLocateMe, handlePlaceSelection } from "../utils/mapLogic";
+import usePlacesAutocomplete from "use-places-autocomplete";
 
 const LocationSearch = () => {
   const [hideAutoComplete, setHideAutoComplete] = useState(true);
@@ -24,18 +17,6 @@ const LocationSearch = () => {
     suggestions: { status, data },
     clearSuggestions,
   } = usePlacesAutocomplete();
-
-  // const handleSelect = async (address) => {
-  //   setValue(address, false);
-  //   clearSuggestions();
-
-  //   const result = await getGeocode({ address });
-  //   const locality = getLocality(result);
-  //   const { lat, lng } = await getLatLng(result[0]);
-  //   console.log("handleSelect", { lat, lng, locality: locality });
-  //   setIsLocationSearchPopup(true);
-  //   setPlaceSelected({ lat, lng, locality: locality, address: address });
-  // };
 
   return (
     <form
@@ -85,6 +66,9 @@ const LocationSearch = () => {
             onClick={(e) => {
               e.stopPropagation();
               handleLocateMe(setPlaceSelected, setValue);
+              console.log("first");
+              handleLocateMe(setPlaceSelected, setValue);
+              console.log("Second");
             }}
           >
             <LuLocateFixed size={"20px"} className="pink-icon" />

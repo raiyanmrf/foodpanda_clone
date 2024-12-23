@@ -1874,8 +1874,12 @@ footer .line {
 }
 
 .slide {
-  margin-bottom: 5em;
-  padding-inline: 0.5em;
+  margin-bottom: 2em;
+}
+@media (min-width: 764px) {
+  .slide {
+    padding-inline: 5em;
+  }
 }
 .slide-ul {
   display: flex;

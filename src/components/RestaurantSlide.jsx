@@ -8,9 +8,12 @@ import alternateImage from "../assets/images/imageGenerator/alternative.webp";
 import Slider from "./Slider";
 
 const RestaurantSlide = ({ data, query, title }) => {
-  const filteredData = data.filter(
-    (item) => item.offer && item.offer.includes(query)
-  );
+  const cuisines = ["Sweets", "Dessert", "Cakes", "Beverages"];
+
+  const filteredData =
+    query === "sweets"
+      ? data.filter((item) => item.cuisine && cuisines.includes(item.cuisine))
+      : data.filter((item) => item.offer && item.offer.includes(query));
   return (
     <>
       {" "}
