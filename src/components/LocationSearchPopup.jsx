@@ -37,17 +37,18 @@ const LocationSearchPopup = () => {
   return (
     <div className="popup-container ">
       <form
-        action=""
         className="locationPopup"
         onSubmit={(e) => {
           e.preventDefault();
 
           const { lat, lng, locality } = placeSelected;
+          setIsLocationSearchPopup(false);
 
           navigate(`/area/${locality.toLowerCase()}/${lat}/${lng}`);
         }}
       >
         <RxCross1
+          className="locationPopup-cross"
           onClick={(e) => {
             e.stopPropagation();
             setIsLocationSearchPopup(false);
@@ -72,7 +73,7 @@ const LocationSearchPopup = () => {
             Your street and street number
           </a>
 
-          {data.length > 0 ? (
+          {value.length > 0 ? (
             <button
               onClick={(e) => {
                 e.stopPropagation();
