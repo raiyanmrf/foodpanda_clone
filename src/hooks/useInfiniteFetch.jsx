@@ -5,7 +5,7 @@ const LIMIT = 20;
 const useInfiniteFetch = (url, key, city, lat, lng) => {
   const buildEndpoint = (pageParam) => {
     // Differentiate between "nearMe" and generic city-based queries
-    if (key === "nearMe" && city === "dhaka") {
+    if (key === "nearMe") {
       const area = city;
       return `${url}/area/${area}/${lat}/${lng}?page=${pageParam}&limit=${LIMIT}`;
     }
@@ -19,7 +19,7 @@ const useInfiniteFetch = (url, key, city, lat, lng) => {
 
     if (!res.ok) {
       if (res.status === 404) {
-        throw new Error(`We are not in ${city} yet.`);
+        throw new Error(`We are not in your area yet.`);
       }
       throw new Error("Failed to fetch data");
     }
