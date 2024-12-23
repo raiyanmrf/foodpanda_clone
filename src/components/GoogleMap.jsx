@@ -51,9 +51,12 @@ const GoogleMap = ({ setValue }) => {
             <AdvancedMarker
               position={placeSelected}
               draggable={!!isLocationSearchPopup}
-              onDragEnd={(e) =>
-                isLocationSearchPopup ? handleMarkerDrag(e) : null
-              }
+              onDragEnd={(e) => {
+                if (isLocationSearchPopup) {
+                  handleMarkerDrag(e);
+                  handleMarkerDrag(e);
+                }
+              }}
             />
           </Map>
         }

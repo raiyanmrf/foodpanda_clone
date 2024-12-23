@@ -65,10 +65,12 @@ const LocationSearch = () => {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              handleLocateMe(setPlaceSelected, setValue);
-              console.log("first");
-              handleLocateMe(setPlaceSelected, setValue);
-              console.log("Second");
+              setIsLocationSearchPopup(true);
+
+              // handleLocateMe(setPlaceSelected, setValue);
+              // console.log("first");
+              // handleLocateMe(setPlaceSelected, setValue);
+              // console.log("Second");
             }}
           >
             <LuLocateFixed size={"20px"} className="pink-icon" />

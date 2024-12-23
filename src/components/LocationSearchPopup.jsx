@@ -27,7 +27,11 @@ const LocationSearchPopup = () => {
   } = usePlacesAutocomplete();
 
   useEffect(() => {
-    setValue((prev) => (prev = placeSelected.address));
+    if (placeSelected) {
+      setValue((prev) => (placeSelected ? placeSelected.address : prev));
+    } else {
+      handleLocateMe(setPlaceSelected, setValue);
+    }
   }, []);
 
   return (

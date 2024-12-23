@@ -35,12 +35,7 @@ export const handleLocateMe = (setPlaceSelected, setValue) => {
             address: newAddress,
           });
           setValue(newAddress);
-          console.log("locateME", {
-            lat: latitude,
-            lng: longitude,
-            locality: locality,
-            newAddress,
-          });
+          console.log("locateME", results);
         })
         .catch((error) => {
           console.error("Error fetching geocode:", error.message);
@@ -87,9 +82,4 @@ export const handlePlaceSelection = async (
   });
 };
 
-export const handleRestaurantsNearbyPageNavigation = () => {
-
-
-
-  
-};
+export const handleRestaurantsNearbyPageNavigation = () => {};
