@@ -11,14 +11,14 @@ const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
+    <MapContextComponent>
       <CartContextComponent>
-        <MapContextComponent>
-          <PopupContextComponent>
+        <PopupContextComponent>
+          <QueryClientProvider client={queryClient}>
             <App />
-          </PopupContextComponent>
-        </MapContextComponent>
+          </QueryClientProvider>
+        </PopupContextComponent>
       </CartContextComponent>
-    </QueryClientProvider>
+    </MapContextComponent>
   </StrictMode>
 );

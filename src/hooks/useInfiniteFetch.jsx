@@ -2,9 +2,8 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 
 const LIMIT = 20;
 
-const useInfiniteFetch = (url, key, city, lat, lng) => {
+const useInfiniteFetch = (url, key, city, lat = 0, lng = 0) => {
   const buildEndpoint = (pageParam) => {
-    // Differentiate between "nearMe" and generic city-based queries
     if (key === "nearMe") {
       const area = city;
       return `${url}/area/${area}/${lat}/${lng}?page=${pageParam}&limit=${LIMIT}`;
@@ -30,7 +29,7 @@ const useInfiniteFetch = (url, key, city, lat, lng) => {
 
   const { data, fetchNextPage, isLoading, hasNextPage, isError, error } =
     useInfiniteQuery({
-      queryKey: [key, city],
+      queryKey: [key],
       queryFn: getRestaurants,
       getNextPageParam: (lastPage) => {
         const currentPage = lastPage.prevPage;
@@ -40,7 +39,7 @@ const useInfiniteFetch = (url, key, city, lat, lng) => {
     });
 
   const restaurantData = data?.pages?.reduce((arr, page) => {
-    return [...arr, ...page.restaurantsNew];
+    return [...arr, ...page.restaurants];
   }, []);
 
   return { isLoading, isError, fetchNextPage, hasNextPage, restaurantData };

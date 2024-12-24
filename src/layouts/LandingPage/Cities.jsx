@@ -1,6 +1,6 @@
 import React from "react";
 import { citiesArray } from "../../assets/images/cities/index";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Cities = () => {
   const navigate = useNavigate();
@@ -20,14 +20,14 @@ const Cities = () => {
               key={city.id}
               className="cities-grid-item"
             >
-              <a href="">
+              <Link to={`/city/${city.name.toLowerCase()}`}>
                 <img
                   src={city.image}
                   alt={city.name}
                   className="city-grid-item-img"
                 />
                 <p className="cities-grid-item-caption">{city.name}</p>
-              </a>
+              </Link>
             </div>
           );
         })}

@@ -49,12 +49,16 @@ export const handleLocateMe = (setPlaceSelected, setValue) => {
 };
 
 export const getLocality = (results) => {
-  const locality = results[0].address_components.filter((place) =>
+  const locality1 = results[0]?.address_components?.filter((place) =>
+    place.types.find((item) => item === "locality")
+  );
+  const locality2 = results[1]?.address_components?.filter((place) =>
     place.types.find((item) => item === "locality")
   );
 
-  if (locality.length > 0) return locality[0].short_name;
-  else return undefined;
+  if (locality1?.length > 0) return locality1[0].short_name;
+  else if (locality2?.length > 0) return locality2[1].short_name;
+  else return "unknown";
 };
 
 export const handlePlaceSelection = async (
@@ -82,4 +86,33 @@ export const handlePlaceSelection = async (
   });
 };
 
-export const handleRestaurantsNearbyPageNavigation = () => {};
+export const haversineDistance = (lat1, lng1, lat2, lng2) => {
+  const R = 6371; // Radius of the Earth in kilometers
+  const toRadians = (degree) => (degree * Math.PI) / 180;
+
+  const dLat = toRadians(lat2 - lat1);
+  const dLng = toRadians(lng2 - lng1);
+
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(toRadians(lat1)) *
+      Math.cos(toRadians(lat2)) *
+      Math.sin(dLng / 2) *
+      Math.sin(dLng / 2);
+
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const distance = R * c; // Distance in kilometers
+
+  return distance;
+};
+
+export const isWithin3Km = (lat1, lng1, lat2, lng2, locality) => {
+  const distance = haversineDistance(
+    parseFloat(lat1),
+    parseFloat(lng1),
+    parseFloat(lat2),
+    parseFloat(lng2)
+  );
+  if (locality === "dhaka") return distance <= 2;
+  else return distance <= 3;
+};

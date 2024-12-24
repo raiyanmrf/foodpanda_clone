@@ -31,7 +31,10 @@ const SlideExperiment = () => {
   if (isError) {
     return (
       <section className="content">
-        <Banner value={`banner`} title={`Sorry! we are not in ${area} yet.`} />
+        <Banner
+          value={`banner`}
+          title={`Sorry! we are not in this area yet.`}
+        />
       </section>
     );
   }

@@ -7,8 +7,7 @@ import { isTheRestaurantOpen } from "../../utils/isRestaurantOpen";
 import RestaurantsGrid from "../../components/RestaurantsGrid";
 
 const AllRestaurants = ({ data }) => {
-  const navigate = useNavigate();
-
+  console.log("inside AllRestaurants");
   return (
     <section className="restaurant">
       <div className="restaurant-title">

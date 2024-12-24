@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BreadCrumbs from "../../components/BreadCrumbs";
 import {
   deliveryIcon,
@@ -15,15 +15,37 @@ import { useLocation } from "react-router-dom";
 import GoogleMap from "../../components/GoogleMap";
 import RestaurantMoreInfo from "./RestaurantMoreInfo";
 import { useMapContext } from "../../components/MapContextComponent";
+import { isWithin3Km } from "../../utils/mapLogic";
 
 const RestaurantProfile = ({ restaurant }) => {
-  const { city, cuisine, image, name, ratings, reviews } = restaurant;
+  const { city, cuisine, image, name, ratings, reviews, lat, lng } = restaurant;
   const items = [`${cuisine}`, "Beverage", "Cakes", "Dessert"];
-  const { setPlaceSelected } = useMapContext();
+  const { navbarLocation } = useMapContext();
+  const [isTooFar, setIsTooFar] = useState(false);
 
   const [isRestaurantInfoPopup, setIsRestaurantInfoPopup] = useState(false);
+
+  useEffect(() => {
+    const initiaze = () => {
+      if (navbarLocation) {
+        const bool = isWithin3Km(
+          navbarLocation.lat,
+          navbarLocation.lng,
+          lat,
+          lng,
+          navbarLocation.locality
+        );
+        console.log(bool);
+        setIsTooFar(bool);
+      }
+    };
+
+    initiaze();
+  }, []);
+
   return (
     <section className="restaurant-profile">
+      {isTooFar && <h1>Too Far</h1>}
       <BreadCrumbs linkArray={["Homepage", `${city}`, `${name}`]} />
 
       <div className="restaurant-profile-content">

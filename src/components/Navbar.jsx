@@ -29,9 +29,11 @@ const Navbar = () => {
   const [isMenuActive, handleIsMenuActive] = useIsActive();
   const [isSignActive, handleIsSignActive] = useIsActive();
   const { isLocationSearchPopup } = usePopContext();
-  const { placeSelected, setPlaceSelected } = useMapContext();
+  const { navbarLocation } = useMapContext();
   const { setIsLocationSearchPopup } = usePopContext();
   const navigate = useNavigate();
+
+  console.log("navbarLocation", navbarLocation);
 
   return (
     <nav className="nav">
@@ -48,7 +50,7 @@ const Navbar = () => {
           <img src={foodpandatext} width="106.22px" alt="pandatext" />
         </div>
 
-        {placeSelected && (
+        {navbarLocation && (
           <div className="nav-bar-location">
             {locationNavList.map((item, index) => (
               <div
@@ -66,7 +68,7 @@ const Navbar = () => {
                   alt={item.label}
                 />{" "}
                 {index === 0 ? (
-                  <h4>{placeSelected.locality}</h4>
+                  <h4>{navbarLocation.locality}</h4>
                 ) : (
                   <h4>{item.label}</h4>
                 )}

@@ -7,10 +7,11 @@ import SlideExperiment from "./pages/SlideExperiment";
 
 import Lats from "./pages/Lats";
 import Loading from "./assets/svg/Loading";
+import City from "./pages/City";
 
 // Lazy load the page components
 const HomePage = lazy(() => import("./pages/HomePage"));
-const City = lazy(() => import("./pages/City"));
+
 const RestaurantPage = lazy(() => import("./pages/RestaurantPage"));
 const RestaurantsNearby = lazy(() => import("./pages/RestaurantsNearby"));
 

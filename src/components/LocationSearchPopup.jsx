@@ -6,17 +6,14 @@ import { RxCross1 } from "react-icons/rx";
 import { LuLocateFixed } from "react-icons/lu";
 import { usePopContext } from "../hooks/PopupContextComponent";
 import { useMapContext } from "./MapContextComponent";
-import {
-  getLocality,
-  handleLocateMe,
-  handlePlaceSelection,
-} from "../utils/mapLogic";
+import { handleLocateMe, handlePlaceSelection } from "../utils/mapLogic";
 import { useNavigate } from "react-router-dom";
 
 const LocationSearchPopup = () => {
   const [hideAutoComplete, setHideAutoComplete] = useState(true);
   const { setIsLocationSearchPopup } = usePopContext();
-  const { placeSelected, setPlaceSelected } = useMapContext();
+  const { placeSelected, setPlaceSelected, setNavbarLocation } =
+    useMapContext();
   const navigate = useNavigate();
   const {
     ready,
@@ -27,11 +24,15 @@ const LocationSearchPopup = () => {
   } = usePlacesAutocomplete();
 
   useEffect(() => {
-    if (placeSelected) {
-      setValue((prev) => (placeSelected ? placeSelected.address : prev));
-    } else {
-      handleLocateMe(setPlaceSelected, setValue);
-    }
+    const initialize = () => {
+      if (placeSelected) {
+        setValue(placeSelected.address);
+      } else {
+        handleLocateMe(setPlaceSelected, setValue);
+      }
+    };
+
+    initialize();
   }, []);
 
   return (
@@ -43,6 +44,7 @@ const LocationSearchPopup = () => {
 
           const { lat, lng, locality } = placeSelected;
           setIsLocationSearchPopup(false);
+          setNavbarLocation(placeSelected);
 
           navigate(`/area/${locality.toLowerCase()}/${lat}/${lng}`);
         }}

@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import altImage from "../assets/images/imageGenerator/alternative.webp";
 const RestaurantsGrid = ({ data }) => {
   const navigate = useNavigate();
+  console.log("inside RestaurantsGrid");
+
   return (
     <div className="restaurant-grid">
       {data.map((restaurant, index) => {
