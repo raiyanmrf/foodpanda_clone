@@ -8,6 +8,7 @@ import {
   instaIcon,
   pandaIcon,
 } from "../assets/svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
         <ul className="upper-footer-list">
           {footerLinks.countries.map((country, index) => (
             <li key={index} className="upper-footer-list-item">
-              <a href="">{country}</a>
+              <Link>{country}</Link>
             </li>
           ))}
         </ul>
@@ -30,7 +31,7 @@ const Footer = () => {
 
           {footerLinks.mainLinks.map((link, index) => (
             <li key={index} className="middle-footer-list-item">
-              <a href="">{link}</a>
+              <Link>{link}</Link>
             </li>
           ))}
 

@@ -1195,7 +1195,7 @@ footer .upper-footer-list-item a:hover {
 footer .middle-footer-list {
   -moz-columns: 300px;
        columns: 300px;
-  margin: 0.5em auto;
+  margin: 2em auto;
   text-align: center;
 }
 footer .middle-footer-list-item {

@@ -24,20 +24,8 @@ const LocationSearchPopup = () => {
   } = usePlacesAutocomplete();
 
   useEffect(() => {
-    const initialize = () => {
-      if (placeSelected) {
-        setValue(placeSelected.address);
-      } else {
-        handleLocateMe(setPlaceSelected, setValue);
-      }
-    };
-    console.log(placeSelected);
-    placeSelected
-      ? setValue(placeSelected.address)
-      : handleLocateMe(setPlaceSelected, setValue);
-
-    // initialize();
-  }, []);
+    placeSelected && setValue(placeSelected.address);
+  }, [placeSelected]);
 
   return (
     <div className="popup-container ">
