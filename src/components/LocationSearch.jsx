@@ -3,7 +3,7 @@ import { LuLocateFixed } from "react-icons/lu";
 import { RxCross1 } from "react-icons/rx";
 import { usePopContext } from "../hooks/PopupContextComponent";
 import { useMapContext } from "./MapContextComponent";
-import { handlePlaceSelection } from "../utils/mapLogic";
+import { handleLocateMe, handlePlaceSelection } from "../utils/mapLogic";
 import usePlacesAutocomplete from "use-places-autocomplete";
 
 const LocationSearch = () => {
@@ -66,6 +66,7 @@ const LocationSearch = () => {
             onClick={(e) => {
               e.stopPropagation();
               setIsLocationSearchPopup(true);
+              handleLocateMe(setPlaceSelected, setValue);
             }}
           >
             <LuLocateFixed size={"20px"} className="pink-icon" />

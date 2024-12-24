@@ -31,6 +31,7 @@ const LocationSearchPopup = () => {
         handleLocateMe(setPlaceSelected, setValue);
       }
     };
+    console.log(placeSelected);
     placeSelected
       ? setValue(placeSelected.address)
       : handleLocateMe(setPlaceSelected, setValue);
