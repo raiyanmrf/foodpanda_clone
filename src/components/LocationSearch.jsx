@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LuLocateFixed } from "react-icons/lu";
 import { RxCross1 } from "react-icons/rx";
 import { usePopContext } from "../hooks/PopupContextComponent";
@@ -8,6 +8,7 @@ import usePlacesAutocomplete from "use-places-autocomplete";
 
 const LocationSearch = () => {
   const [hideAutoComplete, setHideAutoComplete] = useState(true);
+  const [fireSecondTime, setFireSecondTime] = useState(false);
   const { setIsLocationSearchPopup } = usePopContext();
   const { setPlaceSelected } = useMapContext();
   const {
@@ -17,7 +18,12 @@ const LocationSearch = () => {
     suggestions: { status, data },
     clearSuggestions,
   } = usePlacesAutocomplete();
-
+  useEffect(() => {
+    if (fireSecondTime) {
+      handleLocateMe(setPlaceSelected, setValue);
+      setFireSecondTime(false);
+    }
+  }, [fireSecondTime]);
   return (
     <form
       action=""
@@ -65,8 +71,8 @@ const LocationSearch = () => {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              setIsLocationSearchPopup(true);
               handleLocateMe(setPlaceSelected, setValue);
+              setFireSecondTime(true);
             }}
           >
             <LuLocateFixed size={"20px"} className="pink-icon" />
