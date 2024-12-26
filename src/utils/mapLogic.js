@@ -17,6 +17,10 @@ export const handleLocateMe = (setPlaceSelected, setValue) => {
     return;
   }
 
+  navigator.geolocation.getCurrentPosition((position) => {
+    const { latitude, longitude } = position.coords;
+  });
+
   navigator.geolocation.getCurrentPosition(
     (position) => {
       const { latitude, longitude } = position.coords;
@@ -44,11 +48,6 @@ export const handleLocateMe = (setPlaceSelected, setValue) => {
     (error) => {
       console.error("Geolocation error:", error.message);
       alert("Unable to retrieve your location");
-    },
-    {
-      enableHighAccuracy: true, // Use high-accuracy mode
-      timeout: 10000, // Set timeout for location fetching
-      maximumAge: 0, // Ensure a fresh location
     }
   );
 };
