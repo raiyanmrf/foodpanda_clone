@@ -13,6 +13,7 @@ const MapContextComponent = (props) => {
   const [placeSelected, setPlaceSelected] = useState(null);
   const [areaSelected, setAreaSelected] = useState(null);
   const [navbarLocation, setNavbarLocation] = useState(null);
+  const [popupWhenFar, setPopupWhenFar] = useState(false);
 
   const values = {
     placeSelected,
@@ -22,6 +23,8 @@ const MapContextComponent = (props) => {
     navbarLocation,
     setNavbarLocation,
     isLoaded,
+    popupWhenFar,
+    setPopupWhenFar,
   };
   return (
     <mapContext.Provider value={values}>{props.children}</mapContext.Provider>

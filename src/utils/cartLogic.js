@@ -185,7 +185,7 @@ export const handleShallowDecreasing = (
   );
   console.log("filteredItems", filteredItems);
 
-  if (filteredItems.length > 1) {
+  if (filteredItems.length >= 1) {
     if (filteredItems[0].count > 1) {
       const updatedItems = cartItems.items.map((product, index) => {
         return index === 0
@@ -203,9 +203,7 @@ export const handleShallowDecreasing = (
         subtotal: cartItems.subtotal - existingItem.price,
       });
     } else if (filteredItems[0].count === 1) {
-      const updatedItems = cartItems.items.filter(
-        (product, index) => index !== 0
-      );
+      const updatedItems = cartItems.items.slice(1);
 
       setCartItems({
         restaurantID,
@@ -213,16 +211,16 @@ export const handleShallowDecreasing = (
         subtotal: cartItems.subtotal - existingItem.price,
       });
     }
-  } else {
-    const updatedItems = cartItems.items.filter(
-      (product) => product._id !== existingItem._id
-    );
+    // } else {
+    //   const updatedItems = cartItems.items.filter(
+    //     (product) => product._id !== existingItem._id
+    //   );
 
-    setCartItems({
-      restaurantID,
-      items: updatedItems,
-      subtotal: cartItems.subtotal - existingItem.price,
-    });
+    //   setCartItems({
+    //     restaurantID,
+    //     items: updatedItems,
+    //     subtotal: cartItems.subtotal - existingItem.price,
+    //   });
   }
 };
 

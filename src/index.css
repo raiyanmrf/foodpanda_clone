@@ -944,6 +944,31 @@ li {
   max-width: 98%;
 }
 
+.restaurantTooFarPopup {
+  background: white;
+  top: 50;
+  z-index: 10;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1.8em;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  box-shadow: 0px -30px 600px rgba(0, 0, 0, 0.249);
+}
+.restaurantTooFarPopup-container {
+  align-items: center !important;
+}
+.restaurantTooFarPopup p {
+  font-size: 0.95em;
+  font-weight: 450;
+}
+.restaurantTooFarPopup-Btns {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
 .nav {
   box-shadow: 1px -5px 20px 0px #9f8a8a;
   display: flex;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import BreadCrumbs from "../../components/BreadCrumbs";
 import {
   deliveryIcon,
@@ -16,36 +16,30 @@ import GoogleMap from "../../components/GoogleMap";
 import RestaurantMoreInfo from "./RestaurantMoreInfo";
 import { useMapContext } from "../../components/MapContextComponent";
 import { isWithin3Km } from "../../utils/mapLogic";
+import RestaurantTooFarPopup from "./RestaurantTooFarPopup";
 
 const RestaurantProfile = ({ restaurant }) => {
   const { city, cuisine, image, name, ratings, reviews, lat, lng } = restaurant;
   const items = [`${cuisine}`, "Beverage", "Cakes", "Dessert"];
-  const { navbarLocation } = useMapContext();
-  const [isTooFar, setIsTooFar] = useState(false);
+  const { navbarLocation, popupWhenFar, setPopupWhenFar } = useMapContext();
+  const [isNear, setIsNear] = useState(false);
 
   const [isRestaurantInfoPopup, setIsRestaurantInfoPopup] = useState(false);
 
   useEffect(() => {
-    const initiaze = () => {
+    const initialize = () => {
       if (navbarLocation) {
-        const bool = isWithin3Km(
-          navbarLocation.lat,
-          navbarLocation.lng,
-          lat,
-          lng,
-          navbarLocation.locality
-        );
-        console.log(bool);
-        setIsTooFar(bool);
+        const bool = navbarLocation.locality.toLowerCase() === city;
+        setIsNear(bool);
+        !bool && setPopupWhenFar(true);
       }
     };
 
-    initiaze();
+    initialize();
   }, []);
 
   return (
     <section className="restaurant-profile">
-      {isTooFar && <h1>Too Far</h1>}
       <BreadCrumbs linkArray={["Homepage", `${city}`, `${name}`]} />
 
       <div className="restaurant-profile-content">
@@ -101,6 +95,8 @@ const RestaurantProfile = ({ restaurant }) => {
           restaurant={restaurant}
         />
       )}
+
+      {popupWhenFar && <RestaurantTooFarPopup />}
     </section>
   );
 };

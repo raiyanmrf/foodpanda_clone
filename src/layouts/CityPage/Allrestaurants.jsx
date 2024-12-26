@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 import OfferTags from "../../components/OfferTags";
 import { isTheRestaurantOpen } from "../../utils/isRestaurantOpen";
 import RestaurantsGrid from "../../components/RestaurantsGrid";
+import { useEffect, useRef } from "react";
 
 const AllRestaurants = ({ data }) => {
-  console.log("inside AllRestaurants");
   return (
     <section className="restaurant">
       <div className="restaurant-title">

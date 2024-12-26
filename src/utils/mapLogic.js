@@ -105,6 +105,6 @@ export const isWithin3Km = (lat1, lng1, lat2, lng2, locality) => {
     parseFloat(lat2),
     parseFloat(lng2)
   );
-  if (locality === "dhaka") return distance <= 2;
-  else return distance <= 3;
+  if (locality === "Dhaka") return distance <= 3;
+  else return distance <= 5;
 };

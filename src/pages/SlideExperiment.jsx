@@ -10,11 +10,18 @@ import Loading from "../assets/svg/Loading";
 import InfiniteScroll from "react-infinite-scroll-component";
 import AllRestaurants from "../layouts/CityPage/Allrestaurants";
 import useInfiniteFetch from "../hooks/useInfiniteFetch";
+import { useEffect } from "react";
+import { useMapContext } from "../components/MapContextComponent";
 const SlideExperiment = () => {
+  const { navbarLocation, setNavbarLocation } = useMapContext();
   const { area, lat, lng } = useParams();
   const key = "nearMe";
   const city = area.toLocaleLowerCase();
   const url = "https://restaurant-server-ni4y.onrender.com/api";
+
+  useEffect(() => {
+    !navbarLocation && setNavbarLocation({ lat, lng, locality: area });
+  }, [navbarLocation, setNavbarLocation]);
 
   const { isLoading, isError, fetchNextPage, hasNextPage, restaurantData } =
     useInfiniteFetch(url, key, city, lat, lng);
