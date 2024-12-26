@@ -17,10 +17,6 @@ export const handleLocateMe = (setPlaceSelected, setValue) => {
     return;
   }
 
-  navigator.geolocation.getCurrentPosition((position) => {
-    const { latitude, longitude } = position.coords;
-  });
-
   navigator.geolocation.getCurrentPosition(
     (position) => {
       const { latitude, longitude } = position.coords;
@@ -39,7 +35,6 @@ export const handleLocateMe = (setPlaceSelected, setValue) => {
             address: newAddress,
           });
           setValue(newAddress);
-          console.log("locateME", results);
         })
         .catch((error) => {
           console.error("Error fetching geocode:", error.message);
@@ -81,13 +76,6 @@ export const handlePlaceSelection = async (
 
   setIsLocationSearchPopup(true);
   setPlaceSelected({ lat, lng, locality: locality, address: address });
-
-  console.log("handleSelect", {
-    lat,
-    lng,
-    locality: locality,
-    address: address,
-  });
 };
 
 export const haversineDistance = (lat1, lng1, lat2, lng2) => {
