@@ -4,6 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Cities = () => {
   const navigate = useNavigate();
+  const handleCityClick = (city) => {
+    if (city.available) {
+      navigate(`/city/${city.name.toLowerCase()}`);
+    } else {
+      alert("Sorry! We are not in this area.");
+    }
+  };
   return (
     <section className="cities">
       <div className="cities-title">
@@ -14,20 +21,20 @@ const Cities = () => {
         {citiesArray.map((city) => {
           return (
             <div
-              onClick={() => {
-                navigate(`/city/${city.name.toLowerCase()}`);
+              onClick={(e) => {
+                handleCityClick(city);
               }}
               key={city.id}
               className="cities-grid-item"
             >
-              <Link to={`/city/${city.name.toLowerCase()}`}>
+              <div>
                 <img
                   src={city.image}
                   alt={city.name}
                   className="city-grid-item-img"
                 />
                 <p className="cities-grid-item-caption">{city.name}</p>
-              </Link>
+              </div>
             </div>
           );
         })}

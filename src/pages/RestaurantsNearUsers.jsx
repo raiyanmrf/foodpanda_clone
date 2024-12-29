@@ -12,7 +12,7 @@ import AllRestaurants from "../layouts/CityPage/Allrestaurants";
 import useInfiniteFetch from "../hooks/useInfiniteFetch";
 import { useEffect } from "react";
 import { useMapContext } from "../components/MapContextComponent";
-const SlideExperiment = () => {
+const RestaurantsNearUsers = () => {
   const { navbarLocation, setNavbarLocation } = useMapContext();
   const { area, lat, lng } = useParams();
   const key = "nearMe";
@@ -23,8 +23,14 @@ const SlideExperiment = () => {
     !navbarLocation && setNavbarLocation({ lat, lng, locality: area });
   }, [navbarLocation, setNavbarLocation]);
 
-  const { isLoading, isError, fetchNextPage, hasNextPage, restaurantData } =
-    useInfiniteFetch(url, key, city, lat, lng);
+  const {
+    isLoading,
+    isError,
+    fetchNextPage,
+    hasNextPage,
+    restaurantData,
+    error,
+  } = useInfiniteFetch(url, key, city, lat, lng);
   // Show a loading state
   if (isLoading) {
     return (
@@ -38,10 +44,7 @@ const SlideExperiment = () => {
   if (isError) {
     return (
       <section className="content">
-        <Banner
-          value={`banner`}
-          title={`Sorry! we are not in this area yet.`}
-        />
+        <Banner value={`banner`} title={error.message} />
       </section>
     );
   }
@@ -79,4 +82,4 @@ const SlideExperiment = () => {
   );
 };
 
-export default SlideExperiment;
+export default RestaurantsNearUsers;

@@ -42,7 +42,14 @@ const useInfiniteFetch = (url, key, city, lat = 0, lng = 0) => {
     return [...arr, ...page.restaurants];
   }, []);
 
-  return { isLoading, isError, fetchNextPage, hasNextPage, restaurantData };
+  return {
+    isLoading,
+    isError,
+    fetchNextPage,
+    hasNextPage,
+    restaurantData,
+    error,
+  };
 };
 
 export default useInfiniteFetch;

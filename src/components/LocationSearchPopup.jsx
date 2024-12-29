@@ -8,6 +8,7 @@ import { usePopContext } from "../hooks/PopupContextComponent";
 import { useMapContext } from "./MapContextComponent";
 import { handleLocateMe, handlePlaceSelection } from "../utils/mapLogic";
 import { useNavigate } from "react-router-dom";
+import { citiesArray } from "../assets/images/cities";
 
 const LocationSearchPopup = () => {
   const [hideAutoComplete, setHideAutoComplete] = useState(true);
@@ -22,7 +23,13 @@ const LocationSearchPopup = () => {
     suggestions: { status, data },
     clearSuggestions,
   } = usePlacesAutocomplete();
-
+  const checkCityAvailability = (locality) => {
+    return citiesArray.find((city) => {
+      return (
+        city.name.toLowerCase() === locality.toLowerCase() && city.available
+      );
+    });
+  };
   useEffect(() => {
     placeSelected && setValue(placeSelected.address);
   }, [placeSelected]);
@@ -35,6 +42,11 @@ const LocationSearchPopup = () => {
           e.preventDefault();
 
           const { lat, lng, locality } = placeSelected;
+
+          if (!checkCityAvailability(locality)) {
+            alert("Sorry! We are not in this area.");
+            return;
+          }
           setIsLocationSearchPopup(false);
           setNavbarLocation(placeSelected);
 

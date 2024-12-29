@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ErrorPage from "./pages/ErrorPage";
-import SlideExperiment from "./pages/SlideExperiment";
+import RestaurantsNearUsers from "./pages/RestaurantsNearUsers";
 
 import Lats from "./pages/Lats";
 import Loading from "./assets/svg/Loading";
@@ -30,7 +30,10 @@ function App() {
               element={<RestaurantPage />}
             />
             <Route path="/nearby" element={<RestaurantsNearby />} />
-            <Route path="/area/:area/:lat/:lng" element={<SlideExperiment />} />
+            <Route
+              path="/area/:area/:lat/:lng"
+              element={<RestaurantsNearUsers />}
+            />
             <Route path="/lats" element={<Lats />} />
             <Route path="/*" element={<ErrorPage />} />
           </Routes>

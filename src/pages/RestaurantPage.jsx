@@ -7,7 +7,6 @@ import { cardData } from "../assets/data/cardData";
 import Cards from "../components/Cards";
 import Loading from "../assets/svg/Loading";
 import Banner from "../layouts/CityPage/Banner";
-import LocationSearch from "../components/LocationSearch";
 
 const RestaurantPage = () => {
   const { restaurantID } = useParams();

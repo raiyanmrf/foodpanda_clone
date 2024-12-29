@@ -12,8 +12,14 @@ const City = () => {
   const { city } = useParams();
   const url = "https://restaurant-server-ni4y.onrender.com/api";
   const key = "allRestaurants";
-  const { isLoading, isError, fetchNextPage, hasNextPage, restaurantData } =
-    useInfiniteFetch(url, key, city);
+  const {
+    isLoading,
+    isError,
+    fetchNextPage,
+    hasNextPage,
+    restaurantData,
+    error,
+  } = useInfiniteFetch(url, key, city);
 
   // Show a loading state
   if (isLoading) {
@@ -28,7 +34,7 @@ const City = () => {
   if (isError) {
     return (
       <section className="content">
-        <Banner value={`banner`} title={`Sorry! we are not in this area.`} />
+        <Banner value={`banner`} title={error.message} />
       </section>
     );
   }
