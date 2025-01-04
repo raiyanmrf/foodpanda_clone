@@ -21,28 +21,40 @@ import { useNavigate } from "react-router-dom";
 import { usePopContext } from "../hooks/PopupContextComponent";
 import LocationSearchPopup from "./LocationSearchPopup";
 import { useMapContext } from "./MapContextComponent";
+import SignupModal from "./SignupModal";
+import { useAuthContext } from "../hooks/AuthContext";
+import LoginPopup from "./LoginPopup";
 //
 
 const Navbar = () => {
   const { cartItems } = useContext(cartContext);
   const [isLangActive, handleIsLangActive] = useIsActive();
   const [isMenuActive, handleIsMenuActive] = useIsActive();
-  const [isSignActive, handleIsSignActive] = useIsActive();
+
   const { isLocationSearchPopup } = usePopContext();
   const { navbarLocation } = useMapContext();
   const { setIsLocationSearchPopup } = usePopContext();
-  const navigate = useNavigate();
 
-  console.log("navbarLocation", navbarLocation);
+  const {
+    isSignupPopup,
+    setIsSignupPopup,
+    isAuthPopup,
+    setIsAuthPopup,
+    isLoginPopup,
+    setIsLoginPopup,
+  } = useAuthContext();
 
   return (
     <nav className="nav">
       <section className="nav-bar">
-        <div className="nav-bar-menu" onClick={handleIsSignActive}>
+        <div
+          className="nav-bar-menu"
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsAuthPopup(true);
+          }}
+        >
           <FaRegUser />
-
-          <h4 className="nav-bar-menu-username">Raiyan</h4>
-          <FaChevronDown className="nav-bar-menu-downarrow pink-icon" />
         </div>
 
         <div className="nav-bar-logo">
@@ -136,10 +148,11 @@ const Navbar = () => {
       </button>)
 }
     </section> */}
-
+      {isSignupPopup && <SignupModal />}
       {isMenuActive && <NavbarMenu handleIsMenuActive={handleIsMenuActive} />}
-      {isSignActive && <SignIn handleIsSignActive={handleIsSignActive} />}
+      {isAuthPopup && <SignIn />}
       {isLocationSearchPopup && <LocationSearchPopup />}
+      {isLoginPopup && <LoginPopup />}
     </nav>
   );
 };

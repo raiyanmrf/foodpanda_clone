@@ -113,7 +113,10 @@
   &-loginBtn,
   &-signupBtn,
   &-langBtn {
-    display: none;
+    @media (max-width: 959px) {
+      display: none;
+    }
+    order: 3;
   }
 
   &-drop {
@@ -154,28 +157,23 @@
 
     &-logo {
       margin-inline-end: auto;
-      order: 1;
+      order: 2;
     }
 
     &-location {
       margin-inline: auto;
-      order: 2;
+      order: 3;
       width: max-content;
     }
     &-menu {
-      //display: none;
+      // display: none;
       margin-inline: initial;
       margin-right: 2em;
-      order: 3;
-
-      &-downarrow,
-      &-username {
-        display: initial;
-      }
+      order: 1;
 
       &::after {
-        height: 1.5em;
-        width: 78px;
+        height: 100%;
+        width: 100%;
         border-radius: 9px;
 
         // top: 19%;
@@ -189,14 +187,9 @@
       }
     }
 
-    &-loginBtn,
-    &-signupBtn {
-      display: none;
-    }
-
     &-langBtn {
       display: inline;
-      order: 4;
+      order: 3;
     }
 
     &-cart {

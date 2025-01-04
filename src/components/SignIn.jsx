@@ -7,47 +7,37 @@ import {
 } from "../assets/svg";
 import WelcomeLogIn from "./WelcomeLogIn";
 import useIsActive from "../hooks/useIsActive";
+import { useAuthContext } from "../hooks/AuthContext";
 
-const SignIn = ({ handleIsSignActive }) => {
-  const [isWelcomeLogin, handleisWelcomeLogin] = useIsActive();
-  const [isEmailInput, handleIsEmailInput] = useIsActive();
-  const [isVerifyEmail, handleIsVerifyEmail] = useIsActive();
+const SignIn = () => {
+  // const [isEmailInput, handleIsEmailInput] = useIsActive();
+  //const [isVerifyEmail, handleIsVerifyEmail] = useIsActive();
 
-  const [count, setcount] = useState(60);
-
-  //   useEffect(()=>{
-  //     const id = setInterval(()=>{
-  //       setcount(c=>c-1);
-  //     },1000)
-
-  //  return ()=>{
-  //   clearInterval(id);
-  //  }
-  //   },[])
+  const { isAuthPopup, setIsAuthPopup } = useAuthContext();
 
   return (
     <section className="signin">
       <div className="signin-container">
-        {(isEmailInput || isVerifyEmail) && (
-          <div
+        {/* <div
             className="signin-backward"
-            onClick={() => {
-              isVerifyEmail ? handleIsVerifyEmail() : handleIsEmailInput();
-            }}
+          
           >
             <img src={backwardIcon} alt="<" />
-          </div>
-        )}
+          </div> */}
 
-        <div className="signin-cancel" onClick={handleIsSignActive}>
+        <div
+          className="signin-cancel"
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsAuthPopup(false);
+          }}
+        >
           <img src={cancelIcon} alt="X" />
         </div>
 
-        {!isEmailInput && (
-          <WelcomeLogIn handleIsEmailInput={handleIsEmailInput} />
-        )}
+        <WelcomeLogIn />
 
-        {isEmailInput && (
+        {/* {isEmailInput && (
           <>
             <div className="signin-welcome">
               <img src={envelopeIcon} alt="" />
@@ -71,11 +61,11 @@ const SignIn = ({ handleIsSignActive }) => {
               </button>
             </form>{" "}
           </>
-        )}
+        )} */}
 
-        {isVerifyEmail && (
-          <>
-            <div className="signin-welcome">
+        {/* {isVerifyEmail && (
+          <> */}
+        {/* <div className="signin-welcome">
               <img src={envelopeIcon} alt="" />
               <h2>Verify your email address to get started</h2>
               <p style={{ fontSize: "11px" }}>
@@ -86,9 +76,9 @@ const SignIn = ({ handleIsSignActive }) => {
             <div className="signin-buttons">
               <button className="btn btn-pink btn-moderate btn-lg">
                 Send Verification Email
-              </button>
+              </button> */}
 
-              {/* <button 
+        {/* <button 
     className='btn  btn-moderate btn-lg'>Resend in {count}s</button>
   
   
@@ -102,9 +92,9 @@ const SignIn = ({ handleIsSignActive }) => {
     </div>
     
     </button> */}
-            </div>
-          </>
-        )}
+        {/* </div> */}
+        {/* </>
+        )} */}
       </div>
     </section>
   );
