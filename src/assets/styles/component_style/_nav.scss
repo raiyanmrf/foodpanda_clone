@@ -120,7 +120,11 @@
       gap: 0.5em;
     }
     @media (max-width: 959px) {
-      display: none;
+      order: 0;
+      p,
+      img {
+        display: none;
+      }
     }
   }
   &-loginBtn,

@@ -1080,6 +1080,10 @@ li {
 }
 @media (max-width: 959px) {
   .nav-bar-username {
+    order: 0;
+  }
+  .nav-bar-username p,
+  .nav-bar-username img {
     display: none;
   }
 }
