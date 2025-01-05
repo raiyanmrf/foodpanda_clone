@@ -60,6 +60,7 @@ const SignupModal = () => {
               e.preventDefault();
               setUserEmail(e.target.value);
             }}
+            required
             type="email"
             value={userEmail}
             placeholder="Email"
@@ -69,18 +70,20 @@ const SignupModal = () => {
               e.preventDefault();
               setUserName(e.target.value);
             }}
+            required
             type="text"
             value={userName}
-            placeholder="Email"
+            placeholder="User Name"
           />
           <input
             onChange={(e) => {
               e.preventDefault();
               setUserPassword(e.target.value);
             }}
+            required
             type="password"
             value={userPassword}
-            placeholder="Email"
+            placeholder="Password"
           />
           <button type="submit" className="btn btn-pink btn-moderate btn-lg">
             Register

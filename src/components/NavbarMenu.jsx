@@ -1,20 +1,32 @@
 import { menuList } from "../assets/data/menuData";
 import { cancelIcon, dropIcon, oksignIcon } from "../assets/svg";
+import { useAuthContext } from "../hooks/AuthContext";
 import useIsActive from "../hooks/useIsActive";
 
-const NavbarMenu = ({ handleIsNavbarMenuActive }) => {
+const NavbarMenu = ({ handleIsMenuActive }) => {
   const [isLangActive, handleIsLangActive] = useIsActive();
-
+  const { navbarUsername, setNavbarUsername } = useAuthContext();
   return (
     <>
       <section className="navmenu">
-        <div className="navmenu-cancel" onClick={handleIsNavbarMenuActive}>
+        <div className="navmenu-cancel" onClick={handleIsMenuActive}>
           <img src={cancelIcon} alt="X" />
         </div>
 
         <ul className="navmenu-items">
           {menuList.map((item, index) => (
-            <li className="navmenu-single-item" key={item.id || index}>
+            <li
+              onClick={(e) => {
+                e.stopPropagation();
+                if (index === 8) {
+                  localStorage.removeItem("token");
+                  setNavbarUsername(null);
+                  handleIsMenuActive();
+                }
+              }}
+              className="navmenu-single-item"
+              key={item.id || index}
+            >
               {index !== 6 ? (
                 <>
                   <img src={item.icon} alt={item.label} />

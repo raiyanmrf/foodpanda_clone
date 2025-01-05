@@ -109,7 +109,20 @@
       }
     }
   }
+  &-username {
+    display: flex;
 
+    margin-inline: 0 !important;
+    order: 3;
+    button {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+    @media (max-width: 959px) {
+      display: none;
+    }
+  }
   &-loginBtn,
   &-signupBtn,
   &-langBtn {

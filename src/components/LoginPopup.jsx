@@ -2,18 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useAuthContext } from "../hooks/AuthContext";
 import { RxCross1 } from "react-icons/rx";
+import { handleUserDataDuringLogin } from "../utils/authLogic";
 
 const LoginPopup = () => {
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
-  const {
-    isSignupPopup,
-    setIsSignupPopup,
-    isAuthPopup,
-    setIsAuthPopup,
-    isLoginPopup,
-    setIsLoginPopup,
-  } = useAuthContext();
+  const { setIsAuthPopup, setIsLoginPopup, navbarUsername, setNavbarUsername } =
+    useAuthContext();
 
   const handleLogin = async () => {
     try {
@@ -24,10 +19,12 @@ const LoginPopup = () => {
           password: userPassword,
         }
       );
+      console.log(response.data);
       if (response.data.success) {
         setIsLoginPopup(false);
         setIsAuthPopup(false);
-        alert(response.data.message);
+        localStorage.setItem("token", response.data.token);
+        setNavbarUsername("");
       } else if (!response.data.success) {
         alert(response.data.message);
       }

@@ -8,6 +8,7 @@ export const AuthContextComponent = (props) => {
   const [isSignupPopup, setIsSignupPopup] = useState(false);
   const [isLoginPopup, setIsLoginPopup] = useState(false);
   const [isAuthPopup, setIsAuthPopup] = useState(false);
+  const [navbarUsername, setNavbarUsername] = useState(null);
 
   const value = {
     isSignupPopup,
@@ -16,6 +17,8 @@ export const AuthContextComponent = (props) => {
     setIsAuthPopup,
     isLoginPopup,
     setIsLoginPopup,
+    navbarUsername,
+    setNavbarUsername,
   };
 
   return (

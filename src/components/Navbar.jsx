@@ -13,7 +13,7 @@ import Button from "./Button";
 import SignIn from "./SignIn";
 import NavbarMenu from "./NavbarMenu";
 import { getTotalCartItemsCount } from "../utils/cartLogic";
-import { useContext } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { cartContext } from "../hooks/CartContext";
 import { IoBagOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
@@ -24,7 +24,7 @@ import { useMapContext } from "./MapContextComponent";
 import SignupModal from "./SignupModal";
 import { useAuthContext } from "../hooks/AuthContext";
 import LoginPopup from "./LoginPopup";
-//
+import axios from "axios";
 
 const Navbar = () => {
   const { cartItems } = useContext(cartContext);
@@ -42,20 +42,71 @@ const Navbar = () => {
     setIsAuthPopup,
     isLoginPopup,
     setIsLoginPopup,
+    navbarUsername,
+    setNavbarUsername,
   } = useAuthContext();
+
+  useEffect(() => {
+    const handleUser = async () => {
+      try {
+        const response = await axios.get(
+          "https://restaurant-server-ni4y.onrender.com/profile",
+          {
+            headers: {
+              Authorization: localStorage.getItem("token"),
+            },
+          }
+        );
+        console.log("response", response);
+        if (response.data.success) {
+          setNavbarUsername(response.data.user.username);
+        } else if (!response.data.success) {
+          localStorage.removeItem("token");
+          setNavbarUsername(null);
+          alert(response.data.message);
+        }
+      } catch (error) {
+        console.error("Error:", error.response?.data || error.message);
+        alert(
+          error.response?.data?.message ||
+            "An error occurred during retreiving user data."
+        );
+      }
+    };
+
+    localStorage.getItem("token") && handleUser();
+  }, [navbarUsername]);
 
   return (
     <nav className="nav">
       <section className="nav-bar">
-        <div
-          className="nav-bar-menu"
-          onClick={(e) => {
-            e.stopPropagation();
-            setIsAuthPopup(true);
-          }}
-        >
-          <FaRegUser />
-        </div>
+        {!navbarUsername && (
+          <div
+            className="nav-bar-menu"
+            onClick={(e) => {
+              e.stopPropagation();
+              navbarUsername ? handleIsMenuActive() : setIsAuthPopup(true);
+            }}
+          >
+            <FaRegUser />
+          </div>
+        )}
+
+        {navbarUsername && (
+          <div className="nav-bar-username">
+            <button
+              className="btn btn-md btn-white "
+              onClick={(e) => {
+                e.stopPropagation();
+                navbarUsername ? handleIsMenuActive() : setIsAuthPopup(true);
+              }}
+            >
+              <FaRegUser />
+              <p>{navbarUsername}</p>
+              <img src={dropIcon} className="pink-icon" alt="drop" />
+            </button>
+          </div>
+        )}
 
         <div className="nav-bar-logo">
           <img src={pandaIcon} height="28px" width="28px" alt="panda" />
@@ -88,16 +139,33 @@ const Navbar = () => {
             ))}
           </div>
         )}
-        <div className="nav-bar-loginBtn">
-          <Button
-            title={`Log In`}
-            btnClass={`btn btn-md btn-white btn-border`}
-          />
-        </div>
+        {!navbarUsername && (
+          <Fragment>
+            <div className="nav-bar-loginBtn">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsLoginPopup(true);
+                }}
+                className="btn btn-md btn-white btn-border"
+              >
+                Log In
+              </button>
+            </div>
 
-        <div className="nav-bar-signupBtn">
-          <Button title={`Sign Up`} btnClass={`btn btn-md btn-pink`} />
-        </div>
+            <div className="nav-bar-signupBtn">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsSignupPopup(true);
+                }}
+                className="btn btn-md btn-pink"
+              >
+                Sign Up
+              </button>
+            </div>
+          </Fragment>
+        )}
 
         <div className="nav-bar-langBtn nav-bar-drop">
           <div className="nav-bar-drop-content">
